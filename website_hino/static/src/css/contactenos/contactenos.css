@@ -1,0 +1,434 @@
+/* Importación de las Fuentes */
+@font-face { 
+    font-family: "HelveticaNeue"; 
+    font-weight: 500; 
+    src: 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.woff") format("woff"), 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.ttf") format("truetype"); 
+} 
+
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    font-weight: 300;
+    src:
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.woff") format("woff"),
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.ttf") format("truetype");
+}
+
+/* BANNER CONTACTO */
+
+.banner-contacto{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 130px;
+}
+
+.banner-contacto > div{
+    background-color: rgba(0, 0, 0, .6);
+    padding: 5% 0;
+}
+
+.banner-contacto > div > div{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    height: auto;
+    background-size: inherit;
+    background-position: center;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.banner-contacto div h3{
+    margin: 0;
+    font-size: 35px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.banner-contacto div p{
+    font-size: 20px;
+    width: 70%;
+    line-height: 25px;
+    margin: 1% 0 0 0;
+}
+
+/* BANNER CONTACTO RESPONSIVE */
+
+@media only screen and (max-width: 1300px){
+    .banner-contacto > div > div{
+        max-width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .banner-contacto div h3{
+        font-size: 30px;
+    }
+
+    .banner-contacto > div > div{
+        max-width: 900px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .banner-contacto > div > div{
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .datos-contacto{
+        margin-top: 0 !important;
+    }
+
+}
+
+@media only screen and (max-width: 900px){
+    .banner-contacto > div > div{
+        max-width: 90%;
+    }
+
+    .banner-contacto div p {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .banner-contacto{
+        background-image: url(/website_hino/static/images/hino-contacto-responsive.png) !important;
+        height: 350px !important;
+        margin-top: 70px !important;
+    }
+
+    .banner-contacto > div{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .banner-contacto div h3{
+        font-size: 25px !important;
+        margin-bottom: 2%;
+    }
+
+    .banner-contacto div p {
+        font-size: 15px;
+        width: 70%;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .banner-contacto div h3{
+        font-size: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .banner-contacto div p {
+        width: 80%;
+    }
+}
+
+/* Estilos Formulario */ 
+ 
+.form_main{ 
+    width: 100%;
+    padding: 4% 0;
+    margin-bottom: 0px;
+    background-color: #ffffff;
+    overflow: hidden;
+} 
+ 
+.main-contacto { 
+    position: relative; 
+    display: flex; 
+    justify-content: space-between;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10%;
+} 
+
+.main-contacto h4{
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 6%;
+}
+ 
+.o_container_small { 
+    width: 50%;
+    padding: 0;
+    margin: 0;
+} 
+
+.datos-contacto{
+    width: 40%;
+}
+
+ 
+.s_website_form_rows { 
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 6%; 
+} 
+ 
+.s_website_form_field { 
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 10px;
+} 
+
+.campo_nombre, .campo_apellido,.campo_correo, .campo_tlf{
+    width: 47%;
+}
+
+.campo_ciudad,.campo_contacto, .campo_terminos{
+    width: 100%;
+}
+
+.campo_terminos{
+    margin: 3% 0 4% 0;
+}
+
+.campo_contacto{
+    margin-top: 2%;
+}
+
+.campo_contacto label{
+    margin-bottom: 2% !important;
+}
+ 
+.s_website_form_field > .row{
+    display: flex;
+    flex-direction: column;
+}
+ 
+.s_website_form_field label { 
+    width: 100%; 
+    margin-bottom: 0; 
+} 
+ 
+ 
+.s_website_form_field input, .s_website_form_field select { 
+    background-color: #ffffff; 
+    color: #878787; 
+    margin: 0; 
+    padding: 0; 
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #f50a0a;
+    border-radius: 0; 
+    width: 100%; 
+    box-sizing: border-box; 
+ 
+} 
+ 
+.s_website_form_field select { 
+    width: 100%; 
+    height: 25px; 
+} 
+ 
+input[name="name"] { 
+    width: 100%; 
+    height: 25px; 
+} 
+ 
+.s_website_form_field input[type="checkbox"] { 
+    width: 15px; 
+    position: relative;
+}
+
+.s_website_form_field label{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    color: #878787;
+    font-size: 16px;
+}
+ 
+.s_website_form_submit { 
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-right: 140px;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.s_website_form_submit > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    font-size: 16px;
+    width: 135px;
+    height: 40px;
+}
+ 
+.btn { 
+    background-color: #E02413;
+    color: #ffffff; 
+    padding: 6px 18px; 
+    border: none; 
+    border-radius: 9px; 
+    cursor: pointer; 
+    text-decoration: none; 
+} 
+ 
+#form-icon{ 
+    width: 16px;
+    height: 16px;
+} 
+
+.s_website_form .datos-contacto .fa-map-marker:before,
+.s_website_form .datos-contacto .fa-phone:before,
+.s_website_form .datos-contacto .fa-envelope:before{
+    color: #E02413;
+}
+
+.datos-contacto > ul{
+    padding: 0 !important;
+}
+
+.datos-contacto ul li{
+    color: #878787;
+    margin-bottom: 4%;
+}
+
+.datos-contacto ul li > span{
+    font-size: 18px;
+}
+
+.datos-contacto .phone,
+.datos-contacto .email{
+    color: #878787;
+}
+.datos-contacto .phone:hover,
+.datos-contacto .email:hover{
+    color: #878787;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1300px){
+    
+    .s_website_form{
+        max-width: 1000px;
+    }
+
+}
+
+@media only screen and (max-width: 1100px){
+    
+    .s_website_form{
+        max-width: 900px;
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
+    .s_website_form{
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .s_website_form{
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+
+    .form_main{
+        padding: 5% 0;
+    }
+
+    .main-contacto h4{
+        text-align: center;
+    }
+
+    .s_website_form{
+        flex-direction: column;
+    }
+
+    .o_container_small {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    .campo_nombre, .campo_apellido, .campo_correo, .campo_tlf {
+        width: 100%;
+    }
+
+    .datos-contacto{
+        width: 100%;
+    }
+
+    .s_website_form_submit {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .s_website_form_submit > a{
+        width: 40%;
+        height: 50px;
+    }
+
+    .datos-contacto ul li{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .o_container_small {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .main-contacto h4{
+        font-size: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    .s_website_form_field input, .s_website_form_field select{
+        font-size: 15px;
+    }
+
+    .s_website_form_submit > a {
+        width: 100%;
+        gap: 2%;
+    }
+
+    .main-contacto h4 {
+        font-size: 18px !important;
+    }
+
+    .o_container_small {
+        margin-bottom: 12%;
+    }
+
+    .datos-contacto ul li{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .s_website_form .datos-contacto .fa-map-marker:before,
+    .s_website_form .datos-contacto .fa-phone:before,
+    .s_website_form .datos-contacto .fa-envelope:before{
+        font-size: 30px;
+    }
+}
+

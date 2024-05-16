@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vista de árbol para el modelo Soporte Total -->
+    <record id="view_soporte_total_tree" model="ir.ui.view">
+        <field name="name">view.soporte_total.tree</field>
+        <field name="model">soporte.total</field>
+        <field name="arch" type="xml">
+            <tree string="Soporte_total">
+                <field name="name"/>
+                <field name="imagen" widget="image"/>
+                <field name="descripcion"/>
+                <field name="soporte_url"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista tipo Kanban para el modelo Soporte Total -->
+    <record id="view_soporte_total_kanban" model="ir.ui.view">
+        <field name="name">view.soporte_total.kanban</field>
+        <field name="model">soporte.total</field>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" archivable="false" js_class="soporte_total_kanban" sample="1">
+                <field name="name"/>
+                <field name="imagen"/>
+                <field name="descripcion"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_content oe_kanban_global_click">
+                            <div>
+                                <strong class="o_kanban_record_title">
+                                    <span>
+                                        <field name="name"/>
+                                    </span>
+                                </strong>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_image">
+                                    <field name="imagen" widget="image" size="small"/>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_subtitle">
+                                    <field name="descripcion"/>
+                                </span>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left">
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para el modelo Soporte Total -->
+    <record id="view_soporte_total_form" model="ir.ui.view">
+        <field name="name">view.soporte_total.form</field>
+        <field name="model">soporte.total</field>
+        <field name="arch" type="xml">
+            <form string="Soporte_total">
+                <header></header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="imagen" widget="image" size="small" height="100px" with="100px"/>
+                        <field name="descripcion" placeholder="Breve Descripción..."/>
+                        <field name="informacion" placeholder="Información del Tipo de Soporte..."/>
+                        <field name="soporte_url" placeholder="URL del Tipo de Soporte..."/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de búsqueda para el modelo Soporte Total -->
+    <record id="view_soporte_total_search" model="ir.ui.view">
+        <field name="name">view.soporte_total.search</field>
+        <field name="model">soporte.total</field>
+        <field name="arch" type="xml">
+            <search string="Soporte_total">
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de ventana para abrir la vista de árbol y formulario de Soporte Total -->
+    <record id="action_soporte_total" model="ir.actions.act_window">
+        <field name="name">Soporte Total</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">soporte.total</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No se ha registrado ningún tipo de Soporte Total.
+            </p>
+        </field>
+    </record>
+    <!-- Menú Superior Soporte Total -->
+    <menuitem id="menu_soporte_total" name="Sección Soporte Total" parent="menu_secciones" action="action_soporte_total" sequence="5"/>
+</odoo>

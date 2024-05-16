@@ -1,0 +1,274 @@
+/* Importación de las Fuentes */
+@font-face { 
+  font-family: "HelveticaNeue"; 
+  font-weight: 500; 
+  src: 
+      url("/website_hino/static/src/css/fonts/HelveticaNeue.woff") format("woff"), 
+      url("/website_hino/static/src/css/fonts/HelveticaNeue.ttf") format("truetype"); 
+} 
+
+@font-face {
+  font-family: 'Helvetica Neue Light';
+  font-weight: 300;
+  src:
+      url("/website_hino/static/src/css/fonts/helveticaneue-light.woff") format("woff"),
+      url("/website_hino/static/src/css/fonts/helveticaneue-light.ttf") format("truetype");
+}
+
+.title-cards {
+  background-image: url("/website_hino/static/images/fondo-hino-soporte-total.png");
+  background-size: 850px 40px;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  border-image: none;
+}
+
+.soporte-total {
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.title-cards {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: auto;
+}
+
+
+h2 {
+  color: #2F2F2F;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 56.88px;
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 70px;
+  text-decoration: none;
+  float: right;
+}
+
+.soporte-total .swiper-slide {
+  width: 32% !important;
+}
+
+.soporte-total .card-main {
+  padding: 0px 0px 50px 0px;
+  width: 100%;
+}
+
+.soporte-total .card {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.soporte-total .card .card_landing {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent 80%, #000), var(--i);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+
+}
+
+.soporte-total .card .card_landing .title-soporte a {
+  background-image: url('/website_hino/static/images/fondo-rojo-blanco.png');
+  font-size: 18px;
+  height: 50px;
+  width: 350px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0px;
+  left: 8px;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 15px;
+  padding-top: 10px;
+  border-radius: 10px;
+}
+
+.title-soporte a {
+  text-decoration: none;
+}
+
+.soporte-total .image-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.soporte-total .swiper-scrollbar-drag{
+ background-color: #E02413;
+}
+
+/* Styles for mobile and tablets */
+
+@media only screen and (max-width: 1300px) {
+  .soporte-total {
+    max-width: 1000px;
+  }
+
+  .soporte-total .swiper-slide {
+    width: 40% !important;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .soporte-total {
+    max-width: 900px;
+  }
+
+  .soporte-total .swiper-slide {
+    width: 45% !important;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .soporte-section {
+    margin-top: 40%;
+  }
+
+  .soporte-total {
+    max-width: 800px;
+  }
+
+  .title-cards {
+    background-size: 800px 40px;
+  }
+
+  .soporte-total .swiper-slide {
+    width: 50% !important;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  .soporte-total {
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .soporte-total .swiper-wrapper {
+    height: 350px;
+    gap: 2%;
+  }
+
+  .soporte-total .swiper-slide {
+    width: 55% !important;
+  }
+
+  .soporte-total .card {
+    height: 270px;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  .soporte-total .swiper-wrapper {
+    height: 365px;
+  }
+
+  .soporte-total .swiper-slide {
+    width: 455px !important;
+  }
+
+  .soporte-total .card {
+    height: 285px;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+  .soporte-section {
+    margin-top: 50%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .soporte-total .swiper-slide {
+    width: 400px !important;
+  }
+
+  .soporte-total .card {
+    height: 260px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  .soporte-total .swiper-slide {
+    width: 380px !important;
+  }
+
+  .soporte-total .card {
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .soporte-section {
+    margin-top: 35%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .soporte-total .swiper-wrapper {
+    height: 285px;
+  }
+
+  .soporte-total .swiper-slide {
+    width: 330px !important;
+  }
+
+  .soporte-total .card {
+    height: 215px;
+  }
+
+  .soporte-total .card .card_landing .title-soporte {
+    width: 245px;
+    height: 45px;
+    left: 6px;
+  }
+}

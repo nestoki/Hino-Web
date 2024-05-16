@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vista de árbol para el modelo Servicios Soporte -->
+    <record id="view_servicios_soporte_tree" model="ir.ui.view">
+        <field name="name">view.servicios_soporte.tree</field>
+        <field name="model">servicios.soporte</field>
+        <field name="arch" type="xml">
+            <tree string="Servicios Soporte">
+                <field name="text_slider"/>
+                <field name="slider_image" widget="image"/>
+                <field name="text_slider_2"/>
+                <field name="cita_whatsapp"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista tipo Kanban para el modelo Servicios Soporte -->
+    <record id="view_servicios_soporte_kanban" model="ir.ui.view">
+        <field name="name">view.servicios_soporte.kanban</field>
+        <field name="model">servicios.soporte</field>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" archivable="false" js_class="servicos_soporte_kanban" sample="1">
+                <field name="text_slider"/>
+                <field name="slider_image"/>
+                <field name="text_slider_2"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_content oe_kanban_global_click">
+                            <div>
+                                <strong class="o_kanban_record_title">
+                                    <span>
+                                        <field name="text_slider"/>
+                                    </span>
+                                </strong>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_image">
+                                    <field name="slider_image" widget="image" size="small"/>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_subtitle">
+                                    <field name="text_slider_2"/>
+                                </span>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left">
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para el modelo Servicios Soporte -->
+    <record id="view_servicios_soporte_form" model="ir.ui.view">
+        <field name="name">view.servicios_soporte.form</field>
+        <field name="model">servicios.soporte</field>
+        <field name="arch" type="xml">
+            <form string="Servicios Soporte">
+                <header></header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="text_slider"/>
+                        <h1>
+                            <field name="text_slider" placeholder="Título..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="cita_whatsapp" placeholder="Link de Whatsapp..."/>
+                        <field name="slider_image" widget="image" size="small" height="100px" with="100px"/>
+                        <field name="text_slider_2" placeholder="Información ..."/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de búsqueda para el modelo Servicios Soporte -->
+    <record id="view_servicios_soporte_search" model="ir.ui.view">
+        <field name="name">view.servicios_soporte.search</field>
+        <field name="model">servicios.soporte</field>
+        <field name="arch" type="xml">
+            <search string="Servicios Soporte">
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="text_slider" domain="[]" context="{'group_by':'text_slider'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de ventana para abrir la vista de árbol y formulario de Servicios Soporte -->
+    <record id="action_servicios_soporte" model="ir.actions.act_window">
+        <field name="name">Servicios Soporte</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">servicios.soporte</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No se ha registrado ningún tipo de Servicios.
+            </p>
+        </field>
+    </record>
+    <!-- Menú Superior Servicios Soporte -->
+    <menuitem id="menu_servicios_soporte" name="Servicios Soporte" parent="menu_configuraciones" action="action_servicios_soporte" sequence="12"/>
+</odoo>

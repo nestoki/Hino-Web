@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_serie_website" model="website.menu">
+        <field name="name">Serie</field>
+        <field name="url">serie</field>
+    </record>
+
+    <template id="hino_series" name="Hino Series">
+        <t t-call="website.layout">
+            <t t-set="head">
+                <t t-call-assets="web.assets_common" t-js="false"/>
+                <link rel="stylesheet" href="/website_hino/static/src/css/swiper/swiper-bundle.min.css"/>
+                <link rel="stylesheet" href="/website_hino/static/src/css/series/series.css"/>
+            </t>
+            <t t-set="slider_con_misma_serie" t-value="request.env['series'].sudo().search([('no_serie', '=', serie_series)])"/>
+            <section class="slider-main-series">
+                <section class="swiper swiper-container-series">
+                    <div class="swiper-wrapper">
+                        <t t-foreach="slider_con_misma_serie" t-as="serie">
+                            <div class="swiper-slide">
+                                <t t-if="serie">
+                                    <div t-attf-style="background-image:url('/web/image/series/#{serie.id}/foto_serie')" class="img bg-slide">
+                                        <div class="container-title-serie">
+                                            <span class="slider-text-serie" t-out="serie.name"/>
+                                            <span class="slider-2-text-serie" t-out="serie.descripcion_serie"/>
+                                            <a t-att-href="serie.button_serie_url" class="call-action-btn-serie" t-out="serie.button_serie_text"></a>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                        </t>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </section>
+            </section>
+
+            <!-- CONFIABLE -->
+
+            <section class="confiable">
+                <t t-foreach="request.env['series'].sudo().search([('no_serie', '=', serie_series)], limit=1)" t-as="serie">
+                    <div class="confiable-info">
+                        <h3>
+                            <t t-out="serie.titulo"/>
+                        </h3>
+                        <p>
+                            <t t-out="serie.texto_1"/>
+                        </p>
+                        <p>
+                            <t t-out="serie.texto_2"/>
+                        </p>
+                    </div>
+                    <div class="confiable-camiones">
+                        <t t-foreach="serie.cabinas_ids" t-as="cabina">
+                            <t t-if="cabina.name == 'cabina_angosta'">
+                                <article class="confiable-camion">
+                                    <figure>
+                                        <t t-if="serie.foto_cabina_angosta">
+                                            <img t-att-src="'/web/image/series/%s/foto_cabina_angosta' % serie.id"/>
+                                        </t>
+                                    </figure>
+                                    <h4>cabina angosta</h4>
+                                    <div class="confiable-camion-info">
+                                        <div class="confiable-camion-propiedades">
+                                            <article>
+                                                <figure>
+                                                    <img src="/website_hino/static/images/iconos/capacidad.png"/>
+                                                </figure>
+                                                <div>PESO BRUTO VEHICULAR (TON)</div>
+                                            </article>
+                                            <article>
+                                                <figure>
+                                                    <img src="/website_hino/static/images/iconos/_1.svg"/>
+                                                </figure>
+                                                <div>LONGITUD DE CHASIS (Pies)</div>
+                                            </article>
+                                        </div>
+                                        <div class="confiable-camion-tabla">
+                                            <t t-set="contador" t-value="0"/>
+                                            <t t-foreach="serie.tabla_ids" t-as="tabla">
+                                                <div class="tabla-dato">
+                                                    <div t-att-class="contador % 2 == 0 and 'gris' or ''">
+                                                        <span t-esc="tabla.peso_tn"></span>
+                                                        <span t-esc="tabla.longitud"></span>
+                                                    </div>
+                                                    <a href="#" class="abrirModal" t-att-data-id="'%s-%s' % (tabla.peso_tn, tabla.longitud)">></a>
+                                                </div>
+                                                <t t-set="contador" t-value="contador + 1"/>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </article>
+                            </t>
+                            <t t-if="cabina.name == 'cabina_ancha'">
+                                <article class="confiable-camion">
+                                    <figure>
+                                        <t t-if="serie.foto_cabina_ancha">
+                                            <img t-att-src="'/web/image/series/%s/foto_cabina_ancha' % serie.id"/>
+                                        </t>
+                                    </figure>
+                                    <h4>cabina ancha</h4>
+                                    <div class="confiable-camion-info">
+                                        <div class="confiable-camion-propiedades">
+                                            <article>
+                                                <figure>
+                                                    <img src="/website_hino/static/images/iconos/capacidad.png"/>
+                                                </figure>
+                                                <div>PESO BRUTO VEHICULAR (TON)</div>
+                                            </article>
+                                            <article>
+                                                <figure>
+                                                    <img src="/website_hino/static/images/iconos/_1.svg"/>
+                                                </figure>
+                                                <div>LONGITUD DE CHASIS (Pies)</div>
+                                            </article>
+                                        </div>
+                                        <div class="confiable-camion-tabla">
+                                            <t t-set="contador" t-value="0"/>
+                                            <t t-foreach="serie.tabla_ids" t-as="tabla">
+                                                <div class="tabla-dato">
+                                                    <div t-att-class="contador % 2 == 0 and 'gris' or ''">
+                                                        <span t-esc="tabla.peso_tn"></span>
+                                                        <span t-esc="tabla.longitud"></span>
+                                                    </div>
+                                                    <a href="#" class="abrirModal">></a>
+                                                </div>
+                                                <t t-set="contador" t-value="contador + 1"/>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </article>
+                            </t>
+                        </t>
+
+
+                        <div id="ventanaModal" class="modal">
+                            <div class="modal-content">
+                                <h2>Modelos disponibles</h2>
+                                <span class="cerrar">x</span>
+                                <div class="carousel carousel-desk">
+                                    <div class="carrusel-list" id="carrusel-list">
+                                        <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                                <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                                                </path>
+                                            </svg>
+                                        </button>
+
+                                        <div class="carrusel-track" id="track">
+                                            <t t-foreach="camion.galeria_ids" t-as="imagen">
+                                                <div class="carrusel">
+                                                    <div>
+                                                        <article class="carousel-item active">
+                                                            <h3>Nombre camión</h3>
+                                                            <figure>
+                                                                <img class="d-block w-100" src="/website_hino/static/images/camion.png" loading="lazy" style=""/>
+                                                            </figure>
+                                                            <a href="#">ver modelo</a>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </div>
+
+                                        <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                                <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!--  carousel responsive  -->
+
+                                <div id="carouselExampleControls8" class="carousel slide carousel-modal-responsive" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <t t-foreach="serie.cabinas_ids" t-as="cabina">
+                                            <t t-if="cabina.name == 'cabina_angosta'">
+                                                <div class="carousel-item active">
+                                                    <article class="info-camion-responsive">
+                                                        <h3>Nombre camión 1</h3>
+                                                        <figure>
+                                                            <img src="/website_hino/static/images/camion.png" loading="lazy" style=""/>
+                                                        </figure> 
+                                                        <a href="#">ver modelo</a>                                       
+                                                    </article>
+                                                </div>
+                                                <t t-set="cabinaAngostaExiste" t-value="True"/>
+                                            </t>
+                                            <t t-if="cabina.name == 'cabina_ancha'">
+                                                <div t-attf-class="carousel-item {{ 'active' if not cabinaAngostaExiste else '' }}">
+                                                    <article class="info-camion-responsive">
+                                                        <h3>Nombre camión 2</h3>
+                                                        <figure>
+                                                            <img src="/website_hino/static/images/camion.png" loading="lazy" style=""/>
+                                                        </figure>
+                                                        <a href="#">ver modelo</a>
+                                                    </article>
+                                                </div>
+                                            </t>
+                                            <t t-set="contador" t-value="contador + 1"/>
+                                        </t>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls8" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls8" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div id="ventanaModal" class="modal">
+                            <div class="modal-content">
+                                <h2>Modelos disponibles</h2>
+                                <span class="cerrar">
+                                x
+                                </span>
+                                <article>
+                                    <h3>Nombre camión</h3>
+                                    <figure>
+                                        <img src="/website_hino/static/images/camion.png" loading="lazy" style=""/>
+                                    </figure>
+                                    <a href="#">ver modelo</a>
+                                </article>
+                                <article>
+                                    <h3>Nombre camión</h3>
+                                    <figure>
+                                        <img src="/website_hino/static/images/camion.png" loading="lazy" style=""/>
+                                    </figure>
+                                    <a href="#">ver modelo</a>
+                                </article>
+                                <article>
+                                    <h3>Nombre camión</h3>
+                                    <figure>
+                                        <img src="/website_hino/static/images/camion.png" loading="lazy" style=""/>
+                                    </figure>
+                                    <a href="#">ver modelo</a>
+                                </article>
+                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <article class="carousel-item active">
+                                            <h3>Nombre camión</h3>
+                                            <figure>
+                                                <img class="d-block w-100" src="/website_hino/static/images/camion.png" loading="lazy" style=""/>
+                                            </figure>
+                                            <a href="#">ver modelo</a>
+                                        </article>
+                                        <article class="carousel-item">
+                                            <h3>Nombre camión</h3>
+                                            <figure>
+                                                <img class="d-block w-100" src="/website_hino/static/images/camion.png" loading="lazy" style=""/>
+                                            </figure>
+                                            <a href="#">ver modelo</a>
+                                        </article>
+                                        <article class="carousel-item">
+                                            <h3>Nombre camión</h3>
+                                            <figure>
+                                                <img class="d-block w-100" src="/website_hino/static/images/camion.png" loading="lazy" style=""/>
+                                            </figure>
+                                            <a href="#">ver modelo</a>
+                                        </article>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div id="ventanaModal" class="modal">
+                            <div class="modal-content">
+                                <h2>Modelos disponibles</h2>
+                                <span class="cerrar">x</span>
+                                <t t-set="camiones_con_misma_serie" t-value="request.env['camion'].sudo().search([('no_serie', '=', serie_camion)])" />
+                                <t t-foreach="serie.tabla_ids" t-as="tabla">
+                                    <t t-foreach="camiones_con_misma_serie" t-as="camion">
+                                        <t t-if="camion.peso_tn == tabla.peso_tn and camion.longitud_pie == tabla.longitud">
+                                            <article>
+                                                <h3><t t-out="camion.name"/></h3>
+                                                <figure>
+                                                    <t t-if="camion.foto">
+                                                        <img t-att-src="'/web/image/camion/%s/foto' % camion.id" loading="lazy"/>
+                                                    </t>
+                                                </figure>
+                                                <a t-attf-href="/camiones/series?camionId={{ camion.id }}">Ver Modelo</a>
+                                            </article>
+                                        </t>
+                                    </t>
+                                </t>
+                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                    <t t-set="camiones_con_misma_serie" t-value="request.env['camion'].sudo().search([('no_serie', '=', serie_camion)])" />
+                                    <div class="carousel-inner">
+                                        <t t-set="serie_found" t-value="False"/>
+                                        <t t-set="counter" t-value="0"/>
+                                        <t t-foreach="camiones_con_misma_serie" t-as="camion">
+                                            <t t-if="camion.no_serie == serie_camion">
+                                                <t t-set="counter" t-value="counter + 1"/>
+                                                <t t-if="counter == 1">
+                                                    <t t-set="serie_found" t-value="True"/>
+                                                    <t t-foreach="serie.tabla_ids" t-as="tabla">
+                                                        <t t-if="camion.peso_tn == tabla.peso_tn and camion.longitud_pie == tabla.longitud">
+                                                            <article class="carousel-item active">
+                                                                <h3>
+                                                                    <t t-out="camion.name"/>
+                                                                </h3>
+                                                                <figure>
+                                                                    <t t-if="camion.foto">
+                                                                        <img t-att-src="'/web/image/camion/%s/foto' % camion.id" loading="lazy"/>
+                                                                    </t>
+                                                                </figure>
+                                                                <a t-attf-href="/camiones/series?camionId={{ camion.id }}">Ver Modelo</a>
+                                                            </article>
+                                                        </t>
+                                                    </t>
+                                                </t>
+                                                <t t-else="">
+                                                    <t t-foreach="serie.tabla_ids" t-as="tabla">
+                                                        <t t-if="camion.peso_tn == tabla.peso_tn and camion.longitud_pie == tabla.longitud">
+                                                            <article class="carousel-item">
+                                                                <h3>
+                                                                    <t t-out="camion.name"/>
+                                                                </h3>
+                                                                <figure>
+                                                                    <t t-if="camion.foto">
+                                                                        <img t-att-src="'/web/image/camion/%s/foto' % camion.id" loading="lazy"/>
+                                                                    </t>
+                                                                </figure>
+                                                                <a t-attf-href="/camiones/series?camionId={{ camion.id }}">Ver Modelo</a>
+                                                            </article>
+                                                        </t>
+                                                    </t>
+                                                </t>
+                                            </t>
+                                        </t>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div id="carouselExampleControls8" class="carousel slide slide-serie" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <t t-foreach="serie.cabinas_ids" t-as="cabina">
+                                    <t t-if="cabina.name == 'cabina_angosta'">
+                                        <div class="carousel-item active">
+                                            <article class="confiable-camion">
+                                                <h4 class="confiable-camion-nombre confiable-camion-nombre-responsive">cabina
+                                            angosta</h4>
+                                                <figure>
+                                                    <t t-if="serie.foto_cabina_angosta">
+                                                        <img t-att-src="'/web/image/series/%s/foto_cabina_angosta' % serie.id"/>
+                                                    </t>
+                                                </figure>
+                                                <h4 class="confiable-camion-nombre">cabina angosta</h4>
+                                                <div class="confiable-camion-info">
+                                                    <div class="confiable-camion-propiedades">
+                                                        <article>
+                                                            <figure>
+                                                                <img src="/website_hino/static/images/iconos/capacidad.png"/>
+                                                            </figure>
+                                                            <div>PESO BRUTO VEHICULAR (TON)</div>
+                                                        </article>
+                                                        <article>
+                                                            <figure>
+                                                                <img src="/website_hino/static/images/iconos/_1.svg"/>
+                                                            </figure>
+                                                            <div>LONGITUD DE CHASIS (Pies)</div>
+                                                        </article>
+                                                    </div>
+                                                    <div class="confiable-camion-tabla">
+                                                        <t t-set="contador" t-value="0"/>
+                                                        <t t-foreach="serie.tabla_ids" t-as="tabla">
+                                                            <div class="tabla-dato">
+                                                                <div t-att-class="contador % 2 == 0 and 'gris' or ''">
+                                                                    <span t-esc="tabla.peso_tn"></span>
+                                                                    <span t-esc="tabla.longitud"></span>
+                                                                </div>
+                                                                <a href="#" class="abrirModal">></a>
+                                                            </div>
+                                                            <t t-set="contador" t-value="contador + 1"/>
+                                                        </t>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <t t-set="cabinaAngostaExiste" t-value="True"/>
+                                    </t>
+                                    <t t-if="cabina.name == 'cabina_ancha'">
+                                        <div t-attf-class="carousel-item {{ 'active' if not cabinaAngostaExiste else '' }}">
+                                            <article class="confiable-camion">
+                                                <h4 class="confiable-camion-nombre confiable-camion-nombre-responsive">cabina
+                                            ancha</h4>
+                                                <figure>
+                                                    <t t-if="serie.foto_cabina_ancha">
+                                                        <img t-att-src="'/web/image/series/%s/foto_cabina_ancha' % serie.id"/>
+                                                    </t>
+                                                </figure>
+                                                <h4 class="confiable-camion-nombre">cabina ancha</h4>
+                                                <div class="confiable-camion-info">
+                                                    <div class="confiable-camion-propiedades">
+                                                        <article>
+                                                            <figure>
+                                                                <img src="/website_hino/static/images/iconos/capacidad.png"/>
+                                                            </figure>
+                                                            <div>PESO BRUTO VEHICULAR (TON)</div>
+                                                        </article>
+                                                        <article>
+                                                            <figure>
+                                                                <img src="/website_hino/static/images/iconos/_1.svg"/>
+                                                            </figure>
+                                                            <div>LONGITUD DE CHASIS (Pies)</div>
+                                                        </article>
+                                                    </div>
+                                                    <div class="confiable-camion-tabla">
+                                                        <t t-set="contador" t-value="0"/>
+                                                        <t t-foreach="serie.tabla_ids" t-as="tabla">
+                                                            <div class="tabla-dato">
+                                                                <div t-att-class="contador % 2 == 0 and 'gris' or ''">
+                                                                    <span t-esc="tabla.peso_tn"></span>
+                                                                    <span t-esc="tabla.longitud"></span>
+                                                                </div>
+                                                                <a href="#" class="abrirModal">></a>
+                                                            </div>
+                                                            <t t-set="contador" t-value="contador + 1"/>
+                                                        </t>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </t>
+                                    <t t-set="contador" t-value="contador + 1"/>
+                                </t>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls8" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls8" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </t>
+            </section>
+
+            <!-- VISTA 360 -->
+            <section class="vista_360-serie">
+                <h3 class="vista_360_titulo">VISTA 360º</h3>
+                    <iframe width="100%" height="500px" t-att-src="camion.vista_360_url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1">
+                </iframe>
+            </section>
+
+            <!-- GALERIA -->
+            <section class="galeria_camiones">
+                <h3 class="galeria_camiones_titulo">GALERÍA</h3>
+                <div class="carousel">
+                    <div class="carrusel-list" id="carrusel-list">
+                        <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                                </path>
+                            </svg>
+                        </button>
+
+                        <div class="carrusel-track" id="track">
+                            <t t-foreach="camion.galeria_ids" t-as="imagen">
+                                <div class="carrusel">
+                                    <div>
+                                        <figure>
+                                            <img t-att-src="'/web/image/camion.galeria/%s/image_data' % imagen.id" class="d-block w-100" t-att-alt="imagen.image_name"/>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+
+                        <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- VIDEO -->
+            <section class="video_camion">
+                <iframe width="560" height="315" t-att-src="camion.video_url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1">
+                </iframe>
+            </section>
+
+            <!-- MODELOS DISPONIBLES -->
+
+            <section class="serie-camiones">
+                <section class="model-camiones">
+                    <h3 class="letter modelos_disponibles">MODELOS DISPONIBLES</h3>
+                    <div class="modelos" id="modelos">
+                        <t t-set="camiones_con_misma_serie" t-value="request.env['camion'].sudo().search([('no_serie', '=', serie_camion)])" />
+                        <div class="content">
+                            <br></br>
+                            <div class="content_text block" data-seccion="1">
+                                <div id="carouselExampleControls7" class="carousel slide" data-bs-ride="carousel">
+                                    <!-- <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div> -->
+                                    <div class="carousel-inner">
+                                        <t t-set="serie_found" t-value="False"/>
+                                        <t t-foreach="camiones_con_misma_serie" t-as="camion">
+                                            <t t-if="camion.no_serie == serie_camion and not serie_found">
+                                                <t t-set="serie_found" t-value="True"/>
+                                                <div class="carousel-item active">
+                                                    <div class="todos">
+                                                        <t t-if="camion">
+                                                            <h3 class="nombre nombre-responsive" t-out="camion.name" />
+                                                        </t>
+                                                        <div class="hc">
+                                                            <img src="/website_hino/static/images/iconos/rectangulo-rojo.png" class="raya-roja" />
+                                                            <t t-if="camion.foto">
+                                                                <img t-att-src="'/web/image/camion/%s/foto' % camion.id" class="img-serie" />
+                                                            </t>
+                                                        </div>
+                                                        <div class="propiedades">
+                                                            <t t-if="camion">
+                                                                <h3 class="nombre" t-out="camion.name" />
+                                                            </t>
+                                                            <div class="container-pro" style="display: inline-block;">
+                                                                <div class="camion-peso" style="display: inline-block;">
+                                                                    <img src="/website_hino/static/images/iconos/capacidad.png" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Peso Bruto Vehicular <br></br>
+                                                                            <span class="datos" t-out="camion.peso_bruto" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                                <div class="camion-capacidad" style="display: inline-block; margin-left: 20px;">
+                                                                    <img src="/website_hino/static/images/iconos/capacidad-carga.svg" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Capacidad de la carga <br></br>
+                                                                            <span class="datos" t-out="camion.capacidad" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                                <br></br>
+                                                                <div class="camion-longitud" style="display: inline-block;">
+                                                                    <img src="/website_hino/static/images/iconos/_1.svg" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Longitud de Chasis <br></br>
+                                                                            <span class="datos" t-out="camion.longitud" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                            </div>
+                                                            <br></br>
+                                                            <div class="botones">
+                                                                <t t-if="camion">
+                                                                    <a t-attf-href="/web/content/{{ camion._name }}/{{ camion.id }}/ficha_tecnica" role="button" class="boton" download="NombreArchivo">
+                                                                        <img src="/website_hino/static/images/iconos/icon-ficha.png" alt="Icono" />
+                                                                        Descargar ficha técnica
+                                                                    </a>
+                                                                </t>
+                                                                <br></br>
+                                                                <a href="/contactus" class="boton1">
+                                                                    <img src="/website_hino/static/images/iconos/icon-cotizacion.png" />
+                                                                    Cotizar
+                                                                </a>
+                                                            </div>
+                                                            <br></br>
+                                                            <a t-attf-href="/camiones/series?camionId={{ camion.id }}" class="ver-btn">Ver Modelo</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                            <t t-else="">
+                                                <div class="carousel-item">
+                                                    <div class="todos">
+                                                        <t t-if="camion">
+                                                            <h3 class="nombre nombre-responsive" t-out="camion.name" />
+                                                        </t>
+                                                        <div class="hc">
+                                                            <img src="/website_hino/static/images/iconos/rectangulo-rojo.png" class="raya-roja" />
+                                                            <t t-if="camion.foto">
+                                                                <img t-att-src="'/web/image/camion/%s/foto' % camion.id" class="img-serie" />
+                                                            </t>
+                                                        </div>
+                                                        <div class="propiedades">
+                                                            <t t-if="camion">
+                                                                <h3 class="nombre" t-out="camion.name" />
+                                                            </t>
+                                                            <div class="container-pro" style="display: inline-block;">
+                                                                <div class="camion-peso" style="display: inline-block;">
+                                                                    <img src="/website_hino/static/images/iconos/capacidad.png" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Peso Bruto Vehicular <br></br>
+                                                                            <span class="datos" t-out="camion.peso_bruto" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                                <div class="camion-capacidad" style="display: inline-block; margin-left: 20px;">
+                                                                    <img src="/website_hino/static/images/iconos/capacidad-carga.svg" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Capacidad de la carga <br></br>
+                                                                            <span class="datos" t-out="camion.capacidad" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                                <br></br>
+                                                                <div class="camion-longitud" style="display: inline-block;">
+                                                                    <img src="/website_hino/static/images/iconos/_1.svg" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Longitud de Chasis <br></br>
+                                                                            <span class="datos" t-out="camion.longitud" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                            </div>
+                                                            <br></br>
+                                                            <div class="botones">
+                                                                <t t-if="camion">
+                                                                    <a t-attf-href="/web/content/{{ camion._name }}/{{ camion.id }}/ficha_tecnica" role="button" class="boton" download="NombreArchivo">
+                                                                        <img src="/website_hino/static/images/iconos/icon-ficha.png" alt="Icono" />
+                                                                        Descargar ficha técnica
+                                                                    </a>
+                                                                </t>
+                                                                <br></br>
+                                                                <a href="/contactus" class="boton1">
+                                                                    <img src="/website_hino/static/images/iconos/icon-cotizacion.png" />
+                                                                    Cotizar
+                                                                </a>
+                                                            </div>
+                                                            <br></br>
+                                                            <a t-attf-href="/camiones/series?camionId={{ camion.id }}" class="ver-btn">Ver Modelo</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </t>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls7" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls7" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+
+            <!-- Aqui agregar los enlaces a los script que sean nesecarios -->
+            <script src="/website_hino/static/src/js/swiper/swiper-bundle.min.js"></script>
+            <script src="/website_hino/static/src/js/series/series.js"></script>
+            <script src="/website_hino/static/src/js/series/galeria.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/series/modal.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+        </t>
+    </template>
+</odoo>

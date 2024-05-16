@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <odoo>
+    
+        <!-- Vista de árbol para el modelo Series -->
+        <record id="view_series_tree" model="ir.ui.view">
+            <field name="name">view.series.tree</field>
+            <field name="model">series</field>
+            <field name="arch" type="xml">
+                <tree string="Series">
+                    <field name="name"/>
+                    <field name="descripcion_serie"/>
+                    <field name="foto_serie" widget="image" size="small"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista tipo Kanban para el modelo Series -->
+    <record id="view_series_kanban" model="ir.ui.view">
+        <field name="name">view.series.kanban</field>
+        <field name="model">series</field>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" archivable="false" js_class="series_kanban" sample="1">
+                <field name="name"/>
+                <field name="foto_serie"/>
+                <field name="descripcion_serie"/>
+                <field name="no_serie"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_content oe_kanban_global_click">
+                            <div>
+                                <strong class="o_kanban_record_title">
+                                    <span>
+                                        <field name="name"/>
+                                    </span>
+                                </strong>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_subtitle">
+                                    <field name="no_serie"/>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_image">
+                                    <field name="foto_serie" widget="image" size="small"/>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_subtitle">
+                                    <field name="descripcion_serie"/>
+                                </span>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left">
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+        <!-- Vista de formulario para el modelo Series -->
+        <record id="view_series_form" model="ir.ui.view">
+            <field name="name">view.series.form</field>
+            <field name="model">series</field>
+            <field name="arch" type="xml">
+                <form string="Series">
+                    <header></header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Título..."/>
+                            </h1>
+                            <label for="no_serie"/>
+                            <h2>
+                                <field name="no_serie" placeholder="Serie del Camión..."/>
+                            </h2>
+                        </div>
+                        <group col="2">
+                            <group>
+                                <field name="foto_serie" widget="image" />
+                            </group>
+                            <group>
+                                <field name="descripcion_serie" placeholder="Descripción..."/>
+                                <field name="button_serie_text" placeholder="Texto del Botón..."/>
+                                <field name="button_serie_url" placeholder="URL del Botón..."/>
+                            </group>
+                        </group>
+                        <group col="2" string="Información de la Serie">
+                            <group>
+                                <field name="titulo" placeholder="Título..."/>
+                                <field name="texto_1" placeholder="Breve Información..."/>
+                                <field name="texto_2" placeholder="Breve Información 2..."/>
+                            </group>
+                            <group>
+                                <field name="cabinas_ids" widget="many2many_tags" options="{'no_quick_create': True}" />
+                                <field name="tabla_ids" string ="Tabla de Datos">
+                                    <tree editable="bottom">
+                                        <field name="peso_tn" placeholder="Peso en Tonelada..."/>
+                                        <field name="longitud" placeholder="Longitud del chasis..."/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                        <group col="2">
+                            <group string="Fotos de las Cabinas">
+                                <field name="foto_cabina_ancha" placeholder="Foto Cabina Ancha..." widget="image" size="small"/>
+                                <field name="foto_cabina_angosta" placeholder="Foto Cabina Angosta..." widget="image" size="small"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Vista de búsqueda para el modelo Series -->
+        <record id="view_series_search" model="ir.ui.view">
+            <field name="name">view.series.search</field>
+            <field name="model">series</field>
+            <field name="arch" type="xml">
+                <search string="Series">
+                    <group expand="1" string="Group By">
+                        <filter string="Título" name="name" domain="[]" context="{'group_by':'name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- Acción de ventana para abrir la vista de árbol y formulario de Serie -->
+        <record id="action_series" model="ir.actions.act_window">
+            <field name="name">Series</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">series</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No se ha registrado ninguna Serie.
+                </p>
+            </field>
+        </record>
+        <!-- Menú Superior Series-->
+        <menuitem 
+            id="menu_series" 
+            parent="menu_secciones"
+            name="Sección Series" 
+            action="action_series"
+            sequence="6"
+            />
+    
+</odoo> 

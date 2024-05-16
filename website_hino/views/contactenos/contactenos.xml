@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_contactenos_website" model="website.menu">
+        <field name="name">Contactenos</field>
+        <field name="url">contactenos</field>
+    </record>
+
+    <template id="hino_contactenos" name="Hino Contáctenos">
+        <t t-call="website.layout">
+            <t t-set="head">
+                <t t-call-assets="web.assets_common" t-js="false" />
+                <!-- <link rel="stylesheet" href="/website_hino/static/src/css/formulario.css" /> -->
+                <link rel="stylesheet" href="/website_hino/static/src/css/contactenos/contactenos.css" />
+            </t>
+            <section class="banner-contacto" t-attf-style="background-image:url('/website_hino/static/images/fondo-contactenos.png')">
+                <div>
+                    <div class="img bg-slide bg-slide-nosotros">
+                        <h3>contáctenos</h3>
+                        <p>
+                        Contáctenos sobre cualquier cosa relacionada 
+                        con nuestra empresa o servicios.Haremos todo 
+                        lo posible por responderle con brevedad. 
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Formulario -->
+            <section class="form_main">
+                <section class="s_website_form main-contacto" data-vcss="001" data-snippet="s_website_form" data-name="Formulario">
+                    <div class="o_container_small">
+                        <h4>escríbenos</h4>
+                        <form action="/website/form/" method="post" enctype="multipart/form-data" data-mark="*" data-pre-fill="true" data-model_name="crm.lead">
+                            <div class="s_website_form_rows">
+
+                                <div data-name="Field" class="s_website_form_field campo_nombre s_website_form_required" data-type="char">
+                                    <div class="row">
+                                        <label class="" style="width: 200px" for="o6f2b6awhh4g">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-user.png" />
+                                            <span class="s_website_form_label_content">
+                    Nombre</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="o6f2b6awhh4g" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_apellido s_website_form_custom" data-type="char">
+                                    <label class="s_website_form_label" for="o6f2b6awhh4g">
+                                        <img id="form-icon" src="/website_hino/static/images/iconos/icon-user.png" />
+                                        <span class="s_website_form_label_content">Apellido</span>
+                                    </label>
+                                    <input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="o6f2b6awhh4g" />
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_correo s_website_form_required" data-type="email">
+                                    <div class="row">
+                                        <label class="col-form-label  s_website_form_label" for="oywj7qvvtat">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-email.png" />
+                                            <span class="s_website_form_label_content">
+                    Correo</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input" type="email" name="email_from" required="1" data-fill-with="email" id="oywj7qvvtat" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-name="Field" class="s_website_form_field campo_tlf" data-type="tel">
+                                    <div class="row">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" for="oyx5ze4zxn3">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-phone.png" />
+                                            <span class="s_website_form_label_content">
+                    Celular</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input" type="tel" name="phone" data-fill-with="phone" id="oyx5ze4zxn3" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-name="Field" class="s_website_form_field campo_ciudad s_website_form_custom" data-type="many2one">
+                                    <label class="col-form-label col-sm-auto s_website_form_label" for="ogdf4jd1c6wp">
+                                        <img id="form-icon" src="/website_hino/static/images/iconos/icon-localization.png" />
+                                        <span class="s_website_form_label_content">Ciudad</span>
+                                    </label>
+                                    <select class="s_website_form_input" name="city" id="ogdf4jd1c6wp" data-fill-with="commercial_company_name">
+                                        <option value="Panamá">Panamá</option>
+                                        <option value="Panamá Oeste">Panamá Oeste</option>
+                                        <option value="Colón">Colón</option>
+                                        <option value="Herrera">Herrera</option>
+                                        <option value="Cloque">Cloque</option>
+                                        <option value="Los Santos">Los Santos</option>
+                                        <option value="Veraguas">Veraguas</option>
+                                        <option value="Chiriquí">Chiriquí</option>
+                                        <option value="Darién">Darién</option>
+                                        <option value="Bocas del Toro">Bocas del Toro</option>
+                                    </select>
+
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_contacto s_website_form_model_required" data-type="char">
+                                    <label class="s_website_form_label" for="contacto">
+                                        <img id="form-icon" src="/website_hino/static/images/iconos/icon-message.png" />
+                                        <span class="s_website_form_label_content">Motivo
+                del Contacto</span>
+                                    </label>
+                                    <input class="s_website_form_input " type="text" name="name" required="" placeholder="" id="contacto" data-fill-with="undefined" />
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_terminos s_website_form_custom s_website_form_required" data-type="boolean">
+                                    <label class="s_website_form_label" for="terminos">
+                                        <input type="checkbox" value="Yes" class="s_website_form_input" name="Acepto Término y Condiciones" required="1" id="terminos" data-fill-with="undefined" />
+                                        <span class="s_website_form_label_content">Acepto
+                Términos y Condiciones</span>
+                                    </label>
+                                </div>
+
+                                <div class="s_website_form_submit s_website_form_no_submit_label" data-name="Submit Button">
+
+
+                                    <a href="#" role="button" class="btn s_website_form_send o_default_snippet_text" data-bs-original-title="" title="">Enviar<i class="fa fa-paper-plane"></i>
+                                    </a>
+                                    <span id="s_website_form_result"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-4 mt-4 mt-lg-0 datos-contacto">
+                        <ul class="list-unstyled mb-0 ps-2">
+                            <t t-foreach="request.env['info.contacto'].sudo().search([])" t-as="contacto">
+                                <h4>datos de contacto</h4>
+                                <li>
+                                    <i class="fa fa-phone fa-fw me-2 fa-2x"/>
+                                    <span class="o_force_ltr">
+                                        <t t-if="contacto">
+                                            <a class="phone" t-att-href="'tel:' + contacto.numero_phone">
+                                                <t t-out="contacto.numero_phone" />
+                                            </a>
+                                        </t>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker fa-fw me-2 fa-2x"/>
+                                    <span class="o_force_ltr">
+                                        <t t-if="contacto">
+                                            <t t-out="contacto.direccion" />
+                                        </t>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-1x fa-fw fa-envelope me-2 fa-2x"/>
+                                    <span>
+                                        <t t-if="contacto">
+                                            <a class="email" t-att-href="'mailto:' + contacto.email">
+                                                <t t-out="contacto.email" />
+                                            </a>
+                                        </t>
+                                    </span>
+                                </li>
+                            </t>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Aqui agragar los enlaces a los script que sean nesecarios -->
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+            
+        </t>
+    </template>
+</odoo>

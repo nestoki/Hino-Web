@@ -1,0 +1,14 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_camion_manager,camion_manager,model_camion,,1,1,1,1
+access_info_contacto_manager,info_contacto_manager,model_info_contacto,,1,1,1,1
+access_novedades_manager,novedades_manager,model_novedades,,1,1,1,1
+access_slider_main_manager,slider_main_manager,model_slider_main,,1,1,1,1
+access_soporte_total_manager,soporte_total_manager,model_soporte_total,,1,1,1,1
+access_camion_galeria_manager,camion_galeria_manager,model_camion_galeria,,1,1,1,1
+access_aplicacion_aplicacion_manager,aplicacion_aplicacion_manager,model_aplicacion_aplicacion,,1,1,1,1
+access_series_manager,series_manager,model_series,,1,1,1,1
+access_sucursales_manager,sucursales_manager,model_sucursales,,1,1,1,1
+access_servicios_manager,servicios_manager,model_servicios,,1,1,1,1
+access_cabina_cabina_manager,cabina_cabina_manager,model_cabina_cabina,,1,1,1,1
+access_tabla_serie_manager,tabla_serie_manager,model_tabla_serie,,1,1,1,1
+access_servicios_soporte_manager,servicios_soporte_manager,model_servicios_soporte,,1,1,1,1

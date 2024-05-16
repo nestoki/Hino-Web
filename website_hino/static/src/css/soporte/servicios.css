@@ -1,0 +1,1234 @@
+/* Importación de las Fuentes */
+@font-face { 
+    font-family: "HelveticaNeue"; 
+    font-weight: 500; 
+    src: 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.woff") format("woff"), 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.ttf") format("truetype"); 
+} 
+
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    font-weight: 300;
+    src:
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.woff") format("woff"),
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.ttf") format("truetype");
+}
+/* CSS del contenido Principal (main) de la pagina */ 
+ 
+/* Slider de imagenes  con sus textos y botones de llamada a la accion*/ 
+ 
+.swiper-container-slider-servicios { 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100%; 
+    height: 100%; 
+} 
+ 
+.swiper-slide { 
+    text-align: center; 
+    background: #fff; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-right: 0 !important; 
+}
+
+.swiper-slide:active{
+    width: 100% !important;
+} 
+ 
+.swiper-slide img { 
+    display: block; 
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+} 
+ 
+.swiper-pagination-bullet { 
+    background-color: #be0a0a; 
+    width: 60px; 
+    height: 6px; 
+    border-radius: 3px; 
+} 
+ 
+.bg-slide{ 
+    height: 600px; 
+    width: 100%; 
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    justify-content: right; 
+} 
+ 
+.swiper-slide .container-title-servicios{ 
+    display: flex; 
+    flex-direction: column; 
+    max-width: 1200px; 
+    width: 100%; 
+    margin: 0 auto; 
+    padding-top: 5%; 
+    align-items: self-start; 
+    gap: 4%; 
+} 
+ 
+.container-title-servicios .slider-text { 
+    font-weight: 900; 
+    font-size: 35px; 
+    line-height: 38.6px; 
+    text-align: left; 
+    letter-spacing: 4px; 
+    text-transform: uppercase; 
+    width: 60%; 
+    margin: 0; 
+    padding: 0; 
+    color: #ffffff; 
+    
+} 
+ 
+.container-title-servicios .slider-2-text { 
+    font-weight: 500; 
+    font-size: 20px; 
+    line-height: 22px; 
+    text-align: left; 
+    width: 50%; 
+    margin: 0; 
+    padding: 0; 
+    color: #ffffff;
+} 
+ 
+.call-action-btn { 
+    background-image: linear-gradient(to right, #E60013, #BF001B, #8D0007); 
+    color: #ffffff;
+    font-size: 20px; 
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    cursor: pointer; 
+} 
+ 
+.call-action-btn:hover { 
+    background-image: linear-gradient(to right, #d81525, #b40f25, #8d0e15);
+    color: #ffffff;
+    text-decoration: none;
+} 
+ 
+.main_container { 
+    background-color: #fffefe; 
+    color: #fff;
+    margin: 0; 
+    padding: 0; 
+}
+
+/* RESPONSIVE SLIDER MAIN */
+
+@media only screen and (max-width: 1300px){
+    .swiper-slide .container-title-servicios{
+      max-width: 1000px;
+    }
+
+    .swiper-slide .container-title-servicios .slider-text{
+        width: 65%;
+        font-size: 35px;
+        line-height: 37px;
+      }
+}
+
+@media only screen and (max-width: 1100px){
+    .swiper-slide .container-title-servicios{
+        max-width: 900px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .swiper-slide .container-title-servicios {
+        max-width: 800px;
+    }
+
+    .swiper-slide .container-title-servicios {
+        justify-content: space-around;
+        padding-top: 0 !important;
+    }
+
+    .swiper-slide .container-title-servicios .slider-text{
+        width: 56%;
+        font-size: 30px;
+    }
+
+    .container-title-servicios .slider-2-text{
+        display: none;
+    }
+
+    .call-action-btn {
+        padding: 18px 30px;
+    }
+}
+
+@media (max-width: 900px){
+    .swiper-slide .container-title-servicios {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 800px){
+    .swiper-slide .container-title-servicios .slider-text {
+        width: 60%;
+        font-size: 25px;
+        line-height: 35px;
+    }
+}
+
+@media (max-width: 700px){
+    .swiper-slide .container-title-servicios .slider-text {
+        width: 60%;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .call-action-btn {
+        padding: 12px 25px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .slider-servicios .bg-slide{
+        height: 400px !important;
+    }
+
+    .swiper-slide .container-title-servicios .slider-text{
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px){
+    .swiper-slide .container-title-servicios .slider-text {
+        width: 60%;
+        font-size: 12px;
+        line-height: 20px;
+    } 
+    
+    .call-action-btn {
+        padding: 10px 22px;
+        font-size: 16px;
+    }
+}
+
+/* SERVICIOS */
+
+.servicios{
+    padding: 5% 0;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.servicios h3{
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.servicios .servicios-articulos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4%;
+}
+
+.servicios .servicios-articulos > .servicio{
+    width: 31%;
+}
+
+.servicios .servicios-articulos > .servicio figure{
+    margin: 0;
+}
+
+.servicios .servicios-articulos > .servicio figure img{
+    width: 100%;
+    border-radius: 48px 0 0 0;
+}
+
+.servicios .servicios-articulos > .servicio h4{
+    background-image: url(/website_hino/static/images/fondo-rojo-blanco.png);
+    background-repeat: no-repeat;
+    font-size: 20px;
+    height: 50px;
+    font-weight: 700;
+    position: relative;
+    top: -15px;
+    color: #ffffff;
+    padding-left: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.servicios .servicios-articulos > .servicio p{
+    font-size: 20px;
+    text-align: left;
+}
+
+.servicios > a{
+    background-color: #E02413;
+    color: #FFF;
+    padding: 1% 2%;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.servicios > h3{
+    background-image: url("/website_hino/static/images/fondo-title-servicios.png");
+    background-size: 400px 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-image: none;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+    height: 40px;
+}
+
+/* SERVICIOS RESPONSIVE */
+
+@media only screen and (max-width: 1300px){
+    .servicios{
+        max-width: 1000px;
+    }
+
+    .servicios .servicios-articulos > .servicio{
+        width: 32%;
+    }
+
+    .servicios .servicios-articulos > .servicio h4{
+        background-size: contain;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .servicios .servicios-articulos > .servicio p{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .servicios{
+        max-width: 900px;
+    }
+
+    .servicios .servicios-articulos > .servicio h4{
+        font-size: 16px;
+        font-weight: 900;
+    }
+
+    .servicios .servicios-articulos > .servicio p{
+        line-height: 25px;
+    }
+
+    .servicios > a {
+        padding: 1.5% 4%;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .servicios{
+        max-width: 800px;
+    }
+
+    .servicios .servicios-articulos{
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .servicios .servicios-articulos > .servicio{
+        width: 60%;
+    }
+
+    .servicios .servicios-articulos > .servicio h4{
+        font-size: 20px;
+        background-size: 100%;
+        height: 80px;
+    }
+
+    .servicios .servicios-articulos > .servicio p{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .servicios > a{
+        display: flex;
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .servicios{
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .servicios > h3{
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .servicios .servicios-articulos > .servicio h4{
+        height: 68px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .servicios > h3{
+        font-size: 20px;
+    }
+
+    .servicios .servicios-articulos > .servicio{
+        width: 70%;
+    }
+
+    .servicios .servicios-articulos > .servicio h4{
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .servicios .servicios-articulos > .servicio p{
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .servicios > a{
+        font-size: 18px;
+        width: 70%;
+        padding: 2.5% 4%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .servicios .servicios-articulos > .servicio {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .servicios > h3{
+        background-size: contain;
+    }
+
+    .servicios .servicios-articulos > .servicio {
+        width: 100%;
+    }
+
+    .servicios > a{
+        width: 90%;
+        padding: 3% 4%;
+    }
+
+}
+
+/* GARANTIAS HINO */
+
+.garantias{
+    background-image: url(../../../images/fondo-garantias.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 3%;
+}
+
+.garantias h3{
+    text-align: center;
+    color: #FFF;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.garantias .garantias-articulos{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.garantias .garantias-articulos .garantia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.garantias .garantias-articulos .garantia figure{
+    position: relative;
+    z-index: 10;
+    width: 160px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.garantias .garantias-articulos .garantia figure img{
+    width: 100%;
+    height: 100%;
+}
+
+.garantia-info{
+    position: absolute;
+    background: white;
+    bottom: -100px;
+    margin: 0;
+    height: 190px;
+    display: flex;
+    align-items: self-end;
+    width: 150%;
+    padding: 15%;
+    border-radius: 20px;
+    z-index: 5;
+    font-size: 16px;
+    color: #878787;
+    box-shadow: 0px 5px 5px 0px #00000026;
+}
+
+/* GARANTIAS SLIDER RESPONSIVE */
+
+#slider{
+    display: none;
+    max-height: 450px;
+    overflow-x: auto;
+    width: 50%;
+    margin: 0 auto;
+    height: 80%;
+}
+
+#slider::-webkit-scrollbar{
+    width: 0;
+}
+
+#slider > article{
+    min-width: 100%;
+    text-align: center;
+    margin-right: 5px;
+}
+
+#slider > article figure{
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+#slider > article figure img{
+    width: 100%;
+}
+
+#slider > article p{
+    width: 100%;
+    bottom: 20px;
+    padding: 10%;
+}
+
+.fondo-garantias{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #E8E8E8;
+    z-index: -1;
+}
+
+
+/* GARANTIAS HINO RESPONSIVE */
+
+@media only screen and (max-width: 1100px){
+    .garantias .garantias-articulos{
+        max-width: 900px;
+    }
+
+    .garantias .garantias-articulos .garantia{
+        width: 24%;
+    }
+
+    .garantias .garantias-articulos .garantia p{
+        width: 100%;
+        padding: 10%;
+        height: 198px;
+        bottom: -110px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .garantias .garantias-articulos{
+        max-width: 800px;
+    }
+
+    .garantias .garantias-articulos .garantia p {
+        height: 190px;
+        bottom: -95px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .garantias .garantias-articulos{
+        max-width: 90%;
+    }
+
+    .garantias .garantias-articulos .garantia p{
+        padding: 8%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .garantias{
+        height: 360px;
+        background-size: contain;
+    }
+
+    .garantias h3{
+        font-size: 25px;
+    }
+
+    .garantias .garantias-articulos{
+        display: none;
+    }
+
+    #slider{
+        display: flex;
+        height: 90%;
+    }
+
+    #slider > article > div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #slider > article figure{
+        width: 45%;
+    }
+
+    #slider > article p{
+        bottom: 5px;
+        padding: 10%;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 767.98px){
+    .garantias{
+        height: 360px !important;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .garantias h3{
+        font-size: 20px;
+    }
+
+    #slider{
+        width: 60%;
+    }
+
+    #slider > article figure{
+        width: 40%;
+    }
+
+    #slider > article p{
+        bottom: 24px;
+        padding: 8%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .garantias{
+        background-size: cover;
+        background-position: right;
+        padding-top: 5%;
+    }
+
+    #slider{
+        width: 80%;
+    }
+
+    #slider > article p{
+        bottom: 20px;
+        padding: 6%;
+        height: 180px;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+    .garantias h3{
+        font-size: 18px;
+    }
+
+    #slider > article p{
+        bottom: 40px;
+        height: 170px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    #slider > article p{
+        bottom: 60px;
+        height: 160px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    #slider{
+        width: 90%;
+    }
+
+    #slider > article figure{
+        width: 50%;
+    }
+
+    #slider > article p{
+        width: 100%;
+        bottom: 50px;
+        line-height: 22px;
+        height: 160px;
+    }
+}
+
+
+/* SERVICIOS DATOS */
+
+
+.servicios-total-datos{
+    background-color: #E8E8E8;
+    height: 465px;
+    padding-top: 6%;
+}
+
+.servicios-total-datos > div{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.servicios-total-datos > div article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 206px;
+}
+
+.servicios-total-datos > div article > figure{
+    width: 90px;
+    height: 90px;
+    margin: 0;
+}
+
+.servicios-total-datos > div article > figure > img{
+    width: 100%;
+    height: 100%;
+} 
+
+.servicios-total-datos article > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios-total-datos article span{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.servicios-total-datos article .grupo-toyota{
+    text-align: center;
+}
+
+.servicios-total-datos article .datos-numeros{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* RESPONSIVE HINO DATOS */
+
+@media only screen and (max-width: 1300px){
+    .servicios-total-datos > div{
+        max-width: 1000px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .servicios-total-datos{
+        padding-top: 14%;
+        height: 450px;
+    }
+
+    .servicios-total-datos > div{
+        max-width: 900px;
+    }
+
+    .servicios-total-datos > div article > figure {
+        width: 50px;
+        height: 50px;
+    }
+
+    .servicios-total-datos > div article > .icono-hino {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .servicios-total-datos article span {
+        font-size: 18px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
+    .servicios-total-datos{
+        padding-top: 8%;
+    }
+
+    .servicios-total-datos > div {
+        max-width: 800px;
+    }
+
+    .servicios-total-datos > div article {
+        height: 40%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .servicios-total-datos > div {
+        max-width: 90%;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .servicios-total-datos{
+        padding-top: 0;
+        height: 300px;
+    }
+
+    .servicios-total-datos article span {
+        font-size: 16px !important;
+    }
+}
+
+@media only screen and (max-width: 767.98px){
+
+    .servicios-total-datos {
+        height: 230px !important;
+    }
+    
+}
+
+@media only screen and (max-width: 600px){
+
+    .servicios-total-datos {
+        height: auto !important;
+        padding: 8% 0;
+    }
+    
+    .servicios-total-datos > div {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-left: 9%;
+    }
+
+    .servicios-total-datos > div article {
+        width: 47%;
+        flex-direction: row;
+        justify-content: left;
+        gap: 5%;
+        align-items: center;
+    }
+
+    .servicios-total-datos article > div {
+        align-items: start;
+    }
+
+    .servicios-total-datos > div article > figure{
+        margin-bottom: 0;
+    }
+
+    .servicios-total-datos article .grupo-toyota {
+        text-align: left;
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .servicios-total-datos > div {
+        padding-left: 6%;
+    }
+
+    .servicios-total-datos article span {
+        font-size: 14px !important;
+    }
+
+}
+
+@media only screen and (max-width: 450px){
+    .servicios-total-datos > div {
+        padding-left: 4%;
+    }
+
+    .servicios-total-datos > div article > figure {
+        width: 40px;
+        height: 40px;
+    }
+
+    .servicios-total-datos > div article > .icono-hino {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .servicios-total-datos > div {
+        padding-left: 5%;
+    }
+
+    .servicios-total-datos article span {
+        font-size: 12px !important;
+    }
+
+    .servicios-total-datos > div article {
+        width: 45%;
+    }
+
+    .servicios-total-datos > div article > figure {
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+
+/* Estilos Formulario y foto  */ 
+
+ 
+.form-main-servicios{ 
+    width: 100%;
+    margin-bottom: 0px;
+    background-color: #111;
+    overflow: hidden;
+} 
+ 
+.s_website_form { 
+    position: relative; 
+    display: flex; 
+    justify-content: space-between;
+    background-color: #111111;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 5%;
+} 
+ 
+.o_container_small { 
+    width: 50%;
+    padding: 4% 0;
+    margin: 0;
+} 
+
+.s_website_form > .text-img-servicios{
+    width: 75%;
+    background-image: url(../../../images/taller-hino.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    right: -365px;
+    top: 0;
+}
+
+.s_website_form > .text-img-servicios .capa{
+    width: calc(100% + 3px);
+    height: 100%;
+    background: linear-gradient(to right, #111, transparent);
+    position: relative;
+    left: -3px;
+}
+ 
+.s_website_form_rows { 
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 6%; 
+} 
+ 
+.s_website_form_field { 
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 10px;
+} 
+
+.campo_nombre, .campo_apellido,.campo_correo, .campo_tlf{
+    width: 47%;
+}
+
+.campo_ciudad,.campo_contacto, .campo_terminos{
+    width: 100%;
+}
+
+.campo_terminos{
+    margin: 3% 0 4% 0;
+}
+
+.campo_contacto{
+    margin-top: 2%;
+}
+
+.campo_contacto label{
+    margin-bottom: 2% !important;
+}
+ 
+.s_website_form_field > .row{
+    display: flex;
+    flex-direction: column;
+}
+ 
+.s_website_form_field label { 
+    width: 100%; 
+    margin-bottom: 0; 
+} 
+ 
+.s_website_form_field input, .s_website_form_field select { 
+    background-color: #111111; 
+    color: #ffffff; 
+    margin: 0; 
+    padding: 0; 
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #f50a0a; 
+    border-radius: 0; 
+    width: 100%; 
+    box-sizing: border-box; 
+ 
+} 
+ 
+.s_website_form_field select { 
+    width: 100%; 
+    height: 25px; 
+} 
+ 
+input[name="name"] { 
+    width: 100%; 
+    height: 25px; 
+} 
+ 
+.s_website_form_field input[type="checkbox"] { 
+    width: 15px; 
+    position: relative;
+}
+
+.s_website_form_field label{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    color: gray;
+    font-size: 16px;
+}
+ 
+.s_website_form_submit { 
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-right: 140px;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.s_website_form_submit > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    font-size: 16px;
+    width: 135px;
+    height: 40px;
+}
+ 
+.btn { 
+    background-color: #E02413;
+    color: #ffffff; 
+    padding: 6px 18px; 
+    border: none; 
+    border-radius: 9px; 
+    cursor: pointer; 
+    text-decoration: none; 
+} 
+ 
+#form-icon{ 
+    width: 16px;
+    height: 16px;
+} 
+
+.image-text { 
+    position: absolute; 
+    font-weight: 800; 
+    font-size: 40px; 
+    top: 40%; 
+    color: #fff; 
+    line-height: 60px;
+    padding-left: 5%;
+} 
+
+.row-copi{ 
+    margin-left: 35% 
+}
+
+.form-title-responsive{
+    display: none;
+}
+
+/* RESPONSIVE FORMULARIO */
+
+@media only screen and (max-width: 1300px){
+    .s_website_form{
+        max-width: 1000px;
+    }
+
+    .s_website_form > .text-img-servicios{
+        background-size: cover;
+        background-position: right;
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 1100px){
+    
+    .s_website_form{
+        max-width: 900px;
+    }
+
+    .s_website_form > .text-img-servicios{
+        width: 88%;
+    }
+
+    .image-text{
+        font-size: 30px;
+    }
+
+    .image-text br{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
+    .s_website_form{
+        max-width: 100%;
+        height: 1000px;
+        gap: 0;
+        display: inline-block;
+    }
+
+    .s_website_form .o_container_small{
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .s_website_form > .text-img-servicios{
+        width: 100%;
+        height: 38%;
+        right: 0;
+        bottom: 0;
+        top: initial;
+    }
+
+    .image-text {
+        display: none;
+    }
+
+    .form-title-responsive{
+        display: flex;
+        justify-content: center;
+        color: #FFF;
+        margin-top: 4%;
+        margin-bottom: 0;
+        font-weight: 800;
+        font-size: 30px;
+    }
+
+    .s_website_form > .text-img-servicios .capa{
+        background: linear-gradient(to bottom, #111, transparent);
+        height: calc(100% + 3px);
+        position: relative;
+        top: -3px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+
+    .s_website_form{
+        height: 1180px;
+    }
+
+    .form-title-responsive{
+        font-size: 25px;  
+    }
+
+    .campo_nombre, .campo_apellido, .campo_correo, .campo_tlf {
+        width: 100%;
+    }
+
+    .s_website_form > .text-img-servicios {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767.98px){
+    .s_website_form{
+        height: 1180px !important;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .form-title-responsive{
+        font-size: 20px;  
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .s_website_form{
+        height: 1100px !important;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .s_website_form{
+        height: 1020px !important;
+    }
+
+    .form-title-responsive{
+        font-size: 18px;  
+        margin: 6% 0 3% 0;
+    }
+
+    .s_website_form_field input, .s_website_form_field select{
+        font-size: 15px;
+    }
+
+    .s_website_form_submit > a {
+        font-size: 15px;
+    }
+}

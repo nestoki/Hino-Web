@@ -1,0 +1,296 @@
+/* Importación de las Fuentes */
+@font-face { 
+    font-family: "HelveticaNeue"; 
+    font-weight: 500; 
+    src: 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.woff") format("woff"), 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.ttf") format("truetype"); 
+} 
+
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    font-weight: 300;
+    src:
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.woff") format("woff"),
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.ttf") format("truetype");
+}
+/* Estilos Formulario y foto  */ 
+
+.titulo-form-responsive{
+    display: none;
+    font-size: 25px;
+    color: #FFF;
+    margin-bottom: 5%;
+    
+}
+ 
+.form_main{ 
+    width: 100%;
+    padding: 4% 0;
+    margin-bottom: 0px;
+    background-color: #111;
+    overflow: hidden;
+} 
+ 
+.s_website_form { 
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    background-color: #111111;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 5%;
+} 
+ 
+.o_container_small { 
+    width: 50%;
+    padding: 0;
+    margin: 0;
+} 
+
+.s_website_form > .text-img{
+    width: 45%;
+}
+ 
+.s_website_form_rows { 
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 6%; 
+} 
+ 
+.s_website_form_field { 
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 10px;
+} 
+
+.campo_nombre, .campo_apellido,.campo_correo, .campo_tlf{
+    width: 47%;
+}
+
+.campo_ciudad,.campo_contacto, .campo_terminos{
+    width: 100%;
+}
+
+.campo_terminos{
+    margin: 3% 0 4% 0;
+}
+
+.campo_contacto{
+    margin-top: 2%;
+}
+
+.campo_contacto label{
+    margin-bottom: 2% !important;
+}
+ 
+.s_website_form_field > .row{
+    display: flex;
+    flex-direction: column;
+}
+ 
+.s_website_form_field label { 
+    width: 100%; 
+    margin-bottom: 0; 
+} 
+ 
+ 
+.s_website_form_field input, .s_website_form_field select { 
+    background-color: #111111; 
+    color: #ffffff; 
+    margin: 0; 
+    padding: 0; 
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #f50a0a; 
+    border-radius: 0; 
+    width: 100%; 
+    box-sizing: border-box; 
+ 
+} 
+ 
+.s_website_form_field select { 
+    width: 100%; 
+    height: 25px; 
+} 
+ 
+input[name="name"] { 
+    width: 100%; 
+    height: 25px; 
+} 
+ 
+.s_website_form_field input[type="checkbox"] { 
+    width: 15px; 
+    position: relative;
+}
+
+.s_website_form_field label{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    color: gray;
+    font-size: 16px;
+}
+ 
+.s_website_form_submit { 
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-right: 140px;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.s_website_form_submit > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    font-size: 16px;
+    width: 135px;
+    height: 40px;
+}
+ 
+.btn { 
+    background-color: #E02413;
+    color: #ffffff; 
+    padding: 6px 18px; 
+    border: none; 
+    border-radius: 9px; 
+    cursor: pointer; 
+    text-decoration: none; 
+} 
+ 
+#form-icon{ 
+    width: 16px;
+    height: 16px;
+} 
+ 
+.sucursal-img { 
+    position: relative; 
+    bottom: -78px;
+    left: -8%; 
+    width: 900px; 
+    height: auto; 
+    margin-top: 14%; 
+    margin-left: 48px; 
+}
+
+.image-text { 
+    position: absolute; 
+    font-weight: 800; 
+    font-size: 30px; 
+    top: 0; 
+    color: #fff; 
+    line-height: 40px;
+} 
+
+.image-text > br{
+    display: none;
+}
+
+.row-copi{ 
+    margin-left: 35% 
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1300px){
+    
+    .s_website_form{
+        max-width: 1000px;
+    }
+
+}
+
+@media only screen and (max-width: 1100px){
+    
+    .s_website_form{
+        max-width: 900px;
+    }
+
+    .image-text{
+        top: -40px;
+    }
+
+    .sucursal-img{
+        bottom: -112px;
+        left: -15%;
+        width: 560px;
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
+    .s_website_form{
+        max-width: 800px;
+    }
+
+    .image-text {
+        font-size: 28px;
+        top: -25px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .s_website_form{
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+
+    .titulo-form-responsive{
+        display: flex;
+        text-align: center;
+        
+    }
+
+    .form_main{
+        height: 930px;
+        padding: 5% 0 0 0;
+    }
+
+    .s_website_form{
+        flex-direction: column;
+    }
+
+    .o_container_small {
+        width: 100%;
+    }
+
+    .campo_nombre, .campo_apellido, .campo_correo, .campo_tlf {
+        width: 100%;
+    }
+
+    .s_website_form > .text-img {
+        width: 100%;
+    }
+
+    .image-text {
+        display: none;
+    }
+
+    .sucursal-img {
+        bottom: 0px;
+        left: 42px;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .titulo-form-responsive {
+        font-size: 20px;
+    }
+
+    .s_website_form_field input, .s_website_form_field select{
+        font-size: 15px;
+    }
+
+    .s_website_form_submit > a {
+        font-size: 15px;
+    }
+}
+

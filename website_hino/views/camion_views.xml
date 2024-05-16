@@ -1,0 +1,179 @@
+<odoo>
+    <data>
+        <!-- Vista de árbol para el modelo Camión -->
+        <record id="view_camion_tree" model="ir.ui.view">
+            <field name="name">view.camion.tree</field>
+            <field name="model">camion</field>
+            <field name="arch" type="xml">
+                <tree string="Camion">
+                    <field name="name"/>
+                    <field name="foto" widget="image" size="small"/>
+                    <field name="no_serie"/>
+                    <field name="descripcion"/>
+                    <field name="peso_bruto"/>
+                    <field name="capacidad"/>
+                    <field name="longitud"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Vista tipo Kanban para el modelo Camión -->
+        <record id="view_camion_kanban" model="ir.ui.view">
+            <field name="name">view.camion.kanban</field>
+            <field name="model">camion</field>
+            <field name="priority" eval="100"/>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile" archivable="false" js_class="camion_kanban" sample="1">
+                    <field name="name"/>
+                    <field name="foto"/>
+                    <field name="no_serie"/>
+                    <field name="descripcion"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_content oe_kanban_global_click">
+                                <div>
+                                    <strong class="o_kanban_record_title">
+                                        <span>
+                                            <field name="name"/>
+                                        </span>
+                                    </strong>
+                                </div>
+                                <div>
+                                    <span class="o_kanban_record_image">
+                                        <field name="foto" widget="image" size="small"/>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="o_kanban_record_subtitle">
+                                        <field name="no_serie"/>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="o_kanban_record_subtitle">
+                                        <field name="descripcion"/>
+                                    </span>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left">
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Vista de formulario para el modelo Camión -->
+        <record id="view_camion_form" model="ir.ui.view">
+            <field name="name">view.camion.form</field>
+            <field name="model">camion</field>
+            <field name="arch" type="xml">
+                <form string="Camion">
+                    <header></header>
+                    <sheet>
+                        <div col="2" class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Nombre..."/>
+                            </h1>
+                            <label for="no_serie"/>
+                            <h2>
+                                <field name="no_serie" placeholder="Serie del Camión..."/>
+                            </h2>
+                        </div>
+                        <group col="2">
+                            <group name="name" string="Capacidad">
+                                <field name="peso_bruto" placeholder="Peso Bruto Vehicular..."/>
+                                <field name="peso_chasis" placeholder="Peso del Chasis..."/>
+                                <field name="capacidad" placeholder="Capacidad del camión..."/>
+                                <field name="longitud" placeholder="Longitud utizable del Chasis..."/>
+                                <field name="tipo_rueda" placeholder="Tipo de rueda..."/>
+                            </group>
+                            <group string="Imagen">
+                                <field name="foto" widget="image" size="small"/>
+                            </group>
+                            <group name="name" string="Motor">
+                                <field name="modelo_motor" placeholder="Modelo del Motor..."/>
+                                <field name="tipo_inyeccion" placeholder="Tipo Inyección..."/>
+                                <field name="potencia" placeholder="Potencia..."/>
+                                <field name="torque" placeholder="Torque..."/>
+                                <field name="alternador" placeholder="Alternador..."/>
+                            </group>
+                            <group name="name" string="Transmisión">
+                                <field name="tipo_transmision" placeholder="Tipo de Transmisión..."/>
+                            </group>
+                        </group>
+                        <group col="2">
+                            <group string="Más Información del Camión">
+                                <field name="descripcion" placeholder="Breve Descripción..."/>
+                                <field name="aplicacion_ids" widget="many2many_tags" options="{'no_quick_create': True}" />
+                                <field name="cabinas_ids" widget="many2many_tags" options="{'no_quick_create': True}" />
+                                <field name="video_camion" placeholder="Agregue el link del Video aquí..."/>
+                                <field name="ficha_tecnica" placeholder="Sube la ficha técnica aquí..."/>
+                                <field name="vista_360_url" placeholder="Agregue el link de la vista aquí..."/>
+                            </group>
+                            <group string="Garantía">
+                                <field name="sello_garantia"  widget="image" size="small"/>
+                            </group>
+                        </group>
+                        <!-- <group col="2">
+                            <group string="Descripción">
+                                <field name="descripcion" placeholder="Breve Descripción..."/>
+                                <field name="video_camion" placeholder="Agregue el link del Video aquí..."/>
+                                <field name="ficha_tecnica" placeholder="Sube la ficha técnica aquí..."/>
+                            </group>
+                            <group string="Cabinas">
+                                <field name="cabinas_ids" widget="many2many_tags" options="{'no_quick_create': True}" />
+                                <field name="vista_360_url" placeholder="Agregue el link de la vista aquí..."/>
+                                <br></br>
+                                <br></br>
+                            </group>
+                        </group> -->
+
+                        <br></br>
+                        <br></br>
+                        <group col ="1">
+                            <field name="galeria_ids" widget="one2many_list" string ="Galería de Imágenes">
+                                <tree editable="bottom">
+                                    <field name="image_name" placeholder="Nombre de la Imagen..."/>
+                                    <field name="image_data" widget="image" size="small"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vista de búsqueda para el modelo Camión -->
+        <record id="view_camion_search" model="ir.ui.view">
+            <field name="name">view.camion.search</field>
+            <field name="model">camion</field>
+            <field name="arch" type="xml">
+                <search string="Camion">
+                    <group expand="1" string="Group By">
+                        <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- Acción de ventana para abrir la vista de árbol y formulario de Camión -->
+        <record id="action_camion" model="ir.actions.act_window">
+            <field name="name">Camion</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">camion</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+              No se han registrado datos de camiones
+                </p>
+            </field>
+        </record>
+        <!-- Menú  Hino Camiones-->
+        <menuitem id="menu_camion" name="Web Site Hino" action="action_camion" web_icon="website_hino,static/img/icon.png" />
+        <menuitem id="menu_secciones" name="Otras Secciones" parent="menu_camion" sequence="3"/>
+        <menuitem id="menu_configuraciones" name="Configuraciones" parent="menu_camion" sequence="8"/>
+    </data>
+</odoo>

@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo> 
+    <record id="menu_nosotros_website" model="website.menu">
+        <field name="name">Nosotros Hino</field>
+        <field name="url">nosotros-hino</field>
+    </record> 
+
+    <template id="hino_nosotros_hino" name="Nosotros Hino"> 
+        <t t-call="website.layout"> 
+            <t t-set="head"> 
+                <t t-call-assets="web.assets_common" t-js="false" />
+                <link rel="stylesheet" href="/website_hino/static/src/css/nosotros/nosotros-hino.css"/>                 
+            </t> 
+
+            <!-- SLIDER NOSOTROS HINO  -->
+
+            <section class="slider-main slider-nosotros-hino">
+                <section class="swiper swiper-container-hino">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div t-attf-style="background-image:url('/website_hino/static/images/nosotros-hino.png')" class="img bg-slide bg-slide-nosotros">
+                                <div class="container-title container-title-nosotros-hino">
+                                    <h3>Historia de hino</h3>
+                                    <p>
+                                        HINO es la marca japonesa líder en el 
+                                        desarrollo de tecnologías para camiones, 
+                                        sus vehículos se caracterizan por mejorar 
+                                        las funciones básicas, promover la seguridad 
+                                        y proteger el medio ambiente. Esta prestigiosa 
+                                        marca de clase mundial, basa su constante 
+                                        crecimiento en la eficiencia y la más alta 
+                                        calidad de fabricación.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                </section>
+            </section>
+
+            <!-- LÍNEA CRONOLÓGICA HINO -->
+
+            <section class="timeline-hino">
+                <h3>línea cronológica</h3>
+                <div class="timeline">
+                    <div class="timeline-top">
+                        <article class="año-1910">
+                            <p>
+                                <span>1910</span>
+                            </p>
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/1910 - Hino.jpg"></img>
+                                </figure>
+                                <p>
+                                    Se establece Tokyo Gas Industry Co., LTD
+                                </p>
+                            </div>
+                            <div class="timeline-punto-top"></div> 
+                        </article>
+                        <article class="año-1942">
+                            <p>
+                                <span>1942</span>
+                            </p>
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/1942 - Hino.jpg"></img>
+                                </figure>
+                                <p>
+                                    Se constituye Hino Heavy Industry Co., LTD
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                        <article class="año-1950">
+                            <p>
+                                <span>1950</span>
+                            </p>
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/1950 - Hino.jpg"></img>
+                                </figure>
+                                <p>
+                                    Se introdujeron camiones y autobuses diésel de categoría pesada.
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                        <article class="año-1959">
+                            <p>
+                                <span>1959</span>
+                            </p>
+                            <div>
+                                <p>
+                                    Luego de una fusión, el nombre cambia a Hino Automotive Sales, LTD.
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                        <article class="año-1971">
+                            <p>
+                                <span>1971</span>
+                            </p>
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/1971_Hino.jpg"></img>
+                                </figure>
+                                <p>
+                                    Lanzamiento del motor rojo de Hino,
+                                    con un consumo superior de combustible, 
+                                    fiabilidad y durabilidad
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                        <article class="año-1994">
+                            <p>
+                                <span>1994</span>
+                            </p>
+                            <div>
+                                <figure>
+                                    <img class="logo-hino" src="/website_hino/static/images/1994 - Hino.jpg"></img>
+                                </figure>
+                                <p>
+                                    Se adoptan un nuevo símbolo para la marca y un nuevo logotipo.
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                        <article class="año-1999">
+                            <p>
+                                <span>1999</span>
+                            </p>
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/1999_ Hino.jpg"></img>
+                                </figure>
+                                <p>
+                                    Se introdujo un nuevo camión de categoría lígera desarrollado 
+                                    conjuntamente con Toyota Motor Corporation.
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                        <article class="año-2009">
+                            <p>
+                                <span>2009</span>
+                            </p>
+                            <div>
+                                <p>
+                                    La producción acumulada de autobuses y 
+                                    camiones alcanza los tres millones de unidades.
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                        <article class="año-2012">
+                            <p>
+                                <span>2012</span>
+                            </p>
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/2012 - Hino.jpg"></img>
+                                </figure>
+                                <p>
+                                    Comienza las operaciones en la fábrica de ensamblaje de Koja.
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                        <article class="año-2018">
+                            <p>
+                                <span>2018</span>
+                            </p>
+                            <div>
+                                <p>
+                                    Se desarrolla e instala en el HINO S'ELEGA el primer 
+                                    sistema de parada de emergencia (EDSS*) para vehículos 
+                                    comerciales del mundo.
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                        <article class="año-2022">
+                            <p>
+                                <span>2022</span>
+                            </p>
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/2022 - Hino.jpg"></img>
+                                </figure>
+                                <p>
+                                    Lanzamiento sde HINO DUTRO Z EV, un camión de categoría ligera BEV
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="timeline-bottom ">
+                        <article class="sin-foto año-1918">
+                            <div class="borde-derecho">
+                                <div class="timeline-punto-bottom"></div>
+                                <p>
+                                    <span>1918</span>
+                                </p>
+                            </div>
+                            <p>
+                                Comienza la producción masiva de vehículos motorizados en Japón
+                            </p>
+                        </article>
+                        <article class="año-1946">
+                            <div class="borde-izquierdo">
+                                <div class="timeline-punto-bottom"></div>
+                                <figure>
+                                    <img src="/website_hino/static/images/1946 - Hino.jpg"></img>
+                                </figure>
+                                <p>
+                                    <span>1946</span>
+                                </p>
+                            </div>
+                            <p>
+                                Se fabrica el tracto camión T10B de 10 toneladas. 
+                                | Comienza la producción y la comercialización de 
+                                camiones de carga pesada, autobuses y vehículos diesel.
+                            </p>
+                        </article>
+                        <article class="sin-foto año-1952">
+                            <div class="borde-derecho">
+                                <div class="timeline-punto-bottom"></div>
+                                <p>
+                                    <span>1952</span>
+                                </p>
+                            </div>
+                            <p>
+                                Se exportan los primeros autobuses al extranjero (Taiwan)
+                            </p>
+                        </article>
+                        <article class="año-1963">
+                            <div class="borde-izquierdo">
+                                <div class="timeline-punto-bottom"></div>
+                                <figure>
+                                    <img src="/website_hino/static/images/1963_Hino.jpg"></img>
+                                </figure>
+                                <p>
+                                    <span>1963</span>
+                                </p>
+                            </div>
+                            <p>
+                                Hino lanza su famoso camión mediano modelo RANGER
+                            </p>
+                        </article>
+                        <article class="año-1991">
+                            <div class="borde-izquierdo">
+                                <div class="timeline-punto-bottom"></div>
+                                <figure>
+                                    <img src="/website_hino/static/images/1991- Hino 2.jpg"></img>
+                                </figure>
+                                <p>
+                                    <span>1991</span>
+                                </p>
+                            </div>
+                            <p>
+                                Se presenta el primer autobús diésel eléctrico 
+                                híbrido del mundo. Compite por primera vez en el 
+                                rally Dakar y termina la carrera.
+                            </p>
+                        </article>
+                        <article class="año-1997">
+                            <div class="borde-izquierdo">
+                                <div class="timeline-punto-bottom"></div>
+                                <figure>
+                                    <img src="/website_hino/static/images/1997 - Hino.jpg"></img>
+                                </figure>
+                                <p>
+                                    <span>1997</span>
+                                </p>
+                            </div>
+                            <p>
+                                Hino gana por primera vez en el Rally Dakar asombrando 
+                                al mundo con un 1ro 2do y 3er lugar en la categoría camiones.
+                            </p>
+                        </article>
+                        <article class="año-2004">
+                            <div class="borde-izquierdo">
+                                <div class="timeline-punto-bottom"></div>
+                                <figure>
+                                    <img src="/website_hino/static/images/2004_HINO.jpg"></img>
+                                </figure>
+                                <p>
+                                    <span>2004</span>
+                                </p>
+                            </div>
+                            <p>
+                                Se introdujo la Hino Serie 600 exclusivamente 
+                                para el mercado de América del Norte.
+                            </p>
+                        </article>
+                        <article class="año-2011">
+                            <div class="borde-izquierdo">
+                                <div class="timeline-punto-bottom"></div>
+                                <figure>
+                                    <img src="/website_hino/static/images/2011 - HIno.png"></img>
+                                </figure>
+                                <p>
+                                    <span>2011</span>
+                                </p>
+                            </div>
+                            <p>
+                                Fue lanzado el camión ligero Hino 300.
+                            </p>
+                        </article>
+                        <article class="sin-foto año-2017">
+                            <div class="borde-derecho">
+                                <div class="timeline-punto-bottom"></div>
+                                <p>
+                                    <span>2017</span>
+                                </p>
+                            </div>
+                            <p>
+                                El nuevo camión de categoría pesada ganó el Good Design Award en Japón.
+                            </p>
+                        </article>
+                        <article class="sin-foto año-2019">
+                            <div class="borde-derecho">
+                                <div class="timeline-punto-bottom"></div>
+                                <p>
+                                    <span>2019</span>
+                                </p>
+                            </div>
+                            <p>
+                                El nuevo camión de categoría pesada ganó el Good Design Award en Japón.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LÍNEA CRONOLÓGICA HINO RESPONSIVE  -->
+
+            <section class="timeline-hino-responsive">
+                <h3 class="titulo-hino-responsive">línea cronológica</h3>
+                <div class="timeline-responsive">
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Se establece Tokyo Gas Industry Co., LTD
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>1910</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/1910 - Hino.jpg"></img>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>1918</span>
+                            </p>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Comienza la producción masiva de vehículos 
+                                motorizados en Japón
+                            </p>                           
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Se constituye Hino Heavy Industry Co., LTD
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>1942</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/1942 - Hino.jpg"></img>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>1946</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/1946 - Hino.jpg"></img>
+                            </figure>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Se fabrica el tracto camión T10B de 10 
+                                toneladas. Comienza la producción y la 
+                                comercialización de camiones de carga 
+                                pesada, autobuses y vehículos diesel.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Se introdujeron camiones y autobuses 
+                                diésel de categoría pesada.
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>1950</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/1950 - Hino.jpg"></img>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>1952</span>
+                            </p>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Se exportan los primeros autobuses al extranjero (Taiwan)
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Luego de una fusión, el nombre cambia a 
+                                Hino Automotive Sales, LTD.
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>1959</span>
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>1963</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/1963_Hino.jpg"></img>
+                            </figure>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Hino lanza su famoso camión mediano modelo RANGER
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Lanzamiento del motor rojo de Hino, 
+                                con un consumo superior de 
+                                combustible, fiabilidad y durabilidad
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>1971</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/1971_Hino.jpg"></img>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>1991</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/1991- Hino 2.jpg"></img>
+                            </figure>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Se presenta el primer autobús diésel eléctrico 
+                                híbrido del mundo. Compite por primera vez en 
+                                el rally Dakar y termina la carrera.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Se adoptan un nuevo símbolo para la 
+                                marca y un nuevo logotipo.
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>1994</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/1994 - Hino.jpg"></img>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>1997</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/1997 - Hino.jpg"></img>
+                            </figure>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Hino gana por primera vez en el Rally 
+                                Dakar asombrando al mundo con un 1ro 
+                                2do y 3er lugar en la categoría camiones.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Se introdujo un nuevo camión de 
+                                categoría lígera desarrollado 
+                                conjuntamente con Toyota Motor 
+                                Corporation.
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>1999</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/1999_ Hino.jpg"></img>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>2004</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/2004_HINO.jpg"></img>
+                            </figure>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Se introdujo la Hino Serie 600 
+                                exclusivamente para el mercado 
+                                de América del Norte.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                La producción acumulada de autobuses 
+                                y camiones alcanza los tres millones 
+                                de unidades.
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>2009</span>
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>2011</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/2011 - HIno.png"></img>
+                            </figure>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Fue lanzado el camión ligero Hino 300.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Comienza las operaciones en la 
+                                fábrica de ensamblaje de Koja.
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>2012</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/2012 - Hino.jpg"></img>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>2017</span>
+                            </p>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                El nuevo camión de categoría pesada 
+                                ganó el Good Design Award en Japón.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Se desarrolla e instala en el HINO 
+                                S´ELEGA el primer sistema de parada 
+                                de emergencia (EDSS*) para vehículos 
+                                comerciales del mundo.
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>2018</span>
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>2019</span>
+                            </p>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                El nuevo camión de categoría pesada 
+                                ganó el Good Design Award en Japón.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Lanzamiento sde HINO DUTRO Z EV, 
+                                un camión de categoría ligera BEV
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>2022</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/2022 - Hino.jpg"></img>
+                            </figure>
+                        </div>
+                    </article>
+                </div>
+                <div class="linea-responsive">
+                    <div></div>
+                </div>
+            </section>
+
+            <!-- DATOS DE COLABORADORES, SUCURSALES, BAHIAS Y TALLERES -->
+
+            <section class="nosotros-hino_datos">
+                <div>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/establecida-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">1942</span>
+                            <span>Establecida</span>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/colaboradores-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">34,231</span>
+                            <span>Colaboradores</span>
+                        </div>
+                    </article>
+                    
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/paises-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">90</span>
+                            <span>Países</span>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/ventas-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">1,507,336</span>
+                            <span>Ventas Netas</span>
+                            <span>Million Yen</span> 
+                        </div>
+                    </article>
+                    <article style="width: 180px;">
+                        <figure class="icono-hino">
+                            <img src="/website_hino/static/images/logo-footer-rojo.png"></img>
+                        </figure>
+                        <span class="grupo-toyota">Una empresa de Grupo Toyota</span> 
+                    </article>
+                </div>
+            </section>
+
+            <!-- Aqui agragar los enlaces a los script que sean nesecarios -->
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+            
+        </t> 
+    </template> 
+</odoo>

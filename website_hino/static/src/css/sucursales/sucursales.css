@@ -1,0 +1,363 @@
+/* Importación de las Fuentes */
+@font-face { 
+    font-family: "HelveticaNeue"; 
+    font-weight: 500; 
+    src: 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.woff") format("woff"), 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.ttf") format("truetype"); 
+} 
+
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    font-weight: 300;
+    src:
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.woff") format("woff"),
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.ttf") format("truetype");
+}
+
+figure{
+    margin: 0;
+}
+
+/* SLIDER SUCURSALES */
+
+.slider-sucursales{
+    background-image: url(../../../images/fondo-sucursales.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    margin-top: 130px;
+}
+
+.slider-sucursales > div{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    color: #FFF;
+}
+
+.slider-sucursales > div h3{
+    width: 55%;
+    font-weight: 900;
+    line-height: 38.6px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 35px;
+    padding-top: 4%;
+    color: #ffffff;
+}
+
+.slider-sucursales > div > p{
+    width: 48%;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+/* SUCURSALES */
+
+.sucursales{
+    padding: 5% 0 8% 0;
+    background-color: #E8E8E8;
+}
+
+.sucursales > h3{
+    background-image: url("/website_hino/static/images/fondo-title-sucursales.png");
+    background-size: 450px 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-image: none;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+    height: 40px;
+}
+
+.sucursales > div{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px 24px;
+}
+
+.sucursales > div article{
+    width: 49%;
+}
+
+.sucursales .sucursal .sucursal-top{
+    display: flex;
+    height: 350px;
+    justify-content: space-between;
+}
+
+.sucursales .sucursal-top .sucursal-info{
+    width: 50%;
+    background-color: #FFF;
+    border-radius: 8px 0 0 8px;
+}
+
+.sucursales .sucursal-top .sucursal-info h4{
+    color: #E02413;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-bottom: 2px solid #E02413;
+    padding: 6% 0 1% 8%;
+    margin: 0;
+}
+
+.sucursales .sucursal-top .sucursal-info .informacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 6% 2% 2% 8%;
+}
+
+.sucursales .sucursal-top .sucursal-info .informacion > div{
+    display: flex;
+    width: 100%;
+    height: 45px;
+    justify-content: left;
+    align-items: center;
+    gap: 5%;
+}
+
+.sucursales .sucursal-top .sucursal-info .informacion > div p,
+.sucursales .sucursal-top .sucursal-info .informacion > div a{
+    font-size: 12px;
+    margin: 0;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+.sucursales .sucursal-top .sucursal-ubicacion{
+    width: 50%;
+    height: 100%;
+    border-radius: 0 8px 8px 0;
+}
+
+.sucursales .sucursal-top .sucursal-ubicacion iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 8px 8px 0;
+}
+
+.sucursales .sucursal-bottom{
+    display: flex;
+    margin-top: 2%;
+    gap: 2%;
+}
+
+.sucursales .sucursal-bottom a{
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    background-color: #FFF;
+    color: #000;
+    text-transform: uppercase;
+    align-items: center;
+    height: 50px;
+    width: 120px;
+    text-align: center;
+    line-height: 12px;
+    border-radius: 8px;
+    padding: 2%;
+    gap: 5px;
+}
+
+/* RESPONSIVE SUCURSALES */
+
+@media only screen and (max-width: 1300px){
+    .slider-sucursales > div{
+        max-width: 1000px;
+    }
+
+    .slider-sucursales > div h3{
+        width: 65%;
+    }
+
+    .slider-sucursales > div > p {
+        width: 55%;
+    }
+
+    .sucursales > div {
+        max-width: 1000px;
+        justify-content: space-between;
+    }
+
+    .sucursales > div article {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .slider-sucursales > div{
+        max-width: 900px;
+    }
+
+    .slider-sucursales > div h3{
+        font-size: 30px;
+        line-height: 36px;
+        padding-top: 10%;
+        margin-bottom: 2%;
+    }
+
+    .sucursales > div {
+        max-width: 900px;
+        justify-content: space-between;
+    }
+
+    .sucursales > h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sucursales > div article {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .slider-sucursales > div, .sucursales > div{
+        max-width: 800px;
+    }
+
+    .sucursales > div {
+        max-width: 800px;
+        justify-content: center;
+    }
+
+    .sucursales > div article {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .slider-sucursales > div{
+        max-width: 90%;
+    }
+
+    .slider-sucursales > div h3 {
+        width: 95%;
+    }
+
+    .slider-sucursales > div > p {
+        width: 65%;
+    }
+
+    .sucursales > div {
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .slider-sucursales{
+        margin-top: 70px !important;
+    }
+
+    .slider-sucursales > div h3{
+        width: 70%;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .sucursales > h3 {
+        font-size: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 700px){
+
+    .slider-sucursales > div h3{
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .slider-sucursales > div > p {
+        width: 60%;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .sucursales > h3 {
+        font-size: 20px;
+    }
+
+    .sucursales .sucursal-top .sucursal-info h4{
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width: 767px){
+    .slider-sucursales{
+        height: 600px !important;
+    }
+
+    .slider-sucursales > div h3{
+        padding-top: 12%;
+    }
+
+    .sucursales > div article {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    .slider-sucursales {
+        height: 400px !important;
+    }
+
+    .slider-sucursales > div h3{
+        width: 98%;
+        padding-top: 15%;
+    }
+
+    .slider-sucursales > div > p {
+        font-size: 15px;
+        line-height: 18px;
+        width: 85%;
+    }
+
+    .sucursales > h3{
+        font-size: 18px;
+        margin-bottom: 2%;
+    }
+
+    .sucursal-top{
+        flex-direction: column;
+        height: 500px !important;
+    }
+
+    .sucursal-top > div{
+        width: 100% !important;
+    }
+
+    .sucursal-top .sucursal-info{
+        border-radius: 8px 8px 0 0 !important;
+    }
+
+    .sucursales .sucursal-top .sucursal-info .informacion > div{
+        height: 35px;
+    }
+
+    .sucursales .sucursal-top .sucursal-info h4{
+        font-size: 15px;
+        padding: 4% 0 2% 8%;
+    }
+
+    .sucursales .sucursal-top .sucursal-ubicacion, .sucursal-ubicacion > iframe{
+        border-radius: 0 0 8px 8px !important;
+    }
+
+}
+

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de árbol para el modelo Novedades -->
+    <record id="view_novedades_tree" model="ir.ui.view">
+        <field name="name">view.novedades.tree</field>
+        <field name="model">novedades</field>
+        <field name="arch" type="xml">
+            <tree string="Novedades">
+                <field name="titulo"/>
+                <field name="fecha"/>
+                <field name="creado_por"/>
+                <field name="descripcion"/>
+                <field name="imagen" widget="image" size="small"/>
+            </tree>
+        </field>
+    </record>
+    
+    <!-- Vista tipo Kanban para el modelo Novedades -->
+    <record id="view_novedades_kanban" model="ir.ui.view">
+        <field name="name">view.novedades.kanban</field>
+        <field name="model">novedades</field>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" archivable="false" js_class="novedades_kanban" sample="1">
+                <field name="titulo"/>
+                <field name="fecha"/>
+                <field name="descripcion"/>
+                <field name="imagen"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_content oe_kanban_global_click">
+                            <div>
+                                <strong class="o_kanban_record_title"><span><field name="titulo"/></span></strong>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_date"><field name="fecha"/></span>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_subtitle"><field name="creado_por"/></span>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_image"><field name="imagen" widget="image" size="small"/></span>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_subtitle"><field name="descripcion"/></span>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left">
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    
+
+    <!-- Vista de formulario para el modelo Novedades -->
+    <record id="view_novedades_form" model="ir.ui.view">
+        <field name="name">view.novedades.form</field>
+        <field name="model">novedades</field>
+        <field name="arch" type="xml">
+            <form string="Novedades">
+                <header></header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="titulo"/>
+                        <h1>
+                            <field name="titulo" placeholder="Titulo de la Novedad"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="fecha"/>
+                        <field name="creado_por" placeholder="Creado por..."/>
+                        <field name="imagen" widget="image"/>
+                        <field name="descripcion" placeholder="Breve Descripción..."/>
+                        <field name="informacion" placeholder="Información de la Novedad..."/>
+                    </group>
+                    <group>
+                        <field name="next_novedad"/>
+                        <field name="prev_novedad"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Vista de búsqueda para el modelo Novedades -->
+    <record id="view_novedades_search" model="ir.ui.view">
+        <field name="name">view.novedades.search</field>
+        <field name="model">novedades</field>
+        <field name="arch" type="xml">
+            <search string="Search Novedades">
+                <group expand="1" string="Group By">
+                    <filter string="Nombre" name="titulo" domain="[]" context="{'group_by':'titulo'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de ventana para abrir la vista de árbol y formulario de Novedades -->
+    <record id="action_novedades" model="ir.actions.act_window">
+        <field name="name">Novedades</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">novedades</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No se han registrado ningunas Novedades.
+            </p>
+        </field>
+    </record>
+    
+    <!-- Menu Superior Novedades -->
+    <menuitem id="menu_novedades" name="Novedades" parent="menu_secciones" action="action_novedades" sequence="4"/>
+</odoo>

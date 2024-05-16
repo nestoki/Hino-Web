@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View camion.sucursales View Tree -->
+    <record id="view_sucursales_tree" model="ir.ui.view">
+        <field name="name">view.sucursales.tree</field>
+        <field name="model">sucursales</field>
+        <field name="arch" type="xml">
+            <tree string="Sucursales">
+                <field name="name" />
+                <field name="direccion" />
+                <field name="numero_phone" />
+                <field name="horarios" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- View camion.sucursales form -->
+    <record id="view_sucursales_kanban" model="ir.ui.view">
+        <field name="name">view.sucursales.form</field>
+        <field name="model">sucursales</field>
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" archivable="false" js_class="info_sucursales_kanban"
+                sample="1">
+                <field name="name" />
+                <field name="numero_phone" />
+                <field name="direccion" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_content oe_kanban_global_click">
+                            <div>
+                                <strong class="o_kanban_record_title">
+                                    <span>
+                                        <field name="name" />
+                                    </span>
+                                </strong>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_number">
+                                    <field name="numero_phone" />
+                                </span>
+                            </div>
+                            <div>
+                                <span class="o_kanban_record_subtitle">
+                                    <field name="direccion" />
+                                </span>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left">
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <!-- Vista de formulario para el modelo Info Contacto -->
+    <record id="view_sucursales_form" model="ir.ui.view">
+        <field name="name">view.sucursales.form</field>
+        <field name="model">sucursales</field>
+        <field name="arch" type="xml">
+            <form string="Info_contacto">
+                <header></header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre de la Sucursal..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group name="name" string="Información de la Sucursal">
+                            <field name="direccion" placeholder="Dirección..."/>
+                            <field name="cita" placeholder="Cita..."/>
+                            <field name="numero_phone" placeholder="Teléfono..."/>
+                            <field name="horarios" placeholder="Agregue sus Horarios..."/>
+                        </group>
+                        <group name="name" string="Localización">
+                            <field name="google_maps_direct" placeholder="Agregue la url para abrir en el navagador..."/>
+                            <field name="google_maps" placeholder="Agregue su url embebiba o el iframe..."/>
+                            <field name="waze" placeholder="Agregue su url..."/>
+                        </group>
+                        <group string="Tipo de Servicios">
+                            <field name="servicios_ids" widget="many2many_tags" options="{'no_quick_create': True}"/>
+                            <br></br>
+                            <br></br>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View camion.sucursales search -->
+    <record id="view_sucursales_search" model="ir.ui.view">
+        <field name="name">view.sucursales.search</field>
+        <field name="model">sucursales</field>
+        <field name="arch" type="xml">
+            <search string="Sucursales">
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action camion.sucursales -->
+    <record id="action_sucursales" model="ir.actions.act_window">
+        <field name="name">Sucursales</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sucursales</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No se han registrado datos de Sucursales.
+            </p>
+        </field>
+    </record>
+    <menuitem id="menu_sucursales" name="Sucursales" parent="menu_secciones" action="action_sucursales" sequence="7" />
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo> 
+    <record id="menu_respuestos_website" model="website.menu">
+        <field name="name">Respuestos</field>
+        <field name="url">respuestos</field>
+    </record>
+    
+
+    <template id="hino_respuestos" name="Hino Soporte Total"> 
+        <t t-call="website.layout"> 
+            <t t-set="head"> 
+                <t t-call-assets="web.assets_common" t-js="false" />
+                <link rel="stylesheet" href="/website_hino/static/src/css/respuestos/respuestos.css"/>                 
+            </t> 
+            <h1>Respuestos</h1>
+
+
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+        </t> 
+    </template> 
+</odoo>

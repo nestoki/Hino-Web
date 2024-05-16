@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo> 
+    <record id="menu_free_service_program_website" model="website.menu">
+        <field name="name">Free Service Program</field>
+        <field name="url">free_service_program</field>
+    </record>
+    
+
+    <template id="hino_free_service_program" name="Hino Soporte Total"> 
+        <t t-call="website.layout"> 
+            <t t-set="head"> 
+                <t t-call-assets="web.assets_common" t-js="false" />
+                <link rel="stylesheet" href="/website_hino/static/src/css/free_service_program/free_service_program.css"/>                 
+            </t> 
+            <h1>Free Service Program</h1>
+
+
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+        </t> 
+    </template> 
+</odoo>

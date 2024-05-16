@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_novedades_website" model="website.menu">
+        <field name="name">Novedades News</field>
+        <field name="url">novedades_news</field>
+    </record>
+
+    <template id="hino_novedades_news" name="Hino Novedades News">
+        <t t-call="website.layout">
+            <t t-set="head">
+                <t t-call-assets="web.assets_common" t-js="false" />
+                <link rel="stylesheet"
+                    href="/website_hino/static/src/css/novedades/novedades_news.css" />
+            </t>
+
+            <!-- SLIDER NEWS -->
+            <section class="slider-news"
+                t-attf-style="background-image:url('/web/image/novedades/#{novedad.id}/imagen')">
+                <div class="news-capa"></div>
+                <div>
+                    <h3 t-out="novedad.titulo"></h3>
+                    <div>
+                        <span>
+                            <figure>
+                                <img id="form-icon"
+                                    src="/website_hino/static/images/iconos/vector-user.png" />
+                            </figure>
+
+                            <t t-out="novedad.creado_por" />
+                        </span>
+                        <span>
+                            <figure>
+                                <img id="form-icon"
+                                    src="/website_hino/static/images/iconos/icono-reloj.png" />
+                            </figure>
+                            <t t-out="novedad.fecha" />
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="new">
+                <div>
+                    <p t-out="novedad.descripcion" />
+                    <p t-out="novedad.informacion" />
+                    <br class="ocultar" />
+                    <br />
+                    <a id="leer-otros-blogs" href="/novedades">Leer otros blogs... </a>
+                </div>
+            </section>
+
+            <!-- OTROS BLOGS -->
+            <section class="otros-blogs">
+                <t t-if="novedad.next_novedad and novedad.prev_novedad">
+                    <article class="articulo-izquierdo"
+                        t-attf-style="background-image:url('/web/image/novedades/#{novedad.prev_novedad.id}/imagen')">
+                        <div class="articulo-capa"></div>
+                        <a t-attf-href="/novedades/news?novedadId={{ novedad.prev_novedad.id }}">
+                            <figure>
+                                <img src="/website_hino/static/images/iconos/arrow_left.png"></img>
+                            </figure>
+                        </a>
+                        <p t-out="novedad.prev_novedad.titulo"></p>
+                    </article>
+                    <article class="articulo-derecho"
+                        t-attf-style="background-image:url('/web/image/novedades/#{novedad.next_novedad.id}/imagen')">
+                        <div class="articulo-capa"></div>
+                        <p t-out="novedad.next_novedad.titulo"></p>
+                        <a t-attf-href="/novedades/news?novedadId={{ novedad.next_novedad.id }}">
+                            <figure>
+                                <img src="/website_hino/static/images/iconos/arrow_right.png"></img>
+                            </figure>
+                        </a>
+                    </article>
+                </t>
+                <t t-elif="novedad.next_novedad and novedad.prev_novedad!= null">
+                    <article class="articulo-derecho a"
+                        t-attf-style="background-image:url('/web/image/novedades/#{novedad.next_novedad.id}/imagen')">
+                        <div class="articulo-c"></div>
+                        <p class="blog-uno" t-out="novedad.next_novedad.titulo"></p>
+                        <a t-attf-href="/novedades/news?novedadId={{ novedad.next_novedad.id }}">
+                            <figure>
+                                <img src="/website_hino/static/images/iconos/arrow_right.png"></img>
+                            </figure>
+                        </a>
+                    </article>
+                </t>
+                <t t-else="novedad.prev_novedad and novedad.next_novedad!= null">
+                    <article class="articulo-derecho a"
+                        t-attf-style="background-image:url('/web/image/novedades/#{novedad.prev_novedad.id}/imagen')">
+                        <div class="articulo-c"></div>
+                        <a t-attf-href="/novedades/news?novedadId={{ novedad.prev_novedad.id }}">
+                            <figure>
+                                <img src="/website_hino/static/images/iconos/arrow_left.png"></img>
+                            </figure>
+                        </a>
+                        <p class="blog-uno" t-out="novedad.prev_novedad.titulo"></p>
+                    </article>
+                </t>
+                <!-- Artículo izquierdo -->
+
+
+            </section>
+
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+        </t>
+    </template>
+</odoo>

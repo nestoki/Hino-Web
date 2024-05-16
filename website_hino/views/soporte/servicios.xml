@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo> 
+    <record id="menu_servicios_website" model="website.menu">
+        <field name="name">Servicios</field>
+        <field name="url">servicios</field>
+    </record> 
+
+    <template id="hino_servicios" name="Hino Soporte Total"> 
+        <t t-call="website.layout">
+            <t t-set="head">
+                <t t-call-assets="web.assets_common" t-js="false" />
+                <!-- <link rel="stylesheet" href="/website_hino/static/src/css/swiper/swiper-bundle.min.css" /> -->
+                <link rel="stylesheet" href="/website_hino/static/src/css/soporte/servicios.css"/>
+            </t> 
+
+            <section class="slider-servicios">
+                <section class="swiper swiper-container-slider-servicios">
+                    <div class="swiper-wrapper">
+                        <t t-foreach="request.env['servicios.soporte'].sudo().search([])"
+                            t-as="servicio">
+                            <div class="swiper-slide">
+                                <div
+                                    t-attf-style="background-image:url('/web/image/servicios.soporte/#{servicio.id}/slider_image')"
+                                    class="img bg-slide">
+                                    <div class="container-title-servicios">
+                                        <span class="slider-text" t-out="servicio.text_slider" />
+                                        <span class="slider-2-text"
+                                            t-out="servicio.text_slider_2" />
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </section>
+            </section>
+
+            <!-- SERVICIOS -->
+            <section class="servicios">
+                <h3>servicios</h3>
+                <div class="servicios-articulos">
+                    <article class="servicio">
+                        <figure>
+                            <img src="/website_hino/static/images/Talleres 1.png"></img>
+                        </figure>
+                        <h4>talleres de servicios</h4>
+                        <p>
+                            Contamos con la mayor cobertura de posventa y 
+                            un servicio integral de calidad. Con una amplia 
+                            red de talleres, repuestos disponibles y técnicos 
+                            certificados, garantizamos un servicio de primera 
+                            en tiempos eficientes.
+                        </p>
+                    </article>
+                    <article class="servicio">
+                        <figure>
+                            <img src="/website_hino/static/images/Talleres 2.png"></img>
+                        </figure>
+                        <h4>TÉCNICOS CERTIFICADOS</h4>
+                        <p>
+                            Todos nuestros talleres cuentan con técnicos especializados y capacitados continuamente para atender los mantenimientos preventivos y correctivos de tu unidad HINO. primera en tiempos eficientes.
+                        </p>
+                    </article>
+                    <article class="servicio">
+                        <figure>
+                            <img src="/website_hino/static/images/Talleres 3.png"></img>
+                        </figure>
+                        <h4>TALLERES MÓVILES</h4>
+                        <p>
+                            Contamos con talleres móviles con la herramienta necesaria 
+                            para su mantenimiento y personal capacitado con los más 
+                            altos estándares HINO que va a donde tú lo requieras.
+                        </p>
+                    </article>
+                </div>
+                <t t-foreach="request.env['servicios.soporte'].sudo().search([])" t-as="servicio">
+                    <t t-if="servicio.cita_whatsapp">
+                <a t-att-href="'tel:' + servicio.cita_whatsapp" role="button" title="" target="_blank">
+                    <i class="fa fa-whatsapp"></i>
+                    Agenda tu cita en WhatsApp
+                </a>
+            </t>
+            </t>
+            </section>
+
+            <!-- GARANTIAS -->
+            <section class="garantias">
+                <div class="fondo-garantias"></div>
+                <h3>garantías hino</h3>
+                <div class="garantias-articulos">
+                    <article class="garantia">
+                        <figure>
+                            <img src="/website_hino/static/images/Garantias-200.png"></img>
+                        </figure>
+                        <p class="garantia-info">
+                            Nuestros servicios cuentan
+                            con una garantía de 4 años
+                            para su vehículo Serie 200
+                        </p>
+                    </article>
+                    <article class="garantia">
+                        <figure>
+                            <img src="/website_hino/static/images/Garantias-300.png"></img>
+                        </figure>
+                        <p class="garantia-info">
+                            Nuestros servicios cuentan
+                            con una garantía de 4 años
+                            para su vehículo Serie 300
+                        </p>
+                    </article>
+                    <article class="garantia">
+                        <figure>
+                            <img src="/website_hino/static/images/Garantias-500.png"></img>
+                        </figure>
+                        <p class="garantia-info">
+                            Nuestros servicios cuentan
+                            con una garantía de 4 años
+                            para su vehículo Serie 500
+                        </p>
+                    </article>
+                    <article class="garantia">
+                        <figure>
+                            <img src="/website_hino/static/images/Garantias-700.png"></img>
+                        </figure>
+                        <p class="garantia-info">
+                            Nuestros servicios cuentan
+                            con una garantía de 2 años
+                            para su vehículo Serie 700
+                        </p>
+                    </article>
+                </div>
+
+
+
+                <!-- PRUEBA SLIDER -->
+
+                <div id="slider">
+                    <article class="garantia">
+                        <figure>
+                            <img src="/website_hino/static/images/Garantias-200.png"></img>
+                        </figure>
+                        <div>
+                            <p class="garantia-info">
+                            Nuestros servicios cuentan
+                            con una garantía de 4 años
+                            para su vehículo Serie 200
+                            </p>
+                        </div>
+                    </article>
+                    <article class="garantia">
+                        <figure>
+                            <img src="/website_hino/static/images/Garantias-300.png"></img>
+                        </figure>
+                        <div>
+                            <p class="garantia-info">
+                            Nuestros servicios cuentan
+                            con una garantía de 4 años
+                            para su vehículo Serie 300
+                            </p>
+                        </div>                      
+                    </article>
+                    <article class="garantia">
+                        <figure>
+                            <img src="/website_hino/static/images/Garantias-500.png"></img>
+                        </figure>
+                        <div>
+                            <p class="garantia-info">
+                            Nuestros servicios cuentan
+                            con una garantía de 4 años
+                            para su vehículo Serie 500
+                            </p>
+                        </div>
+                    </article>
+                    <article class="garantia">
+                        <figure>
+                            <img src="/website_hino/static/images/Garantias-700.png"></img>
+                        </figure>
+                        <div>
+                            <p class="garantia-info">
+                            Nuestros servicios cuentan
+                            con una garantía de 2 años
+                            para su vehículo Serie 700
+                            </p>
+                        </div>                    
+                    </article>
+                </div>
+
+            </section>
+
+
+            <!-- DATOS DE TALLERES, BAHIAS, MECÁNICOS Y TALLERES MÓVILES-->
+            <section class="servicios-total-datos">
+                <div>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/talleres-st-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">4</span>
+                            <span>Talleres</span>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/bahias-st-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">10</span>
+                            <span>Bahías</span>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/mecanicos-st-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">10</span>
+                            <span>Mecánicos</span>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/moviles-st-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">10</span>
+                            <span>Talleres Móviles</span>
+                        </div>
+                    </article>
+                    
+                </div>
+            </section>
+
+
+            <!-- Formulario -->
+            <section class="form-main-servicios">
+                <section class="s_website_form" data-vcss="001"
+                    data-snippet="s_website_form" data-name="Formulario">
+                    <h4 class="form-title-responsive">Saca tu cita de mantenimiento</h4>
+                    <div class="o_container_small">
+                        <form action="/website/form/" method="post"
+                            enctype="multipart/form-data" data-mark="*" data-pre-fill="true"
+                            data-model_name="crm.lead">
+                            <div class="s_website_form_rows">
+
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_nombre s_website_form_required"
+                                    data-type="char">
+                                    <div class="row">
+                                        <label class="" style="width: 200px"
+                                            for="o6f2b6awhh4g">
+                                            <img id="form-icon"
+                                                src="/website_hino/static/images/iconos/icon-user.png" />
+                                            <span class="s_website_form_label_content">
+                                                Nombre</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input"
+                                                type="text" name="contact_name" required="1"
+                                                data-fill-with="name" id="o6f2b6awhh4g" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_apellido s_website_form_custom"
+                                    data-type="char">
+                                    <label class="s_website_form_label" for="o6f2b6awhh4g">
+                                        <img id="form-icon"
+                                            src="/website_hino/static/images/iconos/icon-user.png" />
+                                        <span class="s_website_form_label_content">Apellido</span>
+                                    </label>
+                                    <input class="form-control s_website_form_input"
+                                        type="text" name="contact_name" required="1"
+                                        data-fill-with="name" id="o6f2b6awhh4g" />
+                                </div>
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_correo s_website_form_required"
+                                    data-type="email">
+                                    <div class="row">
+                                        <label class="col-form-label  s_website_form_label"
+                                            for="oywj7qvvtat">
+                                            <img id="form-icon"
+                                                src="/website_hino/static/images/iconos/icon-email.png" />
+                                            <span class="s_website_form_label_content">
+                                                Correo</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input"
+                                                type="email" name="email_from" required="1"
+                                                data-fill-with="email" id="oywj7qvvtat" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_tlf" data-type="tel">
+                                    <div class="row">
+                                        <label
+                                            class="col-form-label col-sm-auto s_website_form_label"
+                                            for="oyx5ze4zxn3">
+                                            <img id="form-icon"
+                                                src="/website_hino/static/images/iconos/icon-phone.png" />
+                                            <span class="s_website_form_label_content">
+                                                Celular</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input"
+                                                type="tel" name="phone"
+                                                data-fill-with="phone" id="oyx5ze4zxn3" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_ciudad s_website_form_custom"
+                                    data-type="many2one">
+                                    <label
+                                        class="col-form-label col-sm-auto s_website_form_label"
+                                        for="ogdf4jd1c6wp">
+                                        <img id="form-icon"
+                                            src="/website_hino/static/images/iconos/icon-localization.png" />
+                                        <span class="s_website_form_label_content">Ciudad</span>
+                                    </label>
+                                    <select class="s_website_form_input" name="city"
+                                        id="ogdf4jd1c6wp"
+                                        data-fill-with="commercial_company_name">
+                                        <option value="" />
+                                        <option value="Panamá">Panamá</option>
+                                        <option value="Panamá Oeste">Panamá Oeste</option>
+                                        <option value="Colón">Colón</option>
+                                        <option value="Herrera">Herrera</option>
+                                        <option value="Cloque">Cloque</option>
+                                        <option value="Los Santos">Los Santos</option>
+                                        <option value="Veraguas">Veraguas</option>
+                                        <option value="Chiriquí">Chiriquí</option>
+                                        <option value="Darién">Darién</option>
+                                        <option value="Bocas del Toro">Bocas del Toro</option>
+                                    </select>
+
+                                </div>
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_contacto s_website_form_model_required"
+                                    data-type="char">
+                                    <label class="s_website_form_label" for="contacto">
+                                        <img id="form-icon"
+                                            src="/website_hino/static/images/iconos/icon-message.png" />
+                                        <span class="s_website_form_label_content">Motivo
+                                            del Contacto</span>
+                                    </label>
+                                    <input class="s_website_form_input " type="text"
+                                        name="name" required="" placeholder="" id="contacto"
+                                        data-fill-with="undefined" />
+                                </div>
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_terminos s_website_form_custom s_website_form_required"
+                                    data-type="boolean">
+                                    <label class="s_website_form_label" for="terminos">
+                                        <input type="checkbox" value="Yes"
+                                            class="s_website_form_input"
+                                            name="Acepto Término y Condiciones" required="1"
+                                            id="terminos" data-fill-with="undefined" />
+                                        <span class="s_website_form_label_content">Acepto
+                                            Términos y Condiciones</span>
+                                    </label>
+                                </div>
+
+                                <div
+                                    class="s_website_form_submit s_website_form_no_submit_label"
+                                    data-name="Submit Button">
+
+
+                                    <a href="#" role="button"
+                                        class="btn s_website_form_send o_default_snippet_text"
+                                        data-bs-original-title="" title="">Enviar
+                                        <i class="fa fa-paper-plane"></i>
+                                    </a>
+                                    <span id="s_website_form_result"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="text-img-servicios">
+                        <div class="capa"></div>
+                        <span class="image-text">Saca tu cita <br></br> de mantenimiento</span>
+                    </div>
+                </section>
+            </section>
+
+            <!-- <script src="/website_hino/static/src/js/swiper/swiper-bundle.min.js"></script> -->
+            <!-- <script src="/website_hino/static/src/js/soporte/slider.js"></script>     -->
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+        </t> 
+    </template> 
+</odoo>

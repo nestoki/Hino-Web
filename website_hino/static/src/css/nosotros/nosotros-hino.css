@@ -1,0 +1,1267 @@
+/* Importación de las Fuentes */
+@font-face { 
+    font-family: "HelveticaNeue"; 
+    font-weight: 500; 
+    src: 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.woff") format("woff"), 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.ttf") format("truetype"); 
+} 
+
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    font-weight: 300;
+    src:
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.woff") format("woff"),
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.ttf") format("truetype");
+}
+/* SLIDER NOSOTROS HINO */
+
+.bg-slide-nosotros{
+    height: 500px !important;
+}
+
+.slider-nosotros-hino .container-title-nosotros-hino{
+    width: 42% !important;
+    margin: 0 0 0 auto !important;
+    padding-top: 0 !important;
+    align-items: start !important;
+    justify-content: center !important;
+    gap: 2% !important;
+}
+
+.slider-nosotros-hino .container-title-nosotros-hino > h3{
+    font-size: 35px;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: left;
+    border-bottom: 3px solid #E8E8E8;
+    margin: 0;
+}
+
+.slider-nosotros-hino .container-title-nosotros-hino > p{
+    color: #FFF;
+    font-size: 20px;
+    text-align: left;
+    width: 75%;
+    line-height: 24px;
+}
+
+/* RESPONSIVE SLIDER NOSOTROS HINO */
+
+@media only screen and (max-width: 1100px){
+
+    .slider-nosotros-hino .container-title-nosotros-hino > h3 {
+        font-size: 30px;
+    }
+
+    .slider-nosotros-hino .container-title-nosotros-hino > p {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+
+    .slider-nosotros-hino .container-title-nosotros-hino {
+        width: 60% !important;
+    }
+
+    .slider-nosotros-hino .container-title-nosotros-hino > h3 {
+        font-size: 25px;
+    }
+
+    .slider-nosotros-hino .container-title-nosotros-hino > p {
+        font-size: 18px;
+    }
+
+    .slider-nosotros-hino .container-title-nosotros-hino > p {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+
+    .slider-nosotros-hino .container-title-nosotros-hino {
+        width: 70% !important;
+    }
+
+    .slider-nosotros-hino .container-title-nosotros-hino > h3 {
+        font-size: 20px;
+    }
+
+    .slider-nosotros-hino .container-title-nosotros-hino > p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+
+    .slider-nosotros-hino .container-title-nosotros-hino > p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+}
+
+
+/* LÍNEA CRONOLÓGICA HINO */
+
+@keyframes moveTimeline {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-215%); 
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.timeline-hino{
+    overflow: hidden;
+    width: 100%;
+}
+
+.timeline-hino > h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    margin: 5% 0;
+    border-bottom: 1px solid #E02413;
+    padding-bottom: 1%;
+}
+
+.timeline{
+    width: 100%;
+    padding: 0 0 8% 10%;
+    animation: moveTimeline 100s infinite linear;
+    -webkit-animation: moveTimeline 100s infinite linear;
+}
+
+.timeline > .hr{
+    margin: 0;
+    background: #E02413;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    top: 276px;
+    width: 305%;
+}
+
+.timeline figure{
+    width: 200px !important;
+    margin: 0;
+    height: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline .timeline-top,
+.timeline .timeline-bottom{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.timeline .timeline-top article{
+    border-left: 3px solid #E02413;
+    position: relative;
+}
+
+.timeline .timeline-top article > p{
+    display: flex;
+    justify-content: center;
+    padding: 1% 0;
+    width: 25%;
+    border-top-right-radius: 10px;
+    background-image: linear-gradient(to right, #d81525, #b40f25, #8d0e15);
+    color: #FFF;
+    text-align: center;
+}
+
+.timeline .timeline-top article > p > span{
+    font-size: 20px;
+}
+
+.timeline .timeline-top article > div{
+    display: flex;
+}
+
+.timeline .timeline-top article > div.timeline-punto-top{
+    width: 15px;
+    height: 15px;
+    background: #E02413;
+    position: absolute;
+    border-radius: 50%;
+    left: -8px;
+    bottom: -7px;
+}
+
+.timeline .timeline-top article > div figure{
+    width: 320px;
+}
+
+.timeline .timeline-top article > div figure img{
+    width: 100%;
+}
+
+.timeline .timeline-top article > div > p{
+    width: 165px;
+    margin: 0 5%;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline .timeline-bottom > article{
+    display: flex;
+    position: relative;
+    height: 260px;
+}
+
+.timeline .timeline-bottom > article:not(:first-child){
+    flex-direction: row-reverse;
+}
+
+.timeline .timeline-bottom > article > p{
+    width: 240px;
+    margin: 0 2%;
+    font-size: 16px;
+    padding-top: 5%;
+    line-height: 20px;
+}
+
+.timeline .timeline-bottom > article:not(:first-child) > p{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    margin-bottom: 8%;
+}
+
+.timeline .timeline-bottom figure img{
+    width: 100%;
+    margin-top: 10%;
+}
+
+.timeline .timeline-bottom > article > .borde-izquierdo{
+    text-align: right;
+    border-left: 3px solid #E02413;
+}
+
+.timeline .timeline-bottom > article > .borde-izquierdo > .timeline-punto-bottom{
+    width: 15px;
+    height: 15px;
+    background: #E02413;
+    border-radius: 50%;
+    position: absolute;
+    right: 48.70%;
+    top: -6px;
+}
+
+.timeline .timeline-bottom > article > .borde-izquierdo > p{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0;
+    padding: 2.5% 0;
+    border-top-right-radius: 10px;
+    background-image: linear-gradient(to right, #d81525, #b40f25, #8d0e15);
+    color: #FFF;
+    text-align: center;
+}
+
+.timeline .timeline-bottom > article > .borde-izquierdo > p span{
+    font-size: 20px;
+}
+
+.timeline .timeline-bottom > article > .borde-derecho{
+    text-align: right;
+    border-right: 3px solid #E02413;
+}
+
+.timeline .timeline-bottom > article > .borde-derecho > .timeline-punto-bottom{
+    width: 15px;
+    height: 15px;
+    background: #E02413;
+    border-radius: 50%;
+    position: absolute;
+    right: 48.70%;
+    top: -6px;
+}
+
+.timeline .timeline-bottom > article > .borde-derecho > p{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 0 0 auto;
+    padding: 2.5% 0;
+    border-top-left-radius: 10px;
+    background-image: linear-gradient(to right, #d81525, #b40f25, #8d0e15);
+    color: #FFF;
+    text-align: center;
+}
+
+.timeline .timeline-bottom > article > .borde-derecho > p span{
+    font-size: 20px;
+}
+
+/* SIN FOTO */
+
+.timeline .sin-foto{
+    flex-direction: column !important;
+    border-right: 3px solid red;
+    padding-right: 2%;
+}
+
+.timeline .sin-foto .borde-derecho{
+    border: none !important;
+}
+
+.timeline .sin-foto .borde-derecho .timeline-punto-bottom{
+    right: -8.5px !important;
+    top: -6px !important;
+}
+
+.timeline .sin-foto .borde-derecho > p{
+    right: -28px;
+}
+
+.timeline .sin-foto > p{
+    width: 205px !important;
+}
+
+/* AJUSTES POR AÑO */
+
+/* 1910 */
+
+.año-1910{
+    margin-right: 2%;
+}
+
+.año-1910 > p{
+    width: 130px !important;
+    padding: 1.5% 0 !important;
+}
+
+/* 1918 */
+
+.año-1918 .borde-derecho > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+    position: relative;
+    top: 220px;
+}
+
+/* 1942 */
+
+.año-1942{
+    margin-right: 4%;
+}
+
+.año-1942 > p{
+    width: 130px !important;
+    padding: 1.5% 0 !important;
+}
+
+/* 1946 */
+
+.año-1946{
+    margin: 0 4%;
+}
+
+.año-1946 > p{
+    width: 255px !important;
+}
+
+.año-1946 .borde-izquierdo > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+}
+
+.año-1946 .timeline-punto-bottom{
+    right: 42.2% !important;
+}
+
+/* 1950 */
+
+.año-1950{
+    margin-right: 2%;
+}
+
+.año-1950 > p{
+    width: 130px !important;
+    padding: 1.5% 0 !important;
+}
+
+/* 1952 */
+
+.año-1952 .borde-derecho > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+    position: relative;
+    top: 220px;
+}
+
+.año-1952{
+    margin-right: 4%;
+}
+
+/* 1959 */
+
+.año-1959{
+    margin-right: 10%;
+}
+
+.año-1959 > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+}
+
+.año-1959 > div{
+    width: 180px;
+    margin-top: 45px;
+}
+
+/* 1963 */
+
+.año-1963{
+    margin: 0 2%;
+}
+
+.año-1963 .borde-izquierdo > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+}
+
+.año-1963 .timeline-punto-bottom{
+    right: 43.8% !important;
+}
+
+/* 1971 */
+
+.año-1971{
+    margin-right: 5%;
+}
+
+.año-1971 > p{
+    width: 130px !important;
+    padding: 1.5% 0 !important;
+}
+
+/* 1991 */
+
+.año-1991{
+    margin-right: 2%;
+}
+
+.año-1991 .borde-izquierdo > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+}
+
+.año-1991 .timeline-punto-bottom{
+    right: 43.8% !important;
+}
+
+/* 1994 */
+
+.año-1994{
+    margin-right: 5%;
+}
+
+.año-1994 > p{
+    width: 130px !important;
+    padding: 1.5% 0 !important;
+}
+
+.año-1994 .logo-hino{
+    width: 130px !important;
+}
+
+/* 1997 */
+
+.año-1997{
+    margin-right: 3%;
+}
+
+.año-1997 .borde-izquierdo > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+}
+
+.año-1997 .timeline-punto-bottom{
+    right: 43.8% !important;
+}
+
+/* 1999 */
+
+.año-1999{
+    margin-right: 12%;
+}
+
+.año-1999 > p{
+    width: 130px !important;
+    padding: 1.5% 0 !important;
+}
+
+/* 2004 */
+
+.año-2004{
+    margin-right: 2%;
+}
+
+.año-2004 .borde-izquierdo > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+}
+
+.año-2004 .timeline-punto-bottom{
+    right: 43.8% !important;
+}
+
+/* 2009 */
+
+.año-2009{
+    margin-right: 12%;
+}
+
+.año-2009 > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+}
+
+.año-2009 > div{
+    width: 180px;
+    margin-top: 45px;
+}
+
+/* 2011 */
+
+.año-2011{
+    margin-right: 2%;
+}
+
+.año-2011 .borde-izquierdo > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+}
+
+.año-2011 .timeline-punto-bottom{
+    right: 43.8% !important;
+}
+
+/* 2012 */
+
+.año-2012{
+    margin-right: 8%;
+}
+
+.año-2012 > p{
+    width: 130px !important;
+    padding: 1% 0 !important;
+}
+
+/* 2017 */
+
+.año-2017{
+    margin-right: 6%;
+}
+
+.año-2017 .borde-derecho > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+    position: relative;
+    top: 220px;
+}
+
+/* 2018 */
+
+.año-2018{
+    margin-right: 10%;
+}
+
+.año-2018 > p{
+    width: 130px !important;
+    padding: 1.5% 0 !important;
+}
+
+.año-2018 > div{
+    width: 180px;
+    margin-top: 45px;
+}
+
+/* 2019 */
+
+.año-2019 .borde-derecho > p{
+    width: 130px !important;
+    padding: 2.5% 0 !important;
+    position: relative;
+    top: 220px;
+}
+
+/* 2022 */
+
+.año-2022 > p{
+    width: 130px !important;
+    padding: 1.5% 0 !important;
+}
+
+/* LÍNEA CRONOLÓGICA HINO RESPONSIVE */
+
+@media only screen and (max-width: 1400px){
+    @keyframes moveTimeline {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-230%); 
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .timeline > .hr{
+        width: 320%;
+    }
+
+    .año-2012 {
+        margin-left: 2%;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    @keyframes moveTimeline {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-270%); 
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .timeline > .hr{
+        width: 360%;
+    }
+
+    .año-2012 {
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    @keyframes moveTimeline {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-300%); 
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .timeline > .hr{
+        width: 400%;
+    }
+
+    .año-2012 {
+        margin-left: 10%;
+    }
+
+    .timeline .sin-foto .borde-derecho > p {
+        right: -25px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    @keyframes moveTimeline {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-340%); 
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .timeline > .hr{
+        width: 450%;
+    }
+
+    .año-2012 {
+        margin-left: 15%;
+    }
+
+    .timeline .sin-foto .borde-derecho > p {
+        right: -23px;
+    }
+
+    .timeline-hino > h3{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    @keyframes moveTimeline {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-380%); 
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .timeline > .hr{
+        width: 490%;
+    }
+
+    .año-2012 {
+        margin-left: 20%;
+    }
+
+    .timeline .sin-foto .borde-derecho > p {
+        right: -21px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    @keyframes moveTimeline {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-430%); 
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .timeline > .hr{
+        width: 520%;
+    }
+
+    .año-2012 {
+        margin-left: 24%;
+    }
+
+    .timeline .sin-foto .borde-derecho > p {
+        right: -18px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    @keyframes moveTimeline {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-480%); 
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .timeline > .hr{
+        width: 580%;
+    }
+
+    .año-2012 {
+        margin-left: 40%;
+    }
+
+    .timeline .sin-foto .borde-derecho > p {
+        right: -16px;
+    }
+
+    .timeline-hino > h3{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 767.98px){
+    .timeline .hr{
+        height: 2px !important;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    @keyframes moveTimeline {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-510%); 
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .timeline > .hr{
+        width: 600%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    @keyframes moveTimeline {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-550%); 
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .timeline > .hr{
+        width: 650%;
+    }
+
+
+    .timeline .sin-foto .borde-derecho > p {
+        right: -14px;
+    }
+
+}
+
+@media only screen and (max-width: 650px){
+    @keyframes moveTimeline {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-600%); 
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .timeline > .hr{
+        width: 690%;
+    }
+
+    .año-2022{
+        margin-left: 5%;
+    }
+
+}
+
+
+/* HINO DATOS */
+
+
+.nosotros-hino_datos{
+    background-color: #E8E8E8;
+    height: 400px;
+}
+
+.nosotros-hino_datos > div{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nosotros-hino_datos > div article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 206px;
+}
+
+.nosotros-hino_datos > div article > figure{
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    margin-bottom: 18px;
+}
+
+.icono-hino{
+    width: 70px !important;
+    height: 70px !important;
+}
+
+.nosotros-hino_datos > div article:nth-child(2) > figure{
+    width: 80px;
+}
+
+.nosotros-hino_datos > div article > figure > img{
+    width: 100%;
+    height: 100%;
+} 
+
+.nosotros-hino_datos article > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosotros-hino_datos article span{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nosotros-hino_datos article .grupo-toyota{
+    text-align: center;
+}
+
+.nosotros-hino_datos article .datos-numeros{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* RESPONSIVE HINO DATOS */
+
+@media only screen and (max-width: 1300px){
+    .nosotros-hino_datos > div{
+        max-width: 1000px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .nosotros-hino_datos > div{
+        max-width: 900px;
+    }
+
+    .nosotros-hino_datos > div article > figure {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nosotros-hino_datos > div article > .icono-hino {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .nosotros-hino_datos > div article:nth-child(2) > figure {
+        width: 65px;
+    }
+
+    .nosotros-hino_datos article span {
+        font-size: 18px !important;
+    }
+
+    .nosotros-hino_datos > div article:last-child{
+        width: 135px !important;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .nosotros-hino_datos > div {
+        max-width: 800px;
+    }
+
+    .nosotros-hino_datos > div article {
+        height: 40%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .nosotros-hino_datos > div {
+        max-width: 90%;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .nosotros-hino_datos article span {
+        font-size: 16px !important;
+    }
+}
+
+@media only screen and (max-width: 767.98px){
+
+    .nosotros-hino_datos {
+        height: 350px !important;
+    }
+    
+}
+
+@media only screen and (max-width: 600px){
+
+    .nosotros-hino_datos {
+        height: auto !important;
+        padding: 8% 0;
+    }
+    
+    .nosotros-hino_datos > div {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-left: 9%;
+    }
+
+    .nosotros-hino_datos > div article {
+        width: 47%;
+        flex-direction: row;
+        justify-content: left;
+        gap: 5%;
+        align-items: center;
+    }
+
+    .nosotros-hino_datos article > div {
+        align-items: start;
+    }
+
+    .nosotros-hino_datos > div article > figure{
+        margin-bottom: 0;
+    }
+
+    .nosotros-hino_datos > div article:nth-child(2) > figure {
+        width: 50px;
+        height: 40px;
+    }
+
+    .nosotros-hino_datos > div article:last-child {
+        width: 48% !important;
+    }
+
+    .nosotros-hino_datos article .grupo-toyota {
+        text-align: left;
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .nosotros-hino_datos > div {
+        padding-left: 6%;
+    }
+
+    .nosotros-hino_datos article span {
+        font-size: 14px !important;
+    }
+
+}
+
+@media only screen and (max-width: 450px){
+    .nosotros-hino_datos > div {
+        padding-left: 4%;
+    }
+
+    .nosotros-hino_datos > div article > figure {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nosotros-hino_datos > div article > .icono-hino {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .nosotros-hino_datos > div article:nth-child(2) > figure {
+        width: 40px;
+        height: 35px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .nosotros-hino_datos > div {
+        padding-left: 5%;
+    }
+
+    .nosotros-hino_datos article span {
+        font-size: 12px !important;
+    }
+
+    .nosotros-hino_datos > div article {
+        width: 45%;
+    }
+
+    .nosotros-hino_datos > div article > figure {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nosotros-hino_datos > div article:nth-child(2) > figure {
+        width: 35px;
+        height: auto;
+    }
+}
+
+
+/*----- LÍNEA CRONOLÓGICA HINO RESPONSIVE -----*/
+
+.timeline-hino-responsive{
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.timeline-hino-responsive > h3{
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    text-transform: uppercase;
+    margin: 5% 0 15% 0;
+    font-weight: 900;
+}
+
+.timeline-hino-responsive .timeline-responsive{
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-hino-responsive .timeline-responsive > article{
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline-hino-responsive .timeline-responsive > article figure{
+    margin: 0;
+    width: 100%;
+}
+
+.timeline-hino-responsive .timeline-responsive > article figure img{
+    width: 100%;
+}
+
+.timeline-hino-responsive .timeline-responsive > article > .parrafo{
+    width: 50%;
+    font-size: 14px;
+    display: flex;
+    gap: 2%;
+}
+
+.timeline-hino-responsive .timeline-responsive > article.foto-derecha > .parrafo{
+    flex-direction: row-reverse;
+}
+
+.timeline-hino-responsive .timeline-responsive > article.foto-derecha > .parrafo > p{
+    text-align: right;
+}
+
+.timeline-hino-responsive .timeline-responsive > article > .parrafo > div{
+    width: 18%;
+    height: 2px;
+    background-color: #8D0007;
+    margin-top: 12px;
+}
+
+.timeline-hino-responsive .timeline-responsive > article > .parrafo > p{
+    width: 80%;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.timeline-hino-responsive .timeline-responsive > article > .foto{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 16px;
+}
+
+.timeline-hino-responsive .timeline-responsive > article > .foto > p{
+    width: 45%;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+    background-image: linear-gradient(to right, #E60013, #BF001B, #8D0007);
+    color: #FFF;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 1% 0;
+    margin: 0;
+}
+
+.timeline-hino-responsive .timeline-responsive > article.foto-derecha > .foto{
+    align-items: flex-start;
+}
+
+.timeline-hino-responsive .timeline-responsive > article.foto-derecha > .foto > p{
+    background-image: linear-gradient(to left, #E60013, #BF001B, #8D0007);
+    border-radius: 0px 5px 5px 0px;
+}
+
+.timeline-hino-responsive .linea-responsive{
+    position: absolute;
+    width: 2px;
+    height: 98%;
+    background: #8D0007;
+    top: 85px;
+}
+
+.timeline-hino-responsive .linea-responsive > div{
+    width: 10px;
+    height: 10px;
+    background: #8D0007;
+    bottom: 0;
+    position: absolute;
+    border-radius: 30px;
+    left: -3.7px;
+}
+
+
+/*----- RESPONSIVE -----*/
+
+@media only screen and (max-width: 600px){
+    .timeline-hino{
+        display: none;
+    }
+
+    .timeline-hino-responsive{
+        display: flex;
+        margin-bottom: 10%;
+    }
+
+    .timeline-hino-responsive .timeline-responsive > article:last-child{
+        margin-bottom: 10%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    .timeline-hino-responsive > h3{
+        font-size: 18px;
+    }
+
+    .timeline-hino-responsive .timeline-responsive {
+        gap: 35px;
+    }
+
+    .timeline-hino-responsive .parrafo > p{
+        font-size: 12px;
+        line-height: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 400px){
+
+    .timeline-hino-responsive > h3{
+        margin-top: 8%;
+    }
+
+    .timeline-hino-responsive .parrafo > p{
+        font-size: 10px;
+        line-height: 12px !important;
+    }
+}
+

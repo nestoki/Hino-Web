@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_camiones_website" model="website.menu">
+        <field name="name">Camiones</field>
+        <field name="url">camiones</field>
+    </record>
+
+    <template id="hino_camiones" name="Hino Camiones">
+        <t t-call="website.layout">
+            <t t-set="head">
+                <t t-call-assets="web.assets_common" t-js="false" />
+                <link rel="stylesheet" href="/website_hino/static/src/css/camiones/camiones.css"/>
+            </t>
+
+            <!-- MAIN -->
+            <section class="main_camiones">
+                <h3 class="main_camiones-titulo">
+                    <p t-out="camion.name"/>
+                </h3>
+                <div>
+                    <div class="info_camion">
+                        <div class="garantia_camion">
+                            <t t-if="camion.sello_garantia">
+                                <img t-att-src="'/web/image/camion/%s/sello_garantia' % camion.id" alt="Icono" />
+                            </t>
+                        </div>
+                        <figure class="raya-roja-figure">
+                            <img src="/website_hino/static/images/iconos/rectangulo-rojo.png" class=" raya-roja-camion" />
+                        </figure>
+                        <figure class="img_camion">
+                            <t t-if="camion.foto">
+                                <img t-att-src="'/web/image/camion/%s/foto' % camion.id" alt="Icono" />
+                            </t>
+                        </figure>
+                        <div class="main_camiones_botones">
+                            <t t-if="camion">
+                                <a t-attf-href="/web/content/{{ camion._name }}/{{ camion.id }}/ficha_tecnica" role="button" class="especificaciones" download="NombreArchivo">Especificaciones</a>
+                            </t>
+                            <a href="/contactus" class="cuotas">Cotizar</a>
+                        </div>
+                    </div>
+                    <div class="aplicaciones">
+                        <h4>APLICACIONES</h4>
+                        <div>
+                            <t t-foreach="camion.aplicacion_ids" t-as="aplicacion">
+                                <t t-if="aplicacion.name == 'carga_seca'">
+                                    <article class="carga_seca">
+                                        <figure>
+                                            <img src="/website_hino/static/images/carga-seca.png" alt="Icono" />
+                                        </figure>
+                                        <span>Carga Seca</span>
+                                    </article>
+                                </t>
+                                <t t-if="aplicacion.name == 'carga_refrigerada'">
+                                    <article class="carga_refrigerada">
+                                        <figure>
+                                            <img src="/website_hino/static/images/carga-refrigerada.png" alt="Icono" />
+                                        </figure>
+                                        <span>Carga Refrigerada</span>
+                                    </article>
+                                </t>
+                                <t t-if="aplicacion.name == 'ganadera'">
+                                    <article class="ganadera">
+                                        <figure>
+                                            <img src="/website_hino/static/images/ganadera.png" alt="Icono" />
+                                        </figure>
+                                        <span>Ganadera</span>
+                                    </article>
+                                </t>
+                                <t t-if="aplicacion.name == 'plataforma'">
+                                    <article class="plataforma">
+                                        <figure>
+                                            <img src="/website_hino/static/images/plataforma.png" alt="Icono" />
+                                        </figure>
+                                        <span>Plataforma</span>
+                                    </article>
+                                </t>
+                                <t t-if="aplicacion.name == 'volquete'">
+                                    <article class="plataforma">
+                                        <figure>
+                                            <img src="/website_hino/static/images/volquete.png" alt="Icono" />
+                                        </figure>
+                                        <span>Volquete</span>
+                                    </article>
+                                </t>
+                                <t t-if="aplicacion.name == 'cisterna'">
+                                    <article class="cisterna">
+                                        <figure>
+                                            <img src="/website_hino/static/images/cisterna.png" alt="Icono" />
+                                        </figure>
+                                        <span>Cisterna</span>
+                                    </article>
+                                </t>
+                                <t t-if="aplicacion.name == 'grúa'">
+                                    <article class="grua">
+                                        <figure>
+                                            <img src="/website_hino/static/images/grua.png" alt="Icono" />
+                                        </figure>
+                                        <span>Grúa</span>
+                                    </article>
+                                </t>
+                                <t t-if="aplicacion.name == 'compactador'">
+                                    <article class="compactador">
+                                        <figure>
+                                            <img src="/website_hino/static/images/compactador.png" alt="Icono" />
+                                        </figure>
+                                        <span>Compactador</span>
+                                    </article>
+                                </t>
+                            </t>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </section>
+
+            <!-- BLOCK DROPDOWN -->
+            <section class="DropDown">
+                <div>
+                    <article>
+                        <h5>
+                                    TRANSMISIÓN
+                            <button class="botonMostrarOcultar">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </h5>
+                        <div class="caracteristica">
+                            <p class="informacion" style="display: none;" t-out="camion.tipo_transmision"></p>
+                        </div>
+                    </article>
+                    <article>
+                        <h5>
+                                    CAPACIDADES
+                            <button class="botonMostrarOcultar">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </h5>
+                        <div class="caracteristica">
+                            <p class="informacion" style="display: none;" t-out="'Peso Bruto Vehicular'"></p>
+                            <p class="informacion" style="display: none;" t-out="camion.peso_bruto"></p>
+                        </div>
+                        <div class="caracteristica">
+                            <p class="informacion" style="display: none;" t-out="'Peso del Chasis'"></p>
+                            <p class="informacion" style="display: none;" t-out="camion.peso_chasis"></p>
+                        </div>
+                        <div class="caracteristica">
+                            <p class="informacion" style="display: none;" t-out="'Longitud Utilizable del Chasis'"></p>
+                            <p class="informacion" style="display: none;" t-out="camion.longitud"></p>
+                        </div>
+                        <div class="caracteristica">
+                            <p class="informacion" style="display: none;" t-out="camion.tipo_rueda"></p>
+                        </div>
+                    </article>
+                    <article>
+                        <h5>
+                            MOTOR
+                            <button class="botonMostrarOcultar">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </h5>
+                        <div class="caracteristica">
+                            <p class="informacion" style="display: none;" t-out="camion.modelo_motor"></p>
+                        </div>
+                        <div class="caracteristica">
+                            <p class="informacion" style="display: none;" t-out="camion.tipo_inyeccion"></p>
+                        </div>
+                        <div class="caracteristica">
+                            <p class="informacion" style="display: none;" t-out="'Potencia'"></p>
+                            <p class="informacion" style="display: none;" t-out="camion.potencia"></p>
+                        </div>
+                        <div class="caracteristica">
+                            <p class="informacion" style="display: none;" t-out="'Torque'"></p>
+                            <p class="informacion" style="display: none;" t-out="camion.torque"></p>
+                        </div>
+                        <div class="caracteristica">
+                            <p class="informacion" style="display: none;" t-out="'Alternador'"></p>
+                            <p class="informacion" style="display: none;" t-out="camion.alternador"></p>
+                        </div>
+
+                    </article>
+                </div>
+
+            </section>
+
+            <!-- VISTA 360 -->
+            <section class="vista_360">
+                <h3 class="vista_360_titulo">VISTA 360º</h3>
+                    <iframe width="100%" height="500px" t-att-src="camion.vista_360_url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1">
+                </iframe>
+            </section>
+
+            <!-- GALERÍA 2 -->
+            <section class="galeria_camiones">
+                <h3 class="galeria_camiones_titulo">GALERÍA</h3>
+                <div class="carousel">
+                    <div class="carrusel-list" id="carrusel-list">
+                        <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                                </path>
+                            </svg>
+                        </button>
+
+                        <div class="carrusel-track" id="track">
+                            <t t-foreach="camion.galeria_ids" t-as="imagen">
+                                <div class="carrusel">
+                                    <div>
+                                        <figure>
+                                            <img t-att-src="'/web/image/camion.galeria/%s/image_data' % imagen.id" class="d-block w-100" t-att-alt="imagen.image_name"/>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+
+                        <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIDEO -->
+            <section class="video_camion">
+                <iframe width="560" height="315" t-att-src="camion.video_url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1">
+                </iframe>
+            </section>
+
+            <!-- MODELOS DISPONIBLES -->           
+            <section class="serie-camiones serie-camiones-modelo">
+                <section class="model-camiones">
+                    <h3 class="letter modelos_disponibles">MODELOS DISPONIBLES</h3>
+                    <div class="modelos" id="modelos">
+                        <t t-set="camiones_con_misma_serie" t-value="request.env['camion'].sudo().search([('no_serie', '=', serie_camion)])" />
+                        <div class="content">
+                            <br></br>
+                            <div class="content_text block" data-seccion="1">
+                                <div id="carouselExampleControls6" class="carousel slide" data-bs-ride="carousel">
+                                    <!-- <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div> -->
+                                    <div class="carousel-inner">
+                                        <t t-set="serie_found" t-value="False"/>
+                                        <t t-foreach="camiones_con_misma_serie" t-as="camion">
+                                            <t t-if="camion.no_serie == serie_camion and not serie_found">
+                                                <t t-set="serie_found" t-value="True"/>
+                                                <div class="carousel-item active">
+                                                    <div class="todos">
+                                                        <t t-if="camion">
+                                                            <h3 class="nombre nombre-responsive" t-out="camion.name" />
+                                                        </t>
+                                                        <div class="hc">
+                                                            <img src="/website_hino/static/images/iconos/rectangulo-rojo.png" class="raya-roja-modelo-disponible" />
+                                                            <t t-if="camion.foto">
+                                                                <img t-att-src="'/web/image/camion/%s/foto' % camion.id" class="img-serie" />
+                                                            </t>
+                                                        </div>
+                                                        <div class="propiedades">
+                                                            <t t-if="camion">
+                                                                <h3 class="nombre" t-out="camion.name" />
+                                                            </t>
+                                                            <div class="container-pro" style="display: inline-block;">
+                                                                <div class="camion-peso" style="display: inline-block;">
+                                                                    <img src="/website_hino/static/images/iconos/capacidad.png" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Peso Bruto Vehicular <br></br>
+                                                                            <span class="datos" t-out="camion.peso_bruto" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                                <div class="camion-capacidad" style="display: inline-block; margin-left: 20px;">
+                                                                    <img src="/website_hino/static/images/iconos/capacidad-carga.svg" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Capacidad de la carga <br></br>
+                                                                            <span class="datos" t-out="camion.capacidad" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                                <div class="camion-longitud" style="display: inline-block;">
+                                                                    <img src="/website_hino/static/images/iconos/_1.svg" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Longitud de Chasis <br></br>
+                                                                            <span class="datos" t-out="camion.longitud" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                            </div>
+                                                            <br></br>
+                                                            <div class="botones">
+                                                                <t t-if="camion">
+                                                                    <a t-attf-href="/web/content/{{ camion._name }}/{{ camion.id }}/ficha_tecnica" role="button" class="boton" download="NombreArchivo">
+                                                                        <img src="/website_hino/static/images/iconos/icon-ficha.png" alt="Icono" />
+                                                                        Descargar ficha técnica
+                                                                    </a>
+                                                                </t>
+                                                                <br></br>
+                                                                <a href="/contactus" class="boton1">
+                                                                    <img src="/website_hino/static/images/iconos/icon-cotizacion.png" />
+                                                                    Cotizar
+                                                                </a>
+                                                            </div>
+                                                            <br></br>
+                                                            <a t-attf-href="/camiones/series?camionId={{ camion.id }}" class="ver-btn">Ver Modelo</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                            <t t-else="">
+                                                <div class="carousel-item">
+                                                    <div class="todos">
+                                                        <t t-if="camion">
+                                                            <h3 class="nombre nombre-responsive" t-out="camion.name" />
+                                                        </t>
+                                                        <div class="hc">
+                                                            <img src="/website_hino/static/images/iconos/rectangulo-rojo.png" class="raya-roja-modelo-disponible" />
+                                                            <t t-if="camion.foto">
+                                                                <img t-att-src="'/web/image/camion/%s/foto' % camion.id" class="img-serie" />
+                                                            </t>
+                                                        </div>
+                                                        <div class="propiedades">
+                                                            <t t-if="camion">
+                                                                <h3 class="nombre" t-out="camion.name" />
+                                                            </t>
+                                                            <div class="container-pro" style="display: inline-block;">
+                                                                <div class="camion-peso" style="display: inline-block;">
+                                                                    <img src="/website_hino/static/images/iconos/capacidad.png" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Peso Bruto Vehicular <br></br>
+                                                                            <span class="datos" t-out="camion.peso_bruto" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                                <div class="camion-capacidad" style="display: inline-block; margin-left: 20px;">
+                                                                    <img src="/website_hino/static/images/iconos/capacidad-carga.svg" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Capacidad de la carga <br></br>
+                                                                            <span class="datos" t-out="camion.capacidad" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                                <br></br>
+                                                                <div class="camion-longitud" style="display: inline-block;">
+                                                                    <img src="/website_hino/static/images/iconos/_1.svg" alt="Icono" />
+                                                                    <t t-if="camion">
+                                                                        <span class="dato-tecnico"> Longitud de Chasis <br></br>
+                                                                            <span class="datos" t-out="camion.longitud" />
+                                                                        </span>
+                                                                    </t>
+                                                                </div>
+                                                            </div>
+                                                            <br></br>
+                                                            <div class="botones">
+                                                                <t t-if="camion">
+                                                                    <a t-attf-href="/web/content/{{ camion._name }}/{{ camion.id }}/ficha_tecnica" role="button" class="boton" download="NombreArchivo">
+                                                                        <img src="/website_hino/static/images/iconos/icon-ficha.png" alt="Icono" />
+                                                                        Descargar ficha técnica
+                                                                    </a>
+                                                                </t>
+                                                                <br></br>
+                                                                <a href="/contactus" class="boton1">
+                                                                    <img src="/website_hino/static/images/iconos/icon-cotizacion.png" />
+                                                                    Cotizar
+                                                                </a>
+                                                            </div>
+                                                            <br></br>
+                                                            <a t-attf-href="/camiones/series?camionId={{ camion.id }}" class="ver-btn">Ver Modelo</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </t>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls6" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls6" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </section>
+            </section>
+
+            <!-- Aqui agregar los enlaces a los script que sean nesecarios -->
+            <script src="/website_hino/static/src/js/camiones/btn-mostrar-ocultar.js"></script>
+            <script src="/website_hino/static/src/js/camiones/galeria.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo> 
+    <record id="menu_nosotros_website" model="website.menu">
+        <field name="name">Nosotros Tambor</field>
+        <field name="url">nosotros-tambor</field>
+    </record> 
+
+    <template id="hino_nosotros_tambor" name="Nosotros Tambor"> 
+        <t t-call="website.layout"> 
+            <t t-set="head"> 
+                <t t-call-assets="web.assets_common" t-js="false" />
+                <link rel="stylesheet" href="/website_hino/static/src/css/nosotros/nosotros-tambor.css"/>                 
+            </t> 
+            
+            <!-- SLIDER NOSOTROS TAMBOR  -->
+
+            <section class="slider-main slider-nosotros-tambor">
+                <section class="swiper swiper-container-tambor">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div t-attf-style="background-image:url('/website_hino/static/images/fondo-sucursales.png')" class="img bg-slide bg-slide-nosotros">
+                                <div class="capa-negra"></div>
+                                <div class="container-title container-title-nosotros-tambor">
+                                    <h3>Historia de tambor</h3>
+                                    <p>
+                                        Tambor, S.A., es una empresa con una trayectoria de 65 años, 
+                                        que pertenece a Grupo Corporativo Pérez, S.A. Actualmente 
+                                        cuentan con 9 sucursales a nivel nacional, estratégicamente 
+                                        ubicadas y 11 talleres móviles para brindarles a sus clientes 
+                                        una atención expedita y con un servicio garantizado.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                </section>
+            </section>
+
+            <!-- LÍNEA CRONOLÓGICA TAMBOR  -->
+
+            <section class="timeline-tambor">
+                <h3>línea cronológica</h3>
+                <div class="timeline">
+                    <div class="timeline-top">
+                        <article>
+                            <p>
+                                <span>1957</span>
+                            </p>
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/linea-img1.png"></img>
+                                </figure>
+                                <p>
+                                    El inicio de Tambor, S.A. se remonta al año 1957, 
+                                    en el negocio de venta de productos usados, entre 
+                                    los que predominaban las llantas de poco uso.
+                                    <br></br>
+                                    <br></br>
+                                    Por su cercanía a un conocido bar de la época, 
+                                    llamado “El Tambor de la Alegría”, la empresa 
+                                    fue bautizada con el nombre que ha perdurado por 
+                                    más de medio siglo.
+                                </p>
+                            </div>
+                            <div class="timeline-punto-top"></div> 
+                        </article>
+                        <article>
+                            <p>
+                                <span>1979</span>
+                            </p>
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/linea-img2.png"></img>
+                                </figure>
+                                <p>
+                                    La empresa es adquirida por los empresarios 
+                                    Raúl Hernández y René Diaz, quienes se encargaron 
+                                    de la expansión de la empresa.
+                                    <br></br>
+                                    <br></br>
+                                    La primera sucursal del grupo es inaugurada en 
+                                    el año de 1989 en el Dorado.
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                        <article style="margin-right: 5%;">
+                            <p>
+                                <span>2005</span>
+                            </p>
+                            <div>
+                                <figure style="width: 130px; height: 220px; display: flex; align-items: center;">
+                                    <img src="/website_hino/static/images/linea-img3.png"></img>
+                                </figure>
+                                <p>
+                                    Se vende Tambor, S.A., al Grupo Corporativo Pérez, 
+                                    propietarios de la distribuidora automotriz líder del 
+                                    mercado panameño, Ricardo Pérez, S.A., representante 
+                                    de la marca automotriz Toyota, que buscaba ampliar su 
+                                    negocio y ofrecer valor agregado de calidad a sus clientes.
+                                    <br></br>
+                                    <br></br>
+                                    La visión del grupo era convertir a Tambor, S.A. en la 
+                                    principal cadena de talleres automotrices del país.
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                        <article>
+                            <p>
+                                <span>2019</span>
+                            </p>
+                            <div>
+                                <figure style="width: 130px; height: 220px; display: flex; align-items: center;">
+                                    <img src="/website_hino/static/images/linea-img4.png"></img>
+                                </figure>
+                                <p>
+                                    Se convierte en el Distribuidor autorizado de 
+                                    la marca de camiones Japonesa Hino, líder en 
+                                    el desarrollo de tecnologías para camiones y 
+                                    presentes a nivel mundial en +90 países.
+                                </p>
+                            </div> 
+                            <div class="timeline-punto-top"></div>
+                        </article>
+                    </div>
+                    <hr/>
+                    <div class="timeline-bottom ">
+                        <article style="margin-right: 5%;">
+                            <div class="borde-derecho">
+                                <div class="timeline-punto-bottom"></div>
+                                <figure>
+                                    <img src="/website_hino/static/images/linea-bridgestone.png"></img>
+                                </figure>
+                                <p>
+                                    <span>1970</span>
+                                </p>
+                            </div>
+                            <p>
+                                Tambor, S.A. gana la representación exclusiva 
+                                en Panamá de las llantas Bridgestone.
+                            </p>
+                        </article>
+                        <article>
+                            <div class="borde-izquierdo">
+                                <div class="timeline-punto-bottom"></div>
+                                <figure>
+                                    <img src="/website_hino/static/images/linea-firestone.png"></img>
+                                </figure>
+                                <p>
+                                    <span>1990</span>
+                                </p>
+                            </div>
+                            <p>
+                                La empresa consigue la representación exclusiva 
+                                de las llantas Firestone, que junto con la de 
+                                Bridgestone, obtenida 11 años antes, terminan posicionando 
+                                a Tambor, S.A., como una de las más reconocidas 
+                                distribuidoras de neumáticos de Panamá.
+                            </p>
+                        </article>
+                        <article>
+                            <div class="borde-izquierdo">
+                                <div class="timeline-punto-bottom"></div>
+                                <figure>
+                                    <img src="/website_hino/static/images/linea-motul.png"></img>
+                                </figure>
+                                <p>
+                                    <span>2011</span>
+                                </p>
+                            </div>
+                            <p>
+                                La empresa consigue la representación de MOTUL, 
+                                lubricante de alta calidad con +160 años en el mercado.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LÍNEA CRONOLÓGICA TAMBOR RESPONSIVE  -->
+
+            <section class="timeline-tambor-responsive">
+                <h3 class="titulo-tambor-responsive">línea cronológica</h3>
+                <div class="timeline-responsive">
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>1957</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/linea-img1.png"></img>
+                            </figure>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                El inicio de Tambor, S.A. se remonta al año 1957, 
+                                en el negocio de venta de productos usados, entre 
+                                los que predominaban las llantas de poco uso.
+                                <br></br>
+                                <br></br>
+                                Por su cercanía a un conocido bar de la época, 
+                                llamado “El Tambor de la Alegría”, la empresa 
+                                fue bautizada con el nombre que ha perdurado por 
+                                más de medio siglo.
+                            </p>                           
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Tambor, S.A. gana la representación 
+                                exclusiva en Panamá de las llantas 
+                                Bridgestone.
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>1970</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/linea-bridgestone.png"></img>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>1979</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/linea-img2.png"></img>
+                            </figure>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                La empresa es adquirida por los empresarios 
+                                Raúl Hernández y René Diaz, quienes se encargaron 
+                                de la expansión de la empresa.
+                                <br></br>
+                                <br></br>
+                                La primera sucursal del grupo es inaugurada en 
+                                el año de 1989 en el Dorado.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                La empresa consigue la representación 
+                                exclusiva de las llantas Firestone, 
+                                que junto con la de Bridgestone, obtenida 
+                                11 años antes, terminan posicionando a 
+                                Tambor, S.A., como una de las más 
+                                reconocidas distribuidoras de neumáticos 
+                                de Panamá.
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>1990</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/linea-firestone.png"></img>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>2005</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/linea-img3.png"></img>
+                            </figure>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                La empresa es adquirida por los empresarios 
+                                Raúl Hernández y René Diaz, quienes se encargaron 
+                                de la expansión de la empresa.
+                                <br></br>
+                                <br></br>
+                                La primera sucursal del grupo es inaugurada en 
+                                el año de 1989 en el Dorado.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="foto-derecha">
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                La empresa consigue la representación 
+                                de MOTUL, lubricante de alta calidad 
+                                con +160 años en el mercado.
+                            </p>
+                        </div>
+                        <div class="foto">
+                            <p>
+                                <span>2011</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/linea-motul.png"></img>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="foto-izquierda">
+                        <div class="foto">
+                            <p>
+                                <span>2019</span>
+                            </p>
+                            <figure>
+                                <img src="/website_hino/static/images/linea-img4.png"></img>
+                            </figure>
+                        </div>
+                        <div class="parrafo">
+                            <div></div>
+                            <p>
+                                Se convierte en el Distribuidor autorizado 
+                                de la marca de camiones Japonesa Hino, 
+                                líder en el desarrollo de tecnologías 
+                                para camiones y presentes a nivel mundial 
+                                en +90 países.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="linea-responsive">
+                    <div></div>
+                </div>
+            </section>
+
+            <!-- DATOS DE COLABORADORES, SUCURSALES, BAHIAS Y TALLERES -->
+
+            <section class="nosotros-tambor_datos">
+                <div>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/colaboradores-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">34,231</span>
+                            <span>Colaboradores</span>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/sucursales-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">9</span>
+                            <span>Sucursales</span>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/bahias-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">70</span>
+                            <span>Bahías</span>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/talleres-icono.png"></img>
+                        </figure>
+                        <div>
+                            <span class="datos-numeros">11</span>
+                            <span>Talleres Móviles</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Aqui agragar los enlaces a los script que sean nesecarios -->
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+            
+        </t> 
+    </template> 
+</odoo>

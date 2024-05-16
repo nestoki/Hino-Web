@@ -1,0 +1,378 @@
+/* Importación de las Fuentes */
+@font-face { 
+    font-family: "HelveticaNeue"; 
+    font-weight: 500; 
+    src: 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.woff") format("woff"), 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.ttf") format("truetype"); 
+} 
+
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    font-weight: 300;
+    src:
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.woff") format("woff"),
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.ttf") format("truetype");
+}
+
+.filtro{
+    display: none;
+}
+
+/* SLIDER NOVEDADES*/
+
+.slider-novedades{
+    background-image: url(../../../images/fondo-novedades.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 130px;
+}
+
+.slider-novedades > div{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    color: #FFF;
+}
+
+.slider-novedades > div h3{
+    font-size: 35px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+.slider-novedades > div p{
+    width: 62%;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.slider-novedades > .novedades-capa{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    background-color: #000;
+    opacity: .5;
+}
+
+/* SLIDER NOVEDADES RESPONSIVE */
+
+@media only screen and (max-width: 1300px){
+    .slider-novedades > div{
+        max-width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .slider-novedades > div{
+        max-width: 900px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .slider-novedades > div{
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .slider-novedades > div{
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .slider-novedades{
+        margin-top: 70px !important;
+    }
+
+    .slider-novedades > div h3{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 767.98px){
+    .slider-novedades{
+        height: 220px !important;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .slider-novedades > div h3{
+        font-size: 25px;
+    }
+
+    .slider-novedades > div p{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .slider-novedades{
+        background-image: url(../../../images/fondo-novedades-responsive.png);
+        height: 300px !important;
+    }
+
+    .slider-novedades > div h3{
+        font-size: 20px;
+    }
+
+    .slider-novedades > div p{
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+/* NOVEDADES ARTICULOS */
+
+.novedades-buscador{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3% 0 5% 0;
+}
+
+.novedades-buscador input{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #E02413;
+    font-size: 16px;
+}
+
+.novedades-buscador input:focus-visible{
+    outline-offset: 0;
+    outline-width: 0;
+}
+
+
+.novedades-articulos{
+    background-color: rgb(236, 235, 235);
+    padding-bottom: 5%;
+}
+
+#leer-mas {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 13.93px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #E02413;
+    color: #E02413;
+    margin: 0px 0px 10px 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+#icon-chevron-2 {
+    border-radius: 0px;
+    height: 15px;
+    width: 14px;
+    margin-bottom: 0px;
+}
+
+.articulos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1%;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    row-gap: 30px;
+}
+
+.novedades {
+    position: relative;
+    background-color: #ffffff;
+    height: 383px;
+    width: 24.2%;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.novedades .fecha {
+    color: #878787;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 11.94px;
+    margin-left: 10px;
+    padding-bottom: 4px;
+}
+
+.articulos h4 {
+    color: #E02413;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#ver-todas {
+    color: #E02413;
+    font-family: 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29.3px;
+}
+
+.novedades p {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 15.92px;
+    margin: 0px 10px 10px 10px;
+    color: #1C1C1C;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.novedades h4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.novedades a {
+    font-family: 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    font-weight: bold;
+}
+
+.novedades a:hover {
+    color: #333;
+}
+
+.novedades figure{
+    margin: 0;
+    margin-bottom: 10px;
+    height: 180px;
+}
+
+.novedades img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 10px;
+}
+
+.novedades > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.novedades > div > p{
+    margin: 0;
+    color: #878787;
+    font-weight: 700;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+/* PAGINATION */
+
+/* .novedad-pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 3% 0 5% 0;
+}
+
+.novedad-pagination .pagination{
+    margin: 0;
+}
+
+.page-item .page-link {
+    border-radius: 4px;
+    background-color: transparent;
+    color: #000;
+    font-size: 16px;
+}
+
+.page-link:hover, .page-link:focus {
+    background-color: #E02413;
+    border-color: #E02413;
+    color: #FFF;
+    box-shadow: 0 0 0 1px #E02413;
+}
+
+.page-item.boton{
+    background-color: #FFF;
+    border-radius: 4px;
+}
+
+.page-item.boton > a{
+    color: #E02413;
+    margin-left: 0 !important;
+    font-weight: 700;
+}
+
+.page-item.boton > a:hover, .page-item.boton > a:focus{
+    color:#FFF;
+} */
+
+/* NOVEDADES ARTICULOS RESPONSIVE */
+
+@media only screen and (max-width: 1300px){
+    .novedades-buscador, .articulos{
+        max-width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .novedades-buscador, .articulos{
+        max-width: 900px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .novedades-buscador, .articulos{
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .novedades-buscador, .articulos{
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .articulos{
+        justify-content: center;
+    }
+
+    .articulos .novedades{
+        width: 90%;
+        height: 560px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+
+    .articulos .novedades{
+        width: 100%;
+        height: 500px;
+    }
+}

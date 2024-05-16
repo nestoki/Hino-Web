@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_novedades_website" model="website.menu">
+        <field name="name">Novedades</field>
+        <field name="url">novedades</field>
+    </record>
+
+    <template id="hino_novedades" name="Hino Novedades">
+        <t t-call="website.layout">
+            <t t-set="head">
+                <t t-call-assets="web.assets_common" t-js="false" />
+                <link rel="stylesheet" href="/website_hino/static/src/css/novedades/novedades.css" />
+                <link rel="stylesheet" href="/website_hino/static/src/css/novedades.css" />
+            </t>
+
+            <!-- SLIDER NOVEDADES -->
+            <section class="slider-novedades">
+                <div class="novedades-capa"></div>
+                <div>
+                    <h3>blog</h3>
+                    <p>
+                        Explora las últimas tendencias, consejos y experiencias y novedades
+                        relacionadas
+                        con el mundo automotor.
+                    </p>
+                </div>
+            </section>
+            <section class="novedades-articulos">
+                <div class="novedades-buscador">
+                    <input type="search" id="search" placeholder="Buscar..." />
+                </div>
+                <div class="articulos">
+                    <t
+                        t-foreach="request.env['novedades'].sudo().search([], order='fecha desc')"
+                        t-as="novedad">
+                        <article class="novedades">
+                            <img
+                                t-att-src="'/web/image/novedades/%s/imagen' % novedad.id"
+                                alt="" />
+                            <div>
+                                <div class="fecha"
+                                    t-out="novedad.fecha.strftime('%d-%m-%Y')" />
+                                <p class="creador-por" t-out="novedad.creado_por"/>    
+                            </div>
+                            <h3 class="titulo" t-out="novedad.titulo" />
+                            <p t-out="novedad.informacion" />
+                            <a id="leer-mas" t-attf-href="/novedades/news?novedadId={{ novedad.id }}" class="ver-btn">
+                                <img id="icon-chevron-2"
+                                    src="/website_hino/static/images/iconos/icon-chevron-2.png" />
+                                LEER MÁS </a>
+                        </article>
+                    </t>
+
+                    <!-- PAGINATION -->
+                    <!-- <nav class="novedad-pagination">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item boton">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&lt;</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item boton">
+                                <a class="page-link" href="#">&gt;</a>
+
+                            </li>
+                        </ul>
+                    </nav> -->
+                </div>
+            </section>
+
+
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+            <script src="/website_hino/static/src/js/novedades/search.js"></script>
+        </t>
+    </template>
+</odoo>

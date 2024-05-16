@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo> 
+    <record id="menu_sucursales_website" model="website.menu">
+        <field name="name">Sucursales</field>
+        <field name="url">sucursales</field>
+    </record> 
+
+    <template id="hino_sucursales" name="Hino Sucursales"> 
+        <t t-call="website.layout"> 
+            <t t-set="head"> 
+                <t t-call-assets="web.assets_common" t-js="false" />
+                <link rel="stylesheet" href="/website_hino/static/src/css/sucursales/sucursales.css"/>                 
+            </t> 
+
+            <!-- SLIDER SUCURSALES -->
+            <section class="slider-sucursales">
+                <div>
+                    <h3>Texto de ejemplo para banner con extensión</h3>
+                    <p>
+                        Texto extendido de ejemplo para banner con 
+                        extensión de hasta tres líneas. Texto extendido 
+                        de ejemplo para banner con extensión de hasta tres líneas. 
+                    </p>
+                </div>
+            </section>
+
+            <!-- SUCURSALES -->
+            <section class="sucursales">
+                <h3>sucursales</h3>
+                <div>
+                    <t t-foreach="sucursales" t-as="sucursal">
+                        <article class="sucursal">
+                            <div class="sucursal-top">
+                                <div class="sucursal-info">
+                                    <h4 t-out="sucursal.name"/>
+                                    <div class="informacion">
+                                        <div>
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-ubicacion-rojo.png" alt="Icono" />
+                                            </figure>
+                                            <p style="color: #000;">
+                                                <t t-out="sucursal.direccion"/>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-whatsapp-rojo.png" alt="Icono" />
+                                            </figure>
+                                            <a t-att-href="'tel:' + sucursal.cita" target="_blank">
+                                                <p style="color: #000;">“Agendar Cita“
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <t t-if="sucursal">
+                                                <figure>
+                                                    <img src="/website_hino/static/images/iconos/icono-tlf-rojo.png" alt="Icono" />
+                                                </figure>
+                                                <a t-att-href="'tel:' + sucursal.numero_phone">
+                                                    <p style="color: #000;">
+                                                        <t t-out="sucursal.numero_phone" />
+                                                    </p>
+                                                </a>
+                                            </t>
+                                        </div>
+                                        <div>
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-reloj-rojo.png" alt="Icono" />
+                                            </figure>
+                                            <p style="color: #000;">
+                                                <t t-out="sucursal.horarios"/>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-mapa-rojo.png" alt="Icono" />
+                                            </figure>
+                                            <a t-att-href="sucursal.google_maps_direct" target="_blank" style="color: #000;">Abrir ubicación en Google Maps</a>
+                                        </div>
+                                        <div>
+                                            <figure style="width: 19px; height: 30px;">
+                                                <img src="/website_hino/static/images/iconos/icono-waze-rojo.png" alt="Icono" />
+                                            </figure>
+                                            <a t-att-href="sucursal.waze" target="_blank" style="color: #000;">Abrir ubicación en Waze</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sucursal-ubicacion">
+                                    <iframe t-att-src="sucursal.google_maps_url" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            <div class="sucursal-bottom">
+                                <t t-foreach="sucursal.servicios_ids" t-as="servicio">
+                                    <t t-if="servicio.servicios == 'venta_vehiculo'">
+                                        <a href="#">
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-vehiculos.png" alt="Icono" />
+                                            </figure>
+                                            venta de vehículos
+                                        </a>
+                                    </t>
+                                    <t t-if="servicio.servicios == 'venta_repuesto'">
+                                        <a href="#">
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-repuestos.png" alt="Icono" />
+                                            </figure>
+                                            venta de repuestos
+                                        </a>
+                                    </t>
+                                    <t t-if="servicio.servicios == 'servicio_tecnico'">
+                                        <a href="#">
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-tecnico.png" alt="Icono" />
+                                            </figure>
+                                            servicio técnico
+                                        </a>
+                                    </t>
+                                </t>
+                            </div>
+                        </article>
+                    </t>
+                </div>
+            </section>
+            
+            <!-- Aqui agragar los enlaces a los script que sean nesecarios -->
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+            
+        </t> 
+    </template> 
+</odoo>
