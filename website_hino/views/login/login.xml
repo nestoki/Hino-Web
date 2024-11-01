@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="hino_login_inherited" inherit_id="web.login">
+        <xpath expr="//t[@t-call='web.login_layout']" position="replace">
+
+                <head>
+                    <meta charset="UTF-8"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                    <title> HINO PANAMÁ</title>
+                    <link rel="shortcut icon" href="/website_hino/static/images/iconos/favicon.ico" type="image/x-icon"/>
+                    <meta name="description"
+                            content="HINO PANAMÁ Conoce la línea de camiones HINO para todo tipo de soluciones de negocios"/>
+                    <!-- Meta Canonical -->
+                    <link rel="canonical" href="https://www.hino.com.pa/"/>
+                    <meta name="robots" content="index, follow"/>
+                    <meta name="keywords" content="HINO, PANAMÁ, Camiones, Servicio, Soporte"/>
+                    <meta http-equiv="Content-Language" content="es"/>
+                    <!-- Open Graph -->
+                    <!-- Meta Property para el título -->
+                    <meta property="og:title" content="HINO PANAMÁ"/>
+                    <meta property="og:description"
+                            content="HINO PANAMÁ Conoce la línea de camiones HINO para todo tipo de soluciones de negocios"/>
+                    <meta property="og:image" content="/website_hino/static/images/logo-hino.png"/>
+                    <meta property="og:image:alt" content=" Esta es la imagen de logo de la empresa"/>
+                </head>
+           
+                <link rel="stylesheet" href="/website_hino/static/src/css/login/login.css"/>
+
+                <header>
+                    <figure>
+                        <img src="/website_hino/static/images/logo-tambor.png"/>
+                    </figure>
+                </header>
+
+                <section class="login">
+                    <form t-attf-action="/web/login" method="post" onsubmit="this.action = '/web/login' + location.hash">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="campo-email">
+                            <label for="login">Correo electrónico:</label>
+                            <input type="text" id="login" name="login" placeholder="Correo electrónico" required="required"/>
+                        </div>
+
+                        <div class="campo-tlf">
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" name="password" placeholder="Contraseña" required="required"/>
+                        </div>
+
+                        <button type="submit">Iniciar sesión</button>
+
+                        <a href="/web/reset_password">
+                            Restablecer contraseña
+                        </a>
+                    </form>
+                </section>
+
+                <footer>
+                    <div></div>
+                    <p>Copyright © 2024 Tambor. All Rights Reserved</p>
+                </footer>
+            
+        </xpath>
+    </template>
+</odoo>

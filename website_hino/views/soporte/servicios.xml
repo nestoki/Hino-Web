@@ -9,30 +9,13 @@
         <t t-call="website.layout">
             <t t-set="head">
                 <t t-call-assets="web.assets_common" t-js="false" />
-                <!-- <link rel="stylesheet" href="/website_hino/static/src/css/swiper/swiper-bundle.min.css" /> -->
                 <link rel="stylesheet" href="/website_hino/static/src/css/soporte/servicios.css"/>
             </t> 
 
             <section class="slider-servicios">
-                <section class="swiper swiper-container-slider-servicios">
-                    <div class="swiper-wrapper">
-                        <t t-foreach="request.env['servicios.soporte'].sudo().search([])"
-                            t-as="servicio">
-                            <div class="swiper-slide">
-                                <div
-                                    t-attf-style="background-image:url('/web/image/servicios.soporte/#{servicio.id}/slider_image')"
-                                    class="img bg-slide">
-                                    <div class="container-title-servicios">
-                                        <span class="slider-text" t-out="servicio.text_slider" />
-                                        <span class="slider-2-text"
-                                            t-out="servicio.text_slider_2" />
-                                    </div>
-                                </div>
-                            </div>
-                        </t>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </section>
+                <figure>
+                    <img src="/website_hino/static/images/banner-servicios.jpg"></img>
+                </figure>
             </section>
 
             <!-- SERVICIOS -->
@@ -75,12 +58,12 @@
                 </div>
                 <t t-foreach="request.env['servicios.soporte'].sudo().search([])" t-as="servicio">
                     <t t-if="servicio.cita_whatsapp">
-                <a t-att-href="'tel:' + servicio.cita_whatsapp" role="button" title="" target="_blank">
-                    <i class="fa fa-whatsapp"></i>
-                    Agenda tu cita en WhatsApp
-                </a>
-            </t>
-            </t>
+                        <a t-att-href="'tel:' + servicio.cita_whatsapp" role="button" title="" target="_blank">
+                            <i class="fa fa-whatsapp"></i>
+                            Agenda tu cita en WhatsApp
+                        </a>
+                    </t>
+                </t>
             </section>
 
             <!-- GARANTIAS -->
@@ -232,7 +215,7 @@
             </section>
 
 
-            <!-- Formulario -->
+            <!-- FORMULARIO -->
             <section class="form-main-servicios">
                 <section class="s_website_form" data-vcss="001"
                     data-snippet="s_website_form" data-name="Formulario">
@@ -353,16 +336,11 @@
                                         name="name" required="" placeholder="" id="contacto"
                                         data-fill-with="undefined" />
                                 </div>
-                                <div data-name="Field"
-                                    class="s_website_form_field campo_terminos s_website_form_custom s_website_form_required"
-                                    data-type="boolean">
+                                <div data-name="Field" class="s_website_form_field campo_terminos s_website_form_custom s_website_form_required" data-type="boolean">
                                     <label class="s_website_form_label" for="terminos">
-                                        <input type="checkbox" value="Yes"
-                                            class="s_website_form_input"
-                                            name="Acepto Término y Condiciones" required="1"
-                                            id="terminos" data-fill-with="undefined" />
-                                        <span class="s_website_form_label_content">Acepto
-                                            Términos y Condiciones</span>
+                                        <input type="checkbox" value="Yes" class="s_website_form_input" name="Acepto Término y Condiciones" required="1" id="terminos" data-fill-with="undefined"/>
+                                        <a class="text-o-color-4 politica-privacidad" href="/terminos">Acepto
+                                                    Política de Privacidad</a>
                                     </label>
                                 </div>
 
@@ -383,7 +361,7 @@
                     </div>
                     <div class="text-img-servicios">
                         <div class="capa"></div>
-                        <span class="image-text">Saca tu cita <br></br> de mantenimiento</span>
+                        <span class="image-text">Saca tu cita de mantenimiento</span>
                     </div>
                 </section>
             </section>

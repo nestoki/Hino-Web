@@ -29,7 +29,6 @@ class InfoContacto(models.Model):
     @api.constrains('email')
     def _check_email(self):
         for record in self:
-            # Solo se realiza la validación si el campo correo_electronico no está vacío
             if record.email:
                 pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
                 if not re.match(pattern, record.email):

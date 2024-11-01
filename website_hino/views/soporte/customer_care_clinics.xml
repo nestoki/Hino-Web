@@ -10,13 +10,379 @@
         <t t-call="website.layout"> 
             <t t-set="head"> 
                 <t t-call-assets="web.assets_common" t-js="false" />
-                <link rel="stylesheet" href="/website_hino/static/src/css/customer_care_clinics/customer_care_clinics.css"/>                 
+                <link rel="stylesheet" href="/website_hino/static/src/css/soporte/customer_care_clinics.css"/>                 
             </t> 
-            <h1>Customer Care Clinics</h1>
+
+            <!-- BANNER CUSTOMER CARE CLINICS -->
+            <section class="banner-customer">
+                <figure>
+                    <img src="/website_hino/static/images/banner-customer-care.jpg"></img>
+                </figure>
+            </section>
+
+            <!-- CUSTOMER CARE CLINICS -->
+            <section class="customer-informacion">
+                <figure>
+                    <img src="/website_hino/static/images/customer-clinics-imagen.png"/>
+                </figure>
+                <div class="informacion">
+                    <div class="informacion-container">
+                        <div class="customer-titulo">
+                            <figure>
+                                <img src="/website_hino/static/images/logo-footer.png"/>
+                            </figure>
+                            <h3>customer care clinics</h3>
+                        </div>
+                        <p>
+                            Los Customer Care Clinics de Hino están diseñados con el objetivo de extender la vida útil de los camiones, aumentando su eficiencia y seguridad. Se enfocan en proporcionar un servicio integral y de alta calidad a los propietarios y operadores de vehículos Hino, con el fin de optimizar el rendimiento, maximizar la durabilidad y mejorar la experiencia del cliente.
+                        </p>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- COMO LO HACEMOS -->
+            <section class="como-lo-hacemos">
+                <h3>¿cómo lo hacemos?</h3>
+                <div class="articulos">
+                    <article>
+                        <div class="articulo-titulo">
+                            <figure>
+                                <img src="/website_hino/static/images/1.png"/>
+                            </figure>
+                            <h4>
+                                <span class="rojo">MANTENIMIENTO </span>PREVENTIVO
+                            </h4>
+                        </div>
+                        <p>
+                            Durante los Customer Care Clinics, se ofrecen sesiones de asesoramiento técnico especializado sobre el mantenimiento preventivo de los camiones. Incluye consejos sobre cambio regular de aceite, revisión de filtros y fluidos, inspección de sistemas clave como frenos y suspensión, entre otros.
+                        </p>
+                    </article>
+                    <article>
+                        <div class="articulo-titulo">
+                            <figure>
+                                <img src="/website_hino/static/images/2.png"/>
+                            </figure>
+                            <h4>
+                                <span class="rojo">diagnóstico </span>avanzado (48 puntos)
+                            </h4>
+                        </div>
+                        <p>
+                            Expertos técnicos certificados por Hino realizan diagnósticos avanzados durante los Customer Care Clinics para identificar y resolver cualquier problema técnico o mecánico que pueda afectar la eficiencia y seguridad del camión. Se entrega reporte de condición actual y establece prioridades de reparación.
+                        </p>
+                    </article>
+                    <article>
+                        <div class="articulo-titulo">
+                            <figure>
+                                <img src="/website_hino/static/images/3.png"/>
+                            </figure>
+                            <h4>
+                                <span class="rojo">capacitación </span>y actualización
+                            </h4>
+                        </div>
+                        <p>
+                            Los Customer Care Clinics incluyen sesiones de capacitación y actualización sobre las últimas tecnologías, innovaciones y mejores prácticas en el mantenimiento y operación de camiones Hino.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- CONOCE LOS BENEFICIOS -->
+            <section class="conoce-beneficios">
+                <div class="beneficios-capa"></div>
+                <div class="cuadro-rojo"></div>
+                <div class="beneficios">
+                    <div class="beneficios-titulo">
+                        <h3>conoce de los beneficios</h3>
+                    </div>
+                    <article>
+                        <h4>aseguramiento técnico especializado</h4>
+                        <p>
+                            Los clientes tienen acceso a expertos técnicos altamente capacitados y certificados por Hino Motors, quienes brindan asesoramiento personalizado sobre el mantenimiento, operación y cuidado adecuado de los vehículos Hino.
+                        </p>
+                    </article>
+                    <article>
+                        <h4>Optimización del Rendimiento</h4>
+                        <p>
+                            Mediante la identificación y resolución de problemas técnicos o mecánicos durante los Customer Care Clinics, se puede optimizar el rendimiento y la eficiencia de los vehículos Hino, prolongando su vida útil y reduciendo los costos de operación a largo plazo.
+                        </p>
+                    </article>
+                    <article>
+                        <h4>Actualización y Capacitación</h4>
+                        <p>
+                            Los clientes tienen la oportunidad de actualizarse sobre las últimas tecnologías, innovaciones y mejores prácticas en el sector automotriz relacionadas con los productos de Hino, lo cual les permite estar al día con las últimas tendencias y maximizar el valor de sus inversiones. 
+                        </p>
+                    </article>
+                    <article>
+                        <h4>Resolución Rápida y Efectiva de Problemas</h4>
+                        <p>
+                            Durante los Customer Care Clinics, se realizan diagnósticos avanzados y se ofrecen soluciones prácticas a problemas técnicos o mecánicos, lo cual permite a los clientes abordar cualquier inconveniente de manera rápida y efectiva.
+                        </p>
+                    </article>
+                    <article>
+                        <h4>Servicio Personalizado</h4>
+                        <p>
+                            El servicio de Customer Care Clinics se adapta a las necesidades específicas de cada cliente, ofreciendo consultas personalizadas, demostraciones prácticas y recomendaciones individuales para optimizar el rendimiento y la satisfacción del cliente.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="beneficios-2">
+                <div class="container-beneficios-2">
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/icono-beneficio-1.png"/>
+                        </figure>
+                        <p>
+                            La actividad se realizará en las instalaciones del cliente
+                        </p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/icono-beneficio-3.png"/>
+                        </figure>
+                        <p>
+                            Incluye la participación de técnicos de taller móvil
+                        </p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/icono-beneficio-5.png"/>
+                        </figure>
+                        <p>
+                            Cuenta con la participación ingenieros de la marca
+                        </p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/icono-beneficio-2.png"/>
+                        </figure>
+                        <p>
+                            Cuenta con personal experto en repuestos
+                        </p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/icono-beneficio-4.png"/>
+                        </figure>
+                        <p>
+                            Cuenta con personal de flotas de Tambor S.A
+                        </p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/icono-beneficio-6.png"/>
+                        </figure>
+                        <p>
+                            Cuenta con expertos en neumáticos
+                        </p>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- GALERIA -->
+            <section class="galeria_customer">
+                <h3 class="galeria_customer_titulo">GALERÍA</h3>
+                <div class="carousel">
+                    <div class="carrusel-list" id="carrusel-list">
+                        <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev" onclick="gallery.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                                </path>
+                            </svg>
+                        </button>
+                        <t t-foreach="request.env['customer.care'].sudo().search([])" t-as="customer" />
+                        <div class="carrusel-track" id="track">
+                            <t t-if="customer">
+                                <t t-foreach="customer.galeria_customer_ids" t-as="imagen">
+                                    <div class="carrusel">
+                                        <div>
+                                            <figure>
+                                                <img t-att-src="'/web/image/customer.galeria/%s/image_customer_data' % imagen.id" class="d-block w-100" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </t>
+                            </t>
+                        </div>
+                        <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next" onclick="gallery.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIDEO -->
+            <section class="customer-video">
+                <t t-foreach="request.env['customer.care'].sudo().search([])" t-as="customer" />
+                <t t-if="customer">
+                    <iframe width="560" height="315" t-att-src="customer.video_url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1">
+                    </iframe>
+                </t>
+            </section>
+            
+
+            <!-- FORMULARIO CUSTOMER CARE CLINICS -->
+            <section class="form-main-customer">
+                <section class="s_website_form" data-vcss="001"
+                    data-snippet="s_website_form" data-name="Formulario">
+                    <h4 class="form-title-responsive">¿Quieres más información?</h4>
+                    <div class="o_container_small">
+                        <form action="/website/form/" method="post"
+                            enctype="multipart/form-data" data-mark="*" data-pre-fill="true"
+                            data-model_name="crm.lead">
+                            <div class="s_website_form_rows">
+
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_nombre s_website_form_required"
+                                    data-type="char">
+                                    <div class="row">
+                                        <label class="" style="width: 200px"
+                                            for="o6f2b6awhh4g">
+                                            <img id="form-icon"
+                                                src="/website_hino/static/images/iconos/icon-user.png" />
+                                            <span class="s_website_form_label_content">
+                                                Nombre</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input"
+                                                type="text" name="contact_name" required="1"
+                                                data-fill-with="name" id="o6f2b6awhh4g" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_apellido s_website_form_custom"
+                                    data-type="char">
+                                    <label class="s_website_form_label" for="o6f2b6awhh4g">
+                                        <img id="form-icon"
+                                            src="/website_hino/static/images/iconos/icon-user.png" />
+                                        <span class="s_website_form_label_content">Apellido</span>
+                                    </label>
+                                    <input class="form-control s_website_form_input"
+                                        type="text" name="contact_name" required="1"
+                                        data-fill-with="name" id="o6f2b6awhh4g" />
+                                </div>
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_correo s_website_form_required"
+                                    data-type="email">
+                                    <div class="row">
+                                        <label class="col-form-label  s_website_form_label"
+                                            for="oywj7qvvtat">
+                                            <img id="form-icon"
+                                                src="/website_hino/static/images/iconos/icon-email.png" />
+                                            <span class="s_website_form_label_content">
+                                                Correo</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input"
+                                                type="email" name="email_from" required="1"
+                                                data-fill-with="email" id="oywj7qvvtat" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_tlf" data-type="tel">
+                                    <div class="row">
+                                        <label
+                                            class="col-form-label col-sm-auto s_website_form_label"
+                                            for="oyx5ze4zxn3">
+                                            <img id="form-icon"
+                                                src="/website_hino/static/images/iconos/icon-phone.png" />
+                                            <span class="s_website_form_label_content">
+                                                Celular</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input"
+                                                type="tel" name="phone"
+                                                data-fill-with="phone" id="oyx5ze4zxn3" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_ciudad s_website_form_custom"
+                                    data-type="many2one">
+                                    <label
+                                        class="col-form-label col-sm-auto s_website_form_label"
+                                        for="ogdf4jd1c6wp">
+                                        <img id="form-icon"
+                                            src="/website_hino/static/images/iconos/icon-localization.png" />
+                                        <span class="s_website_form_label_content">Ciudad</span>
+                                    </label>
+                                    <select class="s_website_form_input" name="city"
+                                        id="ogdf4jd1c6wp"
+                                        data-fill-with="commercial_company_name">
+                                        <option value="" />
+                                        <option value="Panamá">Panamá</option>
+                                        <option value="Panamá Oeste">Panamá Oeste</option>
+                                        <option value="Colón">Colón</option>
+                                        <option value="Herrera">Herrera</option>
+                                        <option value="Cloque">Cloque</option>
+                                        <option value="Los Santos">Los Santos</option>
+                                        <option value="Veraguas">Veraguas</option>
+                                        <option value="Chiriquí">Chiriquí</option>
+                                        <option value="Darién">Darién</option>
+                                        <option value="Bocas del Toro">Bocas del Toro</option>
+                                    </select>
+
+                                </div>
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_contacto s_website_form_model_required"
+                                    data-type="char">
+                                    <label class="s_website_form_label" for="contacto">
+                                        <img id="form-icon"
+                                            src="/website_hino/static/images/iconos/icon-message.png" />
+                                        <span class="s_website_form_label_content">Motivo
+                                            del Contacto</span>
+                                    </label>
+                                    <input class="s_website_form_input " type="text"
+                                        name="name" required="" placeholder="" id="contacto"
+                                        data-fill-with="undefined" />
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_terminos s_website_form_custom s_website_form_required" data-type="boolean">
+                                    <label class="s_website_form_label" for="terminos">
+                                        <input type="checkbox" value="Yes" class="s_website_form_input" name="Acepto Término y Condiciones" required="1" id="terminos" data-fill-with="undefined"/>
+                                        <a class="text-o-color-4 politica-privacidad" href="/terminos">Acepto
+                                                    Política de Privacidad</a>
+                                    </label>
+                                </div>
+
+                                <div
+                                    class="s_website_form_submit s_website_form_no_submit_label"
+                                    data-name="Submit Button">
+
+
+                                    <a href="#" role="button"
+                                        class="btn s_website_form_send o_default_snippet_text"
+                                        data-bs-original-title="" title="">Enviar
+                                        <i class="fa fa-paper-plane"></i>
+                                    </a>
+                                    <span id="s_website_form_result"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="text-img-customer">
+                        <div class="capa"></div>
+                        <span class="image-text">¿Quieres más información?</span>
+                    </div>
+                </section>
+            </section>
 
 
             <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
             <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+            <script src="/website_hino/static/src/js/soporte/galeria.js"></script>
         </t> 
     </template> 
 </odoo>

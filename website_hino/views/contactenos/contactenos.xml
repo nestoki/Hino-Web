@@ -9,10 +9,9 @@
         <t t-call="website.layout">
             <t t-set="head">
                 <t t-call-assets="web.assets_common" t-js="false" />
-                <!-- <link rel="stylesheet" href="/website_hino/static/src/css/formulario.css" /> -->
                 <link rel="stylesheet" href="/website_hino/static/src/css/contactenos/contactenos.css" />
             </t>
-            <section class="banner-contacto" t-attf-style="background-image:url('/website_hino/static/images/fondo-contactenos.png')">
+            <section class="banner-contacto" t-attf-style="background-image:url('/website_hino/static/images/contactenos-bg.png')">
                 <div>
                     <div class="img bg-slide bg-slide-nosotros">
                         <h3>contáctenos</h3>
@@ -108,9 +107,9 @@
                                 </div>
                                 <div data-name="Field" class="s_website_form_field campo_terminos s_website_form_custom s_website_form_required" data-type="boolean">
                                     <label class="s_website_form_label" for="terminos">
-                                        <input type="checkbox" value="Yes" class="s_website_form_input" name="Acepto Término y Condiciones" required="1" id="terminos" data-fill-with="undefined" />
-                                        <span class="s_website_form_label_content">Acepto
-                Términos y Condiciones</span>
+                                        <input type="checkbox" value="Yes" class="s_website_form_input" name="Acepto Término y Condiciones" required="1" id="terminos" data-fill-with="undefined"/>
+                                        <a class="text-black-50" href="/terminos">Acepto
+                                                    Política de Privacidad</a>
                                     </label>
                                 </div>
 

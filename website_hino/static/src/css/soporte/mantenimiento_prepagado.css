@@ -14,3 +14,1370 @@
         url("/website_hino/static/src/css/fonts/helveticaneue-light.woff") format("woff"),
         url("/website_hino/static/src/css/fonts/helveticaneue-light.ttf") format("truetype");
 }
+
+/* AJUSTES GENERALES */
+
+figure{
+    margin: 0;
+}
+
+/* BANNER MANTENIMIENTO */ 
+
+.slider-mantenimiento{
+    margin-top: 130px;
+}
+
+.slider-mantenimiento figure img{
+    width: 100%;
+}
+
+/* RESPONSIVE BANNER MANTENIMIENTO */
+
+@media (max-width: 800px){
+    .slider-mantenimiento{
+        margin-top: 70px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .slider-mantenimiento{
+        background-image: url(../../../images/banner-soporte-responsive.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 345px !important;
+    }
+
+    .slider-mantenimiento figure{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .slider-mantenimiento{
+        height: 300px !important;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .slider-mantenimiento{
+        height: 270px !important;
+    }
+}
+
+/* MANTENIMIENTO PREPARADO */
+
+.iconos-mantenimiento{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    top: 590px;
+    z-index: 10;
+}
+
+.iconos-mantenimiento figure{
+    margin: 0;
+}
+
+.mantenimiento-preparado{
+    padding: 5% 0;
+}
+
+.mantenimiento-preparado_container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mantenimiento-preparado_container .rojo{
+    color: #D8232A;
+}
+
+.mantenimiento-preparado_container .descubre{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mantenimiento-preparado_container .descubre .descubre-titulo{
+    font-family: 'HelveticaNeue';
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.mantenimiento-preparado_container .descubre .descubre-parrafo{
+    font-family: 'Helvetica Neue Light';
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 10%;
+}
+
+.mantenimiento-preparado_container a{
+    font-family: 'Helvetica Neue Light';
+    background-color: #D8232A;
+    color: #FFF;
+    padding: 3% 5%;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.mantenimiento-preparado_container .beneficios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 65%;
+    gap: 14px;
+}
+
+.mantenimiento-preparado_container .beneficios > article{
+    width: 49%;
+    background-color: #D8232A;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 3%;
+    gap: 6%;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.mantenimiento-preparado_container .beneficios > article figure,
+.mantenimiento-preparado_container .beneficios > article p{
+    margin: 0;
+}
+
+.mantenimiento-preparado_container .beneficios > article p{
+    font-family: 'Helvetica Neue Light';
+}
+
+.mantenimiento-preparado_container .beneficios article.fondo-blanco{
+    background-color: #FFF;
+    color: #D8232A;
+}
+
+.mantenimiento-preparado_container .link-responsive{
+    display: none;
+}
+
+/* MANTENIMIENTO PREPARADO RESPONSIVE */
+
+@media only screen and (max-width: 1800px){
+    .iconos-mantenimiento{
+        top: 570px;
+    }
+}
+
+@media only screen and (max-width: 1700px){
+    .iconos-mantenimiento{
+        top: 540px;
+    }
+}
+
+@media only screen and (max-width: 1600px){
+    .iconos-mantenimiento{
+        top: 500px;
+    }
+}
+
+@media only screen and (max-width: 1500px){
+    .iconos-mantenimiento{
+        top: 485px;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .iconos-mantenimiento{
+        top: 455px;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .mantenimiento-preparado_container{
+        max-width: 1000px;
+    }
+
+    .mantenimiento-preparado_container .beneficios > article{
+        width: 48%;
+    }
+
+    .iconos-mantenimiento{
+        top: 435px;
+    }
+
+    .iconos-mantenimiento figure{
+        width: 65px;
+    }
+
+    .iconos-mantenimiento figure img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .iconos-mantenimiento{
+        top: 410px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .mantenimiento-preparado_container{
+        max-width: 900px;
+    }
+
+    .iconos-mantenimiento{
+        top: 380px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .mantenimiento-preparado{
+        padding-top: 8%;
+    }
+
+    .mantenimiento-preparado_container{
+        max-width: 800px;
+    }
+
+    .mantenimiento-preparado_container .descubre .descubre-titulo{
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .mantenimiento-preparado_container .descubre .descubre-parrafo{
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .mantenimiento-preparado_container .descubre > a{
+        font-size: 15px;
+    }
+
+    .mantenimiento-preparado_container .beneficios > article{
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .mantenimiento-preparado_container .beneficios > article figure{
+        width: 40%;
+    }
+
+    .mantenimiento-preparado_container .beneficios > article figure img{
+        width: 100%;
+    }
+
+    .iconos-mantenimiento{
+        top: 360px;
+    }
+
+    .iconos-mantenimiento figure{
+        width: 60px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .mantenimiento-preparado_container{
+        max-width: 90%;
+    }
+
+    .iconos-mantenimiento{
+        top: 335px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .mantenimiento-preparado_container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mantenimiento-preparado_container .descubre > a{
+        display: none;
+    }
+
+    .mantenimiento-preparado_container .descubre{
+        width: 100%;
+        align-items: center;
+    }
+
+    .mantenimiento-preparado_container .descubre .descubre-titulo{
+        text-align: center;
+        font-size: 25px;
+        line-height: 26px;
+        margin-bottom: 4%;
+    }
+
+    .mantenimiento-preparado_container .descubre .descubre-parrafo{
+        margin-bottom: 5%;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .mantenimiento-preparado_container .beneficios{
+        width: 100%;
+        margin-bottom: 4%;
+    }
+
+    .mantenimiento-preparado_container .link-responsive{
+        display: flex;
+        padding: 0% 2%;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .iconos-mantenimiento{
+        top: 245px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .mantenimiento-preparado{
+        padding-top: 10%;
+    }
+
+    .mantenimiento-preparado_container .descubre .descubre-titulo{
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .mantenimiento-preparado_container .beneficios > article figure{
+        width: 32%;
+    }
+
+    .iconos-mantenimiento{
+        top: 225px;
+    }
+
+    .iconos-mantenimiento figure{
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .iconos-mantenimiento{
+        top: 200px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .mantenimiento-preparado{
+        padding-top: 12%;
+    }
+
+    .mantenimiento-preparado_container .descubre .descubre-titulo{
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .mantenimiento-preparado_container .descubre .descubre-parrafo{
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .mantenimiento-preparado_container .beneficios{
+        margin-bottom: 5%;
+    }
+
+    .mantenimiento-preparado_container .beneficios > article{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .mantenimiento-preparado_container .link-responsive{
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .iconos-mantenimiento{
+        top: 390px;
+        gap: 5%;
+    }
+
+    .iconos-mantenimiento figure{
+        width: 46px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+
+    .mantenimiento-preparado_container .beneficios > article{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .mantenimiento-preparado_container .beneficios > article:nth-child(3){
+        order: 4;
+    }
+
+    .mantenimiento-preparado_container .beneficios > article:nth-child(4){
+        order: 3;
+    }
+
+    .mantenimiento-preparado_container .beneficios > article figure{
+        width: 10%;
+    }
+
+    .iconos-mantenimiento{
+        top: 345px;
+    }
+
+    .iconos-mantenimiento figure{
+        width: 45px;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .iconos-mantenimiento{
+        top: 315px;
+    }
+}
+
+/* PAQUETES DE INSPECCIÓN */
+
+.paquetes{
+    display: flex;
+    height: 600px;
+}
+
+.paquetes h3{
+    font-family: 'HelveticaNeue';
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FFF;
+    margin: 0 6% 2% 6%;
+}
+
+.paquetes p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.paquetes h4{
+    font-family: 'HelveticaNeue';
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFF;
+}
+
+.paquetes > article > h4{
+    margin: 0 0 6% 6%;
+}
+
+.paquetes > article{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: center;
+}
+
+.paquetes .paquetes-titulo{
+    position: relative;
+    background-image: url(../../../images/paquete-titulo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paquetes .paquetes-titulo > p{
+    font-family: 'Helvetica Neue Light';
+    margin: 0 6% 6% 6%;
+    line-height: 22px;
+}
+
+.paquetes .paquetes-titulo-capa{
+    position: absolute;
+    background-color: #D8232A;
+    opacity: .8;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.paquetes .paquetes-titulo h3,
+.paquetes .paquetes-titulo p{
+    z-index: 10;
+} 
+
+.paquetes .paquete-info{
+    font-family: 'Helvetica Neue Light';
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    opacity: .8;
+    height: 100%;
+    width: 100%;
+    padding: 4% 6%;
+    justify-content: center;
+}
+
+.paquetes .paquete-info ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 2px;
+}
+
+.paquetes .paquete-info ul li{
+    color: #FFF;
+    font-size: 18px;
+}
+
+.paquetes .paquete-motor:hover .paquete-info{
+    display: flex;
+}
+
+.paquetes .paquete-motor:hover > h4{
+    display: none;
+}
+
+.paquetes .paquete-motor{
+    background-image: url(../../../images/paquete-motor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paquetes .paquete-direccion:hover .paquete-info{
+    display: flex;
+}
+
+.paquetes .paquete-direccion:hover > h4{
+    display: none;
+}
+
+.paquetes .paquete-direccion{
+    background-image: url(../../../images/paquete-direccion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paquetes .paquete-cabina:hover .paquete-info{
+    display: flex;
+}
+
+.paquetes .paquete-cabina:hover > h4{
+    display: none;
+}
+
+.paquetes .paquete-cabina{
+    background-image: url(../../../images/paquete-cabina.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* SECTION PAQUETES RESPONSIVE */
+
+.paquetes-responsive{
+    display: none;
+    flex-direction: column;
+    color: #FFF;
+}
+
+.paquetes-responsive .paquetes-titulo{
+    position: relative;
+    background-image: url(../../../images/paquete-titulo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.paquetes-responsive .paquetes-titulo > p{
+    font-family: 'Helvetica Neue Light';
+    line-height: 22px;
+    width: 80%;
+    text-align: center;
+}
+
+.paquetes-responsive .paquetes-titulo-capa{
+    position: absolute;
+    background-color: #E02413;
+    opacity: .8;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.paquetes-responsive article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+
+.paquetes-responsive article .capa{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: .5;
+}
+
+.paquetes-responsive .paquetes-titulo h3,
+.paquetes-responsive .paquetes-titulo p{
+    z-index: 10;
+    position: relative;
+}
+
+.paquetes-responsive .paquetes-titulo p{
+    font-size: 18px;
+    margin: 0;
+}
+
+.paquetes-responsive article h4,
+.paquetes-responsive article .paquete-info-responsive{
+    z-index: 10;
+}
+
+.paquetes-responsive article h4,
+.paquetes-responsive .paquetes-titulo h3{
+    font-family: 'HelveticaNeue';
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.paquetes-responsive article h4{
+    font-size: 25px;
+}
+
+.paquetes-responsive article .paquete-info-responsive{
+    display: none;
+}
+
+.paquetes-responsive article .paquete-info-responsive ul{
+    font-family: 'Helvetica Neue Light';
+    font-size: 18px;
+}
+
+.paquetes-responsive .paquete-motor{
+    background-image: url(../../../images/paquete-motor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 20%;
+}
+
+.paquetes-responsive .paquete-direccion{
+    background-image: url(../../../images/paquete-direccion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 40%;
+}
+
+.paquetes-responsive .paquete-cabina{
+    background-image: url(../../../images/paquete-cabina.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 65%;
+}
+
+.paquetes-responsive > article > a{
+    font-family: 'Helvetica Neue Light';
+    width: 80%;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    align-items: center;
+    border-radius: 6px;
+    color: #FFF;
+    z-index: 10;
+    margin-bottom: 2%;
+}
+
+.paquetes-responsive > article > a:hover{
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+/* PAQUETES DE INSPECCIÓN RESPONSIVE */
+
+@media only screen and (max-width: 1400px){
+
+    .paquetes .paquete .paquete-info h4{
+        font-size: 18px;
+    }
+
+    .paquetes .paquete-info ul li{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+
+    .paquetes .paquete-info ul li{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:1000px){
+
+    .paquetes .paquete-info ul li{
+        line-height: 18px;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .paquetes{
+        display: none;
+    }
+
+    .paquetes-responsive{
+        display: flex;
+    }
+
+    .paquetes-responsive > article > a{
+        order: 3;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .paquetes-responsive article h4,
+    .paquetes-responsive .paquetes-titulo h3{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .paquetes-responsive article h4,
+    .paquetes-responsive .paquetes-titulo h3{
+        font-size: 18px;
+    }
+
+    .paquetes-responsive article{
+        padding: 4%;
+    }
+
+    .paquetes-responsive .paquetes-titulo p,
+    .paquetes-responsive > article > a,
+    .paquetes-responsive article .paquete-info-responsive ul {
+        font-size: 15px;
+    }
+
+    .paquetes-responsive .paquetes-titulo p{
+        line-height: 18px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .paquetes-responsive article{
+        padding: 8% 2%;
+    }
+
+    .paquetes-responsive > article > a{
+        height: 35px;
+    }
+}
+
+
+
+/* PLANES DE MANTENIMIENTO PREVENTIVO */
+
+.planes{
+    padding: 5% 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.planes > h3{
+    font-family: 'HelveticaNeue';
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1%;
+}
+
+.planes > h4{
+    font-family: 'Helvetica Neue Light';
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 3%;
+    width: 90%;
+}
+
+.planes .container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 4%;
+}
+
+.planes .planes-series{
+    width: 100%;
+    display: flex;
+}
+
+.planes .planes-series > a{
+    font-family: 'HelveticaNeue';
+    width: 50%;
+    text-align: center;
+    border: 3px solid #D8232A;
+    padding: 1% 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #D8232A;
+    font-weight: 600;
+}
+
+.planes .planes-series > a:hover{
+    background-color: #D8232A;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.planes .planes-series > a:first-child{
+    border-radius: 20px 0 0 20px;
+}
+
+.planes .planes-series > a:last-child{
+    border-radius: 0 20px 20px 0;
+    border-left: none;
+}
+
+.planes .container > hr{
+    width: 100%;
+    height: 3px;
+    background: #C3C3C3;
+}
+
+.planes-tabla{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.planes-tabla .plan-camion{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.planes-tabla .plan-camion > span{
+    font-family: 'Helvetica Neue Light';
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.planes-tabla .plan-camion > h4{
+    font-family: 'HelveticaNeue';
+    font-size: 25px;
+    margin-bottom: 10%;
+}
+
+.planes-tabla .plan-camion figure{
+    margin: 0;
+    background-image: url(../../../images/iconos/rectangulo-rojo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planes-tabla .plan-camion figure img{
+    width: 100%;
+}
+
+.planes-tabla > figure{
+    width: 55%;
+    display: flex;
+    justify-content: right;
+    margin: 0;
+}
+
+.planes-tabla > figure img{
+    width: 100%;
+}
+
+.planes-tabla-300{
+    display: none;
+}
+
+.serie-selected {
+    background-color: #e02413;
+    color: white !important;
+}
+
+.planes > a{
+    font-family: 'Helvetica Neue Light';
+    text-align: center;
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
+    color: #FFF;
+    border-radius: 12px;
+    font-size: 18px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%;
+    gap: 5px;
+}
+
+/* PLANES DE MANTENIMIENTO PREVENTIVO RESPONSIVE */
+
+@media only screen and (max-width: 1300px){
+    .planes .container {
+        max-width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .planes .container {
+        max-width: 900px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .planes .container {
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .planes .container {
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .planes > h3{
+        font-size: 20px;
+        max-width: 90%;
+    }
+
+    .planes-tabla .plan-camion > h4{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .planes-tabla .plan-camion{
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .planes > h3{
+        font-size: 18px;
+    }
+
+    .planes > h4{
+        font-size: 15px;
+        margin-bottom: 5%;
+    }
+
+    .planes-tabla{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planes .planes-series > a{
+        font-size: 15px;
+    }
+
+    .planes-tabla .plan-camion{
+        width: 100%;
+        height: 400px;
+    }
+
+    .planes-tabla .plan-camion > span{
+        font-size: 12px;
+    }
+
+    .planes-tabla .plan-camion > h4{
+        font-size: 18px;
+        margin-bottom: 6%;
+    }
+
+    .planes-tabla > figure{
+        width: 100%;
+    }
+
+    .planes-tabla .plan-camion figure img{
+        width: 95%;
+    }
+
+    .planes{
+        padding: 5% 0 10% 0;
+    }
+
+    .planes > a{
+        font-size: 15px;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .planes .container{
+        margin-bottom: 5%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .planes-tabla .plan-camion{
+        height: 340px;
+    }
+
+    .planes-tabla .plan-camion figure img{
+        width: 100%;
+    }
+
+    .planes-tabla .plan-camion > span{
+        font-weight: 400;
+    }
+
+    .planes .planes-series > a{
+        font-weight: 400;
+    }
+   
+}
+
+/* FORMULARIO */ 
+
+.form-main-mantenimiento{ 
+    width: 100%;
+    margin-bottom: 0px;
+    background-color: #111;
+    overflow: hidden;
+} 
+ 
+.s_website_form { 
+    position: relative; 
+    display: flex; 
+    justify-content: space-between;
+    background-color: #111111;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 5%;
+} 
+ 
+.o_container_small { 
+    width: 50%;
+    padding: 4% 0;
+    margin: 0;
+} 
+
+.s_website_form > .text-img-mantenimiento{
+    width: 75%;
+    background-image: url(../../../images/taller-hino.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    right: -365px;
+    top: 0;
+}
+
+.s_website_form > .text-img-mantenimiento .capa{
+    width: calc(100% + 3px);
+    height: 100%;
+    background: linear-gradient(to right, #111, transparent);
+    position: relative;
+    left: -3px;
+}
+ 
+.s_website_form_rows { 
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 6%; 
+} 
+ 
+.s_website_form_field { 
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 10px;
+} 
+
+.campo_nombre, .campo_apellido,.campo_correo, .campo_tlf{
+    width: 47%;
+}
+
+.campo_ciudad,.campo_contacto, .campo_terminos{
+    width: 100%;
+}
+
+.campo_terminos{
+    margin: 3% 0 4% 0;
+}
+
+.campo_contacto{
+    margin-top: 2%;
+}
+
+.campo_contacto label{
+    margin-bottom: 2% !important;
+}
+ 
+.s_website_form_field > .row{
+    display: flex;
+    flex-direction: column;
+}
+ 
+.s_website_form_field label { 
+    width: 100%; 
+    margin-bottom: 0; 
+} 
+ 
+.s_website_form_field input, .s_website_form_field select { 
+    background-color: #111111 !important; 
+    color: #ffffff; 
+    margin: 0; 
+    padding: 0; 
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #D8232A; 
+    border-radius: 0; 
+    width: 100%; 
+    box-sizing: border-box; 
+ 
+} 
+ 
+.s_website_form_field select { 
+    width: 100%; 
+    height: 25px; 
+} 
+ 
+input[name="name"] { 
+    width: 100%; 
+    height: 25px; 
+} 
+ 
+.s_website_form_field input[type="checkbox"] { 
+    width: 15px; 
+    position: relative;
+}
+
+.s_website_form_field label{
+    font-family: 'Helvetica Neue Light';
+    letter-spacing: .5px;
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    color: gray;
+    font-size: 15px;
+}
+ 
+.s_website_form_submit { 
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-right: 140px;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.s_website_form_submit > a{
+    font-family: 'Helvetica Neue Light';
+    letter-spacing: .5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    font-size: 15px;
+    width: 135px;
+    height: 40px;
+}
+
+.form-main-mantenimiento .form-control:focus{
+    border-color: #D8232A !important;
+    box-shadow: none;
+}
+ 
+.btn { 
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
+    color: #ffffff; 
+    padding: 6px 18px; 
+    border: none; 
+    border-radius: 9px; 
+    cursor: pointer; 
+    text-decoration: none; 
+} 
+ 
+#form-icon{ 
+    width: 16px;
+    height: 16px;
+} 
+
+.image-text { 
+    font-family: 'HelveticaNeue';
+    position: absolute; 
+    font-weight: 600; 
+    font-size: 25px; 
+    top: 40%; 
+    color: #fff; 
+    line-height: 32px;
+    padding-left: 5%;
+} 
+
+.row-copi{ 
+    margin-left: 35% 
+}
+
+.form-title-responsive{
+    font-family: 'HelveticaNeue';
+    display: none;
+}
+
+/* RESPONSIVE FORMULARIO */
+
+@media only screen and (max-width: 1300px){
+    .s_website_form{
+        max-width: 1000px;
+    }
+
+    .s_website_form > .text-img-mantenimiento{
+        background-size: cover;
+        background-position: right;
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 1100px){
+    
+    .s_website_form{
+        max-width: 900px;
+    }
+
+    .s_website_form > .text-img-mantenimiento{
+        width: 88%;
+    }
+
+    .image-text{
+        font-size: 30px;
+    }
+
+    .image-text br{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
+    .s_website_form{
+        max-width: 100%;
+        height: 1000px;
+        gap: 0;
+        display: inline-block;
+    }
+
+    .s_website_form .o_container_small{
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .s_website_form > .text-img-mantenimiento{
+        width: 100%;
+        height: 38%;
+        right: 0;
+        bottom: 0;
+        top: initial;
+    }
+
+    .image-text {
+        display: none;
+    }
+
+    .form-title-responsive{
+        display: flex;
+        justify-content: center;
+        color: #FFF;
+        margin-top: 4%;
+        margin-bottom: 0;
+        font-weight: 800;
+        font-size: 30px;
+    }
+
+    .s_website_form > .text-img-mantenimiento .capa{
+        background: linear-gradient(to bottom, #111, transparent);
+        height: calc(100% + 3px);
+        position: relative;
+        top: -3px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+
+    .s_website_form{
+        height: 1180px;
+    }
+
+    .form-title-responsive{
+        font-size: 25px;  
+    }
+
+    .campo_nombre, .campo_apellido, .campo_correo, .campo_tlf {
+        width: 100%;
+    }
+
+    .s_website_form > .text-img-mantenimiento {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767.98px){
+    .s_website_form{
+        height: 1180px !important;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .form-title-responsive{
+        font-size: 20px;  
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .s_website_form{
+        height: 1100px !important;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .s_website_form{
+        height: 1020px !important;
+    }
+
+    .form-title-responsive{
+        font-size: 18px;  
+        margin: 6% 0 3% 0;
+    }
+
+    .s_website_form_field input, .s_website_form_field select{
+        font-size: 15px;
+    }
+
+    .s_website_form_submit > a {
+        font-size: 15px;
+    }
+}

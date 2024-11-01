@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_landing_website" model="website.menu">
+        <field name="name">Hino Panamá Ventas</field>
+        <field name="url">landing-ventas</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <template id="hino_ventas" name="Hino Panamá Ventas">
+
+        <head>
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <title> HINO PANAMÁ</title>
+            <link rel="shortcut icon" href="/website_hino/static/images/iconos/favicon.ico"
+                      type="image/x-icon"/>
+            <meta name="description"
+                    content="HINO PANAMÁ Conoce la línea de camiones HINO para todo tipo de soluciones de negocios"/>
+            <!-- Meta Canonical -->
+            <link rel="canonical" href="https://www.hino.com.pa/"/>
+            <meta name="robots" content="index, follow"/>
+            <meta name="keywords" content="HINO, PANAMÁ, Camiones, Servicio, Soporte"/>
+            <meta http-equiv="Content-Language" content="es"/>
+            <!-- Open Graph -->
+            <!-- Meta Property para el título -->
+            <meta property="og:title" content="HINO PANAMÁ"/>
+            <meta property="og:description"
+                    content="HINO PANAMÁ Conoce la línea de camiones HINO para todo tipo de soluciones de negocios"/>
+            <meta property="og:image" content="/website_hino/static/images/logo-hino.png"/>
+            <meta property="og:image:alt" content=" Esta es la imagen de logo de la empresa"/>
+        </head>
+
+        <link rel="stylesheet" href="/website_hino/static/src/css/landing/landing-page1.css"/> 
+
+        <a href="tel:+507 6674-3915" class="btn-wsp" target="_blank">
+            <figure>
+                <img src="/website_hino/static/images/iconos/icon-whatsapp-blanco.png"></img>
+            </figure>
+        </a>
+
+        <header id="header">
+            <figure>
+                <img src="/website_hino/static/images/logo-hino.png"></img>
+            </figure>
+        </header>
+        <section class="contactanos">
+            <div class="capa"></div>
+            <div class="contactanos-titulo">
+                <div class="linea-roja"></div>
+                <h2>
+                    Conoce la línea de
+                    <br/>
+                    camiones HINO para todo 
+                    <br/>
+                    tipo de soluciones de 
+                    <br/>
+                    negocios
+                </h2>
+                <div class="botones">
+                    <a href="tel:+507 6674-3915" class="button">cotizar ahora</a>
+                    <a href="#repuestos-servicios" class="button scroll-link">repuestos y servicios</a>
+                </div>
+            </div>
+            <div class="contactanos-form">
+                <h3>Contáctanos</h3>
+                <form id="contact-us" action="/create_opportunity" method="POST">
+                    <input type="hidden" name="origin_page" value="ventas"/>
+                    <div class="campo-nombre">
+                        <label for="name">* Nombre y Apellido:</label>
+                        <input autocomplete="on" type="text" id="name" name="name" required="1" value=""/>
+                    </div>
+                
+                    <div class="campo-tlf">
+                        <label for="phone">* Teléfono:</label>
+                        <input type="tel" autocomplete="on" name="phone" id="phone" placeholder="+507" required="1" value=""/>
+                    </div>
+                
+                    <div class="campo-email">
+                        <label for="email">* Email:</label>
+                        <input autocomplete="on" type="email" id="email" name="email" placeholder="email@correo.com" required="1" value=""/>
+                    </div>
+                
+                    <div class="campo-ciudad">
+                        <label for="city">* Ciudad:</label>
+                        <select name="city" id="city" required="1">
+                            <option value=""/>
+                            <option value="Panamá">Panamá</option>
+                            <option value="Panamá Oeste">Panamá Oeste</option>
+                            <option value="Colón">Colón</option>
+                            <option value="Herrera">Herrera</option>
+                            <option value="Cloque">Cloque</option>
+                            <option value="Los Santos">Los Santos</option>
+                            <option value="Veraguas">Veraguas</option>
+                            <option value="Chiriquí">Chiriquí</option>
+                            <option value="Darién">Darién</option>
+                            <option value="Bocas del Toro">Bocas del Toro</option>
+                        </select>
+                    </div>
+                
+                    <div class="campo-mensaje">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" cols="30" rows="5" placeholder="Escriba su mensaje..."></textarea>
+                    </div>
+                
+                    <button type="submit">Enviar</button>
+                    <t t-if="request.session.get('success_message')">
+                        <div class="alert alert-success" style="margin-top: 20px;" id="success-message">
+                            <t t-out="request.session.pop('success_message')"/>
+                        </div>
+                    </t>
+                </form>
+                <p>Los campos marcados con * son obligatorios</p>
+            </div>
+        </section>
+        <section class="series">
+            <figure>
+                <img src="/website_hino/static/images/hino-entrega-inmediata.jpg" alt=""/>
+            </figure>
+            <div class="series-info">
+                <h3>Entrega inmedidata      
+                    <span>Serie 300 y 500</span>
+                </h3>
+                <h4>Venta de camiones Hino en Panamá</h4>
+                <ul>
+                    <li>Camiones refrigerados</li>
+                    <li>Volquetes</li>
+                    <li>Camiones carga seca</li>
+                    <li>Camiones ganaderos</li>
+                    <li>Camiones plataforma</li>
+                </ul>
+                <h4>Disponibilidad de inventario</h4>
+                <div>
+                    <p>
+                        MILLA 8: <span>307-4500 |</span> CHITRÉ: <span>996-1371 </span>
+                    </p>
+                    <p>
+                         SANTIAGO: <span>998-1529 |</span> DAVID: <span>774-3948</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="repuestos-servicios" id="repuestos-servicios">
+            <h2>repuestos y servicio de posventa</h2>
+            <div>
+                <h3>
+                    Servicios
+                    <div></div>
+                </h3>
+                <div class="servicios">
+                    <p>Mantenimiento preventivo</p>
+                    <p>Mantenimiento correctivo</p>
+                    <p>Contratos de mantenimiento</p>
+                    <p>Talleres Móviles</p>
+                </div>
+            </div>
+        </section>
+        <section class="repuestos-originales">
+            <div>
+                <h3>Repuestos Originales</h3>
+                <figure>
+                    <img src="/website_hino/static/images/logo-hino-repuestos.png" alt=""/>
+                </figure>
+                <h4>
+                    Diseñados para minimizar 
+                    <br/>
+                    el costo de vida útil de tu camión
+                </h4>
+                <ul>
+                    <li>Previenen daños y reparaciones costosas</li>
+                    <li>Protege la vida de tu motor</li>
+                    <li>Aseguran mayor rendimiento con un menor desgaste</li>
+                    <li>Garantizan el funcionamiento correcto de tu camión</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="/website_hino/static/images/repuestos-originales-img.jpg" style="width: 100%;" alt=""/>
+            </figure>
+        </section>
+        <section class="repuestos">
+            <div class="repuestos-lista">
+                <ul>
+                    <li>FILTROS</li>
+                    <li>EMBRAGUES</li>
+                    <li>CORREAS</li>
+                    <li>BUJES Y PINES</li>
+                </ul>
+            </div>
+            <div class="repuestos-imagenes">
+                <figure>
+                    <img src="/website_hino/static/images/img1-landing.jpg" alt=""/>
+                </figure>
+                <figure>
+                    <img src="/website_hino/static/images/img2-landing.jpg" alt=""/>
+                </figure>
+                <figure>
+                    <img src="/website_hino/static/images/img3-landing.jpg" alt=""/>
+                </figure>
+            </div>
+        </section>
+        <footer>
+            <figure>
+                <img src="/website_hino/static/images/logo-hino.png"></img>
+            </figure>
+            <div class="footer-sucursales">
+                <h4>Sucursales</h4>
+                <span>Hino Milla 8</span>
+                <span>Chitré</span>
+                <span>Santiago</span>
+                <span>David</span>
+            </div>
+            <div class="footer-contactenos">
+                <h4>Contáctenos</h4>
+                <a href="tel:">+507 307-4500 / +507 279-4505</a>
+                <a href="mailto:infotambor@tambor.com.pa">infotambor@tambor.com.pa</a>
+            </div>
+            <div class="footer-horario">
+                <h4>Horario de atención</h4>
+                <p>Lunes a Viernes de 8:00 a.m - 5:00 p.m</p>
+                <p>Sábados de 8:00 a.m - 5:00 p.m</p>
+            </div>
+        </footer>
+        <div class="top">
+            <a href="#header" class="scroll-link">
+                <figure>
+                    <img src="/website_hino/static/images/iconos/arrow-d.svg" alt=""/>
+                </figure>
+            </a>
+        </div>
+
+
+        <script src="/website_hino/static/src/js/animation.js"></script>
+        <script src="/website_hino/static/src/js/landing/mensaje-exito.js"></script>
+
+    </template>
+
+</odoo>

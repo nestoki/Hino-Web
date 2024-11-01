@@ -14,6 +14,11 @@
 
             <!-- MAIN -->
             <section class="main_camiones">
+                <figure class="logo-serie">
+                    <t t-if="camion.foto_logo">
+                        <img t-att-src="'/web/image/camion/%s/foto_logo' % camion.id"/>
+                    </t>
+                </figure>
                 <h3 class="main_camiones-titulo">
                     <p t-out="camion.name"/>
                 </h3>
@@ -122,74 +127,74 @@
                     <article>
                         <h5>
                                     TRANSMISIÓN
-                            <button class="botonMostrarOcultar">
-                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                            </button>
                         </h5>
                         <div class="caracteristica">
-                            <p class="informacion" style="display: none;" t-out="camion.tipo_transmision"></p>
+                            <p class="informacion" t-out="camion.tipo_transmision"></p>
                         </div>
                     </article>
                     <article>
                         <h5>
                                     CAPACIDADES
-                            <button class="botonMostrarOcultar">
-                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                            </button>
                         </h5>
                         <div class="caracteristica">
-                            <p class="informacion" style="display: none;" t-out="'Peso Bruto Vehicular'"></p>
-                            <p class="informacion" style="display: none;" t-out="camion.peso_bruto"></p>
+                            <p class="informacion" t-out="'Peso Bruto Vehicular'"></p>
+                            <p class="informacion" t-out="camion.peso_bruto"></p>
                         </div>
                         <div class="caracteristica">
-                            <p class="informacion" style="display: none;" t-out="'Peso del Chasis'"></p>
-                            <p class="informacion" style="display: none;" t-out="camion.peso_chasis"></p>
+                            <p class="informacion" t-out="'Peso del Chasis'"></p>
+                            <p class="informacion" t-out="camion.peso_chasis"></p>
                         </div>
+                        <t t-if="camion.longitud">
+                            <div class="caracteristica">
+                                <p class="informacion" t-out="'Longitud Utilizable del Chasis'"/>
+                                <p class="informacion" t-out="camion.longitud"/>
+                            </div>
+                        </t>
+                        <t t-if="camion.carroceria">
+                            <div class="caracteristica">
+                                <p class="informacion" t-out="'Carrocería volquete de fábrica'"/>
+                                <p class="informacion" t-out="camion.carroceria"/>
+                            </div>
+                        </t>
                         <div class="caracteristica">
-                            <p class="informacion" style="display: none;" t-out="'Longitud Utilizable del Chasis'"></p>
-                            <p class="informacion" style="display: none;" t-out="camion.longitud"></p>
-                        </div>
-                        <div class="caracteristica">
-                            <p class="informacion" style="display: none;" t-out="camion.tipo_rueda"></p>
+                            <p class="informacion" t-out="camion.tipo_rueda"></p>
                         </div>
                     </article>
                     <article>
                         <h5>
                             MOTOR
-                            <button class="botonMostrarOcultar">
-                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                            </button>
                         </h5>
                         <div class="caracteristica">
-                            <p class="informacion" style="display: none;" t-out="camion.modelo_motor"></p>
+                            <p class="informacion" t-out="camion.modelo_motor"></p>
                         </div>
                         <div class="caracteristica">
-                            <p class="informacion" style="display: none;" t-out="camion.tipo_inyeccion"></p>
+                            <p class="informacion" t-out="camion.tipo_inyeccion"></p>
                         </div>
                         <div class="caracteristica">
-                            <p class="informacion" style="display: none;" t-out="'Potencia'"></p>
-                            <p class="informacion" style="display: none;" t-out="camion.potencia"></p>
+                            <p class="informacion" t-out="'Potencia'"></p>
+                            <p class="informacion" t-out="camion.potencia"></p>
                         </div>
                         <div class="caracteristica">
-                            <p class="informacion" style="display: none;" t-out="'Torque'"></p>
-                            <p class="informacion" style="display: none;" t-out="camion.torque"></p>
+                            <p class="informacion" t-out="'Torque'"></p>
+                            <p class="informacion" t-out="camion.torque"></p>
                         </div>
                         <div class="caracteristica">
-                            <p class="informacion" style="display: none;" t-out="'Alternador'"></p>
-                            <p class="informacion" style="display: none;" t-out="camion.alternador"></p>
+                            <p class="informacion" t-out="'Alternador'"></p>
+                            <p class="informacion" t-out="camion.alternador"></p>
                         </div>
-
                     </article>
                 </div>
 
             </section>
 
             <!-- VISTA 360 -->
-            <section class="vista_360">
-                <h3 class="vista_360_titulo">VISTA 360º</h3>
+            <t t-if="camion.vista_360_url">
+                <section class="vista_360">
+                    <h3 class="vista_360_titulo">VISTA 360º</h3>
                     <iframe width="100%" height="500px" t-att-src="camion.vista_360_url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1">
-                </iframe>
-            </section>
+                    </iframe>
+                </section>
+            </t>
 
             <!-- GALERÍA 2 -->
             <section class="galeria_camiones">
@@ -228,12 +233,14 @@
             </section>
 
             <!-- VIDEO -->
-            <section class="video_camion">
-                <iframe width="560" height="315" t-att-src="camion.video_url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1">
-                </iframe>
-            </section>
+            <t t-if="camion.video_url">
+                <section class="video_camion">
+                    <iframe width="560" height="315" t-att-src="camion.video_url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1">
+                    </iframe>
+                </section>
+            </t>
 
-            <!-- MODELOS DISPONIBLES -->           
+            <!-- MODELOS DISPONIBLES -->
             <section class="serie-camiones serie-camiones-modelo">
                 <section class="model-camiones">
                     <h3 class="letter modelos_disponibles">MODELOS DISPONIBLES</h3>
@@ -390,13 +397,12 @@
                                 </div>
                             </div>
                         </div>
-                    
+
                     </div>
                 </section>
             </section>
 
             <!-- Aqui agregar los enlaces a los script que sean nesecarios -->
-            <script src="/website_hino/static/src/js/camiones/btn-mostrar-ocultar.js"></script>
             <script src="/website_hino/static/src/js/camiones/galeria.js"></script>
             <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
             <script src="/website_hino/static/src/js/mostrar-footer.js"></script>

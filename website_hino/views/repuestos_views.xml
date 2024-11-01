@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vista de árbol para el modelo Repuestos -->
+    <record id="view_repuestos_tree" model="ir.ui.view">
+        <field name="name">view.rspuestos.tree</field>
+        <field name="model">repuestos</field>
+        <field name="arch" type="xml">
+            <tree string="Repuestos">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista tipo Kanban para el modelo Repuestos -->
+    <record id="view_repuestos_kanban" model="ir.ui.view">
+        <field name="name">view.repuestos.kanban</field>
+        <field name="model">repuestos</field>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" archivable="false" js_class="repuestos_kanban" sample="1">
+                <field name="name"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_content oe_kanban_global_click">
+                            <div>
+                                <strong class="o_kanban_record_title">
+                                    <span>
+                                        <field name="name"/>
+                                    </span>
+                                </strong>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para el modelo Repuestos -->
+    <record id="view_repuestos_form" model="ir.ui.view">
+        <field name="name">view.repuestos.form</field>
+        <field name="model">repuestos</field>
+        <field name="arch" type="xml">
+            <form string="Repuestos">
+                <header></header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Título..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group col ="1">
+                            <field name="galeria_repuestos_ids" widget="one2many_list" string ="Galería de Imágenes">
+                                <tree editable="bottom">
+                                    <field name="image_repuestos_data" widget="image" size="small"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Vista de búsqueda para el modelo Repuestos -->
+    <record id="view_repuestos_search" model="ir.ui.view">
+        <field name="name">view.repuestos.search</field>
+        <field name="model">repuestos</field>
+        <field name="arch" type="xml">
+            <search string="Repuestos">
+                <group expand="1" string="Group By">
+                    <filter string="Título" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <!-- Acción de ventana para abrir la vista de árbol y formulario de Repuestos -->
+    <record id="action_repuestos" model="ir.actions.act_window">
+        <field name="name">Repuestos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">repuestos</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                    No se ha registrado ningun Elemento.
+            </p>
+        </field>
+    </record>
+    <!-- Menú Superior Repuestos -->
+    <menuitem id="menu_repuestos" parent="menu_secciones" name="Repuestos" action="action_repuestos" sequence="16" />
+
+</odoo> 

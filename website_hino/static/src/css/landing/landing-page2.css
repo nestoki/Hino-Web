@@ -1,0 +1,1040 @@
+/* Importación de las Fuentes */
+
+@font-face { 
+    font-family: 'Roboto'; 
+    font-weight: 500; 
+    src: 
+        url("/website_hino/static/src/css/fonts/roboto.woff") format("woff"), 
+        url("/website_hino/static/src/css/fonts/roboto.ttf") format("truetype"); 
+} 
+
+@font-face {
+    font-family: 'WorkSans';
+    font-weight: 300;
+    src:
+        url("/website_hino/static/src/css/fonts/WorkSans-Regular.woff") format("woff"),
+        url("/website_hino/static/src/css/fonts/WorkSans-Regular.ttf") format("truetype");
+}
+
+/* GENERAL STYLES */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+figure{
+    margin: 0;
+}
+
+.btn-wsp{
+    position: fixed;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00bb2d;
+    border-radius: 50px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+}
+
+.btn-wsp:hover{
+    background-color: #009423;
+}
+
+.btn-wsp figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.btn-wsp figure img{
+    width: 35px;
+}
+
+/* HEADER */
+
+header{
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTACTANOS */
+
+section.contactanos{
+    font-family: 'Roboto';
+    background-image: url(../../../images/banner-02.jpg);
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.contactanos .capa{
+    position: absolute;
+    background-color: #000;
+    opacity: .5;
+    height: 100%;
+    width: 100%;
+}
+
+.contactanos .contactanos-titulo{
+    position: relative;
+    z-index: 10;
+    width: 30%;
+    margin: 5% 0;
+}
+
+.contactanos .contactanos-titulo .linea-roja{
+    width: 50px;
+    height: 5px;
+    background-color: #D8232A;
+}
+
+.contactanos .contactanos-titulo > p{
+    color: #FFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 6%;
+    letter-spacing: .5px;
+}
+
+.contactanos .contactanos-titulo h2{
+    font-family: 'WorkSans';
+    color: #FFF;
+    font-size: 36px;
+    letter-spacing: .5px;
+    margin: 5% 0;
+    line-height: 50px;
+}
+
+.contactanos .contactanos-titulo .botones{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactanos .contactanos-titulo .botones .button{
+    font-family: 'Roboto';
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
+    border: none;
+    border-radius: 25px;
+    color: #FFF;
+    width: 235px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.contactanos .contactanos-form{
+    position: relative;
+    background-color: rgba(203, 21, 21, 0.8);
+    z-index: 10;
+    width: 26%;
+    margin: 5% 0;
+    padding: 2%;
+}
+
+.contactanos .contactanos-form h3{
+    font-family: 'WorkSans';
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFF;
+    font-size: 25px;
+}
+
+.contactanos .contactanos-form .form-flecha img{
+    display: flex;
+    width: 20px;
+    margin: 22px auto 15px auto;
+}
+
+.contactanos .contactanos-form form{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactanos .contactanos-form form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.contactanos .contactanos-form input,
+textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    padding: 8px;
+    color: #FFF;
+}
+
+.contactanos .contactanos-form input::placeholder,
+textarea::placeholder{
+    font-family: 'Roboto';
+    color: #FFF;
+}
+
+.contactanos .contactanos-form form > button{
+    font-family: 'Roboto';
+    font-weight: 600;
+    background: #FFF;
+    border: none;
+    border-radius: 25px;
+    color: #D8232A;
+    width: 210px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 2% auto 8% auto;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px){
+
+    .contactanos{
+        padding: 3% 5%;
+    }
+
+    .contactanos .capa{
+        top: 0;
+    }
+
+    .contactanos .contactanos-titulo{
+        width: 45%;
+    }
+
+    .contactanos .contactanos-titulo h2{
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .contactanos .contactanos-form{
+        width: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
+    .contactanos .contactanos-form{
+        width: 45%;
+    }
+
+    .contactanos .contactanos-titulo h2{
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .contactanos .contactanos-titulo .botones .button{
+        width: 70%;
+    }
+
+    .contactanos .contactanos-form h3{
+        font-size: 20px;
+    }
+
+    .contactanos .contactanos-form form > button{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .contactanos .contactanos-titulo h2{
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .contactanos .contactanos-titulo > p{
+        font-size: 14px;
+    }
+
+    .contactanos .contactanos-titulo .botones{
+        gap: 15px;
+    }
+
+    .contactanos .contactanos-titulo .botones .button{
+        font-size: 14px;
+    }
+
+    .contactanos .contactanos-form h3{
+        font-size: 18px;
+    }
+
+    .contactanos .contactanos-form form > button{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    section.contactanos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactanos .capa{
+        left: 0;
+    }
+
+    .contactanos .contactanos-titulo{
+        width: 80%;
+    }
+
+    .contactanos .contactanos-titulo .linea-roja{
+        display: none;
+    }
+
+    .contactanos .contactanos-titulo > p{
+        text-align: center;
+    }
+
+    .contactanos .contactanos-titulo h2{
+        font-size: 25px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .contactanos .contactanos-titulo .botones{
+        align-items: center;
+    }
+
+    .contactanos .contactanos-titulo .botones .button{
+        width: 50%;
+    }
+
+    .contactanos .contactanos-form{
+        width: 80%;
+        padding: 5% 4%;
+    }
+
+    .contactanos .contactanos-form form > button{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .contactanos .contactanos-titulo{
+        width: 95%;
+    }
+
+    .contactanos .contactanos-form{
+        width: 95%;
+    }
+
+    .contactanos .contactanos-titulo .botones .button,
+    .contactanos .contactanos-form form > button{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .contactanos .contactanos-titulo h2{
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .contactanos .contactanos-titulo .botones .button, .contactanos .contactanos-form form > button{
+        width: 80%;
+        height: 40px;
+    }
+}
+
+/* SERIES SERIE 300 */
+
+.series{
+    font-family: 'Roboto';
+    background-color: #000;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 5%;
+    gap: 5%;
+}
+
+.series > figure{
+    width: 30%;
+}
+
+.series > figure img{
+    width: 100%;
+}
+
+.series .series-info{
+    width: 35%;
+}
+
+.series .series-info h3{
+    font-family: 'WorkSans';
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+.series .series-info > ul{
+    margin: 2% 0 5% 0;
+    list-style: none;
+}
+
+.series .series-info > ul li{
+    font-size: 16px;
+    margin-bottom: 3%;
+}
+
+/* SERIES SERIE 500 */
+
+.serie-500{
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
+    flex-direction: row-reverse;
+    margin-bottom: 3%;
+}
+
+/* SERIES RESPONSIVE */
+
+@media only screen and (max-width: 1200px){
+    .series > figure{
+        width: 40%;
+    }
+
+    .series .series-info{
+        width: 45%;
+    }
+
+    .series .series-info h3{
+        font-size: 30px;
+    }
+
+    .series .series-info > ul li{
+        margin-bottom: 2%;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .series{
+        padding: 6% 5%;
+    }
+
+    .series > figure{
+        width: 45%;
+    }
+
+    .series .series-info h3{
+        font-size: 25px;
+    }
+
+    .series .series-info > div p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .series .series-info h3{
+        font-size: 20px;
+    }
+
+    .series .series-info > h4{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .series{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .serie-500{
+        flex-direction: column-reverse;
+        margin-bottom: 0;
+    }
+
+    .series > figure{
+        width: 75%;
+    }
+
+    .series .series-info{
+        width: 80%;
+    }
+
+    .series .series-info h3{
+        font-size: 25px;
+    }
+
+    .series .series-info > h4{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .series{
+        padding: 10% 5%;
+    }
+
+    .series > figure{
+        width: 90%;
+    }
+
+    .series .series-info{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .series .series-info h3{
+        font-size: 20px;
+    }
+
+    .series .series-info > h4{
+        font-size: 16px;
+    }
+
+    .series .series-info > ul li{
+        font-size: 14px;
+    }
+
+    .series .series-info > div p{
+        font-size: 12px;
+    }
+}
+
+/* REPUESTOS SERVICIOS */
+
+.repuestos-servicios{
+    font-family: 'Roboto';
+    background-color: #000;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.repuestos-servicios > h2{
+    font-family: 'WorkSans';
+    font-size: 36px;
+    background-color: #D8232A;
+    width: 100%;
+    height: 80px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .5px;
+}
+
+.repuestos-servicios > div{
+    width: 685px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    margin: 2% 0;
+}
+
+.repuestos-servicios > div h3{
+    width: 40%;
+    font-family: 'WorkSans';
+    font-size: 36px;
+}
+
+.repuestos-servicios > div h3 div{
+    width: 25px;
+    height: 2px;
+    background-color: #D8232A;
+    margin-top: 5%;
+}
+
+.repuestos-servicios > div > div{
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* RESPONSIVE REPUESTOS SERVICIOS */
+
+@media only screen and (max-width: 1200px){
+    .repuestos-servicios > h2{
+        font-size: 30px;
+    }
+
+    .repuestos-servicios > div{
+        width: 80%;
+    }
+
+    .repuestos-servicios > div h3{
+        font-size: 30px;
+        width: 45%;
+    }
+
+    .repuestos-servicios > div > div{
+        width: 45%;
+    }
+
+    .repuestos-servicios > div > div > p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .repuestos-servicios > h2{
+        font-size: 25px;
+        height: 70px;
+    }
+
+    .repuestos-servicios > div{
+        width: 70%;
+        margin: 5% 0;
+    }
+
+    .repuestos-servicios > div h3{
+        font-size: 25px;
+    }
+
+    .repuestos-servicios > div h3 div{
+        margin-top: 3%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+
+    .repuestos-servicios > h2{
+        font-size: 20px;
+    }
+
+    .repuestos-servicios > div h3{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .repuestos-servicios{
+        padding-top: 3%;
+    }
+
+    .repuestos-servicios > h2{
+        width: 95%;
+        font-size: 25px;
+        text-align: center;
+        height: auto;
+        padding: 3% 2%;
+    }
+
+    .repuestos-servicios > div{
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .repuestos-servicios > div h3{
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .repuestos-servicios > div h3 div{
+        margin-top: 2%;
+        position: relative;
+        left: 48%;
+    }
+
+    .repuestos-servicios > div > div{
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .repuestos-servicios > div{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .repuestos-servicios > h2{
+        font-size: 20px;
+    }
+
+    .repuestos-servicios > div{
+        margin: 10% 2%;
+    }
+
+    .repuestos-servicios > div h3{
+        font-size: 20px;
+    }
+
+    .repuestos-servicios > div > div > p{
+        font-size: 14px;
+    }
+}
+
+/* REPUESTOS ORIGINALES */
+
+.repuestos-originales{
+    font-family: 'Helvetica Neue Light';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding: 1% 5%;
+}
+
+.repuestos-originales > div{
+    width: 32%;
+}
+
+.repuestos-originales > div h3{
+    font-size: 36px;
+    font-family: 'WorkSans';
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.repuestos-originales > div figure{
+    width: 100%;
+}
+
+.repuestos-originales > div figure img{
+    width: 100%;
+}
+
+.repuestos-originales > div h4{
+    font-family: 'WorkSans';
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 4%;
+}
+
+.repuestos-originales > div ul{
+    margin: 4% 0 0 8%;
+}
+
+.repuestos-originales > div ul li{
+    font-family: 'Roboto';
+    margin-bottom: 2%;
+    font-size: 16px;
+}
+
+.repuestos-originales > figure{
+    width: 32%;
+}
+
+/* REPUESTOS ORIGINALES RESPONSIVE */
+
+@media only screen and (max-width: 1200px){
+
+    .repuestos-originales{
+        padding: 3% 5%;
+    }
+
+    .repuestos-originales > div{
+        width: 45%;
+    }
+
+    .repuestos-originales > figure{
+        width: 40%;
+    }
+
+    .repuestos-originales > div figure img{
+        width: 95%;
+    }
+
+    .repuestos-originales > div h3{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+
+    .repuestos-originales{
+        padding: 6% 5% 4% 5%;
+    }
+
+    .repuestos-originales > div h3{
+        font-size: 25px;
+    }
+
+    .repuestos-originales > figure{
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .repuestos-originales > div h3{
+        font-size: 20px;
+    }
+
+    .repuestos-originales > div h4{
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .repuestos-originales{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .repuestos-originales > div{
+        width: 80%;
+    }
+
+    .repuestos-originales > div h3{
+        font-size: 25px;
+    }
+
+    .repuestos-originales > div h4{
+        font-size: 20px;
+    }
+
+    .repuestos-originales > figure{
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .repuestos-originales > div{
+        width: 95%;
+    }
+
+    .repuestos-originales > figure{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .repuestos-originales > div h3{
+        font-size: 20px;
+    }
+
+    .repuestos-originales > div h4{
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .repuestos-originales > div ul li{
+        font-size: 14px;
+    }
+}
+
+/* REPUESTOS */
+
+.repuestos{
+    font-family: 'HelveticaNeue';
+}
+
+.repuestos .repuestos-lista{
+    background-color: #000;
+    width: 100%;
+    height: 80px;
+    color: #FFF;
+}
+
+.repuestos .repuestos-lista ul{
+    font-family: 'WorkSans';
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    height: 100%;
+    font-size: 36px;
+}
+
+.repuestos .repuestos-lista ul li:first-child{
+    list-style: none;
+}
+
+.repuestos .repuestos-imagenes{
+    display: flex;
+}
+
+.repuestos .repuestos-imagenes figure{
+    width: 33.33%;
+}
+
+.repuestos .repuestos-imagenes figure img{
+    width: 100%;
+    height: 100%;
+}
+
+/* REPUESTOS RESPONSIVE */
+
+@media only screen and (max-width: 1200px){
+    .repuestos .repuestos-lista ul{
+        font-size: 30px;
+        gap: 4%;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .repuestos .repuestos-lista{
+        height: 120px;
+        padding: 2%;
+    }
+
+    .repuestos .repuestos-lista ul{
+        flex-wrap: wrap;
+        font-size: 25px;
+        gap: 18px;
+    }
+
+    .repuestos .repuestos-lista ul li{
+        width: 24%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .repuestos .repuestos-lista ul{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .repuestos .repuestos-lista{
+        padding: 3% 2%;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+    .repuestos .repuestos-lista ul{
+        font-size: 18px;
+    }
+
+    .repuestos .repuestos-lista ul li{
+        width: 32%;
+    }
+
+    .repuestos .repuestos-lista ul li:first-child{
+        list-style: inherit;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .repuestos .repuestos-lista ul{
+        gap: 10px;
+    }
+
+    .repuestos .repuestos-lista ul li{
+        width: 45%;
+        list-style: none;
+    }
+
+    .repuestos .repuestos-lista ul li:first-child{
+        list-style: none;
+    }
+}
+
+
+/* FOOTER */
+
+footer{
+    font-family: 'Helvetica Neue Light';
+    background-color: #D8232A;
+    color: #FFF;
+    display: flex;
+    gap: 5%;
+    padding: 5% 8%;
+}
+
+footer > div{
+    width: 24%;
+}
+
+footer .footer-sucursales{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+footer  h4{
+    font-family: 'WorkSans';
+    font-size: 20px;
+    margin-bottom: 3%;
+}
+
+footer  div span{
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+footer .footer-contactenos{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+footer .footer-contactenos a{
+    font-family: 'Roboto';
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: #FFF;
+}
+
+footer .footer-horario{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+footer .footer-horario p{
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+/* FOOTER RESPONSIVE */
+
+@media only screen and (max-width: 1000px){
+    footer{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    footer > div{
+        text-align: center;
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    footer h4{
+        font-size: 18px;
+    }
+
+    footer div span,
+    footer .footer-contactenos a,
+    footer .footer-horario p{
+        font-size: 14px;
+    }
+}

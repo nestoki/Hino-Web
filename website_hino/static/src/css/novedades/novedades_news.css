@@ -24,7 +24,7 @@ figure{
 .slider-news{
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    height: 500px;
     position: relative;
     display: flex;
     align-items: self-end;
@@ -47,11 +47,12 @@ figure{
 }
 
 .slider-news div:last-child h3{
-    font-size: 35px;
+    font-family: 'HelveticaNeue';
+    font-size: 25px;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 600;
     width: 80%;
-    line-height: 47px;
+    line-height: 45px;
 }
 
 .slider-news div:last-child > div{
@@ -60,8 +61,10 @@ figure{
 }
 
 .slider-news div:last-child > div span{
+    font-family: 'Helvetica Neue Light';
     display: flex;
     align-items: center;
+    font-size: 18px;
     gap: 6px;
 }
 
@@ -168,14 +171,17 @@ figure{
 }
 
 .new > div{
+    font-family: 'Helvetica Neue Light';
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
 
 .new > div > p{
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: justify;
 }
 
 .new > div p:last-child{
@@ -183,10 +189,11 @@ figure{
 }
 
 .new #leer-otros-blogs{
+    font-family: 'Helvetica Neue Light';
     color: #000;
     font-style: italic;
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 /* NEW RESPONSIVE */
@@ -285,12 +292,14 @@ figure{
 }
 
 .otros-blogs article:first-child p{
+    font-family: 'HelveticaNeue';
     width: 70%;
     text-align: right;
     margin-right: 2%;
     position: relative;
     margin-bottom: 0;
-    font-weight: 900;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .otros-blogs article:last-child{
@@ -307,12 +316,14 @@ figure{
 }
 
 .otros-blogs article:last-child p{
+    font-family: 'HelveticaNeue';
     width: 70%;
     text-align: left;
     margin-left: 2%;
     position: relative;
     margin-bottom: 0;
-    font-weight: 900;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .otros-blogs article a{

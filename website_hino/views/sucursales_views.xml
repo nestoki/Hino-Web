@@ -76,6 +76,7 @@
                             <field name="cita" placeholder="Cita..."/>
                             <field name="numero_phone" placeholder="Teléfono..."/>
                             <field name="horarios" placeholder="Agregue sus Horarios..."/>
+                            <!-- <field name="tipo" placeholder="Tipo de Sucursal..."/> -->
                         </group>
                         <group name="name" string="Localización">
                             <field name="google_maps_direct" placeholder="Agregue la url para abrir en el navagador..."/>

@@ -1,22 +1,471 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<odoo> 
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
     <record id="menu_free_service_program_website" model="website.menu">
         <field name="name">Free Service Program</field>
         <field name="url">free_service_program</field>
     </record>
-    
 
-    <template id="hino_free_service_program" name="Hino Soporte Total"> 
-        <t t-call="website.layout"> 
-            <t t-set="head"> 
+
+    <template id="hino_free_service_program" name="Hino Soporte Total">
+        <t t-call="website.layout">
+            <t t-set="head">
                 <t t-call-assets="web.assets_common" t-js="false" />
-                <link rel="stylesheet" href="/website_hino/static/src/css/free_service_program/free_service_program.css"/>                 
-            </t> 
-            <h1>Free Service Program</h1>
+                <link rel="stylesheet" href="/website_hino/static/src/css/soporte/free_service_program.css"/>
+            </t>
+
+            <!-- BANNER FREE SERVICE PROGRAM -->
+            <section class="banner-free">
+                <figure>
+                    <img src="/website_hino/static/images/banner-free-service.jpg"></img>
+                </figure>
+            </section>
+
+            <!-- FREE SERVICE PROGRAM -->
+            <section class="free-service">
+                <h3 class="free-titulo-responsive">free service program</h3>
+                <div class="container-free-service">
+                    <h3>free service program</h3>
+                    <p>
+                        En HINO, nos preocupamos por el rendimiento y la longevidad de tu camión. Por eso, ofrecemos una inspección gratuita cuando tu camión alcanza los 1,000 km, asegurándonos de que todo funcione perfectamente desde el principio. Esta revisión garantiza la seguridad y el funcionamiento satisfactorio del camión una vez instalada la carrocería.
+                    </p>
+                </div>
+                <figure>
+                    <img src="/website_hino/static/images/free-service-imagen.png"/>
+                </figure>
+            </section>
+
+            <!-- FREE SERVICE BENEFICIOS -->
+            <section class="free-service-beneficios">
+                <div class="container-free-service-beneficios">
+                    <div class="titulo-free-beneficios">
+                        <h4>Conoce sus <span>beneficios</span>
+                        </h4>
+                    </div>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/free-beneficios-1.png"/>
+                        </figure>
+                        <p>Vida Útil Prolongada</p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/free-beneficios-2.png"/>
+                        </figure>
+                        <p>Mayor Rendimiento y Eficiencia</p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/free-beneficios-3.png"/>
+                        </figure>
+                        <p>Prevención de Problemas</p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/free-beneficios-4.png"/>
+                        </figure>
+                        <p>Seguridad en Carretera</p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/free-beneficios-5.png"/>
+                        </figure>
+                        <p>Técnicos Certificados</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- FREE SERVICE DETALLES -->
+            <section class="free-service-detalles">
+                <h3>detalles de la inspección</h3>
+                <div class="detalles-inspeccion">
+                    <div class="detalles-capa"></div>
+                    <div class="detalles-top">
+                        <article class="articulo-responsive detalle-responsive">
+                            <div class="detalles-info-capa"></div>
+                            <div class="detalles-info">
+                                <p>Revisión del
+                                    <span>funcionamiento del motor</span>
+                                </p>
+                                <span>1</span>
+                            </div>
+                        </article>
+                        <article class="detalle-2">
+                            <div class="detalles-info">
+                                <p>Revisión del 
+                                    <span>sistema de embrague</span>
+                                </p>
+                                <span>2</span>
+                            </div>
+                        </article>
+                        <article class="detalle-3">
+                            <div class="detalles-info-capa"></div>
+                            <div class="detalles-info">
+                                <p>Revisión de 
+                                    <span>sistemas de frenos</span>
+                                </p>
+                                <span>3</span>
+                            </div>
+                        </article>
+                        <article class="detalle-4">
+                            <div class="detalles-info-capa"></div>
+                            <div class="detalles-info">
+                                <p>Inspección de 
+                                    <span>neumáticos y alineación</span>
+                                </p>
+                                <span>4</span>
+                            </div>
+                        </article>
+                        <article class="detalle-5">
+                            <div class="detalles-info-capa"></div>
+                            <div class="detalles-info">
+                                <p>Verificación de
+                                    <span>fluidos y aceites</span>
+                                </p>
+                                <span>5</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="detalles-bottom">
+                        <article class="detalle-1">
+                            <div class="detalles1-info-capa"></div>
+                            <div class="detalles-info">
+                                <p>Revisión del
+                                    <span>funcionamiento del motor</span>
+                                </p>
+                                <span>1</span>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="detalles-info">
+                                <p>Chequeo del
+                                    <span>sistema eléctrico</span>
+                                </p>
+                                <span>6</span>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="detalles-info-capa"></div>
+                            <div class="detalles-info">
+                                <p>Inspección del 
+                                    <span>sistema de escape</span>
+                                </p>
+                                <span>7</span>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="detalles-info-capa"></div>
+                            <div class="detalles-info">
+                                <p>Evaluación de la 
+                                    <span>suspensión y dirección</span>
+                                </p>
+                                <span>8</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SOLICITA UNA INSPECCIÓN -->
+            <section class="solicita-inspeccion">
+                <section class="s_website_form" data-vcss="001" data-snippet="s_website_form" data-name="Formulario">
+                    <div class="o_container_small">
+                        <h3>Solicita una inspección</h3>
+                        <form action="/website/form/" method="post" enctype="multipart/form-data" data-mark="*" data-pre-fill="true" data-model_name="crm.lead">
+                            <div class="s_website_form_rows">
+
+                                <div data-name="Field" class="s_website_form_field campo_nombre s_website_form_required" data-type="char">
+                                    <div class="row">
+                                        <label class="" style="width: 200px" for="o6f2b6awhh4g">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-user.png" />
+                                            <span class="s_website_form_label_content">
+                                            Nombre</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="o6f2b6awhh4g" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_apellido s_website_form_custom" data-type="char">
+                                    <label class="s_website_form_label" for="o6f2b6awhh4g">
+                                        <img id="form-icon" src="/website_hino/static/images/iconos/icon-user.png" />
+                                        <span class="s_website_form_label_content">Apellido</span>
+                                    </label>
+                                    <input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="o6f2b6awhh4g" />
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_correo s_website_form_required" data-type="email">
+                                    <div class="row">
+                                        <label class="col-form-label  s_website_form_label" for="oywj7qvvtat">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-email.png" />
+                                            <span class="s_website_form_label_content">
+                                            Correo</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input" type="email" name="email_from" required="1" data-fill-with="email" id="oywj7qvvtat" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-name="Field" class="s_website_form_field campo_tlf" data-type="tel">
+                                    <div class="row">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" for="oyx5ze4zxn3">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-phone.png" />
+                                            <span class="s_website_form_label_content">
+                                            Celular</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input" type="tel" name="phone" data-fill-with="phone" id="oyx5ze4zxn3" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-name="Field" class="s_website_form_field campo_ciudad s_website_form_custom" data-type="many2one">
+                                    <label class="col-form-label col-sm-auto s_website_form_label" for="ogdf4jd1c6wp">
+                                        <img id="form-icon" src="/website_hino/static/images/iconos/icon-localization.png" />
+                                        <span class="s_website_form_label_content">Ciudad</span>
+                                    </label>
+                                    <select class="s_website_form_input" name="city" id="ogdf4jd1c6wp" data-fill-with="commercial_company_name">
+                                        <option value="" />
+                                        <option value="Panamá">Panamá</option>
+                                        <option value="Panamá Oeste">Panamá Oeste</option>
+                                        <option value="Colón">Colón</option>
+                                        <option value="Herrera">Herrera</option>
+                                        <option value="Cloque">Cloque</option>
+                                        <option value="Los Santos">Los Santos</option>
+                                        <option value="Veraguas">Veraguas</option>
+                                        <option value="Chiriquí">Chiriquí</option>
+                                        <option value="Darién">Darién</option>
+                                        <option value="Bocas del Toro">Bocas del Toro</option>
+                                    </select>
+
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_contacto s_website_form_model_required" data-type="char">
+                                    <label class="s_website_form_label" for="contacto">
+                                        <img id="form-icon" src="/website_hino/static/images/iconos/icon-message.png" />
+                                        <span class="s_website_form_label_content">Motivo
+                                        del Contacto</span>
+                                    </label>
+                                    <input class="s_website_form_input " type="text" name="name" required="" placeholder="" id="contacto" data-fill-with="undefined" />
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_terminos s_website_form_custom s_website_form_required" data-type="boolean">
+                                    <label class="s_website_form_label" for="terminos">
+                                        <input type="checkbox" value="Yes" class="s_website_form_input" name="Acepto Término y Condiciones" required="1" id="terminos" data-fill-with="undefined"/>
+                                        <a class="text-black-50" href="/terminos">Acepto
+                                                    Política de Privacidad</a>
+                                    </label>
+                                </div>
+
+                                <div class="s_website_form_submit s_website_form_no_submit_label" data-name="Submit Button">
+
+
+                                    <a href="#" role="button" class="btn s_website_form_send o_default_snippet_text" data-bs-original-title="" title="">Enviar
+                                        <i class="fa fa-paper-plane"></i>
+                                    </a>
+                                    <span id="s_website_form_result"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <div class="separacion"></div>
+                <div class="solicita-inspeccion-contactanos">
+                    <t t-foreach="request.env['info.contacto'].sudo().search([])" t-as="contacto"></t>
+                    <h3>Contáctanos</h3>
+                    <div class="informacion">
+                        <t t-if="contacto">
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/icono-phone-rojo.png" alt="Icono" />
+                                </figure>
+                                <a class="phone" t-att-href="'tel:' + contacto.numero_phone">
+                                    <t t-out="contacto.numero_phone" />
+                                </a>
+                            </div>
+                        </t>
+                        <t t-if="contacto">
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/icono-location-rojo.png" alt="Icono" />
+                                </figure>
+                                <p>
+                                    <t t-out="contacto.direccion" />
+                                </p>
+                            </div>
+                        </t>
+                        <t t-if="contacto">
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/icono-email-rojo.png" alt="Icono" />
+                                </figure>
+                                <a class="email" t-att-href="'mailto:' + contacto.email">
+                                    <t t-out="contacto.email" />
+                                </a>
+                            </div>
+                        </t>
+                        <t t-if="contacto">
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/icono-lnk-rojo.svg" alt="Icono" />
+                                </figure>
+                                <a t-att-href="contacto.linkedin" target="_blank">
+                                    <p>
+                                        @hinopanama
+                                    </p>
+                                </a>
+                            </div>
+                        </t>
+                        <t t-if="contacto">
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/icono-ig-rojo.png" alt="Icono" />
+                                </figure>
+                                <a t-att-href="contacto.instagram" target="_blank">
+                                    <p>
+                                        @hinopanama
+                                    </p>
+                                </a>
+                            </div>
+                        </t>
+                        <t t-if="contacto">
+                            <div>
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/icono-yt-rojo.svg" alt="Icono" />
+                                </figure>
+                                <a t-att-href="contacto.youtube" target="_blank">
+                                    <p>
+                                        @hinopanama
+                                    </p>
+                                </a>
+                            </div>
+                        </t>
+                        <t t-foreach="request.env['servicios.soporte'].sudo().search([])" t-as="servicio"></t>
+                        <a t-att-href="'tel:' + servicio.cita_whatsapp" role="button" class="btn s_website_form_send o_default_snippet_text" data-bs-original-title="" title="">Chat en Línea
+                            <figure>
+                                <img src="/website_hino/static/images/iconos/icono-chat.png" alt="Icono" />
+                            </figure>
+                        </a>
+                        <a href="/sucursales" role="button" class="btn s_website_form_send o_default_snippet_text" data-bs-original-title="" title="">Encuéntranos
+                            <figure>
+                                <img src="/website_hino/static/images/iconos/icono-location-rojo.png" alt="Icono" />
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FORMULARIO -->
+                <!-- <section class="form-main-free">
+                    <section class="s_website_form" data-vcss="001" data-snippet="s_website_form" data-name="Formulario">
+                        <h4 class="form-title-responsive">Saca tu cita para inspección gratuita</h4>
+                        <div class="o_container_small">
+                            <form action="/website/form/" method="post" enctype="multipart/form-data" data-mark="*" data-pre-fill="true" data-model_name="crm.lead">
+                                <div class="s_website_form_rows">
+
+                                    <div data-name="Field" class="s_website_form_field campo_nombre s_website_form_required" data-type="char">
+                                        <div class="row">
+                                            <label class="" style="width: 200px" for="o6f2b6awhh4g">
+                                                <img id="form-icon" src="/website_hino/static/images/iconos/icon-user.png" />
+                                                <span class="s_website_form_label_content">
+                                                    Nombre</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <div class="col-sm">
+                                                <input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="o6f2b6awhh4g" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field" class="s_website_form_field campo_apellido s_website_form_custom" data-type="char">
+                                        <label class="s_website_form_label" for="o6f2b6awhh4g">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-user.png" />
+                                            <span class="s_website_form_label_content">Apellido</span>
+                                        </label>
+                                        <input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="o6f2b6awhh4g" />
+                                    </div>
+                                    <div data-name="Field" class="s_website_form_field campo_correo s_website_form_required" data-type="email">
+                                        <div class="row">
+                                            <label class="col-form-label  s_website_form_label" for="oywj7qvvtat">
+                                                <img id="form-icon" src="/website_hino/static/images/iconos/icon-email.png" />
+                                                <span class="s_website_form_label_content">
+                                                    Correo</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <div class="col-sm">
+                                                <input class="form-control s_website_form_input" type="email" name="email_from" required="1" data-fill-with="email" id="oywj7qvvtat" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-name="Field" class="s_website_form_field campo_tlf" data-type="tel">
+                                        <div class="row">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" for="oyx5ze4zxn3">
+                                                <img id="form-icon" src="/website_hino/static/images/iconos/icon-phone.png" />
+                                                <span class="s_website_form_label_content">
+                                                    Celular</span>
+                                            </label>
+                                            <div class="col-sm">
+                                                <input class="form-control s_website_form_input" type="tel" name="phone" data-fill-with="phone" id="oyx5ze4zxn3" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-name="Field" class="s_website_form_field campo_ciudad s_website_form_custom" data-type="many2one">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" for="ogdf4jd1c6wp">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-localization.png" />
+                                            <span class="s_website_form_label_content">Ciudad</span>
+                                        </label>
+                                        <select class="s_website_form_input" name="city" id="ogdf4jd1c6wp" data-fill-with="commercial_company_name">
+                                            <option value="" />
+                                            <option value="Panamá">Panamá</option>
+                                            <option value="Panamá Oeste">Panamá Oeste</option>
+                                            <option value="Colón">Colón</option>
+                                            <option value="Herrera">Herrera</option>
+                                            <option value="Cloque">Cloque</option>
+                                            <option value="Los Santos">Los Santos</option>
+                                            <option value="Veraguas">Veraguas</option>
+                                            <option value="Chiriquí">Chiriquí</option>
+                                            <option value="Darién">Darién</option>
+                                            <option value="Bocas del Toro">Bocas del Toro</option>
+                                        </select>
+
+                                    </div>
+                                    <div data-name="Field" class="s_website_form_field campo_contacto s_website_form_model_required" data-type="char">
+                                        <label class="s_website_form_label" for="contacto">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-message.png" />
+                                            <span class="s_website_form_label_content">Motivo
+                                                del Contacto</span>
+                                        </label>
+                                        <input class="s_website_form_input " type="text" name="name" required="" placeholder="" id="contacto" data-fill-with="undefined" />
+                                    </div>
+                                    <div data-name="Field" class="s_website_form_field campo_terminos s_website_form_custom s_website_form_required" data-type="boolean">
+                                        <label class="s_website_form_label" for="terminos">
+                                            <input type="checkbox" value="Yes" class="s_website_form_input" name="Acepto Término y Condiciones" required="1" id="terminos" data-fill-with="undefined"/>
+                                            <a class="text-o-color-4" href="/terminos">Acepto
+                                                        Política de Privacidad</a>
+                                        </label>
+                                    </div>
+
+                                    <div class="s_website_form_submit s_website_form_no_submit_label" data-name="Submit Button">
+
+
+                                        <a href="#" role="button" class="btn s_website_form_send o_default_snippet_text" data-bs-original-title="" title="">Enviar
+                                            <i class="fa fa-paper-plane"></i>
+                                        </a>
+                                        <span id="s_website_form_result"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="text-img-free">
+                            <div class="capa"></div>
+                            <span class="image-text">Saca tu cita para inspección gratuita</span>
+                        </div>
+                    </section>
+                </section> -->
 
 
             <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
             <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
-        </t> 
-    </template> 
+        </t>
+    </template>
 </odoo>

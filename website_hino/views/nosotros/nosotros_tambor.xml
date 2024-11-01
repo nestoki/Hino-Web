@@ -17,23 +17,10 @@
             <section class="slider-main slider-nosotros-tambor">
                 <section class="swiper swiper-container-tambor">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div t-attf-style="background-image:url('/website_hino/static/images/fondo-sucursales.png')" class="img bg-slide bg-slide-nosotros">
-                                <div class="capa-negra"></div>
-                                <div class="container-title container-title-nosotros-tambor">
-                                    <h3>Historia de tambor</h3>
-                                    <p>
-                                        Tambor, S.A., es una empresa con una trayectoria de 65 años, 
-                                        que pertenece a Grupo Corporativo Pérez, S.A. Actualmente 
-                                        cuentan con 9 sucursales a nivel nacional, estratégicamente 
-                                        ubicadas y 11 talleres móviles para brindarles a sus clientes 
-                                        una atención expedita y con un servicio garantizado.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <figure class="bg-slide bg-slide-nosotros">
+                            <img src="/website_hino/static/images/nosotros-tambor-bg.png"></img>
+                        </figure>
                     </div>
-                    <!-- <div class="swiper-pagination"></div> -->
                 </section>
             </section>
 
@@ -90,8 +77,8 @@
                                 <span>2005</span>
                             </p>
                             <div>
-                                <figure style="width: 130px; height: 220px; display: flex; align-items: center;">
-                                    <img src="/website_hino/static/images/linea-img3.png"></img>
+                                <figure class="logo-gcp" style="width: 130px; height: 220px; display: flex; align-items: center;">
+                                    <img src="/website_hino/static/images/tambor-img3.svg" ></img>
                                 </figure>
                                 <p>
                                     Se vende Tambor, S.A., al Grupo Corporativo Pérez, 
@@ -275,8 +262,8 @@
                             <p>
                                 <span>2005</span>
                             </p>
-                            <figure>
-                                <img src="/website_hino/static/images/linea-img3.png"></img>
+                            <figure class="logo-gcp">
+                                <img src="/website_hino/static/images/tambor-img3.svg"></img>
                             </figure>
                         </div>
                         <div class="parrafo">

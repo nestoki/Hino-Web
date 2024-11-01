@@ -43,35 +43,13 @@
                                 <p class="creador-por" t-out="novedad.creado_por"/>    
                             </div>
                             <h3 class="titulo" t-out="novedad.titulo" />
-                            <p t-out="novedad.informacion" />
+                            <p t-out="novedad.descripcion" />
                             <a id="leer-mas" t-attf-href="/novedades/news?novedadId={{ novedad.id }}" class="ver-btn">
                                 <img id="icon-chevron-2"
                                     src="/website_hino/static/images/iconos/icon-chevron-2.png" />
                                 LEER MÁS </a>
                         </article>
                     </t>
-
-                    <!-- PAGINATION -->
-                    <!-- <nav class="novedad-pagination">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item boton">
-                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&lt;</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">3</a>
-                            </li>
-                            <li class="page-item boton">
-                                <a class="page-link" href="#">&gt;</a>
-
-                            </li>
-                        </ul>
-                    </nav> -->
                 </div>
             </section>
 

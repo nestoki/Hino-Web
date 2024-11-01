@@ -18,10 +18,10 @@
 
 .titulo-form-responsive{
     display: none;
+    font-family: 'HelveticaNeue';
     font-size: 25px;
     color: #FFF;
     margin-bottom: 5%;
-    
 }
  
 .form_main{ 
@@ -97,17 +97,17 @@
  
  
 .s_website_form_field input, .s_website_form_field select { 
+    font-family: 'Helvetica Neue Light';
     background-color: #111111; 
     color: #ffffff; 
     margin: 0; 
     padding: 0; 
     border: none;
     outline: none;
-    border-bottom: 2px solid #f50a0a; 
+    border-bottom: 2px solid #D8232A; 
     border-radius: 0; 
     width: 100%; 
     box-sizing: border-box; 
- 
 } 
  
 .s_website_form_field select { 
@@ -126,11 +126,13 @@ input[name="name"] {
 }
 
 .s_website_form_field label{
+    font-family: 'Helvetica Neue Light';
+    letter-spacing: .5px;
     display: flex;
     align-items: center;
     gap: 2%;
     color: gray;
-    font-size: 16px;
+    font-size: 15px;
 }
  
 .s_website_form_submit { 
@@ -143,17 +145,19 @@ input[name="name"] {
 }
 
 .s_website_form_submit > a{
+    font-family: 'Helvetica Neue Light';
+    letter-spacing: .5px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8%;
-    font-size: 16px;
+    font-size: 15px;
     width: 135px;
     height: 40px;
 }
  
 .btn { 
-    background-color: #E02413;
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
     color: #ffffff; 
     padding: 6px 18px; 
     border: none; 
@@ -163,8 +167,8 @@ input[name="name"] {
 } 
  
 #form-icon{ 
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
 } 
  
 .sucursal-img { 
@@ -178,12 +182,13 @@ input[name="name"] {
 }
 
 .image-text { 
+    font-family: "HelveticaNeue";
     position: absolute; 
-    font-weight: 800; 
-    font-size: 30px; 
+    font-weight: 600; 
+    font-size: 25px; 
     top: 0; 
     color: #fff; 
-    line-height: 40px;
+    line-height: 32px;
 } 
 
 .image-text > br{

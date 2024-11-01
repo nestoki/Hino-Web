@@ -45,17 +45,26 @@
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  margin-top: calc(130px + 6%);
+  margin-top: calc(90px + 6%);
+}
+
+.main_camiones .logo-serie{
+  width: 250px;
+}
+
+.main_camiones .logo-serie img{
+  width: 100%;
 }
 
 .main_camiones-titulo {
+  font-family: 'HelveticaNeue';
   transform: skew(-15deg);
   border-top-right-radius: 10px;
   border-top-left-radius: 5px;
-  width: 32%;
-  background-image: linear-gradient(to right, #d81525, #b40f25, #8d0e15);
+  width: 60%;
+  background-image: linear-gradient(to right, #D8232A, #b40f25, #8d0e15);
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   margin-bottom: 5%;
 }
@@ -64,7 +73,8 @@
   transform: skew(15deg);
   padding: 4% 0;
   text-transform: uppercase;
-  font-weight: 900;
+  font-size: 25px;
+  font-weight: 600;
   margin: 0;
   padding: 3px 0;
 }
@@ -117,10 +127,12 @@ div.garantia_camion img {
   position: absolute;
   width: 100%;
   top: 80%;
-  left: 187px;
+  left: 195px;
 }
 
 .main_camiones_botones .especificaciones {
+  font-family: 'Helvetica Neue Light';
+  letter-spacing: .5px;
   background: transparent;
   border: 2px solid #FFF;
   color: #FFF;
@@ -128,15 +140,19 @@ div.garantia_camion img {
   padding: 12px 15px;
   margin-right: 65px;
   text-transform: capitalize;
+  font-size: 18px;
 }
 
 .main_camiones_botones .cuotas {
-  background: #E02413;
+  font-family: 'Helvetica Neue Light';
+  letter-spacing: .5px;
+  background: linear-gradient(#D8232A, #BF001B, #8D0007);
   border: none;
   border-radius: 12px;
   padding: 13.6px 20px;
   color: #FFF;
   text-transform: capitalize;
+  font-size: 18px;
 }
 
 .main_camiones>div>.aplicaciones {
@@ -144,9 +160,10 @@ div.garantia_camion img {
   text-align: center;
 }
 
-.main_camiones>div>.aplicaciones>h4 {
-  font-size: 24px;
-  font-weight: 900;
+.main_camiones>div>.aplicaciones> h4 {
+  font-family: 'HelveticaNeue';
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: 8%;
 }
 
@@ -174,10 +191,10 @@ div.garantia_camion img {
   margin: 0;
 }
 
-.aplicaciones > div article>span {
+.aplicaciones > div article> span {
+  font-family: 'HelveticaNeue';
   font-size: 14px;
   font-weight: 900;
-  letter-spacing: .5px;
 }
 
 /* RESPONSIVE MAIN */
@@ -288,7 +305,7 @@ div.garantia_camion img {
   }
 
   .main_camiones_botones .especificaciones {
-    border: 2px solid red;
+    border: 2px solid #D8232A;
     color: black;
     padding: 16px 20px;
     margin-right: 2%;
@@ -326,6 +343,7 @@ div.garantia_camion img {
 
   .main_camiones-titulo {
     font-size: 25px;
+    width: 100%;
   }
 
   .main_camiones_botones{
@@ -364,11 +382,14 @@ div.garantia_camion img {
 
 @media (max-width: 700px){
   .main_camiones-titulo {
-    font-size: 20px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .main_camiones-titulo > p{
+    font-size: 20px;
   }
 
   .img_camion {
@@ -451,6 +472,10 @@ div.garantia_camion img {
 
 @media (max-width: 500px){
 
+  .main_camiones-titulo > p{
+    font-size: 18px;
+  }
+
   .raya-roja-camion {
     width: 170px;
     height: 250px;
@@ -473,7 +498,7 @@ div.garantia_camion img {
 @media (max-width: 450px){
 
   .main_camiones-titulo{
-    width: 50%;
+    width: 100%;
   }
 
   .raya-roja-camion {
@@ -556,12 +581,14 @@ div.garantia_camion img {
 }
 
 .DropDown>div article h5 {
+  font-family: 'HelveticaNeue';
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 600;
   border-bottom: 1px solid #878787;
   padding: 1% 0;
+  color: #D8232A;
 }
 
 .DropDown>div article h5 button {
@@ -572,6 +599,7 @@ div.garantia_camion img {
 }
 
 .DropDown .caracteristica {
+  font-family: 'HelveticaNeue';
   color: #2F2F2F;
   justify-content: space-between;
   display: flex;
@@ -616,10 +644,11 @@ div.garantia_camion img {
 }
 
 .vista_360 .vista_360_titulo {
+  font-family: 'HelveticaNeue';
   color: #000;
-  font-size: 30px;
-  border-bottom: 1px solid #E02413;
-  font-weight: 800;
+  font-size: 25px;
+  border-bottom: 1px solid #D8232A;
+  font-weight: 600;
 }
 
 .vista_360 figure {
@@ -721,9 +750,10 @@ div.garantia_camion img {
 }
 
 .galeria_camiones .galeria_camiones_titulo {
+  font-family: 'HelveticaNeue';
   color: #000;
-  font-size: 30px;
-  font-weight: 800;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .carousel-control-prev-icon {
@@ -977,7 +1007,7 @@ div.garantia_camion img {
 .carrusel-arrow svg{
   width: 20px;
   height: 100%;
-  color: #E02413;
+  color: #D8232A;
 }
 
 .carrusel-prev{
@@ -1077,10 +1107,11 @@ div.garantia_camion img {
 /* MODELOS DISPONIBLES */
 
 .serie-camiones .modelos_disponibles {
+  font-family: 'HelveticaNeue';
   text-align: left;
-  border-bottom: 1px solid red;
-  font-size: 30px;
-  font-weight: 800;
+  border-bottom: 1px solid #D8232A;
+  font-size: 25px;
+  font-weight: 600;
   margin-bottom: 1%;
 }
 
@@ -1123,7 +1154,7 @@ div.garantia_camion img {
   color: #000;
   line-height: 20px;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .datos {
@@ -1210,13 +1241,14 @@ div.garantia_camion img {
   display: inline-block;
   color: #0e0e0e;
 
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 14px;
+  font-family: 'Helvetica Neue Light', sans-serif;
+  font-size: 12px;
+  letter-spacing: .5px;
 
   width: 50%;
   word-wrap: break-word;
   background-color: transparent;
-  border: 1px solid #E02413;
+  border: 1px solid #D8232A;
   padding: 2% 3%;
   border-radius: 12px;
   cursor: pointer;
@@ -1236,13 +1268,14 @@ div.garantia_camion img {
 
   color: #0e0e0e;
 
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 14px;
+  font-family: 'Helvetica Neue Light', sans-serif;
+  font-size: 12px;
+  letter-spacing: .5px;
 
   width: 25%;
   word-wrap: break-word;
   background-color: transparent;
-  border: 1px solid #E02413;
+  border: 1px solid #D8232A;
   padding: 2% 3%;
   border-radius: 12px;
   cursor: pointer;
@@ -1257,16 +1290,15 @@ div.garantia_camion img {
 }
 
 .ver-btn {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-
-  line-height: 15.92px;
+  font-family: 'Helvetica Neue Light', sans-serif;
+  font-size: 15px;font-weight: 600;
+  letter-spacing: .5px;
 
   width: 150px;
   height: 40px;
   color: #ffffff;
   word-wrap: break-word;
-  background: #E02413;
+  background: linear-gradient(#D8232A, #BF001B, #8D0007);
   border: none;
   border-radius: 12px;
   cursor: pointer;
@@ -1278,7 +1310,7 @@ div.garantia_camion img {
 }
 
 .ver-btn:hover {
-  background-color: #E02413;
+  background: linear-gradient(#D8232A, #BF001B, #8D0007);
   color: #fff;
   /* text-decoration: none; */
 }
@@ -1311,12 +1343,12 @@ div.garantia_camion img {
 }
 
 .btn-serie:focus {
-  background-color: #E02413;
+  background-color: #D8232A;
   color: #fff;
 }
 
 .btn-serie.active {
-  background-color: #E02413;
+  background-color: #D8232A;
   color: #fff;
   /* Cambia el color de fondo para indicar que está activo */
 }
@@ -1349,9 +1381,9 @@ div.garantia_camion img {
 }
 
 .nombre {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 30px;
-  font-weight: 900;
+  font-family: 'HelveticaNeue', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
   color: #000;
   text-transform: uppercase;
 }
@@ -1395,7 +1427,7 @@ div.garantia_camion img {
 }
 
 .carousel-indicators [data-bs-target]{
-  background-color: #E02413 !important;
+  background-color: #D8232A !important;
 }
 
 /* RESPONSIVE MODELOS DISPONIBLES */

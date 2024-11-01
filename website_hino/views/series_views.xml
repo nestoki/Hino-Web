@@ -9,7 +9,6 @@
                 <tree string="Series">
                     <field name="name"/>
                     <field name="descripcion_serie"/>
-                    <field name="foto_serie" widget="image" size="small"/>
                 </tree>
             </field>
         </record>
@@ -22,7 +21,6 @@
         <field name="arch" type="xml">
             <kanban class="o_kanban_mobile" archivable="false" js_class="series_kanban" sample="1">
                 <field name="name"/>
-                <field name="foto_serie"/>
                 <field name="descripcion_serie"/>
                 <field name="no_serie"/>
                 <templates>
@@ -41,9 +39,6 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="o_kanban_record_image">
-                                    <field name="foto_serie" widget="image" size="small"/>
-                                </span>
                             </div>
                             <div>
                                 <span class="o_kanban_record_subtitle">
@@ -81,36 +76,49 @@
                         </div>
                         <group col="2">
                             <group>
-                                <field name="foto_serie" widget="image" />
-                            </group>
-                            <group>
-                                <field name="descripcion_serie" placeholder="Descripción..."/>
-                                <field name="button_serie_text" placeholder="Texto del Botón..."/>
-                                <field name="button_serie_url" placeholder="URL del Botón..."/>
-                            </group>
-                        </group>
-                        <group col="2" string="Información de la Serie">
-                            <group>
-                                <field name="titulo" placeholder="Título..."/>
-                                <field name="texto_1" placeholder="Breve Información..."/>
-                                <field name="texto_2" placeholder="Breve Información 2..."/>
+                                <field name="serie_slider_ids" widget="one2many_list" string ="Imagenes Slider">
+                                    <tree editable="bottom">
+                                        <field name="image_data_serie" widget="image" size="small"/>
+                                    </tree>
+                                </field>
+                                <field name="serie_responsive_ids" widget="one2many_list" string ="Imagenes Slider Responsive">
+                                    <tree editable="bottom">
+                                        <field name="image_data_responsive" widget="image" size="small"/>
+                                    </tree>
+                                </field>
                             </group>
                             <group>
                                 <field name="cabinas_ids" widget="many2many_tags" options="{'no_quick_create': True}" />
-                                <field name="tabla_ids" string ="Tabla de Datos">
+                                <field name="tabla_ids" string ="Tabla de Datos(Cabina Angosta)">
                                     <tree editable="bottom">
                                         <field name="peso_tn" placeholder="Peso en Tonelada..."/>
                                         <field name="longitud" placeholder="Longitud del chasis..."/>
                                     </tree>
                                 </field>
+                                <field name="tabla_idss" string ="Tabla de Datos(Cabina Ancha)">
+                                    <tree editable="bottom">
+                                        <field name="peso_tn" placeholder="Peso en Tonelada..."/>
+                                        <field name="longitud" placeholder="Longitud del chasis..."/>
+                                    </tree>
+                                </field>
+
+
                             </group>
                         </group>
-                        <group col="2">
-                            <group string="Fotos de las Cabinas">
+                        <group  string="Información de la Serie">
+                            <group>
+                                <field name="titulo" placeholder="Título..."/>
+                                <field name="texto_1" placeholder="Breve Información..."/>
+                                <field name="texto_2" placeholder="Breve Información 2..."/>
+                            </group>
+                            <group >
+                                <field name="foto_camion" placeholder="Foto de Camión..." widget="image" size="small"/>
                                 <field name="foto_cabina_ancha" placeholder="Foto Cabina Ancha..." widget="image" size="small"/>
                                 <field name="foto_cabina_angosta" placeholder="Foto Cabina Angosta..." widget="image" size="small"/>
                             </group>
                         </group>
+                        
+                        
                     </sheet>
                 </form>
             </field>

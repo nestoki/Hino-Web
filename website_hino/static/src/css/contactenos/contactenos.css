@@ -20,12 +20,12 @@
 .banner-contacto{
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: right;
     margin-top: 130px;
+    height: 250px;
 }
 
 .banner-contacto > div{
-    background-color: rgba(0, 0, 0, .6);
     padding: 5% 0;
 }
 
@@ -43,16 +43,18 @@
 }
 
 .banner-contacto div h3{
+    font-family: 'HelveticaNeue';
     margin: 0;
-    font-size: 35px;
-    font-weight: 800;
+    font-size: 25px;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
 .banner-contacto div p{
-    font-size: 20px;
+    font-family: 'Helvetica Neue Light';
+    font-size: 18px;
     width: 70%;
-    line-height: 25px;
+    line-height: 22px;
     margin: 1% 0 0 0;
 }
 
@@ -99,12 +101,12 @@
 
 @media only screen and (max-width: 800px){
     .banner-contacto{
-        background-image: url(/website_hino/static/images/hino-contacto-responsive.png) !important;
-        height: 350px !important;
         margin-top: 70px !important;
     }
 
     .banner-contacto > div{
+        background-color: rgba(0, 0, 0, .5);
+        padding: 5% 0;
         height: 100%;
         display: flex;
         align-items: center;
@@ -129,8 +131,26 @@
 }
 
 @media only screen and (max-width: 500px){
+
+    .banner-contacto{
+        background-image: url(/website_hino/static/images/hino-contacto-responsive.jpg) !important;
+        height: 345px !important;
+    }
+
     .banner-contacto div p {
         width: 80%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .banner-contacto{
+        height: 300px !important;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .banner-contacto{
+        height: 270px !important;
     }
 }
 
@@ -155,8 +175,9 @@
 } 
 
 .main-contacto h4{
+    font-family: 'HelveticaNeue';
     font-size: 25px;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 6%;
 }
@@ -216,13 +237,14 @@
  
  
 .s_website_form_field input, .s_website_form_field select { 
+    font-family: 'Helvetica Neue Light';
     background-color: #ffffff; 
     color: #878787; 
     margin: 0; 
     padding: 0; 
     border: none;
     outline: none;
-    border-bottom: 2px solid #f50a0a;
+    border-bottom: 2px solid #D8232A;
     border-radius: 0; 
     width: 100%; 
     box-sizing: border-box; 
@@ -245,11 +267,13 @@ input[name="name"] {
 }
 
 .s_website_form_field label{
+    font-family: 'Helvetica Neue Light';
+    letter-spacing: .5px;
     display: flex;
     align-items: center;
     gap: 2%;
     color: #878787;
-    font-size: 16px;
+    font-size: 15px;
 }
  
 .s_website_form_submit { 
@@ -262,17 +286,24 @@ input[name="name"] {
 }
 
 .s_website_form_submit > a{
+    font-family: 'Helvetica Neue Light';
+    letter-spacing: .5px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8%;
-    font-size: 16px;
+    font-size: 15px;
     width: 135px;
     height: 40px;
 }
+
+.form-control:focus{
+    box-shadow: none !important;
+    border-color: #D8232A;
+}
  
 .btn { 
-    background-color: #E02413;
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
     color: #ffffff; 
     padding: 6px 18px; 
     border: none; 
@@ -289,7 +320,7 @@ input[name="name"] {
 .s_website_form .datos-contacto .fa-map-marker:before,
 .s_website_form .datos-contacto .fa-phone:before,
 .s_website_form .datos-contacto .fa-envelope:before{
-    color: #E02413;
+    color: #D8232A;
 }
 
 .datos-contacto > ul{
@@ -307,12 +338,18 @@ input[name="name"] {
 
 .datos-contacto .phone,
 .datos-contacto .email{
+    font-family: 'Helvetica Neue Light';
+    letter-spacing: .5px;
     color: #878787;
 }
 .datos-contacto .phone:hover,
 .datos-contacto .email:hover{
     color: #878787;
     text-decoration: none;
+}
+
+.form_main .datos-contacto .fa-2x{
+    font-size: 25px;
 }
 
 /* RESPONSIVE */

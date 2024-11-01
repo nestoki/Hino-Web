@@ -14,14 +14,9 @@
 
             <!-- SLIDER SUCURSALES -->
             <section class="slider-sucursales">
-                <div>
-                    <h3>Texto de ejemplo para banner con extensión</h3>
-                    <p>
-                        Texto extendido de ejemplo para banner con 
-                        extensión de hasta tres líneas. Texto extendido 
-                        de ejemplo para banner con extensión de hasta tres líneas. 
-                    </p>
-                </div>
+                <figure class="bg-slide bg-slide-sucursales">
+                    <img src="website_hino/static/images/FACHADA PAGINA WEB.jpg"></img>
+                </figure>
             </section>
 
             <!-- SUCURSALES -->
@@ -91,12 +86,12 @@
                             </div>
                             <div class="sucursal-bottom">
                                 <t t-foreach="sucursal.servicios_ids" t-as="servicio">
-                                    <t t-if="servicio.servicios == 'venta_vehiculo'">
+                                    <t t-if="servicio.servicios == 'venta_camiones'">
                                         <a href="#">
                                             <figure>
                                                 <img src="/website_hino/static/images/iconos/icono-vehiculos.png" alt="Icono" />
                                             </figure>
-                                            venta de vehículos
+                                            venta de camiones
                                         </a>
                                     </t>
                                     <t t-if="servicio.servicios == 'venta_repuesto'">

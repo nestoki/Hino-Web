@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="tambor_services" name="Tambor Services">
+            <field name="website_id" eval="2"/> 
+            <link rel="stylesheet" href="/website_hino/static/src/tambor/css/servicios.css"/>
+            <t t-if="website.id == 2">
+                <t t-call="website.layout">
+                    <a href="" class="btn-wsp" target="_blank" data-oe-model="ir.ui.view" data-oe-id="2400"
+                       data-oe-field="arch" data-oe-xpath="/t[1]/a[1]">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="40" height="40">
+                            <path fill="#ffffff"
+                                  d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                        </svg>
+                    </a>
+
+                    <!-- AGENDA TU CITA -->
+                    <section class="servicios-agenda">
+                        <div class="servicios-agenda-info">
+                            <div class="capa"></div>
+                            <h3>
+                                paquetes de
+                                <br/>
+                                mantenimiento
+                                <br/>
+                                preventivo
+                            </h3>
+                            <p>Mantenga su vehículo en las mejores condiciones.</p>
+                            <a href="#" class="main-btn">
+                                Agenda tu cita aquí
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 18px; height: 18px; margin-left:15px"><path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- PAQUETES DE MANTENIMIIENTO PREVENTIVO -->
+                    <section class="servicios-mantenimiento-preventivo">
+                        <div class="mantenimiento-preventivo-paquetes">
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill="#ffffff" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                Paquetes de mantenimiento preventivo
+                            </h3>
+                            <div class="paquetes">
+                                <span>básico</span>
+                                <span>silver</span>
+                                <span>plátinum</span>
+                            </div>
+                        </div>
+                        <p class="servicios-incluidos">servicios incluidos</p>
+                        <div class="mantenimiento-preventivo-caracteristicas">
+                            <ul>
+                                <li>
+                                    <div class="mantenimiento-top">
+                                        <div class="caracteristica-titulo">
+                                        <span>01.</span>
+                                        <p>21 puntos de inspección</p>
+                                        </div>
+                                        <div class="caracteristica-verificacion">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="caracteristica-info" style="display: none;">
+                                        <article>
+                                            <div class="numero">1</div>
+                                            <ul>
+                                                <li>Estado de sus llantas y desgaste</li>
+                                                <li>Profundidad adecuada</li>
+                                                <li>Desgaste irregular</li>
+                                                <li>Llanta respuesto</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">2</div>
+                                            <ul>
+                                                <li>Niveles y fluidos</li>
+                                                <li>Power Steering</li>
+                                                <li>Aceite de motor</li>
+                                                <li>Coolant</li>
+                                                <li>Fugas de líquidos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">3</div>
+                                            <ul>
+                                                <li>Suspensión y dirección</li>
+                                                <li>Alineamiento</li>
+                                                <li>Balineras de rodamiento</li>
+                                                <li>Platos de suspensión</li>
+                                                <li>Amortiguadores</li>
+                                                <li>Terminales de dirección</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">4</div>
+                                            <ul>
+                                                <li>Frenos</li>
+                                                <li>Tacos</li>
+                                                <li>Discos</li>
+                                                <li>Limpieza y/o ajuste</li>
+                                                <li>Liquido de frenos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">5</div>
+                                            <ul>
+                                                <li>Luces</li>
+                                                <li>Bombillos</li>
+                                                <li>Baterías</li>
+                                                <li>Correas</li>
+                                                <li>Luces, encendido y filtros</li>
+                                                <li>Filtro de aire acondicionado </li>
+                                                <li>Filtro de aire de motor</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            
+                                        </article>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mantenimiento-top">
+                                        <div class="caracteristica-titulo">
+                                            <span>02.</span>
+                                            <p>cambio de aceite y filtro de motor</p>
+                                        </div>
+                                        <div class="caracteristica-verificacion">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="caracteristica-info" style="display: none;">
+                                        <article>
+                                            <div class="numero">1</div>
+                                            <ul>
+                                                <li>Estado de sus llantas y desgaste</li>
+                                                <li>Profundidad adecuada</li>
+                                                <li>Desgaste irregular</li>
+                                                <li>Llanta respuesto</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">2</div>
+                                            <ul>
+                                                <li>Niveles y fluidos</li>
+                                                <li>Power Steering</li>
+                                                <li>Aceite de motor</li>
+                                                <li>Coolant</li>
+                                                <li>Fugas de líquidos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">3</div>
+                                            <ul>
+                                                <li>Suspensión y dirección</li>
+                                                <li>Alineamiento</li>
+                                                <li>Balineras de rodamiento</li>
+                                                <li>Platos de suspensión</li>
+                                                <li>Amortiguadores</li>
+                                                <li>Terminales de dirección</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">4</div>
+                                            <ul>
+                                                <li>Frenos</li>
+                                                <li>Tacos</li>
+                                                <li>Discos</li>
+                                                <li>Limpieza y/o ajuste</li>
+                                                <li>Liquido de frenos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">5</div>
+                                            <ul>
+                                                <li>Luces</li>
+                                                <li>Bombillos</li>
+                                                <li>Baterías</li>
+                                                <li>Correas</li>
+                                                <li>Luces, encendido y filtros</li>
+                                                <li>Filtro de aire acondicionado </li>
+                                                <li>Filtro de aire de motor</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            
+                                        </article>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mantenimiento-top">
+                                        <div class="caracteristica-titulo">
+                                            <span>03.</span>
+                                            <p>limpieza y ajuste de frenos</p>
+                                        </div>
+                                        <div class="caracteristica-verificacion">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="caracteristica-info" style="display: none;">
+                                        <article>
+                                            <div class="numero">1</div>
+                                            <ul>
+                                                <li>Estado de sus llantas y desgaste</li>
+                                                <li>Profundidad adecuada</li>
+                                                <li>Desgaste irregular</li>
+                                                <li>Llanta respuesto</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">2</div>
+                                            <ul>
+                                                <li>Niveles y fluidos</li>
+                                                <li>Power Steering</li>
+                                                <li>Aceite de motor</li>
+                                                <li>Coolant</li>
+                                                <li>Fugas de líquidos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">3</div>
+                                            <ul>
+                                                <li>Suspensión y dirección</li>
+                                                <li>Alineamiento</li>
+                                                <li>Balineras de rodamiento</li>
+                                                <li>Platos de suspensión</li>
+                                                <li>Amortiguadores</li>
+                                                <li>Terminales de dirección</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">4</div>
+                                            <ul>
+                                                <li>Frenos</li>
+                                                <li>Tacos</li>
+                                                <li>Discos</li>
+                                                <li>Limpieza y/o ajuste</li>
+                                                <li>Liquido de frenos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">5</div>
+                                            <ul>
+                                                <li>Luces</li>
+                                                <li>Bombillos</li>
+                                                <li>Baterías</li>
+                                                <li>Correas</li>
+                                                <li>Luces, encendido y filtros</li>
+                                                <li>Filtro de aire acondicionado </li>
+                                                <li>Filtro de aire de motor</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            
+                                        </article>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mantenimiento-top">
+                                        <div class="caracteristica-titulo">
+                                            <span>04.</span>
+                                            <p>relleno de liquidos <span style="font-weight: 400;">(limpia parabrisas y bateria)</span></p>
+                                        </div>
+                                        <div class="caracteristica-verificacion">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="caracteristica-info" style="display: none;">
+                                        <article>
+                                            <div class="numero">1</div>
+                                            <ul>
+                                                <li>Estado de sus llantas y desgaste</li>
+                                                <li>Profundidad adecuada</li>
+                                                <li>Desgaste irregular</li>
+                                                <li>Llanta respuesto</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">2</div>
+                                            <ul>
+                                                <li>Niveles y fluidos</li>
+                                                <li>Power Steering</li>
+                                                <li>Aceite de motor</li>
+                                                <li>Coolant</li>
+                                                <li>Fugas de líquidos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">3</div>
+                                            <ul>
+                                                <li>Suspensión y dirección</li>
+                                                <li>Alineamiento</li>
+                                                <li>Balineras de rodamiento</li>
+                                                <li>Platos de suspensión</li>
+                                                <li>Amortiguadores</li>
+                                                <li>Terminales de dirección</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">4</div>
+                                            <ul>
+                                                <li>Frenos</li>
+                                                <li>Tacos</li>
+                                                <li>Discos</li>
+                                                <li>Limpieza y/o ajuste</li>
+                                                <li>Liquido de frenos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">5</div>
+                                            <ul>
+                                                <li>Luces</li>
+                                                <li>Bombillos</li>
+                                                <li>Baterías</li>
+                                                <li>Correas</li>
+                                                <li>Luces, encendido y filtros</li>
+                                                <li>Filtro de aire acondicionado </li>
+                                                <li>Filtro de aire de motor</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            
+                                        </article>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mantenimiento-top">
+                                        <div class="caracteristica-titulo">
+                                            <span>05.</span>
+                                            <p>rotación + balance de 2 ruedas</p>
+                                        </div>
+                                        <div class="caracteristica-verificacion">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="caracteristica-info" style="display: none;">
+                                        <article>
+                                            <div class="numero">1</div>
+                                            <ul>
+                                                <li>Estado de sus llantas y desgaste</li>
+                                                <li>Profundidad adecuada</li>
+                                                <li>Desgaste irregular</li>
+                                                <li>Llanta respuesto</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">2</div>
+                                            <ul>
+                                                <li>Niveles y fluidos</li>
+                                                <li>Power Steering</li>
+                                                <li>Aceite de motor</li>
+                                                <li>Coolant</li>
+                                                <li>Fugas de líquidos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">3</div>
+                                            <ul>
+                                                <li>Suspensión y dirección</li>
+                                                <li>Alineamiento</li>
+                                                <li>Balineras de rodamiento</li>
+                                                <li>Platos de suspensión</li>
+                                                <li>Amortiguadores</li>
+                                                <li>Terminales de dirección</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">4</div>
+                                            <ul>
+                                                <li>Frenos</li>
+                                                <li>Tacos</li>
+                                                <li>Discos</li>
+                                                <li>Limpieza y/o ajuste</li>
+                                                <li>Liquido de frenos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">5</div>
+                                            <ul>
+                                                <li>Luces</li>
+                                                <li>Bombillos</li>
+                                                <li>Baterías</li>
+                                                <li>Correas</li>
+                                                <li>Luces, encendido y filtros</li>
+                                                <li>Filtro de aire acondicionado </li>
+                                                <li>Filtro de aire de motor</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            
+                                        </article>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mantenimiento-top">
+                                        <div class="caracteristica-titulo">
+                                            <span>06.</span>
+                                            <p>engrase y lubricación de puertas</p>
+                                        </div>
+                                        <div class="caracteristica-verificacion">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="caracteristica-info" style="display: none;">
+                                        <article>
+                                            <div class="numero">1</div>
+                                            <ul>
+                                                <li>Estado de sus llantas y desgaste</li>
+                                                <li>Profundidad adecuada</li>
+                                                <li>Desgaste irregular</li>
+                                                <li>Llanta respuesto</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">2</div>
+                                            <ul>
+                                                <li>Niveles y fluidos</li>
+                                                <li>Power Steering</li>
+                                                <li>Aceite de motor</li>
+                                                <li>Coolant</li>
+                                                <li>Fugas de líquidos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">3</div>
+                                            <ul>
+                                                <li>Suspensión y dirección</li>
+                                                <li>Alineamiento</li>
+                                                <li>Balineras de rodamiento</li>
+                                                <li>Platos de suspensión</li>
+                                                <li>Amortiguadores</li>
+                                                <li>Terminales de dirección</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">4</div>
+                                            <ul>
+                                                <li>Frenos</li>
+                                                <li>Tacos</li>
+                                                <li>Discos</li>
+                                                <li>Limpieza y/o ajuste</li>
+                                                <li>Liquido de frenos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">5</div>
+                                            <ul>
+                                                <li>Luces</li>
+                                                <li>Bombillos</li>
+                                                <li>Baterías</li>
+                                                <li>Correas</li>
+                                                <li>Luces, encendido y filtros</li>
+                                                <li>Filtro de aire acondicionado </li>
+                                                <li>Filtro de aire de motor</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            
+                                        </article>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mantenimiento-top">
+                                        <div class="caracteristica-titulo">
+                                            <span>07.</span>
+                                            <p>pad de baterias</p>
+                                        </div>
+                                        <div class="caracteristica-verificacion">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="caracteristica-info" style="display: none;">
+                                        <article>
+                                            <div class="numero">1</div>
+                                            <ul>
+                                                <li>Estado de sus llantas y desgaste</li>
+                                                <li>Profundidad adecuada</li>
+                                                <li>Desgaste irregular</li>
+                                                <li>Llanta respuesto</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">2</div>
+                                            <ul>
+                                                <li>Niveles y fluidos</li>
+                                                <li>Power Steering</li>
+                                                <li>Aceite de motor</li>
+                                                <li>Coolant</li>
+                                                <li>Fugas de líquidos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">3</div>
+                                            <ul>
+                                                <li>Suspensión y dirección</li>
+                                                <li>Alineamiento</li>
+                                                <li>Balineras de rodamiento</li>
+                                                <li>Platos de suspensión</li>
+                                                <li>Amortiguadores</li>
+                                                <li>Terminales de dirección</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">4</div>
+                                            <ul>
+                                                <li>Frenos</li>
+                                                <li>Tacos</li>
+                                                <li>Discos</li>
+                                                <li>Limpieza y/o ajuste</li>
+                                                <li>Liquido de frenos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">5</div>
+                                            <ul>
+                                                <li>Luces</li>
+                                                <li>Bombillos</li>
+                                                <li>Baterías</li>
+                                                <li>Correas</li>
+                                                <li>Luces, encendido y filtros</li>
+                                                <li>Filtro de aire acondicionado </li>
+                                                <li>Filtro de aire de motor</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            
+                                        </article>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mantenimiento-top">
+                                        <div class="caracteristica-titulo">
+                                            <span>08.</span>
+                                            <p>tableta de fluido limpia parabrisas</p>
+                                        </div>
+                                        <div class="caracteristica-verificacion">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px; display: none;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="caracteristica-info" style="display: none;">
+                                        <article>
+                                            <div class="numero">1</div>
+                                            <ul>
+                                                <li>Estado de sus llantas y desgaste</li>
+                                                <li>Profundidad adecuada</li>
+                                                <li>Desgaste irregular</li>
+                                                <li>Llanta respuesto</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">2</div>
+                                            <ul>
+                                                <li>Niveles y fluidos</li>
+                                                <li>Power Steering</li>
+                                                <li>Aceite de motor</li>
+                                                <li>Coolant</li>
+                                                <li>Fugas de líquidos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">3</div>
+                                            <ul>
+                                                <li>Suspensión y dirección</li>
+                                                <li>Alineamiento</li>
+                                                <li>Balineras de rodamiento</li>
+                                                <li>Platos de suspensión</li>
+                                                <li>Amortiguadores</li>
+                                                <li>Terminales de dirección</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">4</div>
+                                            <ul>
+                                                <li>Frenos</li>
+                                                <li>Tacos</li>
+                                                <li>Discos</li>
+                                                <li>Limpieza y/o ajuste</li>
+                                                <li>Liquido de frenos</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <div class="numero">5</div>
+                                            <ul>
+                                                <li>Luces</li>
+                                                <li>Bombillos</li>
+                                                <li>Baterías</li>
+                                                <li>Correas</li>
+                                                <li>Luces, encendido y filtros</li>
+                                                <li>Filtro de aire acondicionado </li>
+                                                <li>Filtro de aire de motor</li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            
+                                        </article>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="servicios-mantenimiento-preventivo_aceite-motul">
+                            <p>nuestros mantenimientos se realizan con aceite</p>
+                            <figure>
+                                <img src="/website_hino/static/images/tambor_img/motul-logo-rojo.png" alt=""/>
+                            </figure>
+                            <p>semi sintético 10w30 o 15w40</p>
+                        </div>
+                    </section>
+
+                    <!-- SERVICIOS 2 -->
+                    <section class="servicios2">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                            Servicios
+                        </h3>
+                        <div>
+                            <article class="servicios2-servicio">
+                                <figure>
+                                    <img src="/website_hino/static/images/tambor_img/servicios-mantenimiento2.png" alt=""/>
+                                </figure>
+                                <div>
+                                    <h4>Mantenimiento preventivo</h4>
+                                    <ul>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de aceites</strong> (motor, transmisión, diferencial y transfer)
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambios de filtros</strong> (Aire, aceite, combustible, aire de cabina)
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de correas de motor</strong> (Power steering, alternador, A/A)
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Diagnóstico e instalación de baterías</strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de bujías</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="servicios2-servicio">
+                                <figure>
+                                    <img src="/website_hino/static/images/tambor_img/servicios-frenos2.png" alt=""/>
+                                </figure>
+                                <div>
+                                    <h4>Frenos</h4>
+                                    <ul>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Rectificación de discos y tambores
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de tacos y bandas
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Limpieza y ajuste de frenos
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de master de freno
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de calipers de freno
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de cilindros de freno
+                                            </strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="servicios2-servicio">
+                                <figure>
+                                    <img src="/website_hino/static/images/tambor_img/servicios-direccion2.png" alt=""/>
+                                </figure>
+                                <div>
+                                    <h4>Dirección y suspensión</h4>
+                                    <ul>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de amortiguadores y bases
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de platos de suspensión
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de bolas de suspensión
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de terminales de barra estabilizadora
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de bujes de hojas de muelle</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="servicios2-servicio">
+                                <figure>
+                                    <img src="/website_hino/static/images/tambor_img/servicios-servicio2.png" alt=""/>
+                                </figure>
+                                <div>
+                                    <h4>Servicio de llantas</h4>
+                                    <ul>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Instalación, rotación, balance
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Alineamiento y reparación de llantas</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="servicios2-servicio">
+                                <figure>
+                                    <img src="/website_hino/static/images/tambor_img/servicios-diagnostico2.png" alt=""/>
+                                </figure>
+                                <div>
+                                    <h4>Diagnóstico y revisión</h4>
+                                    <ul>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de amortiguadores y bases
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de platos de suspensión
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de bolas de suspensión
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de terminales de barra estabilizadora
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de bujes de hojas de muelle</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="servicios2-servicio">
+                                <figure>
+                                    <img src="/website_hino/static/images/tambor_img/servicios-mecanica2.png" alt=""/>
+                                </figure>
+                                <div>
+                                    <h4>Mecánica general</h4>
+                                    <ul>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de fluido de frenos e inspección de fugas
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Cambio de fluidos de Power steering
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Limpieza de sistema de inyección de gasolina y diesel
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Limpieza de evaporador de aire acondicionado
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Motor flush
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Ozono
+                                            </strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="servicios2-servicio">
+                                <figure>
+                                    <img src="/website_hino/static/images/tambor_img/servicios-revisado2.png" alt=""/>
+                                </figure>
+                                <div>
+                                    <h4>Revisado vehicular</h4>
+                                    <ul>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Autos, camiones y moto
+                                            </strong>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                            <strong>Requisitos:
+                                            </strong>
+                                        </li>
+                                        <li class="requisitos">
+                                            <span>Póliza actualizada</span>
+                                            <span>Registro Único Vehicular original</span>
+                                            <span>Trámite de placa</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- TAMBOR EXPRESS -->
+                    <section class="tambor-express">
+                        <div class="tambor-express-titulo">
+                            <figure class="tambor-express-img">
+                                <img src="/website_hino/static/images/tambor_img/logo-tambor-express.png" alt=""/>
+                            </figure>
+                            <div class="tambor-express-ubicacion">
+                                <a href="#" class="contacto-btn tambor-express-ubicacion-btn">
+                                    Tambor - El Dorado
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="width: 12px; height: 12px;"><path fill="#ffffff" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="main-info tambor-express-info">
+                            <h1>
+                                mantenimiento
+                                <br/>
+                                de tu auto desde
+                                <br/>
+                                <strong>30 minutos</strong>
+                            </h1>
+                            <p>
+                                Contamos con dos técnicos especializados para realizar el mantenimiento de tu auto de manera remota, el tiempo de entrega varia dependiendo de la categoría de tu auto Sedanes - Small/SUV - Pick Up/4x4.
+                            </p>
+                            <a href="#" class="main-btn tambor-express-btn">
+                                Agendar cita
+                            </a>
+                        </div>
+
+                        <video width="auto" height="500" controls="" style="border-radius: 24px;"> 
+                            <source src="/website_hino/static/images/tambor_img/tambor-video.mp4" type="video/mp4"/>
+                        </video>
+                    </section>
+
+                    <!-- CONTACTO -->
+                    <section class="contacto tambor-express-contacto">
+                        <div class="contacto-info">
+                            <div class="contacto-info-logo">
+                                <figure>
+                                    <img src="/website_hino/static/images/tambor_img/logo-tambor.png" alt=""/>
+                                </figure>
+                            </div>
+                            <div class="contactos">
+                                <p class="contactos-titulo"> Atención del cliente</p>
+                                <div class="contacto-tlf">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30"><path fill="#fff" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                                    <div>
+                                        <a href="#">297 4505</a>
+                                        <span>Panamá</span>
+                                    </div>
+                                </div>
+                                <div class="contacto-interior">
+                                    <div>
+                                        <a href="#">800 3031</a>
+                                        <span>Interior</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacto-ws">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="35" height="35"><path fill="#ffffff" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                                <div>
+                                    <a href="#">6674 3915</a>
+                                    <span>Whatsapp</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </t>
+
+                <script src="/website_hino/static/src/tambor/js/paquetes-info.js"></script>
+
+            </t>
+
+        </template>
+
+    </data>
+</odoo>

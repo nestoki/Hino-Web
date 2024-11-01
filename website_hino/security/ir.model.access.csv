@@ -12,3 +12,12 @@ access_servicios_manager,servicios_manager,model_servicios,,1,1,1,1
 access_cabina_cabina_manager,cabina_cabina_manager,model_cabina_cabina,,1,1,1,1
 access_tabla_serie_manager,tabla_serie_manager,model_tabla_serie,,1,1,1,1
 access_servicios_soporte_manager,servicios_soporte_manager,model_servicios_soporte,,1,1,1,1
+access_series_slider_manager,series_slider_manager,model_series_slider,,1,1,1,1
+access_eco_safety_manager,eco_safety_manager,model_eco_safety,,1,1,1,1
+access_eco_galeria_manager,eco_galeria_manager,model_eco_galeria,,1,1,1,1
+access_customer_care_manager,customer_care_manager,model_customer_care,,1,1,1,1
+access_customer_galeria_manager,customer_galeria_manager,model_customer_galeria,,1,1,1,1
+access_repuestos_manager,repuestos_manager,model_repuestos,,1,1,1,1
+access_repuestos_galeria_manager,repuestos_galeria_manager,model_repuestos_galeria,,1,1,1,1
+access_tabla_ancha_manager,tabla_ancha_manager,model_tabla_ancha,,1,1,1,1
+access_series_responsive_manager,series_responsive_manager,model_series_responsive,,1,1,1,1

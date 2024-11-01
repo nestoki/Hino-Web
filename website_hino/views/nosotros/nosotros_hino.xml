@@ -18,24 +18,11 @@
                 <section class="swiper swiper-container-hino">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div t-attf-style="background-image:url('/website_hino/static/images/nosotros-hino.png')" class="img bg-slide bg-slide-nosotros">
-                                <div class="container-title container-title-nosotros-hino">
-                                    <h3>Historia de hino</h3>
-                                    <p>
-                                        HINO es la marca japonesa líder en el 
-                                        desarrollo de tecnologías para camiones, 
-                                        sus vehículos se caracterizan por mejorar 
-                                        las funciones básicas, promover la seguridad 
-                                        y proteger el medio ambiente. Esta prestigiosa 
-                                        marca de clase mundial, basa su constante 
-                                        crecimiento en la eficiencia y la más alta 
-                                        calidad de fabricación.
-                                    </p>
-                                </div>
-                            </div>
+                            <figure class="bg-slide bg-slide-nosotros">
+                                <img src="/website_hino/static/images/nosotros-hino.png"></img>
+                            </figure>
                         </div>
                     </div>
-                    <!-- <div class="swiper-pagination"></div> -->
                 </section>
             </section>
 

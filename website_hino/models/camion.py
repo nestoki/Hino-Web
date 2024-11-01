@@ -3,6 +3,7 @@
 from odoo import models, fields, api
 import re
 
+
 class Camion(models.Model):
     _name = 'camion'
     _description = 'Modelo para registrar la informacion de la sección Nosotros Hino'
@@ -18,13 +19,14 @@ class Camion(models.Model):
         ],
         string="Número de Serie",
     )
-    #Foto principal del modelo
+    # Foto principal del modelo
     foto = fields.Binary(string='Foto', help='Sube tu foto aquí.')
+    foto_logo = fields.Binary(string='Logo de la Serie')
 
-    #Vista 360
+    # Vista 360
     vista_360_url = fields.Char(string="Link de la vista 360")
-    
-    #Galeria
+
+    # Galeria
     galeria_ids = fields.One2many('camion.galeria', 'camion_id', string='Galería')
 
     # Video de Youtube
@@ -84,7 +86,10 @@ class Camion(models.Model):
 
     # Capacidad
     peso_bruto = fields.Char(string="Peso Bruto Vehicular(Kg)")
+    peso_convertido = fields.Integer(string='Peso')
+    longitud_conevrtida = fields.Integer(string='Longitud')
     peso_tn = fields.Char(compute='_compute_peso_tn')
+    traction = fields.Char(string="Tracción")
 
     @api.depends('peso_bruto')
     def _compute_peso_tn(self):
@@ -92,7 +97,7 @@ class Camion(models.Model):
             if camion.peso_bruto:
                 match = re.search(r"[-+]?\d+(\.\d*)?", camion.peso_bruto)
                 if match:
-                    peso_bruto_valor = match.group(0)  # Usa.group(0) para obtener la primera coincidencia completa
+                    peso_bruto_valor = match.group(0)
                     camion.peso_tn = peso_bruto_valor
                 else:
                     camion.peso_tn = 0.0
@@ -101,10 +106,12 @@ class Camion(models.Model):
 
     peso_chasis = fields.Char(string="Peso del Chasis(Kg)")
     capacidad = fields.Char(string="Capacidad de Carga(Kg)")
-    
-    #Longitud del Chasis
+
+    # Longitud del Chasis
     longitud = fields.Char(string="Longitud utilizable de Chasis(pies)")
     longitud_pie = fields.Char(compute='_compute_longitud_pie')
+
+    carroceria = fields.Char(string="Carrocería volquete de fábrica")
 
     @api.depends('longitud')
     def _compute_longitud_pie(self):
@@ -112,7 +119,7 @@ class Camion(models.Model):
             if camion.longitud:
                 match = re.search(r"[-+]?\d+(\.\d*)?", camion.longitud)
                 if match:
-                    numero = match.group(0)  # Usa.group(0) para obtener la primera coincidencia completa
+                    numero = match.group(0)
                     camion.longitud_pie = numero
                 else:
                     camion.longitud_pie = 0.0
@@ -141,6 +148,11 @@ class Camion(models.Model):
     cabinas_ids = fields.Many2many(
         'cabina.cabina', string="Tipo de Cabinas")
 
+    doble = fields.Boolean(string="¿Tiene dos cabinas?")
+    ilustrativa = fields.Boolean(string="¿La imagen es ilustrativa?")
+    volquete = fields.Boolean(string="¿Tiene cabina volquete, cabina ancha?")
+
+
 class Aplicacion(models.Model):
     _name = 'aplicacion.aplicacion'
     _description = 'Modelo para registrar los tipos de aplicaciones'
@@ -155,4 +167,3 @@ class Aplicacion(models.Model):
         ('grúa', 'Grúa'),
         ('compactador', 'Compactador'),
     ], string='Aplicación')
-

@@ -15,10 +15,10 @@ class SliderMain(models.Model):
     ]
     name = fields.Char(string='Título')
     foto = fields.Binary(string='Foto')
+    foto_responsive = fields.Binary(string='Foto Responsive')
     descripcion = fields.Text(string='Descripción')
     button_text = fields.Char(string='Texto del Botón')
     button_url = fields.Char(string='URL del Botón')
-
 
 
 
