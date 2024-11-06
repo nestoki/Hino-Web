@@ -348,7 +348,7 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="./productos.html">Productos</a>
+                                    <a href="/">Productos</a>
                                 </li>
                                 <li>
                                     <a href="/tambor/service">Servicios</a>
@@ -357,13 +357,13 @@
                                     <a href="#">Nuestras Marcas</a>
                                 </li>
                                 <li>
-                                    <a href="#">Taller Móvil</a>
+                                    <a href="/tambor/taller-movil">Taller Móvil</a>
                                 </li>
                                 <li>
-                                    <a href="#">Sucursales</a>
+                                    <a href="/tambor/sucursales">Sucursales</a>
                                 </li>
                                 <li>
-                                    <a href="#">Contáctanos</a>
+                                    <a href="/tambor/contacto">Contáctanos</a>
                                 </li>
                             </ul>
                         </nav>
