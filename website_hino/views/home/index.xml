@@ -2263,13 +2263,13 @@
                                          alt="Logo 1"/>
                                 </div>
                                 <div class="slide">
-                                    <img src="/website_hino/static/images/tambor_img/logo-firestone.png" alt="Logo 2"/>
+                                    <img src="/website_hino/static/images/tambor_img/logo-firestone-rojo.gif" alt="Logo 2"/>
                                 </div>
                                 <div class="slide">
-                                    <img src="/website_hino/static/images/tambor_img/logo-yokohama.png" alt="Logo 3"/>
+                                    <img src="/website_hino/static/images/tambor_img/logo-yokohama-negro.png" alt="Logo 3"/>
                                 </div>
                                 <div class="slide">
-                                    <img src="/website_hino/static/images/tambor_img/logo-motul.png" alt="Logo 4"/>
+                                    <img src="/website_hino/static/images/tambor_img/motul-logo-rojo.png" alt="Logo 4"/>
                                 </div>
                                 <div class="slide">
                                     <img src="/website_hino/static/images/tambor_img/Logo-GTRadial.png" alt="Logo 5"/>
@@ -2297,15 +2297,40 @@
                             <div class="agenda-cita-form">
                                 <h4>agenda tu cita</h4>
                                 <form action="">
-                                    <input type="text" placeholder="Nombre"/>
-                                    <input type="email" name="" id="" placeholder="Email"/>
+                                    <input type="text" class="nombre" placeholder="Nombre Completo*"/>
+                                    <input type="email" name="" id="" placeholder="Email*"/>
                                     <input type="tel" name="" id="" placeholder="Teléfono"/>
                                     <select name="" id="">
-                                        <option value="fecha">Fecha</option>
+                                        <option value="sucursal">Sucursal de tu preferencia</option>
                                     </select>
-                                    <textarea name="" id="" cols="30" rows="5"
-                                              placeholder="Quieres dejar un mensaje..."></textarea>
-                                    <a href="#" class="agenda-cita-btn">solicitar</a>
+                                    <select name="" id="">
+                                        <option value="tipo-vehiculo">Tipo de Vehículo</option>
+                                    </select>
+                                    <input type="text" class="direccion" placeholder="Dirección*"/>
+                                    <fieldset>
+                                        <legend class="intereses">Intereses</legend>
+                                        
+                                        <input type="checkbox" name="intereses" id="llantas" value="llantas"/> 
+                                        <label for="llantas">llantas</label>
+
+                                        <input type="checkbox" name="intereses" id="baterias" value="baterias"/> <label for="baterias">baterias</label>
+
+                                        <input type="checkbox" name="intereses" id="mantenimiento" value="mantenimiento"/> 
+                                        <label for="mantenimiento">mantenimiento preventivo</label>
+                                        
+                                        <input type="checkbox" name="intereses" id="lubricantes" value="lubricantes"/> <label for="lubricantes">lubricantes</label>
+
+                                        
+                                        <input type="checkbox" name="intereses" id="repuestos" value="repuestos"/> <label for="repuestos">repuestos</label>
+                                    </fieldset>
+                                    <textarea name="" id="" cols="30" rows="5" placeholder="Quieres dejar un mensaje..."/>
+                                    <div class="acepto">
+                                        <div class="checkbox-container">
+                                            <input type="checkbox" name="acepto" id="acepto" value="acepto"/> <label for="acepto">Acepto recibir información y promociones según la política de privacidad</label>
+                                        </div>
+                                        
+                                        <a href="#" class="agenda-cita-btn">solicitar</a>
+                                    </div>
                                 </form>
                             </div>
                             <figure>

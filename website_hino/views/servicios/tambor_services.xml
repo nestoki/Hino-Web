@@ -50,10 +50,13 @@
                         <div class="mantenimiento-preventivo-caracteristicas">
                             <ul>
                                 <li>
-                                    <div class="mantenimiento-top">
+                                    <div class="mantenimiento-top puntos-inspeccion">
                                         <div class="caracteristica-titulo">
-                                        <span>01.</span>
-                                        <p>21 puntos de inspección</p>
+                                            <span>01.</span>
+                                            <p class="puntos-inspeccion-p">
+                                                21 puntos de inspección 
+                                                <div class="mas-btn">+</div> 
+                                            </p>
                                         </div>
                                         <div class="caracteristica-verificacion">
                                             <div>
@@ -144,64 +147,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    <div class="caracteristica-info" style="display: none;">
-                                        <article>
-                                            <div class="numero">1</div>
-                                            <ul>
-                                                <li>Estado de sus llantas y desgaste</li>
-                                                <li>Profundidad adecuada</li>
-                                                <li>Desgaste irregular</li>
-                                                <li>Llanta respuesto</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">2</div>
-                                            <ul>
-                                                <li>Niveles y fluidos</li>
-                                                <li>Power Steering</li>
-                                                <li>Aceite de motor</li>
-                                                <li>Coolant</li>
-                                                <li>Fugas de líquidos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">3</div>
-                                            <ul>
-                                                <li>Suspensión y dirección</li>
-                                                <li>Alineamiento</li>
-                                                <li>Balineras de rodamiento</li>
-                                                <li>Platos de suspensión</li>
-                                                <li>Amortiguadores</li>
-                                                <li>Terminales de dirección</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">4</div>
-                                            <ul>
-                                                <li>Frenos</li>
-                                                <li>Tacos</li>
-                                                <li>Discos</li>
-                                                <li>Limpieza y/o ajuste</li>
-                                                <li>Liquido de frenos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">5</div>
-                                            <ul>
-                                                <li>Luces</li>
-                                                <li>Bombillos</li>
-                                                <li>Baterías</li>
-                                                <li>Correas</li>
-                                                <li>Luces, encendido y filtros</li>
-                                                <li>Filtro de aire acondicionado </li>
-                                                <li>Filtro de aire de motor</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            
-                                        </article>
-                                    </div>
                                 </li>
                                 <li>
                                     <div class="mantenimiento-top">
@@ -220,64 +165,6 @@
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
                                             </div>
                                         </div>
-                                    </div>
-                                    
-                                    <div class="caracteristica-info" style="display: none;">
-                                        <article>
-                                            <div class="numero">1</div>
-                                            <ul>
-                                                <li>Estado de sus llantas y desgaste</li>
-                                                <li>Profundidad adecuada</li>
-                                                <li>Desgaste irregular</li>
-                                                <li>Llanta respuesto</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">2</div>
-                                            <ul>
-                                                <li>Niveles y fluidos</li>
-                                                <li>Power Steering</li>
-                                                <li>Aceite de motor</li>
-                                                <li>Coolant</li>
-                                                <li>Fugas de líquidos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">3</div>
-                                            <ul>
-                                                <li>Suspensión y dirección</li>
-                                                <li>Alineamiento</li>
-                                                <li>Balineras de rodamiento</li>
-                                                <li>Platos de suspensión</li>
-                                                <li>Amortiguadores</li>
-                                                <li>Terminales de dirección</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">4</div>
-                                            <ul>
-                                                <li>Frenos</li>
-                                                <li>Tacos</li>
-                                                <li>Discos</li>
-                                                <li>Limpieza y/o ajuste</li>
-                                                <li>Liquido de frenos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">5</div>
-                                            <ul>
-                                                <li>Luces</li>
-                                                <li>Bombillos</li>
-                                                <li>Baterías</li>
-                                                <li>Correas</li>
-                                                <li>Luces, encendido y filtros</li>
-                                                <li>Filtro de aire acondicionado </li>
-                                                <li>Filtro de aire de motor</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            
-                                        </article>
                                     </div>
                                 </li>
                                 <li>
@@ -375,64 +262,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    <div class="caracteristica-info" style="display: none;">
-                                        <article>
-                                            <div class="numero">1</div>
-                                            <ul>
-                                                <li>Estado de sus llantas y desgaste</li>
-                                                <li>Profundidad adecuada</li>
-                                                <li>Desgaste irregular</li>
-                                                <li>Llanta respuesto</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">2</div>
-                                            <ul>
-                                                <li>Niveles y fluidos</li>
-                                                <li>Power Steering</li>
-                                                <li>Aceite de motor</li>
-                                                <li>Coolant</li>
-                                                <li>Fugas de líquidos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">3</div>
-                                            <ul>
-                                                <li>Suspensión y dirección</li>
-                                                <li>Alineamiento</li>
-                                                <li>Balineras de rodamiento</li>
-                                                <li>Platos de suspensión</li>
-                                                <li>Amortiguadores</li>
-                                                <li>Terminales de dirección</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">4</div>
-                                            <ul>
-                                                <li>Frenos</li>
-                                                <li>Tacos</li>
-                                                <li>Discos</li>
-                                                <li>Limpieza y/o ajuste</li>
-                                                <li>Liquido de frenos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">5</div>
-                                            <ul>
-                                                <li>Luces</li>
-                                                <li>Bombillos</li>
-                                                <li>Baterías</li>
-                                                <li>Correas</li>
-                                                <li>Luces, encendido y filtros</li>
-                                                <li>Filtro de aire acondicionado </li>
-                                                <li>Filtro de aire de motor</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            
-                                        </article>
-                                    </div>
                                 </li>
                                 <li>
                                     <div class="mantenimiento-top">
@@ -451,64 +280,6 @@
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
                                             </div>
                                         </div>
-                                    </div>
-                                    
-                                    <div class="caracteristica-info" style="display: none;">
-                                        <article>
-                                            <div class="numero">1</div>
-                                            <ul>
-                                                <li>Estado de sus llantas y desgaste</li>
-                                                <li>Profundidad adecuada</li>
-                                                <li>Desgaste irregular</li>
-                                                <li>Llanta respuesto</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">2</div>
-                                            <ul>
-                                                <li>Niveles y fluidos</li>
-                                                <li>Power Steering</li>
-                                                <li>Aceite de motor</li>
-                                                <li>Coolant</li>
-                                                <li>Fugas de líquidos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">3</div>
-                                            <ul>
-                                                <li>Suspensión y dirección</li>
-                                                <li>Alineamiento</li>
-                                                <li>Balineras de rodamiento</li>
-                                                <li>Platos de suspensión</li>
-                                                <li>Amortiguadores</li>
-                                                <li>Terminales de dirección</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">4</div>
-                                            <ul>
-                                                <li>Frenos</li>
-                                                <li>Tacos</li>
-                                                <li>Discos</li>
-                                                <li>Limpieza y/o ajuste</li>
-                                                <li>Liquido de frenos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">5</div>
-                                            <ul>
-                                                <li>Luces</li>
-                                                <li>Bombillos</li>
-                                                <li>Baterías</li>
-                                                <li>Correas</li>
-                                                <li>Luces, encendido y filtros</li>
-                                                <li>Filtro de aire acondicionado </li>
-                                                <li>Filtro de aire de motor</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            
-                                        </article>
                                     </div>
                                 </li>
                                 <li>
@@ -529,64 +300,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    <div class="caracteristica-info" style="display: none;">
-                                        <article>
-                                            <div class="numero">1</div>
-                                            <ul>
-                                                <li>Estado de sus llantas y desgaste</li>
-                                                <li>Profundidad adecuada</li>
-                                                <li>Desgaste irregular</li>
-                                                <li>Llanta respuesto</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">2</div>
-                                            <ul>
-                                                <li>Niveles y fluidos</li>
-                                                <li>Power Steering</li>
-                                                <li>Aceite de motor</li>
-                                                <li>Coolant</li>
-                                                <li>Fugas de líquidos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">3</div>
-                                            <ul>
-                                                <li>Suspensión y dirección</li>
-                                                <li>Alineamiento</li>
-                                                <li>Balineras de rodamiento</li>
-                                                <li>Platos de suspensión</li>
-                                                <li>Amortiguadores</li>
-                                                <li>Terminales de dirección</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">4</div>
-                                            <ul>
-                                                <li>Frenos</li>
-                                                <li>Tacos</li>
-                                                <li>Discos</li>
-                                                <li>Limpieza y/o ajuste</li>
-                                                <li>Liquido de frenos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">5</div>
-                                            <ul>
-                                                <li>Luces</li>
-                                                <li>Bombillos</li>
-                                                <li>Baterías</li>
-                                                <li>Correas</li>
-                                                <li>Luces, encendido y filtros</li>
-                                                <li>Filtro de aire acondicionado </li>
-                                                <li>Filtro de aire de motor</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            
-                                        </article>
-                                    </div>
                                 </li>
                                 <li>
                                     <div class="mantenimiento-top">
@@ -605,64 +318,6 @@
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 40px; height: 40px;"><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
                                             </div>
                                         </div>
-                                    </div>
-                                    
-                                    <div class="caracteristica-info" style="display: none;">
-                                        <article>
-                                            <div class="numero">1</div>
-                                            <ul>
-                                                <li>Estado de sus llantas y desgaste</li>
-                                                <li>Profundidad adecuada</li>
-                                                <li>Desgaste irregular</li>
-                                                <li>Llanta respuesto</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">2</div>
-                                            <ul>
-                                                <li>Niveles y fluidos</li>
-                                                <li>Power Steering</li>
-                                                <li>Aceite de motor</li>
-                                                <li>Coolant</li>
-                                                <li>Fugas de líquidos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">3</div>
-                                            <ul>
-                                                <li>Suspensión y dirección</li>
-                                                <li>Alineamiento</li>
-                                                <li>Balineras de rodamiento</li>
-                                                <li>Platos de suspensión</li>
-                                                <li>Amortiguadores</li>
-                                                <li>Terminales de dirección</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">4</div>
-                                            <ul>
-                                                <li>Frenos</li>
-                                                <li>Tacos</li>
-                                                <li>Discos</li>
-                                                <li>Limpieza y/o ajuste</li>
-                                                <li>Liquido de frenos</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            <div class="numero">5</div>
-                                            <ul>
-                                                <li>Luces</li>
-                                                <li>Bombillos</li>
-                                                <li>Baterías</li>
-                                                <li>Correas</li>
-                                                <li>Luces, encendido y filtros</li>
-                                                <li>Filtro de aire acondicionado </li>
-                                                <li>Filtro de aire de motor</li>
-                                            </ul>
-                                        </article>
-                                        <article>
-                                            
-                                        </article>
                                     </div>
                                 </li>
                             </ul>
@@ -939,7 +594,7 @@
                             </a>
                         </div>
 
-                        <video width="auto" height="500" controls="" style="border-radius: 24px;"> 
+                        <video width="45%" height="500" controls="" style="border-radius: 24px;"> 
                             <source src="/website_hino/static/images/tambor_img/tambor-video.mp4" type="video/mp4"/>
                         </video>
                     </section>

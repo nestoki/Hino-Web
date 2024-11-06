@@ -216,7 +216,6 @@ header nav ul li a:hover{
 
 .taller-movil-main-info{
     background-image: url(../../../images/tambor_img/banner-taller-movil.png);
-
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -224,7 +223,7 @@ header nav ul li a:hover{
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    height: 650px;
+    height: 621px;
     border-radius: 20px;
     color: #FFF;
     position: relative;
@@ -248,11 +247,11 @@ header nav ul li a:hover{
     font-size: 55px !important;
     font-weight: 600 !important;
     text-transform: uppercase;
-    margin-bottom: 2% !important;
+    margin-bottom: 1% !important;
 }
 
 .taller-movil-main-info > p{
-    width: 30%;
+    width: 421px;
     position: relative;
     line-height: 22px;
     z-index: 10;
@@ -260,10 +259,26 @@ header nav ul li a:hover{
     margin-bottom: 0;
 }
 
+.taller-movil-main-info > .agenda-btn{
+    position: relative;
+    color: #FFF;
+    background-color: #E23E27;
+    text-transform: uppercase;
+    width: 228px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 60px;
+    margin-top: 1%;
+}
+
 /* TALLER MÓVIL */
 
 .taller-movil{
-    padding: 3% 4% 8% 4%;
+    padding: 2% 0%;
 }
 
 .taller-movil .taller{
@@ -271,7 +286,7 @@ header nav ul li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 110px;
+    gap: 90px;
 }
 
 .taller-movil .taller .taller-horarios{
@@ -298,10 +313,41 @@ header nav ul li a:hover{
     font-weight: 800;
 }
 
+.taller-movil .taller .taller-caracteristicas{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 231px;
+}
+
+.taller-movil .taller .taller-caracteristicas article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.taller-movil .taller .taller-caracteristicas article figure{
+    width: 129px;
+    height: 129px;
+}
+
+.taller-movil .taller .taller-caracteristicas article figure img{
+    width: 100%;
+}
+
+.taller-movil .taller .taller-caracteristicas article h4{
+    font-size: 22px;
+    text-align: center;
+    line-height: 23px;
+}
+
 .taller-movil .taller .taller-servicios{
+    background-color: #E33E22;
+    padding: 4%;
     width: 100%;
     display: flex;
-    gap: 3%;
+    gap: 49px;
     justify-content: center;
     align-items: top;
 }
@@ -320,6 +366,7 @@ header nav ul li a:hover{
     line-height: 32px;
     text-align: center;
     font-weight: 600;
+    color: #FFF;
 }
 
 .taller-movil .taller .taller-servicios .taller-servicio figure{
@@ -344,16 +391,102 @@ header nav ul li a:hover{
     font-size: 16px;
     display: flex;
     gap: 2%;
-    color: #454C56;
+    color: #FFF;
 }
 
 .taller-movil .taller .taller-servicios .taller-servicio ul li svg{
     width: 6%;
     height: 14px;
+    margin-top: 3px;
 }
 
 .taller-movil .taller .taller-servicios .taller-servicio ul li p{
     width: 90%;
+}
+
+/* PREGUNTAS FRECUENTES */
+
+.preguntas-frecuentes{
+    padding: 3% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.preguntas-frecuentes h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.preguntas-frecuentes ul{
+    width: 70%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #7E8492;
+    font-size: 18px;
+}
+
+.preguntas-frecuentes ul li .pregunta{
+    border-bottom: 1px solid #7E8492;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5%;
+    cursor: pointer;
+    padding: 1% 0;
+}
+
+.preguntas-frecuentes ul li .pregunta p{
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.respuesta{
+    display: none;
+    color: #333;
+    border-bottom: 1px solid gray;
+    padding: 1% 2%;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+/* MAPA DE COBERTURA */
+
+.mapa-cobertura{
+    padding: 3% 4% 8% 4%;
+}
+
+.mapa-cobertura .mapa-cobertura-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.mapa-cobertura .mapa-cobertura-top h3{
+    width: 40%;
+    margin-bottom: 0 !important;
+}
+
+.mapa-cobertura .mapa-cobertura-top p{
+    color: #090909;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.mapa-cobertura iframe{
+    width: 100%;
+    border-radius: 5px;
+    height: 565px;
 }
 
 /* CONTACTO */

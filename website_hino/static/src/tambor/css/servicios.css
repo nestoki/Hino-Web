@@ -89,7 +89,7 @@ h3{
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    height: 650px;
+    height: 621px;
     border-radius: 20px;
     color: #FFF;
     position: relative;
@@ -112,15 +112,16 @@ h3{
     color: #FFF;
     font-size: 45px !important;
     font-weight: 600 !important;
-    line-height: 45px;
+    line-height: 50px;
     text-transform: uppercase;
-    margin-bottom: 2% !important;
+    margin-bottom: 1% !important;
 }
 
 .servicios-agenda-info > p{
+    width: 405px;
     position: relative;
     z-index: 10;
-    margin-bottom: 3% !important;
+    margin-bottom: 2% !important;
     font-size: 18px;
 }
 
@@ -247,13 +248,13 @@ h3{
 
 .servicios-mantenimiento-preventivo .mantenimiento-preventivo-caracteristicas ul li .caracteristica-titulo{
     display: flex;
+    align-items: center;
     width: 80%;
 }
 
 .mantenimiento-preventivo-caracteristicas ul li .caracteristica-titulo span{
     font-size: 16px;
     margin-right: 12px;
-    margin-top: 1%;
     width: 5%;
     color: #FFF;
     font-weight: 500;
@@ -267,15 +268,33 @@ h3{
     font-size: 35px;
     color: #FFF;
     text-transform: uppercase;
-    opacity: 0.5;
     font-weight: 800;
     margin-bottom: 0;
     letter-spacing: -0.2px;
 }
 
-.mantenimiento-preventivo-caracteristicas ul li .caracteristica-titulo p:hover{
-    opacity: 1;
+.mantenimiento-preventivo-caracteristicas ul li .puntos-inspeccion .caracteristica-titulo p:hover{
+    opacity: 0.5;
     transition: .4s;
+    cursor: pointer;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.mantenimiento-preventivo-caracteristicas ul li .caracteristica-titulo .mas-btn{
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+    color:#E12826;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-left: 1%;
+    cursor: pointer;
 }
 
 .mantenimiento-preventivo-caracteristicas ul li .caracteristica-verificacion{
@@ -327,7 +346,7 @@ h3{
 .servicios2 article{
     display: flex;
     justify-content: left;
-    gap: 3%;
+    gap: 2%;
 }
 
 .servicios2 article figure{
@@ -396,7 +415,7 @@ h3{
     width: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
 }
 
 .tambor-express > .tambor-express-titulo > figure{
@@ -455,7 +474,7 @@ h3{
 
 .tambor-express .tambor-express-info > p{
     width: 65%;
-    margin: 6% 0 8% 0;
+    margin: 4% 0 6% 0;
     font-size: 20px;
     line-height: 30px;
     color: #737272;

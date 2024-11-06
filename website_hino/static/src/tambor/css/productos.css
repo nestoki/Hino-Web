@@ -1381,9 +1381,9 @@ article.cuatro{
     position: relative;
     z-index: 10;
     background-color: #FFF;
-    width: 40px;
-    height: 40px;
-    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
     color: #E12826;
     border-radius: 50px;
     margin-bottom: 1%;
@@ -1748,27 +1748,150 @@ img {
 .contacto .agenda-cita form select{
     width: 48%;
     border: none;
-    background-color: #f0f0f0;
-    color: #737272;
+    background-color: #f4f4f4;
+    color: #7E8492;
     padding: 2%;
     border-radius: 5px;
     outline: none;
+    font-size: 16px;
+}
+
+.contacto .agenda-cita form input::placeholder{
+    color: #7E8492 !important;
+}
+
+.contacto .agenda-cita form input.nombre,
+.contacto .agenda-cita form input.direccion{
+    width: 100%;
+}
+
+.contacto .agenda-cita form fieldset{
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+
+.contacto .agenda-cita form fieldset legend{
+    color: #7E8492;
+    font-size: 16px;
+}
+
+.contacto .agenda-cita form fieldset input[type="checkbox"]{
+    display: none;
+}
+
+.contacto .agenda-cita form fieldset label{
+    width: 50%;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #7E8492;
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+    user-select: none;
+}
+
+.contacto .agenda-cita form fieldset label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Ancho del círculo */
+    height: 20px; /* Alto del círculo */
+    border: 1px solid #7E8492; /* Color del borde */
+    border-radius: 50%; /* Hacerlo circular */
+    background: white; /* Fondo blanco */
+    transition: border 0.2s;
+}
+
+.contacto .agenda-cita form fieldset input[type="checkbox"]:checked + label::before {
+    background: #fff !important;
+    border: 5px solid #E12826; 
+}
+
+.agenda-cita form fieldset input[type="checkbox"]:checked + label {
+    color: #000 !important; 
 }
 
 .contacto .agenda-cita form textarea{
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
     width: 100%;
     border: none;
-    background-color: #f0f0f0;
+    color: #7E8492;
+    background-color: #f4f4f4;
     border-radius: 5px;
     padding: 2%;
     margin-bottom: 2%;
     outline: none;
+    resize: none;
+}
+
+.contacto .agenda-cita form textarea::placeholder{
+    color: #7E8492;
+}
+
+.contacto .agenda-cita .acepto{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacto .agenda-cita form .acepto div{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 14px;
+}
+
+.checkbox-container {
+    background-color: white;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+    appearance: none; 
+    width: 26px !important; 
+    height: 24px; 
+    margin-right: 12px;
+    border: 1px solid #C6C6C6 !important;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    background-color: #FFF !important;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: #FFF !important;
+    border-radius: 8px;
+}
+
+.checkbox-container input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 6px;
+    height: 12px;
+    border: solid #E12826;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.acepto .checkbox-container label{
+    text-decoration: underline;
+    line-height: 16px;
 }
 
 .contacto .agenda-cita form a{
-    width: 20%;
-    padding: 3% 2%;
+    width: 16%;
+    padding: 2% 1%;
     background-color: #E12826;
     color: #FFF;
     text-transform: uppercase;

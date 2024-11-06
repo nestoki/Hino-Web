@@ -33,16 +33,22 @@
                         </h3>
                         <div class="escribenos">
                             <div class="escribenos-form">
-                                <h4>escríbenos</h4>
+                                <h4>contáctanos</h4>
                                 <form action="">
-                                    <input type="text" placeholder="Nombre"/>
-                                    <input type="email" name="" id="" placeholder="Email"/>
+                                    <input type="text" class="nombre" placeholder="Nombre Completo*"/>
+                                    <input type="email" name="" id="" placeholder="Email*"/>
                                     <input type="tel" name="" id="" placeholder="Teléfono"/>
-                                    <select name="" id="">
-                                        <option value="ciudad">Ciudad</option>
+                                    <select class="sucursal-preferencia" name="" id="">
+                                        <option value="sucursal-preferencia">Sucursal de tu preferencia</option>
                                     </select>
-                                    <textarea name="" id="" cols="30" rows="5" placeholder="Motivo del Contacto"></textarea>
-                                    <a href="#" class="agenda-cita-btn">Enviar</a>
+                                    <textarea name="" id="" cols="30" rows="5" placeholder="Quieres dejar un mensaje..."></textarea>
+                                    <div class="acepto">
+                                        <div class="checkbox-container">
+                                            <input type="checkbox" name="acepto" id="acepto" value="acepto"/> <label for="acepto">Acepto recibir información y promociones según la política de privacidad</label>
+                                        </div>
+                                        
+                                        <a href="#" class="agenda-cita-btn">solicitar</a>
+                                    </div>
                                 </form>
                             </div>
                             <figure>                        

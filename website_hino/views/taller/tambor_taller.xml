@@ -24,19 +24,36 @@
                             <p>
                                 No deje que su día se detenga. Programe el mantenimiento de su auto con nuestro Taller Móvil de Tambor: un servicio a domicilio que llega a su hogar u oficina para mayor comodidad.
                             </p>
+                            <a href="#" class="agenda-btn">Agenda tu cita aquí</a>
                         </div>
                     </section>
 
                     <!-- TALLER MÓVIL -->
                     <section class="taller-movil">
-                        <h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
-                            Taller Móvil
-                        </h3>
                         <div class="taller">
                             <div class="taller-horarios">
                                 <h4>horarios de atención</h4>
                                 <p>Lunes a Sábados <strong>| 8:00 am a 5:00 pm</strong></p>
+                            </div>
+                            <div class="taller-caracteristicas">
+                                <article>
+                                    <figure>
+                                        <img src="/website_hino/static/images/tambor_img/icono-ahorro.png" alt=""/>
+                                    </figure>
+                                    <h4>Ahorro <br/> de tiempo</h4>
+                                </article>
+                                <article>
+                                    <figure>
+                                        <img src="/website_hino/static/images/tambor_img/icono-comodidad.png" alt=""/>
+                                    </figure>
+                                    <h4>Comodidad</h4>
+                                </article>
+                                <article>
+                                    <figure>
+                                        <img src="/website_hino/static/images/tambor_img/icono-cobertura.png" alt=""/>
+                                    </figure>
+                                    <h4>Cobertura <br/> Amplia</h4>
+                                </article>
                             </div>
                             <div class="taller-servicios">
                                 <article class="taller-servicio">
@@ -50,7 +67,7 @@
                                     </figure>
                                     <ul class="taller-servio-info">
                                         <li>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#e2211c" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
                                             <p>
                                                 Reemplazo de filtros y aceites
                                             </p>
@@ -68,21 +85,21 @@
                                     </figure>
                                     <ul class="taller-servio-info">
                                         <li>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#e2211c" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
                                             <p>
                                                 Revisión de nivel de aceites (motor, power steering, frenos, coolant)
                                             </p>
                                             
                                         </li>
                                         <li>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#e2211c" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
                                             <p>
                                             Inspección de llantas y nivelación de presión 
                                             </p>
                                             
                                         </li>
                                         <li>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#e2211c" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
                                             <p>
                                                 Revisión de filtros y correas
                                             </p>
@@ -101,42 +118,42 @@
                                     </figure>
                                     <ul class="taller-servio-info">
                                         <li>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#e2211c" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
                                             <p>
                                                 Cambio de correas
                                             </p>
                                             
                                         </li>
                                         <li>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#e2211c" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
                                             <p>
                                                 Reemplazo de conjunto de embrague
                                             </p>
                                             
                                         </li>
                                         <li>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#e2211c" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
                                             <p>
                                                 Engrase general
                                             </p>
                                             
                                         </li>
                                         <li>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#e2211c" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
                                             <p>
                                                 Cambio de bandas y tacos de frenos
                                             </p>
                                             
                                         </li>
                                         <li>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#e2211c" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
                                             <p>
                                                 Reemplazo de escobillas de limpia parabrisas
                                             </p>
                                             
                                         </li>
                                         <li>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#e2211c" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
                                             <p>
                                                 MOC (motor flush, limpieza de inyectores, power steering)
                                             </p>
@@ -145,6 +162,52 @@
                                 </article>
                             </div>
                         </div>
+                    </section>
+
+                    <!-- PREGUNTAS FRECUENTES -->
+                    <section class="preguntas-frecuentes">
+                        <h4>preguntas frecuentes</h4>
+                        <ul class="preguntas">
+                            <li>
+                                <div class="pregunta">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 15px;" viewBox="0 0 512 512"><path fill="#e12826" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
+                                    <p>¿Qué áreas cubre el Taller Móvil?</p>
+                                </div>
+                                <p class="respuesta">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                </p>
+                            </li>
+                            <li>
+                                <div class="pregunta">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 15px;" viewBox="0 0 512 512"><path fill="#e12826" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
+                                    <p>¿Qué necesito para recibir el servicio en casa?</p>
+                                </div>
+                                <p class="respuesta">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                </p>
+                            </li>
+                            <li>
+                                <div class="pregunta">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 15px;" viewBox="0 0 512 512"><path fill="#e12826" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
+                                    <p>¿El costo es el mismo que en el taller?</p>
+                                </div>
+                                <p class="respuesta">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                </p>
+                            </li>
+                        </ul>
+                    </section>
+
+                   <!--  MAPA DE COBERTURA -->
+                    <section class="mapa-cobertura">
+                        <div class="mapa-cobertura-top">
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill=" #E12826" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                                Mapa de cobertura
+                            </h3>
+                            <p>El mejor servicio a domicilio</p>
+                        </div>
+                        <iframe id="mapa-cobertura-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.6057990514328!2d-79.53612662405634!3d9.008371591052112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8436b024cf9%3A0x6d512679801bf4bc!2sTambor%20%7C%20El%20Dorado!5e0!3m2!1ses!2sve!4v1730147625806!5m2!1ses!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
                     </section>
 
                     <!-- CONTACTO -->
@@ -182,7 +245,7 @@
                     </section>
 
                 </t>
-
+                <script src="/website_hino/static/src/tambor/js/preguntas.js"></script>
             </t>
         </template>
 

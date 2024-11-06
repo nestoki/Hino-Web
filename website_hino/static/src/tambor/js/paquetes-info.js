@@ -1,18 +1,22 @@
-document.querySelectorAll('.caracteristica-titulo p').forEach(function(p) {
-    p.addEventListener('click', function() {
-        const li = this.closest('li'); 
-        const infoDiv = li.querySelector('.caracteristica-info');
+document.addEventListener('DOMContentLoaded', function() {
+    const puntosInspeccion = document.querySelector('.puntos-inspeccion-p');
+    const masBtn = document.querySelector('.mas-btn');
+    const caracteristicaInfo = document.querySelector('.caracteristica-info');
 
-        
-        if (infoDiv.style.display === 'none' || infoDiv.style.display === '') {
-            infoDiv.style.display = 'flex'; 
-            this.style.opacity = '1'; 
+    const toggleInfo = () => {
+        if (caracteristicaInfo.style.display === 'none' || caracteristicaInfo.style.display === '') {
+            caracteristicaInfo.style.display = 'flex';
+            puntosInspeccion.classList.add('opacity'); 
         } else {
-            infoDiv.style.display = 'none';
-            this.style.opacity = ''; 
+            caracteristicaInfo.style.display = 'none';
+            puntosInspeccion.classList.remove('opacity');
         }
-    });
+    };
+
+    puntosInspeccion.addEventListener('click', toggleInfo);
+    masBtn.addEventListener('click', toggleInfo);
 });
+
 
 
 

@@ -109,11 +109,11 @@ h3{
     font-size: 55px !important;
     font-weight: 600 !important;
     text-transform: uppercase;
-    margin-bottom: 2% !important;
+    margin-bottom: 1% !important;
 }
 
 .sucursales-main-info > p{
-    width: 30%;
+    width: 414px;
     position: relative;
     line-height: 22px;
     z-index: 10;
@@ -164,7 +164,7 @@ h3{
 .sucursales .sucursales-articulos{
     display: none;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
 }
 
 .sucursales .sucursales-articulos.panama{
@@ -226,7 +226,7 @@ h3{
     font-size: 18px;
     color: #454C56;
     margin-bottom: 0;
-    width: 50%;
+    width: 40%;
 }
 
 .sucursales .sucursal .sucursal-info .sucursal-tlf{
