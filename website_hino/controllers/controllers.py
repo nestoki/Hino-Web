@@ -1,6 +1,7 @@
 from odoo import http
-#Controller para renderizar la seccion de Camiones
+from odoo.http import request
 
+#Controller para renderizar la seccion de Camiones
 class CamionesController(http.Controller):
     #Ruta para Camiones General
     @http.route('/camiones/series', type='http', auth='public', website=True)
@@ -216,9 +217,9 @@ class SoporteTotalController(http.Controller):
     def servicios(self, **kw):
         return http.request.render('website_hino.hino_servicios')
 
-    @http.route('/soporte-total/respuestos', auth='public', website=True)
-    def respuestos(self, **kw):
-        return http.request.render('website_hino.hino_respuestos')
+    @http.route('/soporte-total/repuestos', auth='public', website=True)
+    def repuestos(self, **kw):
+        return http.request.render('website_hino.hino_repuestos')
 
 
     @http.route('/soporte-total/mantenimiento-prepagado', auth='public', website=True)
@@ -280,3 +281,106 @@ class ContactenosController(http.Controller):
     @http.route('/contactus', auth='public', website=True)
     def contactenos(self, **kw):
         return http.request.render('website_hino.hino_contactenos')
+
+#Controller para renderizar la seccion de Politicas de Privacidad
+class PoliticasController(http.Controller):
+
+    @http.route('/terminos', auth='public', website=True)
+    def terminos(self, **kw):
+        return http.request.render('website_hino.hino_politicas_privacidad')
+    
+
+class LandingController(http.Controller):
+    @http.route('/ventas', auth='public', website=True)
+    def ventas(self, **kw):
+        return http.request.render('website_hino.hino_ventas')
+
+    @http.route('/ventas300y500', auth='public', website=True)
+    def ventas2(self, **kw):
+        return http.request.render('website_hino.hino_ventas_300_500')
+
+    @http.route('/create_opportunity', type='http', auth='public', methods=['POST'], csrf=False)
+    def create_opportunity(self, **kwargs):
+        name = request.params.get('name')
+        email = request.params.get('email')
+        phone = request.params.get('phone')
+        city = request.params.get('city')
+        message = request.params.get('message')
+        origin_page = request.params.get('origin_page')
+
+        opportunity = request.env['crm.lead'].sudo().create({
+            'name': message,
+            'contact_name': name,
+            'email_from': email,
+            'phone': phone,
+            'description': f"city: {city}",
+            'type': 'opportunity',
+        })
+
+        # Guardar el mensaje de éxito en la sesión
+        request.session['success_message'] = 'El formulario ha sido enviado correctamente.'
+
+        if origin_page == 'ventas_300_500':
+            return request.redirect('/ventas300y500')
+        else:
+            return request.redirect('/ventas')
+    
+
+
+class LoginController(http.Controller):
+    @http.route('/login', auth='public', website=True)
+    def login(self, **kw):
+        return http.request.render('website_hino.hino_login_inherited')
+
+
+class TamborController(http.Controller):
+
+    @http.route('/tambor/service', auth='public', website=True)
+    def tambor_services(self, **kw):
+        # Obtener el ID del sitio web actual
+        current_website = http.request.env['website'].get_current_website()
+
+        # Verificar si el sitio actual es el ID 1
+        if current_website.id == 2:
+            # Renderizar la vista si estamos en el sitio correcto
+            return http.request.render('website_hino.tambor_services')
+        else:
+            return http.request.render('website.page_not_found')
+        
+    
+    @http.route('/tambor/sucursales', auth='public', website=True)
+    def tambor_sucursales(self, **kw):
+        # Obtener el ID del sitio web actual
+        current_website = http.request.env['website'].get_current_website()
+
+        # Verificar si el sitio actual es el ID 1
+        if current_website.id == 2:
+            # Renderizar la vista si estamos en el sitio correcto
+            return http.request.render('website_hino.tambor_sucursales')
+        else:
+            return http.request.render('website.page_not_found')
+        
+        
+    @http.route('/tambor/contacto', auth='public', website=True)
+    def tambor_contacto(self, **kw):
+        # Obtener el ID del sitio web actual
+        current_website = http.request.env['website'].get_current_website()
+
+        # Verificar si el sitio actual es el ID 1
+        if current_website.id == 2:
+            # Renderizar la vista si estamos en el sitio correcto
+            return http.request.render('website_hino.tambor_contacto')
+        else:
+            return http.request.render('website.page_not_found')
+        
+    @http.route('/tambor/taller-movil', auth='public', website=True)
+    def tambor_taller(self, **kw):
+        # Obtener el ID del sitio web actual
+        current_website = http.request.env['website'].get_current_website()
+
+        # Verificar si el sitio actual es el ID 1
+        if current_website.id == 2:
+            # Renderizar la vista si estamos en el sitio correcto
+            return http.request.render('website_hino.tambor_taller')
+        else:
+            return http.request.render('website.page_not_found')

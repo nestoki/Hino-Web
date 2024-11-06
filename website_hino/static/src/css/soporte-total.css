@@ -36,15 +36,25 @@
   margin: auto;
 }
 
+.soporte-total .logo-soporte-total{
+  width: 120px;
+  margin: 0;
+  margin-bottom: 1%;
+}
+
+.soporte-total .logo-soporte-total img{
+  width: 100%;
+}
+
 
 h2 {
+  font-family: 'HelveticaNeue';
   color: #2F2F2F;
-  font-size: 30px;
-  font-weight: 800;
-  line-height: 56.88px;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 56px;
   margin: 0;
   padding-left: 10px;
-  padding-top: 70px;
   text-decoration: none;
   float: right;
 }
@@ -77,15 +87,17 @@ h2 {
 }
 
 .soporte-total .card .card_landing .title-soporte a {
+  font-family: 'Helvetica Neue Light';
   background-image: url('/website_hino/static/images/fondo-rojo-blanco.png');
   font-size: 18px;
   height: 50px;
   width: 350px;
-  font-weight: 700;
+  font-weight: 600;
   position: absolute;
   bottom: 0px;
   left: 8px;
   text-align: left;
+  text-transform: capitalize;
   color: #ffffff;
   padding-left: 15px;
   padding-top: 10px;
@@ -107,7 +119,7 @@ h2 {
 }
 
 .soporte-total .swiper-scrollbar-drag{
- background-color: #E02413;
+ background-color: #D8232A;
 }
 
 /* Styles for mobile and tablets */
@@ -156,7 +168,7 @@ h2 {
 @media only screen and (max-width: 1000px) {
 
   .soporte-section {
-    margin-top: 40%;
+    margin-top: 42%;
   }
 
   .soporte-total {
@@ -174,6 +186,10 @@ h2 {
 }
 
 @media only screen and (max-width: 900px) {
+
+  .soporte-section {
+    margin-top: 45%;
+  }
 
   .soporte-total {
     max-width: 90%;
@@ -200,6 +216,10 @@ h2 {
 
 @media only screen and (max-width: 800px) {
 
+  .soporte-section {
+    margin-top: 48%;
+  }
+
   .soporte-total .swiper-wrapper {
     height: 365px;
   }
@@ -220,6 +240,11 @@ h2 {
     margin-top: 50%;
   }
 
+  .soporte-total .logo-soporte-total{
+    width: 100px;
+    margin-bottom: 0;
+  }
+
   h2 {
     font-size: 20px;
   }
@@ -233,7 +258,32 @@ h2 {
   }
 }
 
+@media only screen and (max-width: 576px){
+  .soporte-total .logo-soporte-total{
+    width: 42%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .soporte-total .logo-soporte-total img{
+    width: 100px;
+  }
+}
+
 @media only screen and (max-width: 500px) {
+
+  .soporte-section{
+    margin-top: 48%;
+  }
+
+  .soporte-total .logo-soporte-total{
+    width: 37%;
+  }
+
+  .soporte-total .logo-soporte-total img{
+    width: 85px;
+  }
+
   h2 {
     font-size: 18px;
   }
@@ -249,11 +299,28 @@ h2 {
 
 @media only screen and (max-width: 450px) {
   .soporte-section {
-    margin-top: 35%;
+    margin-top: 40%;
+  }
+
+  .soporte-total .logo-soporte-total{
+    width: 33%;
+  }
+
+  .soporte-total .logo-soporte-total img{
+    width: 85px;
   }
 }
 
 @media only screen and (max-width: 400px) {
+
+  .soporte-total .logo-soporte-total{
+    width: 29%;
+  }
+
+  .soporte-total .logo-soporte-total img{
+    width: 80px;
+  }
+
   .soporte-total .swiper-wrapper {
     height: 285px;
   }
@@ -270,5 +337,20 @@ h2 {
     width: 245px;
     height: 45px;
     left: 6px;
+  }
+}
+
+@media only screen and (max-width: 380px){
+
+  .soporte-section{
+    margin-top: 45%;
+  }
+
+  .soporte-total .logo-soporte-total{
+    width: 27%;
+  }
+
+  .soporte-total .logo-soporte-total img{
+    width: 70px;
   }
 }

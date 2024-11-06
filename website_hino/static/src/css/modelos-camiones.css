@@ -23,12 +23,13 @@
   }
   
   .carousel-indicators [data-bs-target]{
-    background-color: #E02413 !important;
+    background-color: #D8232A !important;
   }
 .letter {
+    font-family: 'HelveticaNeue';
     color: #000000;
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 25px;
+    font-weight: 600;
     line-height: 60px;
     text-align: center;
     text-transform: uppercase;
@@ -42,6 +43,7 @@
 .model-camiones {
     background-color: #FFF;
     margin: 70px auto;
+    margin-bottom: 20px;
     width: 100%;
     max-width: 1200px;
     box-sizing: border-box;
@@ -58,7 +60,7 @@
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    border-bottom: 3px solid #E02413;
+    border-bottom: 3px solid #8D0007;
     width: 92%;
     margin-left: 50px;
 }
@@ -67,7 +69,7 @@
     color: #000;
     line-height: 20px;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .datos {
@@ -151,13 +153,14 @@
 .boton {
     display: inline-block;
 
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 13px;
+    font-family: 'Helvetica Neue Light', sans-serif;
+    font-size: 12px;
+    letter-spacing: .5px;
 
     width: 45%;
     word-wrap: break-word;
     background-color: transparent;
-    border: 1px solid #E02413;
+    border: 1px solid #D8232A;
     padding: 2% 3%;
     border-radius: 12px;
     cursor: pointer;
@@ -171,14 +174,16 @@
 }
 
 .boton1 {
+    font-family: 'Helvetica Neue Light';
     margin-left: 10px;
 
-    font-size: 13px;
+    font-size: 12px;
+    letter-spacing: .5px;
 
     width: 120px;
     word-wrap: break-word;
     background-color: transparent;
-    border: 1px solid #E02413;
+    border: 1px solid #BF001B;
     padding: 2% 3%;
     border-radius: 12px;
     cursor: pointer;
@@ -188,18 +193,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:3%;
+    gap: 3%;
 
 }
 
 .ver-btn {
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    font-family: 'Helvetica Neue Light', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .5px;
 
     width: 150px;
     height: 40px;
     color: #ffffff;
-    background: #E02413;
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -212,7 +219,7 @@
 }
 
 .ver-btn:hover {
-    background-color: #E02413;
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
     color: #fff;
 }
 
@@ -227,15 +234,14 @@
 }
 
 .btn-serie {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue Light', sans-serif;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 19.76px;
+    font-size: 18px;
+    line-height: 20px;
     border: none;
     color: #000;
     cursor: pointer;
     background-color: transparent;
-    font-size: 1em;
     top: 1066px;
     left: 421px;
     border-radius: 0px 0 0 0px;
@@ -249,12 +255,12 @@
 }
 
 .btn-serie:focus {
-    background-color: #E02413;
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
     color: #fff;
 }
 
 .btn-serie.active {
-    background-color: #E02413;
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
     color: #fff;
 }
 
@@ -283,8 +289,9 @@
 }
 
 .nombre {
-    font-size: 30px;
-    font-weight: 900;
+    font-family: 'HelveticaNeue';
+    font-size: 25px;
+    font-weight: 600;
     color: #000;
     text-transform: uppercase;
 }
@@ -498,7 +505,7 @@
         text-align: center;
     }
 
-    .model-camiones .todos .propiedades > h1{
+    .model-camiones .todos .propiedades > .nombre{
         display: none;
     }
 
@@ -614,6 +621,7 @@
         justify-content: space-evenly;
         align-items: center;
         font-size: 15px;
+        z-index: 11;
     }
 
     .menu-modelos-responsive{
@@ -623,7 +631,7 @@
         left: 24px;
         z-index: 100;
         padding: 5% 0 8% 15%;
-        background: #E02413;
+        background: linear-gradient(#E60013, #BF001B, #8D0007);
         border-radius: 0 0 8px 8px;
         transform: skew(15deg);
     }
@@ -717,6 +725,11 @@
 }
 
 @media (max-width: 500px){
+
+    .model-camiones{
+        margin-top: 60px;
+    }
+
     .model-camiones > h1.letter {
         line-height: 28px;
         font-size: 18px;
@@ -740,7 +753,7 @@
     }
 
     .model-camiones .todos .img-serie {
-        left: -36% !important;
+        left: -22% !important;
         width: 350px !important;
     }
     .carousel-control-prev, .carousel-control-next {
@@ -758,13 +771,14 @@
 
 @media (max-width: 450px){
     .model-camiones .todos .img-serie {
-        width: 300px !important;
+        width: 250px !important;
         margin-top: 8px;
+        left: -25%;
     }
 
     .raya-roja {
-        height: 215px;
-        width: 190px;
+        height: 200px;
+        width: 165px;
     }
 
     .nombre-responsive {
@@ -786,10 +800,25 @@
     .propiedades > .ver-btn {
         width: 40% !important
     }
+
+    .propiedades .container-pro div > img {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @media (max-width: 400px){
     .model-camiones .todos .img-serie {
-        left: -45% !important;
+        left: -30% !important;
+    }
+
+    .model-camiones{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 360px){
+    .model-camiones .todos .img-serie {
+        left: -40% !important;
     }
 }

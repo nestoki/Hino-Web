@@ -75,7 +75,7 @@
                         <field name="creado_por" placeholder="Creado por..."/>
                         <field name="imagen" widget="image"/>
                         <field name="descripcion" placeholder="Breve Descripción..."/>
-                        <field name="informacion" placeholder="Información de la Novedad..."/>
+                        <field name="informacion" widget="editor"/>
                     </group>
                     <group>
                         <field name="next_novedad"/>

@@ -1,0 +1,343 @@
+/* Importación de las Fuentes */
+@font-face { 
+    font-family: "HelveticaNeue"; 
+    font-weight: 500; 
+    src: 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.woff") format("woff"), 
+        url("/website_hino/static/src/css/fonts/HelveticaNeue.ttf") format("truetype"); 
+} 
+
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    font-weight: 300;
+    src:
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.woff") format("woff"),
+        url("/website_hino/static/src/css/fonts/helveticaneue-light.ttf") format("truetype");
+}
+
+/* GENERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+figure{
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+header{
+    background: #D8232A;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header figure img{
+    width: 200px;
+}
+
+/* HEADER RESPONSIVE */
+
+@media only screen and (max-width: 700px){
+    header figure img{
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    header{
+        height: auto;
+        padding: 5%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    header{
+        height: auto;
+        padding: 4% 5%;
+    }
+
+    header figure img{
+        width: 130px;
+    }
+}
+
+/* TOTP */
+
+.totp{
+    font-family: 'Helvetica Neue Light';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8% 0;
+    flex: 1;
+}
+
+.totp > div{
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.2);
+    padding: 2% 3%;
+}
+
+.totp > div h5{
+    font-family: 'Helvetica Neue Light';
+    font-size:20px;
+    margin-bottom: 2%;
+    font-weight: 600;
+}
+
+.totp form{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.totp form > div{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+section.totp form div label{
+    color: #363435;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+section.totp form .remember label{
+    font-weight: 300;
+}
+
+section.totp form div input{
+    font-family: 'Helvetica Neue Light';
+    background-color: transparent !important;
+    border: none;
+    padding: 3%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+}
+
+section.totp form div input#totp_token:focus-visible{
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px 3px rgba(212, 61, 61, 0.2);
+}
+
+section.totp form .autenticacion{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+section.totp form .remember{
+    margin-top: 2%;
+    border-top: 1px solid #cccccc;
+    padding-top: 5%;
+}
+
+section.totp form .iniciar-sesion{
+    font-family: 'Helvetica Neue Light';
+    width: 100%;
+    background: #D8232A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    height: 45px;
+    margin-top: 2%;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+section.totp form .btn-cancelar{
+    border: none;
+    background: none;
+    color: #D8232A;
+    margin-top: 4%;
+    font-family: 'Helvetica Neue Light';
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.totp form > button{
+    font-family: 'Helvetica Neue Light';
+    width: 100%;
+    background: #D8232A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    height: 45px;
+    margin-top: 6%;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.totp form div > a{
+    font-size: 18px;
+    color: #D8232A;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+
+.totp div > a{
+    font-size: 15px;
+    color: #D8232A;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+
+/* TOTP RESPONSIVE */
+
+@media only screen and (max-width: 1000px){
+    .totp > div{
+        width: 60%;
+    }
+
+    .totp form{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .totp > div{
+        width: 70%;
+    }
+
+    section.totp form div label{
+        font-size: 18px;
+    }
+
+    .totp form > a{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    .totp > div{
+        width: 80%;
+        padding: 4%;
+    }
+
+    .totp > div h5{
+        font-size: 18px;
+    }
+
+    .totp form > div{
+        font-size: 16px;
+    }
+
+    .totp form div > a{
+        font-size: 16px;
+    }
+
+    section.totp form div label{
+        font-size: 16px;
+    }
+
+    .totp form > button{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .totp > div{
+        width: 85%;
+    }
+
+    .totp > div h5{
+        font-size: 16px;
+    }
+
+    .totp form > div{
+        font-size: 14px;
+    }
+
+    .totp form div > a{
+        font-size: 14px;
+    }
+
+    section.totp form .remember{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 2%;
+    }
+
+    section.totp form div input#switch-remember{
+        box-shadow: none;
+    }
+
+    section.totp form div.remember label{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    section.totp form .iniciar-sesion{
+        font-size: 16px;
+    }
+
+    section.totp form .btn-cancelar{
+        font-size: 14px;
+    }
+}
+
+/* FOOTER */
+
+footer{
+    height: 110px;
+    background-color: #363435;
+    padding: 2% 5%;
+}
+
+footer > div{
+    background-color: #D8232A;
+    width: 100%;
+    height: 3px;
+}
+
+footer p{
+    font-family: 'Helvetica Neue Light';
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-align: center;
+    margin-top: 1%;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media only screen and (max-width: 900px){
+
+    footer{
+        padding: 4% 5% 5% 5%;
+        height: auto;
+    }
+
+    footer p{
+        font-size: 18px;
+        margin-top: 2%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    footer p{
+        font-size: 14px;
+    }
+}

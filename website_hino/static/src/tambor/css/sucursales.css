@@ -1,0 +1,1057 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Epilogue", sans-serif;
+}
+
+h3{
+    font-size: 20px;
+    color: #E12826;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    margin-bottom: 3%;
+    font-weight: 600;
+}
+
+/* BOTÓN WHATSAPP */
+
+.btn-wsp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 70px;
+    height: 70px;
+    line-height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00bb2d;
+    border-radius: 50px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+}
+
+.btn-wsp:hover{
+    background-color: #009423;
+}
+
+@media only screen and (max-width: 700px){
+    .btn-wsp{
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn-wsp svg{
+        width: 32px !important;
+        height: 32px !important;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .btn-wsp{
+        width: 50px;
+        height: 50px;
+    }
+
+    .btn-wsp svg{
+        width: 28px !important;
+        height: 28px !important;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .btn-wsp{
+        display: none;
+    }
+}
+
+/* SUCURSALES MAIN */
+
+.sucursales-main{
+    padding: 0% 4% 1% 4%;
+}
+
+.sucursales-main-info{
+    background-image: url(../../../images/tambor_img/banner-sucursales.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 650px;
+    border-radius: 20px;
+    color: #FFF;
+    position: relative;
+    overflow: hidden;
+    padding: 3% 2%;
+}
+
+.sucursales-main-info > .capa{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(216,35,42,0.5522584033613445) 0%, rgba(0,0,0,0.2) 45%);
+    left: 0;
+    top: 0;
+}
+
+.sucursales-main-info h3{
+    z-index: 10;
+    position: relative;
+    color: #FFF;
+    font-size: 55px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    margin-bottom: 1% !important;
+}
+
+.sucursales-main-info > p{
+    width: 414px;
+    position: relative;
+    line-height: 22px;
+    z-index: 10;
+    margin-bottom: 2%;
+    font-size: 16px;
+}
+
+/* SUCURSALES */
+
+.sucursales{
+    padding: 3% 4%;
+    padding-bottom: 8%;
+}
+
+.sucursales > h3{
+    margin-bottom: 5%;
+}
+
+.sucursales .sucursales-btn{
+    display: flex;
+    justify-content: right;
+    gap: 2%;
+    margin-bottom: 3%;
+}
+
+.sucursales .sucursales-btn a{
+    color: #E2211C;
+    border: 1px solid #00000066;
+    border-radius: 60px;
+    padding: 1% 8%;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sucursales .sucursales-btn a:hover{
+    background-color: #E2211C;
+    color: #FFF;
+    border: 1px solid #E2211C;
+}
+
+.active{
+    background-color: #E2211C;
+    color: #FFF !important;
+    border: 1px solid #E2211C !important;
+}
+
+.sucursales .sucursales-articulos{
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sucursales .sucursales-articulos.panama{
+    display: flex;
+}
+
+.sucursales .sucursales-articulos .sucursal{
+    display: flex;
+    justify-content: space-between;
+    gap: 6%;
+    position: relative;
+}
+
+.capa-sucursal{
+    position: absolute;
+    height: 100%;
+    width: 44.531%;
+    background: #000;
+    opacity: 0.2;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.sucursales .sucursales-articulos .sucursal .sucursal-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    color: #454C56;
+}
+
+.sucursales .sucursal iframe{
+    width: 45%;
+    height: 490px;
+    border-radius: 20px;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-titulo{
+    display: flex;
+    flex-direction: column;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-titulo span{
+    color: #E12826;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-titulo h3{
+    color: #000;
+    font-size: 50px !important;
+    text-transform: uppercase;
+    margin-bottom: 0 !important;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-direccion{
+    line-height: 22px;
+    font-size: 18px;
+    color: #454C56;
+    margin-bottom: 0;
+    width: 40%;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-tlf{
+    display: flex;
+    gap: 2%;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-tlf .icono-phone{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-tlf .icono-phone img{
+    width: 100%;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-tlf strong{
+    text-transform: uppercase;
+    color: #000;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-horarios{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-horarios > p{
+    display: flex;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+    font-size: 16px;
+    gap: 2%;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-horarios > p svg{
+    width: 20px;
+    height: 20px;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-horarios > p strong{
+    color: #000;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-horarios .horarios{
+    font-size: 18px;
+    line-height: 10px;
+}
+
+.sucursales .sucursal .sucursal-info .sucursal-horarios .horarios p span{
+    color: #E2211C;
+}
+
+/* CONTACTO */
+
+.tambor-express-contacto{
+    padding: 0 !important;
+    position: relative;
+}
+
+.tambor-express-contacto .contacto-info{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -90px;
+    margin: auto;
+    width: 65%;
+    background-color: #E12826;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    border-radius: 100px;
+}
+
+.contacto .contacto-info .contacto-info-logo{
+    width: 25%;
+    border-right: 1px solid #FFF;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.contacto .contacto-info .contacto-info-logo figure{
+    width: 80%;
+    background-color: #FFF;
+    padding: 3%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto .contacto-info .contacto-info-logo figure img{
+    width: 90%;
+}
+
+.contacto .contacto-info .contactos{
+    width: 45%;
+    padding: 0 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-right: 1px solid #FFF;
+}
+
+.contacto .contacto-info .contactos .contactos-titulo{
+    width: 100%;
+    margin-bottom: 5%;
+    font-size: 18px;
+}
+
+.contacto .contacto-info .contactos .contacto-tlf, 
+.contacto .contacto-info .contactos .contacto-interior{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6%;
+    width: 45%;
+}
+
+.contacto .contacto-info .contactos .contacto-tlf div, 
+.contacto .contacto-info .contactos .contacto-interior div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contacto .contacto-info .contactos .contacto-tlf div a, 
+.contacto .contacto-info .contactos .contacto-interior div a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.contacto .contacto-info .contactos .contacto-tlf div span, 
+.contacto .contacto-info .contactos .contacto-interior div span{
+    font-size: 18px;
+}
+
+.contacto .contacto-ws{
+    width: 24%;
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+    gap: 6%;
+}
+
+.contacto .contacto-ws > svg{
+    margin-bottom: 12px;
+}
+
+.contacto .contacto-ws > div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contacto .contacto-ws > div a{
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.contacto .contacto-ws > div span{
+    font-size: 18px;
+}
+
+/* RESPONSIVE CONTACTO */
+
+@media only screen and (max-width: 1600px){
+    .contacto .contacto-info{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .contacto .contacto-info{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .contacto{
+        padding-bottom: 15%;
+    }
+
+    .contacto .contacto-info{
+        bottom: -70px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .contacto .contacto-info .contactos .contacto-tlf div a, .contacto .contacto-info .contactos .contacto-interior div a,
+    .contacto .contacto-ws > div a{
+        font-size: 20px;
+    }
+
+    .contacto .contacto-info .contactos .contacto-tlf div span, .contacto .contacto-info .contactos .contacto-interior div span,
+    .contacto .contacto-ws > div span{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .contacto .contacto-info{
+        width: 85%;
+        bottom: -55px;
+    }
+
+    .contacto .contacto-info .contacto-info-logo figure img{
+        width: 85%;
+    }
+
+    .contacto .contacto-info .contactos .contacto-tlf svg{
+        width: 25px !important;
+        height: 25px !important;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .contacto .contacto-info{
+        width: 90%;
+        bottom: -50px;
+    }
+
+    .contacto .contacto-info .contactos .contacto-tlf div a, .contacto .contacto-info .contactos .contacto-interior div a,
+    .contacto .contacto-ws > div a{
+        font-size: 18px;
+    }
+
+    .contacto .contacto-info .contactos .contacto-tlf div span, .contacto .contacto-info .contactos .contacto-interior div span,
+    .contacto .contacto-ws > div span{
+        font-size: 14px;
+    }
+
+    .contacto .contacto-info .contactos .contacto-tlf svg{
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .contacto .contacto-ws svg{
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .contacto .contacto-info .contacto-info-logo{
+        width: 28%;
+    }
+
+    .contacto .contacto-info .contacto-info-logo figure{
+        width: 85%;
+    }
+
+    .contacto .contacto-info .contacto-info-logo figure img{
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .contacto .contacto-info{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .contacto{
+        padding: 5% 4%;
+    }
+
+    .contacto .contacto-info{
+        display: none;
+    }
+}
+
+/* FOOTER */
+
+footer{
+    padding: 10% 4% 5% 4%;
+    background-color: #231F20;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-footer{
+    display: none;
+}
+
+footer .atencion-cliente{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer .atencion-cliente .atencion-cliente-titulo{
+    font-size: 25px;
+    line-height: 35px;
+    margin-top: 3%;
+}
+
+footer .atencion-cliente > div{
+    color: #FFF;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    margin-bottom: 2%;
+}
+
+footer .atencion-cliente > div a{
+    color: #FFF;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+footer .atencion-cliente .atencion-cliente-btn{
+    width: 370px;
+    background-color: #FFF;
+    color: #E12826;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 2% 3%;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+}
+
+footer .atencion-cliente .atencion-cliente-btn:hover{
+    background-color: rgba(256, 256, 256, .2);
+}
+
+footer .atencion-cliente .atencion-cliente-btn div{
+    background-color: #E12826;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 500;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+}
+
+footer .atencion-cliente .atencion-cliente-btn:hover div{
+    background-color: transparent;
+    color: #E12826;
+}
+
+footer .atencion-cliente .copy{
+    margin-top: 5%;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+footer > nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+footer > nav ul li a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+}
+
+footer > nav ul li a:hover{
+    color: #E12826;
+    text-decoration: none;
+    transition: .4s;
+}
+
+footer > nav ul li.politicas-privacidad a{
+    font-size: 15px;
+    color: #737272;
+}
+
+footer > nav ul li.politicas-privacidad a span{
+    color: #FFF;
+}
+
+footer > nav > .copy2{
+    display: none;
+}
+
+footer .horarios{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #737272;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+footer .horarios .horario{
+    line-height: 20px;
+}
+
+footer .horarios > a{
+    color: #737272;
+    text-decoration: none;
+}
+
+footer .horarios .redes{
+    display: flex;
+    gap: 5%;
+}
+
+footer .horarios .redes a{
+    width: 35px;
+    height: 35px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    padding: 1%;
+}
+
+/* RESPONSIVE FOOTER */
+
+@media only screen and (max-width: 1100px){
+
+    footer .atencion-cliente .atencion-cliente-titulo{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    footer .atencion-cliente > div a{
+        font-size: 20px;
+    }
+
+    footer .atencion-cliente{
+        width: 48%;
+    }
+
+    footer .atencion-cliente .copy{
+        font-size: 14px;
+    }
+
+    footer > nav ul{
+        gap: 15px;
+    }
+
+    footer > nav ul li a{
+        font-size: 16px;
+    }
+
+    footer > nav ul li.politicas-privacidad a{
+        font-size: 14px;
+    }
+
+    footer .horarios{
+        font-size: 14px;
+    }
+
+    footer .horarios .redes a{
+        width: 30px;
+        height: 30px;
+    }
+
+    footer .horarios .redes a svg{
+        width: 16px !important;
+        height: 16px !important;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+
+    footer .atencion-cliente{
+        width: 45%;
+    }
+
+    footer .atencion-cliente .atencion-cliente-btn{
+        width: 330px;
+    }
+
+    footer .atencion-cliente .atencion-cliente-btn div{
+        font-size: 18px;
+        width: 22px;
+        height: 22px;
+    }
+
+    footer .atencion-cliente .copy{
+        font-size: 12px;
+    }
+
+    footer > nav ul{
+        gap: 12px;
+    }
+
+    footer > nav ul li a{
+        font-size: 14px;
+    }
+
+    footer .horarios .redes a{
+        width: 25px;
+        height: 25px;
+    }
+
+    footer .horarios .redes a svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 900px){
+
+    footer .atencion-cliente{
+        width: 42%;
+    }
+
+    footer .atencion-cliente .atencion-cliente-titulo{
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    footer .atencion-cliente > div{
+        font-size: 22px;
+    }
+
+    footer .atencion-cliente > div a{
+        font-size: 18px;
+    }
+
+    footer .atencion-cliente .atencion-cliente-btn{
+        font-size: 14px;
+        padding: 2%;
+        width: 280px;
+    }
+
+    footer .atencion-cliente .atencion-cliente-btn div {
+        font-size: 16px;
+        width: 20px;
+        height: 20px;
+    }
+
+    footer .atencion-cliente .copy{
+        font-size: 10px;
+    }
+
+    footer > nav ul li.politicas-privacidad a{
+        font-size: 13px;
+    }
+
+    footer .horarios {
+        font-size: 12px;
+    }
+
+    footer .horarios .redes a {
+        width: 22px;
+        height: 22px;
+    }
+
+    footer .horarios .redes a svg {
+        width: 12px !important;
+        height: 12px !important;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 8%;
+    }
+
+    footer .atencion-cliente{
+        width: 60%;
+        align-items: center;
+    }
+
+    footer .atencion-cliente .atencion-cliente-titulo{
+        width: 100%;
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 2%;
+    }
+
+    footer .atencion-cliente > div{
+        width: 100%;
+        justify-content: center;
+        font-size: 25px;
+    }
+
+    footer .atencion-cliente > div a{
+        font-size: 20px;
+    }
+
+    footer .atencion-cliente .copy{
+        display: none;
+    }
+
+    footer .atencion-cliente .atencion-cliente-btn {
+        font-size: 16px;
+        width: 320px;
+        margin-bottom: 6%;
+    }
+
+    footer .horarios{
+        margin-top: 5%;
+        width: 60%;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    footer .horarios .horario{
+        width: 100%;
+    }
+
+    footer .horarios .redes{
+        width: 100%;
+        justify-content: center;
+        gap: 3%;
+    }
+
+    footer .horarios .redes a {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer .horarios .redes a svg {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    footer nav{
+        width: 60%;
+        order: 3;
+        margin-top: 5%;
+    }
+
+    footer > nav ul li a {
+        font-size: 16px;
+    }
+
+    footer > nav ul li.politicas-privacidad{
+        display: none;
+    }
+
+    footer > nav > .copy2{
+        display: flex;
+        font-size: 12px;
+        justify-content: center;
+        width: 50%;
+        text-align: center;
+        margin: 8% auto 0 auto;
+        text-transform: uppercase;
+    }
+}
+
+@media only screen and (max-width: 700px){
+
+    footer{
+        padding: 8% 5% 10% 5%;
+    }
+
+    .logo-footer{
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+    .logo-footer img{
+        width: 210px;
+    }
+
+    footer .atencion-cliente{
+        width: 80%;
+    }
+
+    footer .atencion-cliente > div{
+        margin-bottom: 8%;
+    }
+
+    footer .horarios{
+        width: 80%;
+    }
+
+    footer nav{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    .logo-footer{
+        width: 90%;
+        margin-bottom: 8%;
+    }
+
+    .logo-footer img{
+        width: 205px;
+    }
+
+    footer .atencion-cliente{
+        width: 90%;
+    }
+
+    footer .atencion-cliente > div{
+        margin-bottom: 10%;
+    }
+
+    footer .horarios{
+        width: 90%;
+    }
+
+    footer nav{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+
+    .logo-footer img{
+        width: 180px;
+    }
+
+    footer .atencion-cliente .atencion-cliente-titulo{
+        font-size: 18px;
+    }
+
+    footer .atencion-cliente > div a {
+        font-size: 18px;
+    }
+
+    footer .atencion-cliente > div {
+        font-size: 22px;
+    }
+
+    footer .atencion-cliente .atencion-cliente-btn {
+        font-size: 14px;
+        width: 280px;
+    }
+
+    footer .horarios{
+        margin-top: 8%;
+    }
+
+    footer nav{
+        margin-top: 8%;
+    }
+
+    footer > nav ul{
+        gap: 10px;
+    }
+
+    footer > nav > .copy2{
+        width: 60%;
+        font-size: 10px;
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+
+    footer{
+        padding-top: 10%;
+    }
+
+    .logo-footer img{
+        width: 150px;
+    }
+
+    footer .atencion-cliente .atencion-cliente-titulo{
+        font-size: 16px;
+    }
+
+    footer .atencion-cliente > div a {
+        font-size: 16px;
+    }
+
+    footer .atencion-cliente > div {
+        font-size: 20px;
+    }
+
+    footer .atencion-cliente .atencion-cliente-btn {
+        font-size: 12px;
+        width: 240px;
+    }
+
+    footer .atencion-cliente .atencion-cliente-btn div {
+        font-size: 14px;
+        width: 18px;
+        height: 18px;
+    }
+
+    footer .horarios{
+        font-size: 12px;
+    }
+
+    footer .horarios .horario {
+        line-height: 18px;
+    }
+
+    footer > nav ul{
+        gap: 8px;
+    }
+
+    footer > nav ul li a{
+        font-size: 14px;
+    }
+
+    footer > nav > .copy2{
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    footer .atencion-cliente .atencion-cliente-btn{
+        width: 100%;
+    }
+}

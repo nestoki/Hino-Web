@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="hino_auth_totp_inherited" inherit_id="auth_totp.auth_totp_form" >
+        <xpath expr="//t[@t-call='web.login_layout']" position="replace">
+
+            <head>
+                <meta charset="UTF-8"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <title> HINO PANAMÁ</title>
+                <link rel="shortcut icon" href="/website_hino/static/images/iconos/favicon.ico" type="image/x-icon"/>
+                <meta name="description"
+                        content="HINO PANAMÁ Conoce la línea de camiones HINO para todo tipo de soluciones de negocios"/>
+                <!-- Meta Canonical -->
+                <link rel="canonical" href="https://www.hino.com.pa/"/>
+                <meta name="robots" content="index, follow"/>
+                <meta name="keywords" content="HINO, PANAMÁ, Camiones, Servicio, Soporte"/>
+                <meta http-equiv="Content-Language" content="es"/>
+                <!-- Open Graph -->
+                <!-- Meta Property para el título -->
+                <meta property="og:title" content="HINO PANAMÁ"/>
+                <meta property="og:description"
+                        content="HINO PANAMÁ Conoce la línea de camiones HINO para todo tipo de soluciones de negocios"/>
+                <meta property="og:image" content="/website_hino/static/images/logo-hino.png"/>
+                <meta property="og:image:alt" content=" Esta es la imagen de logo de la empresa"/>
+            </head>
+
+            <link rel="stylesheet" href="/website_hino/static/src/css/login/auth-totp.css"/>
+
+            <header>
+                <figure>
+                    <img src="/website_hino/static/images/logo-tambor.png"/>
+                </figure>
+            </header>
+
+            <section class="totp">
+                <t t-set="disable_footer">1</t>
+            <div class="">
+                <h5 class="">Autenticación de dos factores</h5>
+                <form method="POST" action="" class="">
+                    <div class="">
+                        Para iniciar sesión, ingrese el código de autenticación de seis dígitos que aparece en la aplicación de autentificación.
+                        <br/>
+                        <a href="https://www.odoo.com/documentation/17.0/applications/general/auth/2fa.html"
+                           title="Learn More" target="_blank">Más información</a>
+                    </div>
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="redirect" t-att-value="redirect"/>
+                    <div class="">
+                        <label class="autenticacion" for="totp_token">Código de autenticación</label>
+                        <input id="totp_token" name="totp_token" required="required" placeholder="e.g. 123456"/>
+                    </div>
+                    <div class="">
+                        <p class="alert alert-danger" t-if="error" role="alert">
+                            <t t-esc="error"/>
+                        </p>
+                    <div class="remember">
+                        <input type="checkbox" name="remember" id="switch-remember" value="1"/>
+                        <label for="switch-remember">No volver a preguntar en este dispositivo</label>
+                    </div>
+                        <div t-attf-class="">
+                            <button type="submit" class="iniciar-sesion">
+                                Iniciar Sesión
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+
+                <form method="POST" action="/web/session/logout">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <div class="">
+                        <button type="submit" class="btn-cancelar">
+                            Cancelar
+                        </button>
+                    </div>
+                </form>
+            </div>
+            </section>
+
+            <footer>
+                <div></div>
+                <p>Copyright © 2024 Tambor. All Rights Reserved</p>
+            </footer>
+
+        </xpath>
+    </template>
+</odoo>

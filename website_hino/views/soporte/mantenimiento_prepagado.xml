@@ -10,13 +10,431 @@
         <t t-call="website.layout"> 
             <t t-set="head"> 
                 <t t-call-assets="web.assets_common" t-js="false" />
-                <link rel="stylesheet" href="/website_hino/static/src/css/mantenimiento_prepagado/mantenimiento-prepagado.css"/>                 
+                <link rel="stylesheet" href="/website_hino/static/src/css/soporte/mantenimiento_prepagado.css"/>                 
             </t> 
-            <h1>Mantenimiento Prepagado</h1>
+
+            <!-- BANNER MANTENIMIENTO -->
+            <section class="slider-mantenimiento">
+                <figure>
+                    <img src="/website_hino/static/images/banner-mantenimiento.jpg"></img>
+                </figure>
+            </section>
+            
+            <!-- MANTENIMIENTO PREPARADO -->
+            <div class="iconos-mantenimiento">
+                <figure>
+                    <img src="/website_hino/static/images/iconos/icono-mantenimiento1.png"/>
+                </figure>
+                <figure>
+                    <img src="/website_hino/static/images/iconos/icono-mantenimiento2.png"/>
+                </figure>
+                <figure>
+                    <img src="/website_hino/static/images/iconos/icono-mantenimiento3.png"/>
+                </figure>
+            </div>
+            <section class="mantenimiento-preparado">
+                <t t-foreach="request.env['servicios.soporte'].sudo().search([])"
+                    t-as="servicio">
+                    <div class="mantenimiento-preparado_container">
+                        <div class="descubre">
+                            <p class="descubre-titulo">
+                                Descubre 
+                                <br/>
+                                <span class="rojo">los Beneficios</span>
+                            </p>
+                            <p class="descubre-parrafo">
+                                de adquirir nuestros servicios 
+                                de <span class="rojo">Mantenimiento Prepagado</span> 
+                            </p>
+                            <a t-att-href="'tel:' + servicio.cita_whatsapp" role="button" title="" target="_blank">
+                                <i class="fa fa-whatsapp"></i>
+                                Agenda tu cita en WhatsApp
+                            </a>
+                        </div>
+                        <div class="beneficios">
+                            <article>
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/beneficio-1.png"/>
+                                </figure>
+                                <p>
+                                    Precios fijos, con ahorros de hasta un 32%
+                                </p>
+                            </article>
+                            <article class="fondo-blanco">
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/beneficio-2.png"/>
+                                </figure>
+                                <p>
+                                    Facilidades de pago en  cómodas letras
+                                </p>
+                            </article>
+                            <article class="fondo-blanco">
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/beneficio-3.png"/>
+                                </figure>
+                                <p>
+                                    Planes flexibles según sus necesidades
+                                </p>
+                            </article>
+                            <article>
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/beneficio-4.png"/>
+                                </figure>
+                                <p>
+                                    descuento del 25% en repuestos y mano de obra
+                                </p>
+                            </article>
+                            <article>
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/beneficio-5.png"/>
+                                </figure>
+                                <p>
+                                    24 puntos de inspección en cada servicio
+                                </p>
+                            </article>
+                            <article class="fondo-blanco">
+                                <figure>
+                                    <img src="/website_hino/static/images/iconos/beneficio-6.png"/>
+                                </figure>
+                                <p>
+                                    Piezas hino 100% originales al dar mantenimiento
+                                </p>
+                            </article>
+                        </div>
+                        <a t-att-href="'tel:' + servicio.cita_whatsapp" class="link-responsive" role="button" title="" target="_blank">
+                            <i class="fa fa-whatsapp"></i>
+                            Agenda tu cita en WhatsApp
+                        </a>
+                    </div>
+                </t>
+                
+            </section>
+
+            <!-- PAQUETES DE INSPECIÓN -->
+            <section class="paquetes">
+                <article class="paquetes-titulo">
+                    <div class="paquetes-titulo-capa"></div>
+                    <h3>24 PUNTOS DE INSPECCIÓN </h3>
+                    <p>Incluidos en los paquetes de mantenimiento prepagado</p>
+                </article>
+                <article class="paquete paquete-motor">
+                    <h4>Motor / Tren Motriz</h4>
+                    <div class="paquete-info">
+                        <h4>Motor / Tren Motriz</h4>
+                        <ul>
+                            <li>-Inspección de correa plana del motor</li>
+                            <li>-Inspección de correa “v” del motor</li>
+                            <li>-Inspección y ajuste de la holgura de las válvulas del motor</li>
+                            <li>-Inspección del filtro de aire del motor</li>
+                            <li>-Inspección de fugas en los sellos del múltiple de escape</li>
+                            <li>-Inspección de nivel del líquido refrigerante</li>
+                            <li>-Inspección de nivel del líquido de aceite diferencial</li>
+                            <li>-Inspección de nivel de líquido de aceite de transmisión</li>
+                            <li>-Inspección de la condición de rodura y presión de aire de los neumáticos</li>
+                            <li>-Inspección de líneas de combustible, tapa de combustible (Externo)</li>
+                            <li>-Inspección del funcionamiento del freno de escape</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="paquete paquete-direccion">
+                    <h4>Dirección y Frenos</h4>
+                    <div class="paquete-info">
+                        <h4>Dirección y Frenos</h4>
+                        <ul>
+                            <li>-Inspección de nivel del líquido de power steering</li>
+                            <li>-Inspección de desgaste de las bandas de frenos delanteros y traseros (Incluye ajuste)</li>
+                            <li>-Inspección de tuberias de frenos</li>
+                            <li>-Inspección y ajuste de freno de estacionamiento</li>
+                            <li>-Revisión del nivel del líquido de frenos</li>
+                            <li>-Inspección del sistema de dirección</li>
+                            
+                        </ul>
+                    </div>
+                </article>
+                <article class="paquete paquete-cabina">
+                    <h4>Cabina y Sistema Eléctrico</h4>
+                    <div class="paquete-info">
+                        <h4>Cabina y Sistema Eléctrico</h4>
+                        <ul>
+                            <li>-Inspección de carga de baterías (Incluye limpieza de terminales y polos)</li>
+                            <li>-Inspección y limpieza de filtro de a/a </li>
+                            <li>-Inspección de nivel del líquido de limpiaparabrisas</li>
+                            <li>-Inspección del funcionamiento de luces externas</li>
+                            <li>-Inspección del funcionamiento de luces indicadoras en el tablero de instrumentos</li>
+                            <li>-Inspección de la condición de limpiaparabrisas-escobillas</li>
+                            <li>-Inspección del funcionamiento del aire acondicionado</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="paquetes-responsive">
+                <article class="paquetes-titulo">
+                    <div class="paquetes-titulo-capa"></div>
+                    <h3>24 PUNTOS DE INSPECCIÓN </h3>
+                    <p>Incluidos en los paquetes de mantenimiento prepagado</p>
+                </article>
+                <article class="paquete paquete-motor">
+                    <div class="capa"></div>
+                    <h4>Motor / Tren Motriz</h4>
+                    <a href="#" class="ver-mas-paquete">
+                        Ver más
+                    </a>
+                    <div class="paquete-info-responsive">
+                        <ul>
+                            <li>Inspección de correa plana del motor</li>
+                            <li>Inspección de correa “v” del motor</li>
+                            <li>Inspección y ajuste de la holgura de las válvulas del motor</li>
+                            <li>Inspección del filtro de aire del motor</li>
+                            <li>Inspección de fugas en los sellos del múltiple de escape</li>
+                            <li>Inspección de nivel del líquido refrigerante</li>
+                            <li>Inspección de nivel del líquido de aceite diferencial</li>
+                            <li>Inspección de nivel de líquido de aceite de transmisión</li>
+                            <li>Inspección de la condición de rodura y presión de aire de los neumáticos</li>
+                            <li>Inspección de líneas de combustible, tapa de combustible (Externo)</li>
+                            <li>Inspección del funcionamiento del freno de escape</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="paquete paquete-direccion">
+                    <div class="capa"></div>
+                    <h4>Dirección y Frenos</h4>
+                    <a href="#" class="ver-mas-paquete">
+                        Ver más
+                    </a>
+                    <div class="paquete-info-responsive">                       
+                        <ul>
+                            <li>Inspección de nivel del líquido de power steering</li>
+                            <li>Inspección de desgaste de las bandas de frenos delanteros y traseros (Incluye ajuste)</li>
+                            <li>Inspección de tuberias de frenos</li>
+                            <li>Inspección y ajuste de freno de estacionamiento</li>
+                            <li>Revisión del nivel del líquido de frenos</li>
+                            <li>Inspección del sistema de dirección</li>
+                            
+                        </ul>
+                    </div>
+                </article>
+                <article class="paquete paquete-cabina">
+                    <div class="capa"></div>
+                    <h4>Cabina y Sistema Eléctrico</h4>
+                    <a href="#" class="ver-mas-paquete">
+                        Ver más
+                    </a>
+                    <div class="paquete-info-responsive">
+                        <ul>
+                            <li>Inspección de carga de baterías (Incluye limpieza de terminales y polos)</li>
+                            <li>Inspección y limpieza de filtro de a/a </li>
+                            <li>Inspección de nivel del líquido de limpiaparabrisas</li>
+                            <li>Inspección del funcionamiento de luces externas</li>
+                            <li>Inspección del funcionamiento de luces indicadoras en el tablero de instrumentos</li>
+                            <li>Inspección de la condición de limpiaparabrisas-escobillas</li>
+                            <li>Inspección del funcionamiento del aire acondicionado</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <!-- PLANES DE MANTENIMIENTO PREVENTIVO -->
+            <section class="planes">
+                <h3>planes de mantenimiento preventivo</h3>
+                <h4>Conoce a detalle las características de nuestros planes de mantenimiento preventivo y ten al día a tu camión HINO.</h4>
+                <div class="container">
+                    <div class="planes-series">
+                        <a href="#" class="serie-300" role="button" title="">
+                            serie 300
+                        </a>
+                        <a href="#" class="serie-500" role="button" title="">
+                            serie 500
+                        </a>
+                    </div>
+                    <hr/>
+                    <div class="planes-tabla planes-tabla-300">
+                        <div class="plan-camion">
+                            <span>modelo</span>
+                            <h4>HINO Serie 300</h4>
+                            <figure>
+                                <img src="/website_hino/static/images/s300.png"/>
+                            </figure>
+                        </div>
+                        <figure>
+                            <img src="/website_hino/static/images/tabla-300.png"/>
+                        </figure>
+                    </div>
+                    <div class="planes-tabla planes-tabla-500">
+                        <div class="plan-camion">
+                            <span>modelo</span>
+                            <h4>HINO Serie 500</h4>
+                            <figure>
+                                <img src="/website_hino/static/images/s500.png"/>
+                            </figure>
+                        </div>
+                        <figure>
+                            <img src="/website_hino/static/images/tabla-500.png"/>
+                        </figure>
+                    </div>
+                </div>
+                <a t-att-href="'tel:' + servicio.cita_whatsapp" role="button" title="" target="_blank">
+                    <i class="fa fa-whatsapp"></i>
+                    Agenda tu cita en WhatsApp
+                </a>
+            </section>
+
+            <!-- FORMULARIO MANTENIMIENTO -->
+            <section class="form-main-mantenimiento">
+                <section class="s_website_form" data-vcss="001"
+                    data-snippet="s_website_form" data-name="Formulario">
+                    <h4 class="form-title-responsive">Saca tu cita de mantenimiento</h4>
+                    <div class="o_container_small">
+                        <form action="/website/form/" method="post"
+                            enctype="multipart/form-data" data-mark="*" data-pre-fill="true"
+                            data-model_name="crm.lead">
+                            <div class="s_website_form_rows">
+
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_nombre s_website_form_required"
+                                    data-type="char">
+                                    <div class="row">
+                                        <label class="" style="width: 200px"
+                                            for="o6f2b6awhh4g">
+                                            <img id="form-icon"
+                                                src="/website_hino/static/images/iconos/icon-user.png" />
+                                            <span class="s_website_form_label_content">
+                                                Nombre</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input"
+                                                type="text" name="contact_name" required="1"
+                                                data-fill-with="name" id="o6f2b6awhh4g" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_apellido s_website_form_custom"
+                                    data-type="char">
+                                    <label class="s_website_form_label" for="o6f2b6awhh4g">
+                                        <img id="form-icon"
+                                            src="/website_hino/static/images/iconos/icon-user.png" />
+                                        <span class="s_website_form_label_content">Apellido</span>
+                                    </label>
+                                    <input class="form-control s_website_form_input"
+                                        type="text" name="contact_name" required="1"
+                                        data-fill-with="name" id="o6f2b6awhh4g" />
+                                </div>
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_correo s_website_form_required"
+                                    data-type="email">
+                                    <div class="row">
+                                        <label class="col-form-label  s_website_form_label"
+                                            for="oywj7qvvtat">
+                                            <img id="form-icon"
+                                                src="/website_hino/static/images/iconos/icon-email.png" />
+                                            <span class="s_website_form_label_content">
+                                                Correo</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input"
+                                                type="email" name="email_from" required="1"
+                                                data-fill-with="email" id="oywj7qvvtat" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_tlf" data-type="tel">
+                                    <div class="row">
+                                        <label
+                                            class="col-form-label col-sm-auto s_website_form_label"
+                                            for="oyx5ze4zxn3">
+                                            <img id="form-icon"
+                                                src="/website_hino/static/images/iconos/icon-phone.png" />
+                                            <span class="s_website_form_label_content">
+                                                Celular</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input"
+                                                type="tel" name="phone"
+                                                data-fill-with="phone" id="oyx5ze4zxn3" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_ciudad s_website_form_custom"
+                                    data-type="many2one">
+                                    <label
+                                        class="col-form-label col-sm-auto s_website_form_label"
+                                        for="ogdf4jd1c6wp">
+                                        <img id="form-icon"
+                                            src="/website_hino/static/images/iconos/icon-localization.png" />
+                                        <span class="s_website_form_label_content">Ciudad</span>
+                                    </label>
+                                    <select class="s_website_form_input" name="city"
+                                        id="ogdf4jd1c6wp"
+                                        data-fill-with="commercial_company_name">
+                                        <option value="" />
+                                        <option value="Panamá">Panamá</option>
+                                        <option value="Panamá Oeste">Panamá Oeste</option>
+                                        <option value="Colón">Colón</option>
+                                        <option value="Herrera">Herrera</option>
+                                        <option value="Cloque">Cloque</option>
+                                        <option value="Los Santos">Los Santos</option>
+                                        <option value="Veraguas">Veraguas</option>
+                                        <option value="Chiriquí">Chiriquí</option>
+                                        <option value="Darién">Darién</option>
+                                        <option value="Bocas del Toro">Bocas del Toro</option>
+                                    </select>
+
+                                </div>
+                                <div data-name="Field"
+                                    class="s_website_form_field campo_contacto s_website_form_model_required"
+                                    data-type="char">
+                                    <label class="s_website_form_label" for="contacto">
+                                        <img id="form-icon"
+                                            src="/website_hino/static/images/iconos/icon-message.png" />
+                                        <span class="s_website_form_label_content">Motivo
+                                            del Contacto</span>
+                                    </label>
+                                    <input class="s_website_form_input " type="text"
+                                        name="name" required="" placeholder="" id="contacto"
+                                        data-fill-with="undefined" />
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_terminos s_website_form_custom s_website_form_required" data-type="boolean">
+                                    <label class="s_website_form_label" for="terminos">
+                                        <input type="checkbox" value="Yes" class="s_website_form_input" name="Acepto Término y Condiciones" required="1" id="terminos" data-fill-with="undefined"/>
+                                        <a class="text-o-color-4 politica-privacidad" href="/terminos">Acepto
+                                                    Política de Privacidad</a>
+                                    </label>
+                                </div>
+
+                                <div
+                                    class="s_website_form_submit s_website_form_no_submit_label"
+                                    data-name="Submit Button">
+
+
+                                    <a href="#" role="button"
+                                        class="btn s_website_form_send o_default_snippet_text"
+                                        data-bs-original-title="" title="">Enviar
+                                        <i class="fa fa-paper-plane"></i>
+                                    </a>
+                                    <span id="s_website_form_result"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="text-img-mantenimiento">
+                        <div class="capa"></div>
+                        <span class="image-text">Saca tu cita de mantenimiento</span>
+                    </div>
+                </section>
+            </section>
 
 
             <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
             <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+            <script src="/website_hino/static/src/js/soporte/planes.js"></script>
+            <script src="/website_hino/static/src/js/soporte/mostrar-paquetes.js"></script>
         </t> 
     </template> 
 </odoo>

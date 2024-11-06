@@ -8,8 +8,6 @@
         <field name="arch" type="xml">
             <tree string="Servicios Soporte">
                 <field name="text_slider"/>
-                <field name="slider_image" widget="image"/>
-                <field name="text_slider_2"/>
                 <field name="cita_whatsapp"/>
             </tree>
         </field>
@@ -23,8 +21,6 @@
         <field name="arch" type="xml">
             <kanban class="o_kanban_mobile" archivable="false" js_class="servicos_soporte_kanban" sample="1">
                 <field name="text_slider"/>
-                <field name="slider_image"/>
-                <field name="text_slider_2"/>
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_content oe_kanban_global_click">
@@ -34,16 +30,6 @@
                                         <field name="text_slider"/>
                                     </span>
                                 </strong>
-                            </div>
-                            <div>
-                                <span class="o_kanban_record_image">
-                                    <field name="slider_image" widget="image" size="small"/>
-                                </span>
-                            </div>
-                            <div>
-                                <span class="o_kanban_record_subtitle">
-                                    <field name="text_slider_2"/>
-                                </span>
                             </div>
                             <div class="o_kanban_record_bottom">
                                 <div class="oe_kanban_bottom_left">
@@ -72,8 +58,6 @@
                     </div>
                     <group>
                         <field name="cita_whatsapp" placeholder="Link de Whatsapp..."/>
-                        <field name="slider_image" widget="image" size="small" height="100px" with="100px"/>
-                        <field name="text_slider_2" placeholder="Información ..."/>
                     </group>
                 </sheet>
             </form>

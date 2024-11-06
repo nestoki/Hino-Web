@@ -3,7 +3,8 @@ const modelos = document.getElementById("modelos");
 
 modelos.addEventListener("click", (e) => { 
     let number = e.target.dataset.number; 
-    let value = e.target.classList.contains("btn-serie"); 
+    let value = /btn-serie|btn-serie-responsive/.test(e.target.className);
+
 
     if (value) { 
         Speed(number); 
@@ -13,12 +14,12 @@ modelos.addEventListener("click", (e) => {
 }); 
 
 const Speed = (number) => { 
-    const buttons = document.querySelectorAll(".btn-serie");
+    const buttons = document.querySelectorAll(".btn-serie,.btn-serie-responsive");
     buttons.forEach(btn => {
-       if (btn.dataset.number === number) {
+       if (btn.dataset.number === number || btn.classList.contains('btn-serie-responsive')) {
          btn.classList.add("active");
        } else {
-         btn.classList.remove("active");
+         btn.classList.remove("active") ;
        }
     });
 

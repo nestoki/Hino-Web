@@ -10,18 +10,15 @@ from odoo.exceptions import ValidationError
 class Novedades(models.Model):
     _name = 'novedades'
     _description = 'Modelo para registrar las novedades(noticias)'
-    _sql_constraints = [
-        ('uniq_name', 'unique(name)', '¡Ya existe otra novedad con el mismo nombre!'),
-    ]
     _rec_name = 'titulo'
 
     titulo = fields.Char(string='Título')
     fecha = fields.Date(string='Fecha')
     imagen = fields.Binary(string='Imagen')
     descripcion = fields.Text(string='Descripción')
-    informacion = fields.Text(string='Información')
+    informacion = fields.Html(string='Información')
     creado_por = fields.Char(string='Creado por')
-    
+
     #obteniendo las novedades
     next_novedad = fields.Many2one('novedades', string='Siguiente Novedad', compute='_compute_next_novedad')
     prev_novedad = fields.Many2one('novedades', string='Novedad Anterior', compute='_compute_prev_novedad')

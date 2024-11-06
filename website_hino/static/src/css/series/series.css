@@ -15,39 +15,70 @@
         url("/website_hino/static/src/css/fonts/helveticaneue-light.ttf") format("truetype");
 }
 
+/* AJUSTES GENERALES */
+
+.serie-camiones .imagen-ilustrativa{
+    position: absolute;
+    bottom: 5px;
+    right: 55px;
+    font-family: 'Helvetica Neue Light';
+    font-size: 15px;
+    color: #d81525;
+}
+
+@media only screen and (max-width: 1300px){
+    .serie-camiones .imagen-ilustrativa{
+        right: 10px;
+        bottom: 2px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .serie-camiones .imagen-ilustrativa{
+        bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .serie-camiones .imagen-ilustrativa{
+        right: -40px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .serie-camiones .imagen-ilustrativa{
+        bottom: -10px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .serie-camiones .imagen-ilustrativa{
+        right: -55px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .serie-camiones .imagen-ilustrativa{
+        right: -60px;
+        bottom: 2px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .serie-camiones .imagen-ilustrativa{
+        bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .serie-camiones .imagen-ilustrativa{
+        right: -65px;
+        bottom: 5px;
+    }
+}
+
 /* Slider de imagenes  con sus textos y botones de llamada a la accion*/
-
-.swiper-container-series {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0 !important;
-    width: 100% !important;
-}
-
-.swiper-slide:active {
-    width: 100% !important;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    /* Asegura que la altura sea del 100% del contenedor */
-    object-fit: cover;
-    /* Asegura que la imagen cubra completamente el contenedor manteniendo su proporción */
-    object-position: center center;
-    /* Centra la imagen en el contenedor */
-}
 
 .swiper-pagination-bullet {
     background-color: #be0a0a;
@@ -56,164 +87,38 @@
     border-radius: 3px;
 }
 
-.bg-slide {
-    height: 600px;
+.slider-main-series .bg-slide{
+    margin-top: 130px;
+}
+
+.slider-main-series figure{
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: right;
+    height: 100%;
+    margin: 0;
 }
 
-.swiper-slide .container-title-serie {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
+.slider-main-series figure img{
     width: 100%;
-    margin: 0 auto;
-    padding-top: 5%;
-    align-items: self-end;
-    gap: 4%;
+    height: 100%;
 }
 
-.slider-text-serie {
-    font-family: 'HelveticaNeue', sans-serif;
-    font-weight: 900;
-    font-size: 35px;
-    line-height: 38.6px;
-    text-align: right;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    width: 60%;
-    margin: 0;
-    padding: 0;
-    /* Ajusta este valor según sea necesario */
-    color: #ffffff;
-    /* Color del texto */
-}
+/* SLIDER SERIES RESPONSIVE */
 
-.slider-2-text-serie {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 19.76px;
-    text-align: right;
-    width: 54%;
-    margin: 0;
-    padding: 0;
-    /* Ajusta este valor según sea necesario */
-    color: #ffffff;
-    /* Color del texto */
-}
-
-.call-action-btn-serie {
-    background-image: linear-gradient(to right, #E60013, #BF001B, #8D0007);
-    color: #ffffff;
-    /* Color del texto del botón */
-    font-size: 20px;
-    padding: 5px 20px;
-    /* Espaciado interno del botón */
-    text-decoration: none;
-    /* Elimina el subrayado del enlace */
-    border-radius: 12px;
-    /* Bordes redondeados del botón */
-    cursor: pointer;
-}
-
-.call-action-btn-serie:hover {
-    background-image: linear-gradient(to right, #d81525, #b40f25, #8d0e15);
-    /* background-color: #d30a0a;  */
-    color: #ffffff;
-    /* Cambia el color del texto al pasar el cursor */
-    text-decoration: none;
-    /* Elimina el subrayado del enlace */
-}
-
-/* RESPONSIVE SLIDER MAIN SERIE */
-
-@media (max-width: 1300px) {
-    .swiper-slide .container-title-serie {
-        max-width: 1000px;
+@media only screen and (max-width: 500px){
+    #slider-series-responsive figure{
+        height: 345px;
     }
 }
 
-@media (max-width: 1100px) {
-    .swiper-slide .container-title-serie {
-        max-width: 900px;
-        padding-top: 10%;
-    }
-
-    .slider-text-serie {
-        font-size: 30px;
+@media only screen and (max-width: 400px){
+    #slider-series-responsive figure{
+        height: 300px;
     }
 }
 
-@media (max-width: 1000px) {
-    .swiper-slide .container-title-serie {
-        max-width: 800px;
-        justify-content: flex-end;
-        padding-top: 0;
-        padding-bottom: 15%;
-        gap: 15%;
-    }
-
-    .slider-2-text-serie {
-        display: none;
-    }
-
-    .call-action-btn-serie {
-        width: 40%;
-        padding: 15px 24px;
-    }
-}
-
-@media (max-width: 900px) {
-    .swiper-slide .container-title-serie {
-        width: 90%;
-    }
-}
-
-@media (max-width: 800px) {
-
-    .slider-text-serie {
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 700px) {
-
-    .slider-text-serie {
-        font-size: 20px;
-    }
-
-    .call-action-btn-serie {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .call-action-btn-serie {
-        width: 50%;
-        padding: 15px 10px;
-    }
-}
-
-@media (max-width: 500px) {
-    .swiper-container-series {
-        height: 400px !important;
-    }
-
-    .bg-slide {
-        height: 100% !important;
-    }
-
-    .slider-text-serie {
-        width: 90%;
-    }
-
-    .call-action-btn-serie {
-        width: 60%;
-        padding: 15px 10px;
+@media only screen and (max-width: 380px){
+    #slider-series-responsive figure{
+        height: 270px;
     }
 }
 
@@ -230,17 +135,25 @@
     margin: 0 auto;
 }
 
-.confiable .confiable-info h3 {
-    font-size: 35px;
-    font-weight: 900;
+.confiable .confiable-info figure {
+    width: 250px;
+}
+
+.confiable .confiable-info figure img{
+    width: 100%;
+}
+
+.confiable .confiable-info > h3{
+    font-family: 'HelveticaNeue';
+    font-size: 25px;
     text-transform: uppercase;
-    margin-bottom: 5%;
-    color: #000000;
 }
 
 .confiable .confiable-info p {
-    font-size: 20px;
-    font-weight: 700;
+    font-family: 'Helvetica Neue Light';
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
 }
 
 .slide-serie {
@@ -278,15 +191,16 @@
 }
 
 .confiable .confiable-camiones .confiable-camion > h4 {
-    font-size: 30px;
+    font-family: 'HelveticaNeue';
+    font-size: 25px;
     text-align: center;
     text-transform: uppercase;
     margin: 5% 0;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .confiable .confiable-camiones .confiable-camion > .confiable-camion-info {
-    width: 55%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -294,7 +208,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    margin-bottom: 10%;
+    margin: 10% 0;
 }
 
 .confiable-camion-info .confiable-camion-propiedades > article {
@@ -312,10 +226,11 @@
 }
 
 .confiable-camion-info .confiable-camion-propiedades > article > div {
-    font-size: 16px;
-    line-height: 19px;
+    font-family: 'Helvetica Neue Light';
+    font-size: 15px;
+    line-height: 18px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -344,7 +259,8 @@
 }
 
 .confiable-camion-tabla .tabla-dato > div span {
-    font-size: 16px;
+    font-family: 'Helvetica Neue Light';
+    font-size: 14px;
 }
 
 .confiable-camion-tabla .tabla-dato > a {
@@ -353,7 +269,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 15px;
     background-color: #2F2F2F;
     text-decoration: none;
     color: #FFF;
@@ -367,6 +283,10 @@
     .confiable .confiable-info {
         max-width: 1000px;
         width: 60%;
+    }
+
+    .confiable .confiable-info figure{
+        width: 165px;
     }
 
     .confiable .confiable-camiones {
@@ -480,13 +400,16 @@
         width: 80%;
     }
 
+    .confiable .confiable-info figure{
+        width: 110px;
+    }
+
     .confiable .confiable-info h3 {
         font-size: 20px;
     }
 
     .confiable .confiable-info p {
         font-size: 18px;
-        font-weight: 500;
     }
 
     .confiable .confiable-camiones {
@@ -527,6 +450,10 @@
 
     .confiable .confiable-info {
         width: 100%;
+    }
+
+    .confiable .confiable-info figure{
+        margin: 0 auto;
     }
 
     .confiable .confiable-info h3 {
@@ -579,10 +506,10 @@
 
 .modal-content{
     max-height: 100%;
-    height: 65%;
+    height: 70%;
     max-width: 1200px;
     width: 100%;
-    padding: 0% 2% 2% 2%;
+    padding: 1% 2% 2% 2%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -597,19 +524,43 @@
     margin: 0 auto;
     padding-bottom: 1%;
     text-transform: uppercase;
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-#ventanaModal .modal-content .carrusel-list{
-    margin: 0;
+#ventanaModal .modal-content .carrusel-list,
+#ventanaModalAncha .modal-content .carrusel-list,
+#ventanaModalNoAplica .modal-content .carrusel-list,
+#ventanaModalPeso4_5 .modal-content .carrusel-list,
+#ventanaModalPeso6_5 .modal-content .carrusel-list,
+#ventanaModalPeso7_5 .modal-content .carrusel-list,
+#ventanaModalPeso10 .modal-content .carrusel-list,
+#ventanaModalPeso8_5 .modal-content .carrusel-list{
+    margin: 0 auto;
 }
 
-#ventanaModal .modal-content .carrusel-list .carrusel-track .carrusel{
+#ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal,
+#ventanaModalAncha .modal-content .carrusel-list .carrusel-track .carruselModal,
+#ventanaModalNoAplica .modal-content .carrusel-list .carrusel-track .carruselModal,
+#ventanaModalPeso5_5 .modal-content .carrusel-list .carrusel-track .carruselModal,
+#ventanaModalPeso6_5 .modal-content .carrusel-list .carrusel-track .carruselModal,
+#ventanaModalPeso7_5 .modal-content .carrusel-list .carrusel-track .carruselModal,
+#ventanaModalPeso7_5 .modal-content .carrusel-list .carrusel-track .carruselModal,
+#ventanaModalPeso10 .modal-content .carrusel-list .carrusel-track .carruselModal,
+#ventanaModalPeso4_5 .modal-content .carrusel-list .carrusel-track .carruselModal{
+
     width: 370px;
 }
 
-#ventanaModal .modal-content article{
+#ventanaModal .modal-content article,
+#ventanaModalAncha .modal-content article,
+#ventanaModalNoAplica .modal-content article,
+#ventanaModalPeso4_5 .modal-content article,
+#ventanaModalPeso6_5 .modal-content article,
+#ventanaModalPeso7_5 .modal-content article,
+#ventanaModalPeso10 .modal-content article,
+#ventanaModalPeso8_5 .modal-content article,
+#ventanaModalPeso5_5 .modal-content article{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -617,26 +568,38 @@
 }
 
 .modal-content article h3{
+    font-family: 'Helvetica Neue Light';
+    width: 90%;
     text-transform: uppercase;
-    font-size: 25px;
-    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    margin: 0 auto;
 }
 
 .modal-content article figure{
     background-image: url(../../../images/iconos/rectangulo-rojo.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 65%;
+    background-size: 55%;
     width: 100%;
-    height: 320px;
+    height: 290px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
 }
 
-#ventanaModal .modal-content article figure img{
-    width: 100%;
+#ventanaModal .modal-content article figure img,
+#ventanaModalAncha .modal-content article figure img,
+#ventanaModalPeso5_5 .modal-content article figure img,
+#ventanaModalPeso4_5 .modal-content article figure img,
+#ventanaModalPeso6_5 .modal-content article figure img,
+#ventanaModalPeso10 .modal-content article figure img,
+#ventanaModalPeso7_5 .modal-content article figure img,
+#ventanaModalPeso8_5 .modal-content article figure img,
+#ventanaModalNoAplica .modal-content article figure img{
+    width: 85%;
     object-fit: contain;
 }
 
@@ -645,8 +608,8 @@
   font-size: 30px;
   font-weight: bold;
   position: absolute;
-  top: 8px;
-  right: 20px;
+  top: 0px;
+  right: 15px;
 }
 
 .cerrar:hover,
@@ -657,156 +620,257 @@
 }
 
 .modal-content article a{
+    font-family: 'Helvetica Neue Light';
     background: #8D0007;
     border-radius: 8px;
     width: 35%;
-    height: 50px;
+    height: 40px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .carousel-modal-responsive{
     display: none;
 }
 
+.carrusel-prev-modal {
+    left: 6px;
+}
+
+.carrusel-next-modal {
+    right: 6px;
+}
+
 /* MODAL RESPONSIVE */
 
-@media (max-width: 1600px){
-    .modal-content{
-        height: 70%;
-    }
-
-    #ventanaModal .modal-content .carrusel-list .carrusel-track .carrusel{
-        width: 375px;
-    }
-}
-
-@media (max-width: 1400px){
-    .modal-content{
-        height: 65%;
-    }
-}
-
 @media (max-width: 1300px){
-    .modal-content{
+    #ventanaModal .modal-content{
         max-width: 1000px;
     }
 
-    #ventanaModal .modal-content .carrusel-list .carrusel-track .carrusel {
-        width: 465px;
+    #ventanaModal .modal-content > .carousel{
+        max-width: 100%;
     }
 
-    .modal-content article figure{
-        height: 380px;
-    }
-}
-
-@media (max-width: 1200px){
-    .modal-content{
-        height: 65%;
-    }
-
-    .modal-content > article{
-        height: 70%;
-    }
-
-    .modal-content article h3{
-        font-size: 25px;
-    }
-
-    .modal-content article figure{
-        background-size: 60%;
-    }
-
-    .modal-content article a{
-        width: 50%;
-        height: 45px;
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 315px;
     }
 }
 
 @media (max-width: 1100px){
-
-    .modal-content{
+    #ventanaModal .modal-content{
         max-width: 900px;
     }
-
-    .modal-content > h2{
-        font-size: 30px;
-    }
-
-    #ventanaModal .modal-content .carousel-desk{
-        max-width: 100%;
-    }
-
-    #ventanaModal .modal-content .carrusel-list .carrusel-track .carrusel{
-        width: 425px;
-    }
-
 }
 
 @media (max-width: 1000px){
+    #ventanaModal .modal-content{
+        max-width: 800px;
+    }
+}
 
-    .modal-content{
+@media (max-width: 900px){
+    #ventanaModal .modal-content{
         max-width: 90%;
-        height: 75%;
+    }
+}
+
+@media (max-width: 700px){
+    .modal-content{
+        height: 55%;
     }
 
-    #ventanaModal .carousel-modal-responsive{
-        display: flex;
+    .modal-content > h2{
+        font-size: 20px;
     }
 
-    #ventanaModal > .modal-content > .carousel-desk{
-        display: none;
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 240px;
     }
 
-    .modal-content article figure{
-        background-size: 40%;
-        height: 460px;
-    }
-
-    #ventanaModal .modal-content article figure img{
-        width: 70%;
-    }
-
-    #ventanaModal .carousel-control-prev{
-        left: 0;
-        width: 4%;
-    }
-
-    #ventanaModal .carousel-control-next{
-        width: 4%;
-    }
-
-    #ventanaModal .carousel-control-next-icon{
-        right: 0;
+    .modal-content article h3{
+        font-size: 15px;
     }
 
     .modal-content article a{
-        width: 30%;
+        font-size: 15px;
+        width: 46%;
+        height: 32px;
     }
 
+    .modal-content article figure{
+        background-size: 60%;
+        height: 230px;
+    }
 }
 
-@media (max-width: 800px){
-    .modal-content > h2 {
-        font-size: 25px;
+@media (max-width: 600px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 255px;
+    }
+}
+
+@media (max-width: 500px){
+    .modal-content{
+        height: 65%;
     }
 
-    .modal-content article figure {
+    .modal-content > h2{
+        font-size: 18px;
+    }
+
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 418px;
+    }
+
+    #ventanaModal .modal-content article{
+        gap: 10px;
+    }
+
+    .modal-content article figure{
+        height: 250px;
+        background-size: 45%;
+    }
+
+    #ventanaModal .modal-content article figure img{
+        width: 75%;
+    }
+
+    .modal-content article a{
+        width: 32%;
+        height: 30px;
+    }
+}
+
+@media (max-width: 490px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 410px;
+    }
+}
+
+@media (max-width: 480px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 400px;
+    }
+}
+
+@media (max-width: 470px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 390px;
+    }
+}
+
+@media (max-width: 460px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 380px;
+    }
+}
+
+@media (max-width: 450px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 370px;
+    }
+}
+
+@media (max-width: 440px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 360px;
+    }
+}
+
+@media (max-width: 430px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 350px;
+    }
+}
+
+@media (max-width: 420px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 340px;
+    }
+
+    .modal-content article figure{
         background-size: 50%;
     }
 
     #ventanaModal .modal-content article figure img{
         width: 80%;
     }
+    
+}
 
-    .modal-content article a{
-        width: 40%;
+@media (max-width: 410px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 330px;
     }
 }
 
+@media (max-width: 400px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 320px;
+    }
+
+    .modal-content article a {
+        width: 35%;
+        height: 32px;
+    }
+}
+
+@media (max-width: 390px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 310px;
+    }
+
+    .modal-content article figure {
+        background-size: 55%;
+    }
+}
+
+@media (max-width: 380px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 300px;
+    }
+}
+
+@media (max-width: 370px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 300px;
+    }
+}
+
+@media (max-width: 360px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 290px;
+    }
+}
+
+@media (max-width: 350px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 280px;
+    }
+}
+
+@media (max-width: 340px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 270px;
+    }
+}
+
+@media (max-width: 330px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 260px;
+    }
+}
+
+@media (max-width: 320px){
+    #ventanaModal .modal-content .carrusel-list .carrusel-track .carruselModal{
+        width: 250px;
+    }
+}
 
 /* VISTA 360 */
 
@@ -817,10 +881,10 @@
 }
 
 .vista_360-serie .vista_360_titulo {
+    font-family: 'HelveticaNeue';
     color: #000;
-    font-size: 30px;
-    border-bottom: 1px solid #E02413;
-    font-weight: 800;
+    font-size: 25px;
+    border-bottom: 1px solid #D8232A;
 }
 
 .vista_360-serie figure {
@@ -918,9 +982,9 @@
 }
 
 .galeria_camiones .galeria_camiones_titulo {
+    font-family: 'HelveticaNeue';
     color: #000;
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 25px;
 }
 
 .carousel-control-prev-icon {
@@ -1168,7 +1232,7 @@
 .carrusel-arrow svg {
     width: 20px;
     height: 100%;
-    color: #E02413;
+    color: #D8232A;
 }
 
 .carrusel-prev {
@@ -1201,7 +1265,7 @@
 
 @media (max-width: 900px) {
     .carousel {
-        max-width: 90%;
+        max-width: 100%;
     }
 }
 
@@ -1268,11 +1332,11 @@
 /* MODELOS DISPONIBLES */
 
 .serie-camiones .modelos_disponibles {
+    font-family: 'HelveticaNeue';
     text-align: left;
-    border-bottom: 1px solid red;
-    font-size: 30px;
+    border-bottom: 1px solid #D8232A;
+    font-size: 25px;
     margin-bottom: 1%;
-    font-weight: 800;
 }
 
 
@@ -1315,7 +1379,7 @@
     color: #000;
     line-height: 20px;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .datos {
@@ -1402,13 +1466,13 @@
     display: inline-block;
     color: #0e0e0e;
 
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 14px;
+    font-family: 'Helvetica Neue Light', sans-serif;
+    font-size: 12px;
 
     width: 50%;
     word-wrap: break-word;
     background-color: transparent;
-    border: 1px solid #E02413;
+    border: 1px solid #D8232A;
     padding: 2% 3%;
     border-radius: 12px;
     cursor: pointer;
@@ -1428,13 +1492,13 @@
 
     color: #0e0e0e;
 
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 14px;
+    font-family: 'Helvetica Neue Light', sans-serif;
+    font-size: 12px;
 
     width: 25%;
     word-wrap: break-word;
     background-color: transparent;
-    border: 1px solid #E02413;
+    border: 1px solid #D8232A;
     padding: 2% 3%;
     border-radius: 12px;
     cursor: pointer;
@@ -1449,16 +1513,16 @@
 }
 
 .ver-btn {
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-
-    line-height: 15.92px;
+    font-family: 'Helvetica Neue Light', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .5px;
 
     width: 150px;
     height: 40px;
     color: #ffffff;
     word-wrap: break-word;
-    background: #E02413;
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -1469,7 +1533,7 @@
 }
 
 .ver-btn:hover {
-    background-color: #E02413;
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
     color: #fff;
     /* text-decoration: none; */
 }
@@ -1503,12 +1567,12 @@
 }
 
 .btn-serie:focus {
-    background-color: #E02413;
+    background-color: #D8232A;
     color: #fff;
 }
 
 .btn-serie.active {
-    background-color: #E02413;
+    background-color: #D8232A;
     color: #fff;
     /* Cambia el color de fondo para indicar que está activo */
 }
@@ -1541,9 +1605,9 @@
 }
 
 .nombre {
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 30px;
-    font-weight: 900;
+    font-family: 'HelveticaNeue';
+    font-size: 25px;
+    font-weight: 600;
     color: #000;
     text-transform: uppercase;
 }
@@ -1587,7 +1651,7 @@
   }
   
   .carousel-indicators [data-bs-target]{
-    background-color: #E02413 !important;
+    background-color: #D8232A !important;
   }
 /* RESPONSIVE */
 
@@ -1612,7 +1676,7 @@
 
     .model-camiones .modelos .propiedades .botones > a {
         font-size: 12px;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.5px;
     }
 
     .model-camiones .modelos .propiedades .botones > .boton {

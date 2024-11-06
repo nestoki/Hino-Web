@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo> 
+    <record id="menu_repuestos_website" model="website.menu">
+        <field name="name">Repuestos</field>
+        <field name="url">repuestos</field>
+    </record>
+    
+
+    <template id="hino_repuestos" name="Hino Soporte Total"> 
+        <t t-call="website.layout"> 
+            <t t-set="head"> 
+                <t t-call-assets="web.assets_common" t-js="false" />
+                <link rel="stylesheet" href="/website_hino/static/src/css/soporte/repuestos.css"/>                 
+            </t>
+
+            <!-- BANNER REPUESTOS-->
+            <section class="banner-repuestos">
+                <figure>
+                    <img src="/website_hino/static/images/banner-repuestos.jpg"></img>
+                </figure>
+            </section>
+
+            <!-- HINO GENUINE PARTS -->
+            <section class="genuine-parts">
+                <div class="genuine-parts-info">
+                    <figure>
+                        <img src="/website_hino/static/images/logo-hino-repuestos.png"/>
+                    </figure>
+                    <p>
+                        Los camiones HINO se distinguen por su alta calidad, así como sus repuestos genuinos de máxima calidad garantizan la durabilidad y el alto desempeño de su vehículo. Diseñados y fabricados para cumplir con los estándares de fabricación originales.
+                    </p>
+                </div>
+                <div class="genuine-parts-articulos">
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/icono-soporte-rojo.png"/>
+                        </figure>
+                        <span>soporte</span>
+                        <p>
+                            Contamos con 8 puntos
+                            de ventas a nivel
+                            nacional
+                        </p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/icono-inventario-rojo.png"/>
+                        </figure>
+                        <span>Inventario</span>
+                        <p>
+                            Más de 10,000 items
+                            en bodega central para
+                            distribuir a los 8 puntos
+                        </p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="/website_hino/static/images/iconos/icono-garantia-rojo.png"/>
+                        </figure>
+                        <span>Garantía HINO</span>
+                        <p>
+                            Productos que aseguran
+                            y alargan la vida útil de
+                            su camión HINO
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- REPUESTOS ORIGINALES -->
+            <section class="repuestos-originales">
+                <figure>
+                    <img src="/website_hino/static/images/hino-repuestos1.png"/>
+                </figure>
+                <figure>
+                    <img src="/website_hino/static/images/hino-repuestos2.png"/>
+                </figure>
+                <figure>
+                    <img src="/website_hino/static/images/hino-repuestos3.png"/>
+                </figure>
+            </section>
+ 
+            <!-- GALERIA -->
+            <section class="galeria_repuestos">
+                <h3 class="galeria_repuestos_titulo">GALERÍA</h3>
+                <div class="carousel">
+                    <div class="carrusel-list" id="carrusel-list">
+                        <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev" onclick="gallery.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                                </path>
+                            </svg>
+                        </button>
+                        <t t-foreach="request.env['repuestos'].sudo().search([])" t-as="repuestos" />
+                        <div class="carrusel-track" id="track">
+                            <t t-if="repuestos">
+                                <t t-foreach="repuestos.galeria_repuestos_ids" t-as="imagen">
+                                    <div class="carrusel">
+                                        <div>
+                                            <figure>
+                                                <img t-att-src="'/web/image/repuestos.galeria/%s/image_repuestos_data' % imagen.id" class="d-block w-100" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </t>
+                            </t>
+                        </div>
+                        <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next" onclick="gallery.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SUCURSALES REPUESTOS -->
+            <section class="sucursales sucursales-repuestos">
+                <h3>Encuéntranos en</h3>
+                <div>
+                    <t t-foreach="request.env['sucursales'].sudo().search([], limit=4)" t-as="sucursal" >
+                        <article class="sucursal">
+                            <div class="sucursal-top">
+                                <div class="sucursal-info">
+                                    <h4 t-out="sucursal.name"/>
+                                    <div class="informacion">
+                                        <div>
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-ubicacion-rojo.png" alt="Icono" />
+                                            </figure>
+                                            <p style="color: #000;">
+                                                <t t-out="sucursal.direccion"/>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-whatsapp-rojo.png" alt="Icono" />
+                                            </figure>
+                                            <a t-att-href="'tel:' + sucursal.cita" target="_blank">
+                                                <p style="color: #000;">“Agendar Cita“
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <t t-if="sucursal">
+                                                <figure>
+                                                    <img src="/website_hino/static/images/iconos/icono-tlf-rojo.png" alt="Icono" />
+                                                </figure>
+                                                <a t-att-href="'tel:' + sucursal.numero_phone">
+                                                    <p style="color: #000;">
+                                                        <t t-out="sucursal.numero_phone" />
+                                                    </p>
+                                                </a>
+                                            </t>
+                                        </div>
+                                        <div>
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-reloj-rojo.png" alt="Icono" />
+                                            </figure>
+                                            <p style="color: #000;">
+                                                <t t-out="sucursal.horarios"/>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-mapa-rojo.png" alt="Icono" />
+                                            </figure>
+                                            <a t-att-href="sucursal.google_maps_direct" target="_blank" style="color: #000;">Abrir ubicación en Google Maps</a>
+                                        </div>
+                                        <div>
+                                            <figure style="width: 19px; height: 30px;">
+                                                <img src="/website_hino/static/images/iconos/icono-waze-rojo.png" alt="Icono" />
+                                            </figure>
+                                            <a t-att-href="sucursal.waze" target="_blank" style="color: #000;">Abrir ubicación en Waze</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sucursal-ubicacion">
+                                    <iframe t-att-src="sucursal.google_maps_url" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            <div class="sucursal-bottom">
+                                <t t-foreach="sucursal.servicios_ids" t-as="servicio">
+                                    <t t-if="servicio.servicios == 'venta_camiones'">
+                                        <a href="#">
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-vehiculos.png" alt="Icono" />
+                                            </figure>
+                                            venta de camiones
+                                        </a>
+                                    </t>
+                                    <t t-if="servicio.servicios == 'venta_repuesto'">
+                                        <a href="#">
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-repuestos.png" alt="Icono" />
+                                            </figure>
+                                            venta de repuestos
+                                        </a>
+                                    </t>
+                                    <t t-if="servicio.servicios == 'servicio_tecnico'">
+                                        <a href="#">
+                                            <figure>
+                                                <img src="/website_hino/static/images/iconos/icono-tecnico.png" alt="Icono" />
+                                            </figure>
+                                            servicio técnico
+                                        </a>
+                                    </t>
+                                </t>
+                            </div>
+                        </article>
+                    </t>
+                </div>
+                <a href="/sucursales">ver más sucursales</a>
+            </section>
+
+            <!-- FORMULARIO -->
+            <section class="form-main-repuestos">
+                <section class="s_website_form" data-vcss="001" data-snippet="s_website_form" data-name="Formulario">
+                    <h4 class="form-title-responsive">Cotiza tus repuestos</h4>
+                    <div class="o_container_small">
+                        <form action="/website/form/" method="post" enctype="multipart/form-data" data-mark="*" data-pre-fill="true" data-model_name="crm.lead">
+                            <div class="s_website_form_rows">
+
+                                <div data-name="Field" class="s_website_form_field campo_nombre s_website_form_required" data-type="char">
+                                    <div class="row">
+                                        <label class="" style="width: 200px" for="o6f2b6awhh4g">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-user.png" />
+                                            <span class="s_website_form_label_content">
+                                                Nombre</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="o6f2b6awhh4g" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_apellido s_website_form_custom" data-type="char">
+                                    <label class="s_website_form_label" for="o6f2b6awhh4g">
+                                        <img id="form-icon" src="/website_hino/static/images/iconos/icon-user.png" />
+                                        <span class="s_website_form_label_content">Apellido</span>
+                                    </label>
+                                    <input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="o6f2b6awhh4g" />
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_correo s_website_form_required" data-type="email">
+                                    <div class="row">
+                                        <label class="col-form-label  s_website_form_label" for="oywj7qvvtat">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-email.png" />
+                                            <span class="s_website_form_label_content">
+                                                Correo</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input" type="email" name="email_from" required="1" data-fill-with="email" id="oywj7qvvtat" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-name="Field" class="s_website_form_field campo_tlf" data-type="tel">
+                                    <div class="row">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" for="oyx5ze4zxn3">
+                                            <img id="form-icon" src="/website_hino/static/images/iconos/icon-phone.png" />
+                                            <span class="s_website_form_label_content">
+                                                Celular</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="form-control s_website_form_input" type="tel" name="phone" data-fill-with="phone" id="oyx5ze4zxn3" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_contacto s_website_form_custom" data-type="char">
+                                    <label class="s_website_form_label" for="contacto">
+                                        <img id="form-icon" src="/website_hino/static/images/iconos/icon-message.png" />
+                                        <span class="s_website_form_label_content">Empresa</span>
+                                    </label>
+                                    <input class="s_website_form_input " type="text" name="name" required="" placeholder="" id="contacto" data-fill-with="undefined" />
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_ciudad s_website_form_custom" data-type="many2one">
+                                    <label class="col-form-label col-sm-auto s_website_form_label" for="ogdf4jd1c6wp">
+                                        <img id="form-icon" src="/website_hino/static/images/iconos/icon-localization.png" />
+                                        <span class="s_website_form_label_content">Ciudad</span>
+                                    </label>
+                                    <select class="s_website_form_input" name="city" id="ogdf4jd1c6wp" data-fill-with="commercial_company_name">
+                                        <option value="" />
+                                        <option value="Panamá">Panamá</option>
+                                        <option value="Panamá Oeste">Panamá Oeste</option>
+                                        <option value="Colón">Colón</option>
+                                        <option value="Herrera">Herrera</option>
+                                        <option value="Cloque">Cloque</option>
+                                        <option value="Los Santos">Los Santos</option>
+                                        <option value="Veraguas">Veraguas</option>
+                                        <option value="Chiriquí">Chiriquí</option>
+                                        <option value="Darién">Darién</option>
+                                        <option value="Bocas del Toro">Bocas del Toro</option>
+                                    </select>
+
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_placa_camion s_website_form_custom" data-type="char">
+                                    <div class="row">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" for="ohpuytalv06i">
+                                            <span class="s_website_form_label_content">Placa del Camión</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input class="s_website_form_input" type="text" name="Placa del Camión" id="ohpuytalv06i"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_vin_camion s_website_form_custom" data-type="char">
+                                    <label class="s_website_form_label" for="oaepamwq0z0u">
+                                        <span class="s_website_form_label_content"># VIN del Camión</span>
+                                    </label>
+                                    <input class="s_website_form_input" type="text" name="# VIN del camión" id="oaepamwq0z0u"/>
+                                </div>
+                                <div data-name="Field" class="s_website_form_field campo_terminos s_website_form_custom s_website_form_required" data-type="boolean">
+                                    <label class="s_website_form_label" for="terminos">
+                                        <input type="checkbox" value="Yes" class="s_website_form_input" name="Acepto Término y Condiciones" required="1" id="terminos" data-fill-with="undefined"/>
+                                        <a class="text-o-color-4 politica-privacidad" href="/terminos">Acepto
+                                                    Política de Privacidad</a>
+                                    </label>
+                                </div>
+
+                                <div class="s_website_form_submit s_website_form_no_submit_label" data-name="Submit Button">
+
+
+                                    <a href="#" role="button" class="btn s_website_form_send o_default_snippet_text" data-bs-original-title="" title="">Enviar
+                                        <i class="fa fa-paper-plane"></i>
+                                    </a>
+                                    <span id="s_website_form_result"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="text-img-repuestos">
+                        <div class="capa"></div>
+                        <span class="image-text">Cotiza tus repuestos</span>
+                    </div>
+                </section>
+            </section>
+
+            <!-- CONTACTANOS -->
+            <section class="contactanos">
+                <div class="container-contactanos">
+                    <t t-foreach="request.env['info.contacto'].sudo().search([])" t-as="contacto"></t>
+                    <span>contáctanos:</span>
+                    <div>
+                        <a t-att-href="'tel:' + contacto.whatsapp" target="_blank">
+                            <figure>
+                                <img src="/website_hino/static/images/iconos/icon-whatsapp-blanco.png"/>
+                            </figure>
+                        </a>
+                        <a t-att-href="'mailto:' + contacto.email">
+                            <figure>
+                                <img src="/website_hino/static/images/iconos/icon-email-blanco.png"/>
+                            </figure>
+                        </a>
+                        <a t-att-href="contacto.youtube" target="_blank">
+                            <figure>
+                                <img src="/website_hino/static/images/iconos/icon-yt-blanco.svg"/>
+                            </figure>
+                        </a>
+                        <a t-att-href="contacto.instagram" target="_blank">
+                            <figure>
+                                <img src="/website_hino/static/images/iconos/icon-ig-blanco.png"/>
+                            </figure>
+                        </a>
+                        <a t-att-href="contacto.linkedin" target="_blank">
+                            <figure>
+                                <img src="/website_hino/static/images/iconos/icon-linkedin-blanco.png"/>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <script src="/website_hino/static/src/js/mostrar-responsive.js"></script>
+            <script src="/website_hino/static/src/js/mostrar-footer.js"></script>
+            <script src="/website_hino/static/src/js/soporte/galeria.js"></script>
+        </t> 
+    </template> 
+</odoo>

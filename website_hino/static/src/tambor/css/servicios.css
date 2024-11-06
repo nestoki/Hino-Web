@@ -1,0 +1,730 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer#bottom, header#top{
+    display: none;
+}
+
+body{
+    font-family: "Epilogue", sans-serif;
+}
+
+h3{
+    font-size: 20px !important;
+    color: #E12826;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    margin-bottom: 3% !important;
+    font-weight: 600 !important;
+}
+
+/* BOTÓN WHATSAPP */
+
+.btn-wsp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 70px;
+    height: 70px;
+    line-height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00bb2d;
+    border-radius: 50px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+}
+
+.btn-wsp:hover{
+    background-color: #009423;
+}
+
+@media only screen and (max-width: 700px){
+    .btn-wsp{
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn-wsp svg{
+        width: 32px !important;
+        height: 32px !important;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .btn-wsp{
+        width: 50px;
+        height: 50px;
+    }
+
+    .btn-wsp svg{
+        width: 28px !important;
+        height: 28px !important;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .btn-wsp{
+        display: none;
+    }
+}
+
+/* AGENDA TU CITA */
+
+.servicios-agenda{
+    padding: 0% 4% 3% 4%;
+}
+
+.servicios-agenda-info{
+    background-image: url(../../../images/tambor_img/servicios-agenda.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 621px;
+    border-radius: 20px;
+    color: #FFF;
+    position: relative;
+    overflow: hidden;
+    padding: 3% 2%;
+}
+
+.servicios-agenda-info > .capa{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(216,35,42,0.5522584033613445) 0%, rgba(0,0,0,0.47942927170868344) 45%);
+    left: 0;
+    top: 0;
+}
+
+.servicios-agenda-info h3{
+    z-index: 10;
+    position: relative;
+    color: #FFF;
+    font-size: 45px !important;
+    font-weight: 600 !important;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin-bottom: 1% !important;
+}
+
+.servicios-agenda-info > p{
+    width: 405px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 2% !important;
+    font-size: 18px;
+}
+
+.servicios-agenda-info > a{
+    background-color: #E12826;
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFF;
+    text-decoration: none;
+    padding: 1% 3%;
+    border-radius: 50px;
+    position: relative;
+    z-index: 10;
+    align-self: flex-start;
+}
+
+.servicios-agenda-info > a:hover{
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+/* PAQUETES DE MANTENIMIIENTO PREVENTIVO */
+
+.servicios-mantenimiento-preventivo{
+    background-color: #E12826;
+    padding: 4% 0;
+}
+
+.mantenimiento-preventivo-paquetes{
+    display: flex;
+    padding: 0 4%;
+}
+
+.servicios-mantenimiento-preventivo .mantenimiento-preventivo-paquetes h3{
+    color: #FFF;
+    width: 80%;
+    margin-bottom: 0.5% !important;
+}
+
+.servicios-mantenimiento-preventivo .mantenimiento-preventivo-paquetes .paquetes{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.servicios-mantenimiento-preventivo .mantenimiento-preventivo-paquetes .paquetes span{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:20px;
+    font-weight: 700;
+}
+
+.servicios-mantenimiento-preventivo .servicios-incluidos{
+    padding: 0 5.3%;
+    color: #FFF;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.servicios-mantenimiento-preventivo .mantenimiento-preventivo-caracteristicas{
+    margin-top: 3%;
+}
+
+.servicios-mantenimiento-preventivo .mantenimiento-preventivo-caracteristicas ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 0;
+}
+
+.servicios-mantenimiento-preventivo .mantenimiento-preventivo-caracteristicas ul li{
+    padding-top: 1%;
+}
+
+.servicios-mantenimiento-preventivo .mantenimiento-preventivo-caracteristicas ul li .mantenimiento-top{
+    font-size: 40px;
+    font-weight: 800;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 4%;
+    border-bottom: 2px solid #ffffff9a;
+    padding-bottom: 1%;
+}
+
+.caracteristica-info{
+    width: 100%;
+    padding: 5% 4% 4% 4%;
+    background-color: #A9181C;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px 20px;
+}
+
+.caracteristica-info article{
+    width: 30%;
+    display: flex;
+    gap: 5%;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.caracteristica-info article div{
+    background-color: #FFF;
+    color: #A9181C;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 60px;
+}
+
+
+.servicios-mantenimiento-preventivo .mantenimiento-preventivo-caracteristicas ul li .caracteristica-titulo{
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.mantenimiento-preventivo-caracteristicas ul li .caracteristica-titulo span{
+    font-size: 16px;
+    margin-right: 12px;
+    width: 5%;
+    color: #FFF;
+    font-weight: 500;
+}
+
+.mantenimiento-preventivo-caracteristicas ul li .caracteristica-titulo > p > span{
+    font-size: 40px;
+}
+
+.mantenimiento-preventivo-caracteristicas ul li .caracteristica-titulo p{
+    font-size: 35px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 0;
+    letter-spacing: -0.2px;
+}
+
+.mantenimiento-preventivo-caracteristicas ul li .puntos-inspeccion .caracteristica-titulo p:hover{
+    opacity: 0.5;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.mantenimiento-preventivo-caracteristicas ul li .caracteristica-titulo .mas-btn{
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+    color:#E12826;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-left: 1%;
+    cursor: pointer;
+}
+
+.mantenimiento-preventivo-caracteristicas ul li .caracteristica-verificacion{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mantenimiento-preventivo-caracteristicas ul li .caracteristica-verificacion div{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios-mantenimiento-preventivo .servicios-mantenimiento-preventivo_aceite-motul{
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    color: #FFF;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 5%;
+    font-weight: 600;
+    padding: 0 4%;
+}
+
+.servicios-mantenimiento-preventivo .servicios-mantenimiento-preventivo_aceite-motul figure{
+    width: 220px;
+    height: auto;
+}
+
+.servicios-mantenimiento-preventivo .servicios-mantenimiento-preventivo_aceite-motul figure img{
+    width: 100%;
+}
+
+/* SERVICIOS 2 */
+
+.servicios2{
+    padding: 4%;
+}
+
+.servicios2 > div{
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.servicios2 article{
+    display: flex;
+    justify-content: left;
+    gap: 2%;
+}
+
+.servicios2 article figure{
+    width: 700px;
+    height: auto;
+    
+}
+
+.servicios2 article figure img{
+    width: 100%;
+    height: 100%; 
+    border-radius: 20px;
+}
+
+.servicios2 article > div{
+    width: 40%;
+}
+
+.servicios2 article > div h4{
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 10%;
+}
+
+.servicios2 article > div ul{
+    width: 90%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 0;
+}
+
+.servicios2 article > div ul li{
+    font-size: 20px;
+}
+
+.servicios2 article > div ul li svg{
+    margin-right: 15px;
+}
+
+.servicios2 article > div ul li strong{
+    font-weight: 600;
+}
+
+.servicios2 .requisitos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 32px;
+    gap: 15px;
+}
+
+/* TAMBOR EXPRESS */
+
+.tambor-express{
+    background-color: #f0f0f0;
+    padding: 3% 4% 10% 4%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tambor-express > .tambor-express-titulo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.tambor-express > .tambor-express-titulo > figure{
+    margin: 0;
+}
+
+.tambor-express .tambor-express-ubicacion{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tambor-express .contacto-btn{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #E12826;
+    border: 1px solid #737272;
+    border-radius: 35px;
+    padding: .6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 265px;
+    gap: 20px;
+}
+
+.tambor-express .contacto-btn:hover{
+    border: 1px solid #ccc !important;
+    color: #E12826 !important;
+    text-decoration: none !important;
+    background: transparent;
+}
+
+.contacto-btn span{
+    width: 32px;
+    height: 32px;
+    border-radius: 35px;
+    background-color: #E12826;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tambor-express .tambor-express-info{
+    width: 50%;
+}
+
+.tambor-express-info h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #231F20;
+    font-weight: 500;
+    line-height: 55px;
+}
+
+.tambor-express .tambor-express-info > p{
+    width: 65%;
+    margin: 4% 0 6% 0;
+    font-size: 20px;
+    line-height: 30px;
+    color: #737272;
+}
+
+.tambor-express .tambor-express-btn{
+    text-transform: uppercase;
+    font-size: 16px !important;
+    padding: 2% 6% !important;
+    letter-spacing: .5px;
+    border-radius: 50px !important;
+    background-color: #E12826;
+    font-weight: 600;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.tambor-express .tambor-express-img img{
+    border-radius: 25px;
+    width: 100%;
+}
+
+/* TAMBOR EXPRESS RESPONSIVE */
+
+@media only screen and (max-width: 1300px){
+    .tambor-express{
+        padding-bottom: 15%;
+    }
+}
+
+/* CONTACTO */
+
+.tambor-express-contacto{
+    padding: 0 !important;
+    position: relative !important;
+}
+
+.tambor-express-contacto .contacto-info{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -90px;
+    margin: auto;
+    width: 65%;
+    background-color: #E12826;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    border-radius: 100px;
+}
+
+.contacto .contacto-info .contacto-info-logo{
+    width: 25%;
+    border-right: 1px solid #FFF;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.contacto .contacto-info .contacto-info-logo figure{
+    width: 80%;
+    background-color: #FFF;
+    padding: 3%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto .contacto-info .contacto-info-logo figure img{
+    width: 90%;
+}
+
+.contacto .contacto-info .contactos{
+    width: 45%;
+    padding: 0 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-right: 1px solid #FFF;
+}
+
+.contacto .contacto-info .contactos .contactos-titulo{
+    width: 100%;
+    margin-bottom: 5%;
+    font-size: 18px;
+}
+
+.contacto .contacto-info .contactos .contacto-tlf, 
+.contacto .contacto-info .contactos .contacto-interior{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6%;
+    width: 45%;
+}
+
+.contacto .contacto-info .contactos .contacto-tlf div, 
+.contacto .contacto-info .contactos .contacto-interior div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contacto .contacto-info .contactos .contacto-tlf div a, 
+.contacto .contacto-info .contactos .contacto-interior div a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.contacto .contacto-info .contactos .contacto-tlf div span, 
+.contacto .contacto-info .contactos .contacto-interior div span{
+    font-size: 18px;
+}
+
+.contacto .contacto-ws{
+    width: 24%;
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+    gap: 6%;
+}
+
+.contacto .contacto-ws > svg{
+    margin-bottom: 12px;
+}
+
+.contacto .contacto-ws > div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contacto .contacto-ws > div a{
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.contacto .contacto-ws > div span{
+    font-size: 18px;
+}
+
+/* RESPONSIVE CONTACTO */
+
+@media only screen and (max-width: 1600px){
+    .contacto .contacto-info{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .contacto .contacto-info{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .contacto{
+        padding-bottom: 15%;
+    }
+
+    .contacto .contacto-info{
+        bottom: -70px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .contacto .contacto-info .contactos .contacto-tlf div a, .contacto .contacto-info .contactos .contacto-interior div a,
+    .contacto .contacto-ws > div a{
+        font-size: 20px;
+    }
+
+    .contacto .contacto-info .contactos .contacto-tlf div span, .contacto .contacto-info .contactos .contacto-interior div span,
+    .contacto .contacto-ws > div span{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .contacto .contacto-info{
+        width: 85%;
+        bottom: -55px;
+    }
+
+    .contacto .contacto-info .contacto-info-logo figure img{
+        width: 85%;
+    }
+
+    .contacto .contacto-info .contactos .contacto-tlf svg{
+        width: 25px !important;
+        height: 25px !important;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .contacto .contacto-info{
+        width: 90%;
+        bottom: -50px;
+    }
+
+    .contacto .contacto-info .contactos .contacto-tlf div a, .contacto .contacto-info .contactos .contacto-interior div a,
+    .contacto .contacto-ws > div a{
+        font-size: 18px;
+    }
+
+    .contacto .contacto-info .contactos .contacto-tlf div span, .contacto .contacto-info .contactos .contacto-interior div span,
+    .contacto .contacto-ws > div span{
+        font-size: 14px;
+    }
+
+    .contacto .contacto-info .contactos .contacto-tlf svg{
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .contacto .contacto-ws svg{
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .contacto .contacto-info .contacto-info-logo{
+        width: 28%;
+    }
+
+    .contacto .contacto-info .contacto-info-logo figure{
+        width: 85%;
+    }
+
+    .contacto .contacto-info .contacto-info-logo figure img{
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .contacto .contacto-info{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .contacto{
+        padding: 5% 4%;
+    }
+
+    .contacto .contacto-info{
+        display: none;
+    }
+}

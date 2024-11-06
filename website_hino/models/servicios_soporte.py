@@ -13,7 +13,5 @@ class ServiciosSoporte(models.Model):
     _rec_name = 'text_slider' 
     
     cita_whatsapp = fields.Char(string='Cita en Whatsapp')
-    slider_image = fields.Binary(string='Imagen')
     text_slider = fields.Text(string='Título')
-    text_slider_2 = fields.Text(string='Subtítulo')
     

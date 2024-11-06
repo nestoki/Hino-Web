@@ -14,6 +14,70 @@
         url("/website_hino/static/src/css/fonts/helveticaneue-light.woff") format("woff"),
         url("/website_hino/static/src/css/fonts/helveticaneue-light.ttf") format("truetype");
 }
+
+/* AJUSTES GENERALES */
+
+.imagen-ilustrativa{
+    position: absolute;
+    bottom: 5px;
+    right: 55px;
+    font-family: 'Helvetica Neue Light';
+    font-size: 15px;
+    color: #d81525;
+}
+
+@media only screen and (max-width: 1300px){
+    .imagen-ilustrativa{
+        right: 10px;
+        bottom: 2px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .imagen-ilustrativa{
+        bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .imagen-ilustrativa{
+        right: -40px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .imagen-ilustrativa{
+        bottom: -10px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .imagen-ilustrativa{
+        right: -55px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .imagen-ilustrativa{
+        right: -60px;
+        bottom: -15px;
+        font-size: 12px;
+    }
+}
+
+.politica-privacidad{
+    color: gray !important;
+}
+
+.text-o-color-4.politica-privacidad:hover{
+    text-decoration: none;
+    color: gray !important;
+    cursor: default;
+}
+
+.hidden{
+    display: none;
+}
  
 /* Restablecimiento de estilos */ 
 * { 
@@ -24,13 +88,12 @@
  
 /* Encabezado Header  Contiene en menu de navegacion y la barra de info de contacto*/ 
 .header_main { 
-    background-image: linear-gradient(to right, #E60013, #BF001B, #8D0007); 
+    background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 72%, #FFF 72%); 
     color: #ffffff; 
     padding: 0 0; 
     position: fixed;
     z-index: 1000;
     width: 100%;
-
 } 
  
 /* Centrar el logo y el menú */ 
@@ -68,22 +131,30 @@ nav.nav_header {
     position: relative;
     width: 81%;
 } 
+
+.header_main .menu_container > a > img{
+    width: 170px;
+}
+
+.header_main .menu_container .logo-tambor > img{
+    width: 150px !important;
+}
  
 nav.nav_header > ul > li { 
     display: inline-block; 
     padding: 0 0 15px 30px; 
 } 
-
-nav.nav_header > ul > li:last-child{
-    float: right;
-}
  
 /* Estilos de letras de las navbar */ 
+nav.nav_header > ul > li > a.shopping-cart{
+    display: none;
+}
+
 nav.nav_header > ul > li > a {
     font-family: 'Helvetica Neue Light';
     color: #ffffff; 
-    font-size: 17px;
-    font-weight: 500; 
+    font-size: 16px;
+    font-weight: 300; 
     line-height: 15.81px; 
     text-decoration: none; 
     margin-right: 5px;
@@ -98,8 +169,8 @@ nav.nav_header > ul > li > a:hover {
     display: none;
 }
 
-.boton-menu{
-    background-color: transparent !important;
+header .menu_container .boton-menu.btn{
+    background: transparent !important;
 }
 
 /* OPCIONES NOSOTROS */
@@ -136,8 +207,10 @@ nav.nav_header > ul > li > a:hover {
 }
 
 .opciones_nosotros > ul > li > a{
+    font-family: 'Helvetica Neue Light';
     margin: 0;
     font-size: 16px;
+    font-weight: 400;
     color: #FFF;
     text-decoration: none;
 }
@@ -187,8 +260,10 @@ nav.nav_header > ul > li > a:hover {
 }
 
 .opciones_camiones > ul > li > a{
+    font-family: 'Helvetica Neue Light';
     margin: 0;
     font-size: 16px;
+    font-weight: 400;
     color: #FFF;
     text-decoration: none;
 }
@@ -238,8 +313,10 @@ nav.nav_header > ul > li > a:hover {
 }
 
 .opciones_soporte_total > ul > li > a{
+    font-family: 'Helvetica Neue Light';
     margin: 0;
     font-size: 16px;
+    font-weight: 400;
     color: #FFF;
     text-decoration: none;
 }
@@ -278,7 +355,7 @@ header .menu_contacto{
 /* MENU RESPONSIVE */
 
 .menu-responsive{
-    background-image: linear-gradient(to right, #E60013, #BF001B, #8D0007);
+    background-image: linear-gradient(to right, #D8232A, #BF001B, #8D0007);
 }
 
 .menu-responsive .offcanvas-header{
@@ -316,14 +393,13 @@ header .menu_contacto{
     padding-left: 5%;
 }
 
-.menu-responsive .navbar-nav > li .desplegable-responsive > a,
-.menu-responsive .navbar-nav > li > a {
-    font-weight: 600;
-}
-
 .menu-responsive .navbar-nav > li a{
     color: #FFF;
     text-decoration: none;
+    font-family: 'Helvetica Neue Light';
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .menu-responsive .link-responsive{
@@ -375,7 +451,29 @@ header .menu_contacto{
 
 /* RESPONSIVE HEADER */
 
+@media only screen and (max-width: 1800px){
+    .header_main{
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 73%, #FFF 73%);
+    }
+}
+
+@media only screen and (max-width: 1600px){
+    .header_main{
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 76%, #FFF 76%);
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .header_main{
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 78%, #FFF 78%);
+    }
+}
+
 @media only screen and (max-width: 1300px){
+    .header_main{
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 74%, #FFF 74%);
+    }
+
     .menu_container{
       max-width: 1000px;
     }
@@ -385,7 +483,29 @@ header .menu_contacto{
     }
 }
 
+@media only screen and (max-width: 1250px){
+    .header_main{
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 75%, #FFF 75%);
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .header_main{
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 76%, #FFF 76%);
+    }
+}
+
+@media only screen and (max-width: 1150px){
+    .header_main{
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 77%, #FFF 77%);
+    }
+}
+
 @media only screen and (max-width: 1100px){
+
+    .header_main{
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 70%, #FFF 70%);
+    }
 
     .menu_container{
         max-width: 900px;
@@ -414,9 +534,61 @@ header .menu_contacto{
     }
 }
 
+@media only screen and (max-width: 800px){
+    .header_main{
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 65%, #FFF 65%);
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .header_main{
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 60%, #FFF 60%);
+    }
+}
+
 @media (max-width: 500px){
+
+    .header_main{
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 65%, #FFF 65%);
+    }
+
+    .header_main .menu_container{
+        justify-content: space-between;
+    }
+
+    .header_main .menu_container .logo-tambor > img{
+        width: 130px !important;
+    }
+
     .header_main .menu_container > a > img{
-        width: 160px;
+        width: 135px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+
+    .header_main {
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 60%, #FFF 60%);
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .header_main {
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 58%, #FFF 58%);
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .header_main {
+        background: linear-gradient(105deg, #D8232A, #BF001B, #8D0007 56%, #FFF 56%);
+    }
+
+    .header_main .menu_container .logo-tambor > img{
+        width: 125px !important;
+    }
+
+    .header_main .menu_container > a > img{
+        width: 130px;
     }
 }
 
@@ -461,9 +633,10 @@ header .menu_contacto{
 .info h4, 
 .info p, 
 .info a { 
+    font-family: 'Helvetica Neue Light';
     color: #FFFFFF; 
     margin: 0;
-    font-size: 18px; 
+    font-size: 16px; 
     font-weight: 300; 
     line-height: 19.76px; 
     text-decoration: none; 
@@ -474,11 +647,11 @@ header .menu_contacto{
 } 
  
 .fa-phone { 
-    color: #be0a0a; 
+    color: #D8232A; 
 } 
  
 .fa-envelope { 
-    color: #be0a0a; 
+    color: #D8232A; 
 } 
  
 .redes-sociales { 
@@ -554,10 +727,8 @@ header .menu_contacto{
         margin-top: 70px !important;
     }
 }
- 
-/* CSS del contenido Principal (main) de la pagina */ 
- 
-/* Slider de imagenes  con sus textos y botones de llamada a la accion*/ 
+
+/* SLIDER HOME */
  
 .swiper-container-slider-main { 
     margin-left: auto; 
@@ -588,21 +759,30 @@ header .menu_contacto{
 } 
  
 .swiper-pagination-bullet { 
-    background-color: #be0a0a; 
+    background-color: #D8232A; 
     width: 60px; 
     height: 6px; 
     border-radius: 3px; 
 } 
  
 .bg-slide{ 
-    height: 600px; 
+    height: 500px; 
     width: 100%; 
     background-size: cover; 
-    background-position: center; 
+    background-position: 50% 58%; 
     display: flex; 
     justify-content: right; 
     margin-top: 130px;
+    margin-bottom: 0;
 } 
+
+.bg-slide-home.bg-slide{
+    height: auto !important;
+}
+
+.bg-slide-home > img{
+    width: 100%;
+}
  
 .swiper-slide .container-title{ 
     display: flex; 
@@ -616,13 +796,14 @@ header .menu_contacto{
 } 
  
 .slider-text { 
-    font-weight: 900; 
-    font-size: 35px; 
-    line-height: 38.6px; 
+    font-family: 'HelveticaNeue';
+    font-weight: 600; 
+    font-size: 25px; 
+    line-height: 30px; 
     text-align: right; 
-    letter-spacing: 5px; 
+    letter-spacing: 4px; 
     text-transform: uppercase; 
-    width: 60%; 
+    width: 50%; 
     margin: 0; 
     padding: 0; 
     color: #ffffff; 
@@ -630,9 +811,10 @@ header .menu_contacto{
 } 
  
 .slider-2-text { 
-    font-weight: 500; 
-    font-size: 20px; 
-    line-height: 19.76px; 
+    font-family: 'Helvetica Neue Light';
+    font-weight: 400; 
+    font-size: 18px; 
+    line-height: 20px; 
     text-align: right; 
     width: 50%; 
     margin: 0; 
@@ -641,9 +823,12 @@ header .menu_contacto{
 } 
  
 .call-action-btn { 
-    background-image: linear-gradient(to right, #E60013, #BF001B, #8D0007); 
+    font-family: 'Helvetica Neue Light';
+    background: linear-gradient(#D8232A, #BF001B, #8D0007);
     color: #ffffff;
-    font-size: 20px; 
+    font-weight: 600;
+    font-size: 18px; 
+    letter-spacing: 1px;
     padding: 5px 20px;
     text-decoration: none;
     border-radius: 12px;
@@ -662,6 +847,10 @@ header .menu_contacto{
     margin: 0; 
     padding: 0; 
 }
+
+/* #slider-home-responsive{
+    height: 345px !important;
+} */
 
 /* RESPONSIVE SLIDER MAIN */
 
@@ -734,8 +923,22 @@ header .menu_contacto{
 }
 
 @media only screen and (max-width: 500px){
-    .slider-main .bg-slide{
-        height: 400px !important;
+
+    #slider-home-responsive figure.bg-slide-home-responsive{
+        height: 345px;
+    }
+
+    .slider-main .bg-slide-home{
+        height: auto !important;
+    }
+
+    .swiper-pagination{
+        bottom: 0 !important;
+    }
+
+    .swiper-pagination-bullet{
+        width: 40px;
+        height: 4px;
     }
 }
 
@@ -751,8 +954,23 @@ header .menu_contacto{
         font-size: 16px;
     }
 }
+
+@media only screen and (max-width: 400px){
+
+    #slider-home-responsive figure.bg-slide-home-responsive{
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 380px){
+
+    #slider-home-responsive figure.bg-slide-home-responsive{
+        height: 270px;
+    }
+}
  
-/* Estilos del Footer */ 
+/* Estilos del Footer */
+
 .o_footer { 
     background-color: #1C1C1C; 
     padding-top: 2%;
@@ -769,18 +987,25 @@ footer .container >.row {
     margin: 0; 
 } 
 
+#footer .container > .row div ul li a:hover{
+    text-decoration: none !important;
+}
+
 footer .container > .row .logo_footer{
     margin-right: 0;
 }
  
 footer h5 { 
     font-family: 'Helvetica Neue Light';
-    font-weight: 700; 
-    font-size: 20px; 
+    font-weight: 600; 
+    font-size: 18px; 
 } 
  
 footer .text-o-color-4 { 
+    font-family: 'Helvetica Neue Light';
     font-size: 14px; 
+    font-weight: 400;
+    letter-spacing: .5px;
 } 
  
 footer .list-unstyled>h5 { 
@@ -804,6 +1029,7 @@ footer #connect .s_social_media {
  
 footer .s_social_media a i.fa { 
     justify-content: left; 
+    color: #FFF;
 } 
  
 footer .row-copi { 
@@ -812,6 +1038,9 @@ footer .row-copi {
  
 footer .text-center { 
     text-align: center !important; 
+    font-family: 'Helvetica Neue Light';
+    font-weight: 600;
+    font-size: 18px;
 } 
 
 footer .o_footer_copyright {
@@ -911,7 +1140,7 @@ footer .flecha-footer{
     }
 
     footer .container > .row .logo_footer{
-        height: 200px !important;
+        height: 170px !important;
     }
 
     .o_footer_copyright .o_footer_copyright_name {

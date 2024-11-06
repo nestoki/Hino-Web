@@ -87,7 +87,10 @@
                                 <field name="peso_chasis" placeholder="Peso del Chasis..."/>
                                 <field name="capacidad" placeholder="Capacidad del camión..."/>
                                 <field name="longitud" placeholder="Longitud utizable del Chasis..."/>
+                                <field name="carroceria" placeholder="Carrocería volquete de fábrica"/>                               
                                 <field name="tipo_rueda" placeholder="Tipo de rueda..."/>
+                                <field name="traction" placeholder="Traccion..."/>
+
                             </group>
                             <group string="Imagen">
                                 <field name="foto" widget="image" size="small"/>
@@ -98,6 +101,8 @@
                                 <field name="potencia" placeholder="Potencia..."/>
                                 <field name="torque" placeholder="Torque..."/>
                                 <field name="alternador" placeholder="Alternador..."/>
+                                <field name="peso_convertido" placeholder="Peso..."/>
+                                <field name="longitud_conevrtida" placeholder="Longitud..."/>
                             </group>
                             <group name="name" string="Transmisión">
                                 <field name="tipo_transmision" placeholder="Tipo de Transmisión..."/>
@@ -106,30 +111,22 @@
                         <group col="2">
                             <group string="Más Información del Camión">
                                 <field name="descripcion" placeholder="Breve Descripción..."/>
-                                <field name="aplicacion_ids" widget="many2many_tags" options="{'no_quick_create': True}" />
                                 <field name="cabinas_ids" widget="many2many_tags" options="{'no_quick_create': True}" />
+                                <field name="aplicacion_ids" widget="many2many_tags" options="{'no_quick_create': True}" />
                                 <field name="video_camion" placeholder="Agregue el link del Video aquí..."/>
                                 <field name="ficha_tecnica" placeholder="Sube la ficha técnica aquí..."/>
                                 <field name="vista_360_url" placeholder="Agregue el link de la vista aquí..."/>
+                                <field name="foto_logo" widget="image"/>
                             </group>
                             <group string="Garantía">
+                                <field name="doble"/>
                                 <field name="sello_garantia"  widget="image" size="small"/>
+                                <field name="ilustrativa"/>
+                                <field name="volquete"/>
                             </group>
-                        </group>
-                        <!-- <group col="2">
-                            <group string="Descripción">
-                                <field name="descripcion" placeholder="Breve Descripción..."/>
-                                <field name="video_camion" placeholder="Agregue el link del Video aquí..."/>
-                                <field name="ficha_tecnica" placeholder="Sube la ficha técnica aquí..."/>
-                            </group>
-                            <group string="Cabinas">
-                                <field name="cabinas_ids" widget="many2many_tags" options="{'no_quick_create': True}" />
-                                <field name="vista_360_url" placeholder="Agregue el link de la vista aquí..."/>
-                                <br></br>
-                                <br></br>
-                            </group>
-                        </group> -->
 
+                        </group>
+                        
                         <br></br>
                         <br></br>
                         <group col ="1">
@@ -174,6 +171,7 @@
         <!-- Menú  Hino Camiones-->
         <menuitem id="menu_camion" name="Web Site Hino" action="action_camion" web_icon="website_hino,static/img/icon.png" />
         <menuitem id="menu_secciones" name="Otras Secciones" parent="menu_camion" sequence="3"/>
+        <menuitem id="menu_camiones" name="Camiones" action="action_camion" parent="menu_secciones" sequence="13"/>
         <menuitem id="menu_configuraciones" name="Configuraciones" parent="menu_camion" sequence="8"/>
     </data>
 </odoo>

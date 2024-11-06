@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_landing2_website" model="website.menu">
+        <field name="name">Hino Panamá Ventas</field>
+        <field name="url">landing-ventas2</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+    <template id="hino_ventas_300_500" name="Hino Panamá Ventas">
+
+        <head>
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <title> HINO PANAMÁ</title>
+            <link rel="shortcut icon" href="/website_hino/static/images/iconos/favicon.ico" type="image/x-icon"/>
+            <meta name="description" content="HINO PANAMÁ Conoce la línea de camiones HINO para todo tipo de soluciones de negocios"/>
+            <!-- Meta Canonical -->
+            <link rel="canonical" href="https://www.hino.com.pa/"/>
+            <meta name="robots" content="index, follow"/>
+            <meta name="keywords" content="HINO, PANAMÁ, Camiones, Servicio, Soporte"/>
+            <meta http-equiv="Content-Language" content="es"/>
+            <!-- Open Graph -->
+            <!-- Meta Property para el título -->
+            <meta property="og:title" content="HINO PANAMÁ"/>
+            <meta property="og:description" content="HINO PANAMÁ Conoce la línea de camiones HINO para todo tipo de soluciones de negocios"/>
+            <meta property="og:image" content="/website_hino/static/images/logo-hino.png"/>
+            <meta property="og:image:alt" content=" Esta es la imagen de logo de la empresa"/>
+        </head>
+
+        <link rel="stylesheet" href="/website_hino/static/src/css/landing/landing-page2.css"/>
+
+
+        <a href="tel:+507 6674-3915" class="btn-wsp" target="_blank">
+            <figure>
+                <img src="/website_hino/static/images/iconos/icon-whatsapp-blanco.png"></img>
+            </figure>
+        </a>
+
+        <header id="header">
+            <figure>
+                <img src="/website_hino/static/images/logo-hino.png"></img>
+            </figure>
+        </header>
+        <section class="contactanos">
+            <div class="capa"></div>
+            <div class="contactanos-titulo">
+                <div class="linea-roja"></div>
+                <p>entrega inmediata</p>
+                <h2>
+                    No pierdas tiempo
+                    <br/>
+                    Ven por tu Hino 
+                    <br/>
+                    serie 300 y 500
+                </h2>
+                <div class="botones">
+                    <a href="tel:+507 6674-3915" class="button">cotizar ahora</a>
+                    <a href="#repuestos-servicios" class="button scroll-link">repuestos y servicios</a>
+                </div>
+            </div>
+            <div class="contactanos-form">
+                <h3>Contáctanos</h3>
+                <figure class="form-flecha">
+                    <img src="/website_hino/static/images/iconos/arrow-d.svg" alt=""/>
+                </figure>
+                <form id="contact-us" action="/create_opportunity" method="POST">
+                    <input type="hidden" name="origin_page" value="ventas_300_500"/>
+                    <div class="campo-nombre">
+                        <input type="text" id="name" name="name" placeholder="Nombre:" required="1" value=""/>
+                    </div>
+                
+                    <div class="campo-tlf">
+                        <input type="tel" id="phone" name="phone" placeholder="Teléfono:" required="1" value=""/>
+                    </div>
+                
+                    <div class="campo-email">
+                        <input type="email" id="email" name="email" placeholder="Correo:" required="1" value=""/>
+                    </div>
+                
+                    <div class="campo-mensaje">
+                        <textarea id="message" name="message" cols="30" rows="2" placeholder="Mensaje:" required="1"></textarea>
+                    </div>
+                
+                    <button type="submit">Enviar</button>
+                    <t t-if="request.session.get('success_message')">
+                        <div class="alert alert-success" style="margin-top: 20px;" id="success-message">
+                            <t t-out="request.session.pop('success_message')"/>
+                        </div>
+                    </t> 
+                </form>                
+            </div>
+        </section>
+        <section class="series serie-300">
+            <figure>
+                <img src="/website_hino/static/images/tambor+piezas+landing-01-1571e01a-1920w.jpg" alt=""/>
+            </figure>
+            <div class="series-info">
+                <h3>Serie 300</h3>
+                <ul>
+                    <li>Desde 4.5 hasta 8.5 ton (Peso Bruto Vehicular)</li>
+                    <li>Desde 10 hasta 18.3 pies de chasis carrozable</li>
+                    <li>Transmisión manual y automática (en modelos seleccionados)</li>
+                    <li>Motores Euro 3 Turbo Intercooler</li>
+                    <li>Sistema de inyección electrónico tipo riel común</li>
+                    <li>Alternador de fábrica de 60 A</li>
+                    <li>A/A de fábrica</li>
+                    <li>Garantía 4 años o 130,000 km, lo que ocurre primero</li>
+                </ul>
+            </div>
+        </section>
+        <section class="series serie-500">
+            <figure>
+                <img src="/website_hino/static/images/tambor+piezas+landing-02-b07544a7-1920w.jpg" alt=""/>
+            </figure>
+            <div class="series-info">
+                <h3>Serie 500</h3>
+                <ul>
+                    <li>Desde 10.4 hasta 26 ton (Peso Bruto Vehicular)</li>
+                    <li>Desde 18.5 hasta 28 pies de chasis carrozable</li>
+                    <li>Transmisión manual y automática (en modelos seleccionados)</li>
+                    <li>Motores Euro 1 de aspiración natural o Euro 2/Euro 3 Turbo Intercooler (según modelo)</li>
+                    <li>A/A de fábrica</li>
+                    <li>Garantía 4 años o 100,000 km</li>
+                </ul>
+            </div>
+        </section>
+        <section class="repuestos-servicios" id="repuestos-servicios">
+            <h2>repuestos y servicio de posventa</h2>
+            <div>
+                <h3>
+                    Servicios
+                    <div></div>
+                </h3>
+                <div class="servicios">
+                    <p>Mantenimiento preventivo</p>
+                    <p>Mantenimiento correctivo</p>
+                    <p>Contratos de mantenimiento</p>
+                    <p>Talleres Móviles</p>
+                </div>
+            </div>
+        </section>
+        <section class="repuestos-originales">
+            <div>
+                <h3>Repuestos Originales</h3>
+                <figure>
+                    <img src="/website_hino/static/images/logo-hino-repuestos.png" alt=""/>
+                </figure>
+                <h4>
+                    Diseñados para minimizar 
+                    <br/>
+                    el costo de vida útil de tu camión
+                </h4>
+                <ul>
+                    <li>Previenen daños y reparaciones costosas</li>
+                    <li>Protege la vida de tu motor</li>
+                    <li>Aseguran mayor rendimiento con un menor desgaste</li>
+                    <li>Garantizan el funcionamiento correcto de tu camión</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="/website_hino/static/images/repuestos-originales-img.jpg" style="width: 100%;" alt=""/>
+            </figure>
+        </section>
+        <section class="repuestos">
+            <div class="repuestos-lista">
+                <ul>
+                    <li>FILTROS</li>
+                    <li>EMBRAGUES</li>
+                    <li>CORREAS</li>
+                    <li>BUJES Y PINES</li>
+                </ul>
+            </div>
+            <div class="repuestos-imagenes">
+                <figure>
+                    <img src="/website_hino/static/images/img1-landing.jpg" alt=""/>
+                </figure>
+                <figure>
+                    <img src="/website_hino/static/images/img2-landing.jpg" alt=""/>
+                </figure>
+                <figure>
+                    <img src="/website_hino/static/images/img3-landing.jpg" alt=""/>
+                </figure>
+            </div>
+        </section>
+        <footer>
+            <figure>
+                <img src="/website_hino/static/images/logo-hino.png"></img>
+            </figure>
+            <div class="footer-sucursales">
+                <h4>Sucursales</h4>
+                <span>Hino Milla 8</span>
+                <span>Chitré</span>
+                <span>Santiago</span>
+                <span>David</span>
+            </div>
+            <div class="footer-contactenos">
+                <h4>Contáctenos</h4>
+                <a href="tel:">+507 307-4500 / +507 279-4505</a>
+                <a href="mailto:infotambor@tambor.com.pa">infotambor@tambor.com.pa</a>
+            </div>
+            <div class="footer-horario">
+                <h4>Horario de atención</h4>
+                <p>Lunes a Viernes de 8:00 a.m - 5:00 p.m</p>
+                <p>Sábados de 8:00 a.m - 5:00 p.m</p>
+            </div>
+        </footer>
+
+
+        <script src="/website_hino/static/src/js/animation.js"></script>
+        <script src="/website_hino/static/src/js/landing/mensaje-exito.js"></script>
+
+    </template>
+</odoo>

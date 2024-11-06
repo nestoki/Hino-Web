@@ -41,6 +41,10 @@ class Sucursales(models.Model):
     servicios_ids = fields.Many2many(
         'servicios', string="Aplicaciones")
 
+    tipo = fields.Selection([
+        ('general', 'General'),
+        ('repuestos', 'Repuestos'),
+    ], string='Tipo de Sucursal')
 
 class Servicios(models.Model):
     _name = 'servicios'
@@ -48,7 +52,7 @@ class Servicios(models.Model):
     _rec_name = 'servicios'
 
     servicios = fields.Selection([
-        ('venta_vehiculo', 'Venta de Vehículo'),
+        ('venta_camiones', 'Venta de Camiones'),
         ('venta_repuesto', 'Venta de Repuesto'),
         ('servicio_tecnico', 'Servicio Técnico'),
     ], string='Servicios')

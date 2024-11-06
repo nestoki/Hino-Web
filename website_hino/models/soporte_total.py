@@ -18,6 +18,13 @@ class SoporteTotal(models.Model):
     imagen = fields.Binary(string='Imagen')
     descripcion = fields.Char(string='Descripción')
     informacion = fields.Text(string='Información')
-    soporte_url = fields.Char(string='URL del Tipo de Servicio')
+    soporte_url = fields.Selection([
+        ('/soporte-total/servicios', 'Servicios'),
+        ('/soporte-total/repuestos', 'Repuestos'),
+        ('/soporte-total/mantenimiento-prepagado', 'Mantenimiento Prepagado'),
+        ('/soporte-total/free-service-program', 'Free Service Program'),
+        ('/soporte-total/eco-and-safety-drive', 'Eco & Safety Drive'),
+        ('/soporte-total/customer-care-clinics', 'Customer Care Clinics'),
+    ], string='URL del Tipo de Servicio')
 
     

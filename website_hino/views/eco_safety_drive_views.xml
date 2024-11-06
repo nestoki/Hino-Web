@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vista de árbol para el modelo Eco Safety Drive -->
+    <record id="view_eco_safety_tree" model="ir.ui.view">
+        <field name="name">view.eco_safety.tree</field>
+        <field name="model">eco.safety</field>
+        <field name="arch" type="xml">
+            <tree string="Eco Safety">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista tipo Kanban para el modelo Eco Safety Drive -->
+    <record id="view_eco_safety_kanban" model="ir.ui.view">
+        <field name="name">view.eco_safety.kanban</field>
+        <field name="model">eco.safety</field>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" archivable="false" js_class="eco_safety_kanban" sample="1">
+                <field name="name"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_content oe_kanban_global_click">
+                            <div>
+                                <strong class="o_kanban_record_title">
+                                    <span>
+                                        <field name="name"/>
+                                    </span>
+                                </strong>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para el modelo Eco Safety Drive -->
+    <record id="view_eco_safety_form" model="ir.ui.view">
+        <field name="name">view.eco_safety.form</field>
+        <field name="model">eco.safety</field>
+        <field name="arch" type="xml">
+            <form string="Eco_Safety">
+                <header></header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Título..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="video_eco" placeholder="Agregue el link del Video aquí..."/>
+                        </group>
+                        <br></br>
+                        <br></br>
+                        <group col ="1">
+                            <field name="galeria_eco_ids" widget="one2many_list" string ="Galería de Imágenes">
+                                <tree editable="bottom">
+                                    <field name="image_eco_data" widget="image" size="small"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Vista de búsqueda para el modelo Eco Safety Drive -->
+    <record id="view_eco_safety_search" model="ir.ui.view">
+        <field name="name">view.eco_safety.search</field>
+        <field name="model">eco.safety</field>
+        <field name="arch" type="xml">
+            <search string="Eco_Safety">
+                <group expand="1" string="Group By">
+                    <filter string="Título" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <!-- Acción de ventana para abrir la vista de árbol y formulario de Eco Safety Drive -->
+    <record id="action_eco_safety" model="ir.actions.act_window">
+        <field name="name">Eco and Safety Drive</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">eco.safety</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                    No se ha registrado ningun Elemento.
+            </p>
+        </field>
+    </record>
+    <!-- Menú Superior Eco Safety Drive -->
+    <menuitem id="menu_eco_safety" parent="menu_secciones" name="Eco and Safety" action="action_eco_safety" sequence="14" />
+
+</odoo> 

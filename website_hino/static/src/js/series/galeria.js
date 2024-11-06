@@ -1,11 +1,12 @@
-function App() {}
+document.addEventListener('DOMContentLoaded', function() {
+function GalleryApp() {}
 
-    window.onload = function(event) {
-        var app = new App();
-        window.app = app;
+    window.onload = function (event) {
+        let galleryApp = new GalleryApp();
+        window.galleryApp = galleryApp;
     }
 
-    App.prototype.processingButton = function(event){
+    GalleryApp.prototype.processingButton = function(event){
 
         const btn = event.currentTarget;
         const carruselList = event.currentTarget.parentNode;
@@ -15,6 +16,8 @@ function App() {}
         const carruselWidth = carrusel[0].offsetWidth;
         const trackWidth = track.offsetWidth;
         const listWidth = carruselList.offsetWidth;
+
+        let leftPosition = 0;
 
         track.style.left == "" ? leftPosition = track.style.left === 0 : leftPosition = parseFloat(track.style.left.slice(0,-2) * -1);
         btn.dataset.button == "button-prev" ? prevAction(leftPosition, carruselWidth, track) : nextAction(leftPosition, trackWidth, listWidth, carruselWidth, track);
@@ -32,3 +35,4 @@ function App() {}
             track.style.left = `${-1 * (leftPosition + carruselWidth)}px`;
         }
     }
+});
